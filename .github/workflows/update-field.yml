@@ -2,21 +2,23 @@ name: Update First Sales Meeting Field
 
 on:
   workflow_dispatch:
-  # Backup: also runs on a schedule in case cron-job.org misses a trigger
-  # cron-job.org is the primary trigger (hits workflow_dispatch via API)
   schedule:
+    # Backup schedule — cron-job.org is the primary trigger (hits workflow_dispatch via API)
     - cron: '*/30 * * * *'
 
 permissions:
-  contents: write
+  contents: write  # Required for checkpoint commits
 
 jobs:
   update-field:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 120  # Full backfill needs ~80 min; 120 gives plenty of headroom
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # GITHUB_TOKEN allows the script to git push checkpoints back to the repo
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-python@v5
         with:
