@@ -8,7 +8,7 @@ Runs every 30 minutes via GitHub Actions + cron-job.org.
 
 ## What It Does
 
-Close CRM's built-in "First Call Booked Date" field is unreliable — it updates on reschedules and includes non-sales meetings. This script writes a clean, filtered date to a custom field using the same title classification logic that powers the Call Capacity and MTD Funnel dashboards.
+Our current custom "First Call Booked Date" field is unreliable — it updates on reschedules and includes non-sales meetings. This script writes a clean, filtered date to a custom field using the same title classification logic that powers the Call Capacity and MTD Funnel dashboards.
 
 **Result:** Marketing (and anyone else) can filter leads in Close with:
 - `First Sales Call Booked Date = Yesterday` + `Funnel Name Deal = Instagram`
