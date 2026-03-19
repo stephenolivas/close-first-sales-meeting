@@ -302,7 +302,7 @@
     },
     "lead_HdxwLn6QL9B2hXfXi3Cc0fnnNYZjMOohCCh2eSJIRZy": {
       "date": null,
-      "call_type": "Closer"
+      "call_type": null
     },
     "lead_loUoi7MT5TzaKgaEfjF5cL6kgM3uOZgvyezG0pAfpG9": {
       "date": "2026-03-17",
@@ -382,7 +382,7 @@
     },
     "lead_ZBL6yTlrzQMr8O90Cfb7IXQc0PuBr2QzC02Jkqov1Kh": {
       "date": null,
-      "call_type": "Closer"
+      "call_type": null
     },
     "lead_neIRG4nQhoFiyXQ6uocdhYra9SdiXgOqkpnkGcwDkg1": {
       "date": "2026-03-18",
@@ -16613,6 +16613,6 @@
       "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-19 21:54:58 UTC",
+  "saved_at": "2026-03-19 22:02:07 UTC",
   "count": 4153
 }
