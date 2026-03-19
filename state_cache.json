@@ -16579,8 +16579,16 @@
     "lead_M8jQScM0DzZHI9ys1rSSy2b4jyhqJ20FJNINTLEbgHe": {
       "date": null,
       "call_type": "Setter"
+    },
+    "lead_vZLaQUJleWKPJCHk3D6j5a9UayENv48vuvZJOPp9i6S": {
+      "date": "2026-03-20",
+      "call_type": "Closer"
+    },
+    "lead_dc30xdwLzfkHAJMtka5HUnr9fmr6LFYw1ZLh2sEb9Ub": {
+      "date": "2026-03-20",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-19 19:02:08 UTC",
-  "count": 4145
+  "saved_at": "2026-03-19 19:32:07 UTC",
+  "count": 4147
 }
