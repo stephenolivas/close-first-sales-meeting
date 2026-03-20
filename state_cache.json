@@ -177,7 +177,7 @@
       "call_type": "Closer"
     },
     "lead_YeBNTBSskzPquvc06uS63mYx604PBeRHvN0o9xte5lZ": {
-      "date": "2026-03-20",
+      "date": null,
       "call_type": "Closer"
     },
     "lead_2xYLmOFXh6rQSMZ2DGZuCXdE9fh3MND5KNNJmsZNhg5": {
@@ -16655,8 +16655,12 @@
     "lead_dyqqLnKxXLaD3FaQvZiKApZmele2UrIzI9MDTrG78u5": {
       "date": "2026-01-13",
       "call_type": "Closer"
+    },
+    "lead_MxsRz3HDMgcrDQopdQaoa1sbefKJ8hcTbEEZwiVeoVB": {
+      "date": "2026-03-24",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-20 02:02:05 UTC",
-  "count": 4164
+  "saved_at": "2026-03-20 02:31:58 UTC",
+  "count": 4165
 }
