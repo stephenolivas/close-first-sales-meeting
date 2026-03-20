@@ -170,7 +170,7 @@
     },
     "lead_eyx2L0cgp9o34B247qPhOUSwu2S5cKBHLJ7zDyEDpxb": {
       "date": null,
-      "call_type": "Closer"
+      "call_type": null
     },
     "lead_p4AgO7hgbu3ozonVdHzN2Ag0DNFywAC6CcWoKVR1ynK": {
       "date": "2026-03-18",
@@ -16749,6 +16749,6 @@
       "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-20 19:02:39 UTC",
+  "saved_at": "2026-03-20 19:30:40 UTC",
   "count": 4187
 }
