@@ -16663,8 +16663,12 @@
     "lead_Z15VIlFCbbm8GLVsrLWqxft1qF5Vzxmm5iJLHaLCdaf": {
       "date": null,
       "call_type": "Setter"
+    },
+    "lead_GqcPE0Y1253uefxfeucMP2QuMh4x3cYp7DmpEO4XbUK": {
+      "date": "2026-03-20",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-20 03:32:01 UTC",
-  "count": 4166
+  "saved_at": "2026-03-20 04:02:10 UTC",
+  "count": 4167
 }
