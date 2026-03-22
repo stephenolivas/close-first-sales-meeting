@@ -17023,8 +17023,12 @@
     "lead_0RF85W0jFxzOWKUuiOSBcrEZojTAGkhnkdw6TIRxnBv": {
       "date": "2026-03-24",
       "call_type": "Closer"
+    },
+    "lead_nFHwGvH0IdeD8eS11Ol1hPrO1vKBA0nAwnANgVhvJA9": {
+      "date": null,
+      "call_type": "Setter"
     }
   },
-  "saved_at": "2026-03-22 16:32:09 UTC",
-  "count": 4256
+  "saved_at": "2026-03-22 17:00:36 UTC",
+  "count": 4257
 }
