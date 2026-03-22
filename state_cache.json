@@ -16979,8 +16979,16 @@
     "lead_K9BIy1zzApy3evb1e8BLvDbc6zKFclgQT9M9DCuvQt6": {
       "date": null,
       "call_type": "Setter"
+    },
+    "lead_SpDG5qbiQMmnzEBGJaMMdaonpP4eI4cO9C8qOje6JoK": {
+      "date": "2026-03-24",
+      "call_type": "Closer"
+    },
+    "lead_EhMGs6JklhWZ2rbZ6DOQqFG2bXBMbv77yxSHP7DnZko": {
+      "date": null,
+      "call_type": "Setter"
     }
   },
-  "saved_at": "2026-03-22 14:02:07 UTC",
-  "count": 4245
+  "saved_at": "2026-03-22 14:32:02 UTC",
+  "count": 4247
 }
