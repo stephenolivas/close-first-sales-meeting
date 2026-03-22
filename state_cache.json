@@ -16999,8 +16999,16 @@
     "lead_lc5FZxHgmv9EV3MbWWlsrG0B6mxpJrSbbNbxwacdp01": {
       "date": "2026-03-23",
       "call_type": "Closer"
+    },
+    "lead_ujFz0EL06y8PgKWqZqpF0KwCeUn1AYTmgtap4sSdvXi": {
+      "date": "2026-03-24",
+      "call_type": "Closer"
+    },
+    "lead_KMnoy09y4YGOYU3ad2qG3M1WEew6jOfcrj4GZJDKRak": {
+      "date": "2026-03-24",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-22 15:32:07 UTC",
-  "count": 4250
+  "saved_at": "2026-03-22 15:52:43 UTC",
+  "count": 4252
 }
