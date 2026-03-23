@@ -16746,7 +16746,7 @@
     },
     "lead_U4rFyBZqGMj5uPWBY1QWgSqA5x6B9z39RZlFkF3AZtn": {
       "date": null,
-      "call_type": "Closer"
+      "call_type": null
     },
     "lead_9Cai83GSoSGJbwufnLslps52h7BUSyANrsjGdedySdm": {
       "date": "2026-03-25",
@@ -17167,8 +17167,24 @@
     "lead_Ykicy4w7vJlkGStJiTt2MleK8l00Gk7vTl2xthxYKtZ": {
       "date": null,
       "call_type": "Setter"
+    },
+    "lead_Su4GWnIDlSn9x63Ysxqr3ZLfMAOA9Ac3iB3n7SyVZpC": {
+      "date": "2026-03-24",
+      "call_type": "Closer"
+    },
+    "lead_iRYcvpbi0WMsfGhSRDodb4hmcn9z9iZhz5ie4VwmDSH": {
+      "date": "2026-03-23",
+      "call_type": "Closer"
+    },
+    "lead_qVpSY3BRGLFEjcV4luqr8gLRjkiSqQwObjzVbujPNl7": {
+      "date": "2026-03-24",
+      "call_type": "Closer"
+    },
+    "lead_VRrkVgtKxxY6eWsX5CHd3MbvvDkaDbXrSie5XyL5O9s": {
+      "date": "2026-03-20",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-23 20:32:21 UTC",
-  "count": 4292
+  "saved_at": "2026-03-23 21:02:29 UTC",
+  "count": 4296
 }
