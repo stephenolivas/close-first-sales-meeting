@@ -16998,7 +16998,7 @@
     },
     "lead_lc5FZxHgmv9EV3MbWWlsrG0B6mxpJrSbbNbxwacdp01": {
       "date": null,
-      "call_type": "Closer"
+      "call_type": null
     },
     "lead_ujFz0EL06y8PgKWqZqpF0KwCeUn1AYTmgtap4sSdvXi": {
       "date": "2026-03-24",
@@ -17163,8 +17163,12 @@
     "lead_6I2kG3d90NU7NQdJ5JF60mxvGdeI7fzrCzvorTTOVZX": {
       "date": "2026-03-30",
       "call_type": "Closer"
+    },
+    "lead_Ykicy4w7vJlkGStJiTt2MleK8l00Gk7vTl2xthxYKtZ": {
+      "date": null,
+      "call_type": "Setter"
     }
   },
-  "saved_at": "2026-03-23 20:02:28 UTC",
-  "count": 4291
+  "saved_at": "2026-03-23 20:08:48 UTC",
+  "count": 4292
 }
