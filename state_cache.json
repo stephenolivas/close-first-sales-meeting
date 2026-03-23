@@ -17111,8 +17111,12 @@
     "lead_wuy1GRB08BQyWETzgKeiu5vfRNCLsonx4Lhjl0925UY": {
       "date": null,
       "call_type": "Setter"
+    },
+    "lead_2l15rRu8eiN4N9Ccxitg5eRpoqarvEzPcYqLctW8yRP": {
+      "date": "2026-03-25",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-23 06:32:03 UTC",
-  "count": 4278
+  "saved_at": "2026-03-23 07:02:01 UTC",
+  "count": 4279
 }
