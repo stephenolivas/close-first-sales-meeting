@@ -17371,8 +17371,12 @@
     "lead_5oHSuQPJCt06tymvVFkdBnFMemcYQMGVo1xoVBITrIL": {
       "date": null,
       "call_type": "Setter"
+    },
+    "lead_o9vxpWlnjhRZJ55ltZ39xP5YBZjuw2Twxb97WH2dcKT": {
+      "date": "2026-03-30",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-24 23:02:08 UTC",
-  "count": 4343
+  "saved_at": "2026-03-24 23:32:11 UTC",
+  "count": 4344
 }
