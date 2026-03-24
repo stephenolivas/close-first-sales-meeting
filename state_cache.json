@@ -109,8 +109,8 @@
       "call_type": "Closer"
     },
     "lead_p2pw7Rjy8TTomLsuWqGbeclQuwP1Ut3DIgdC28iu5y7": {
-      "date": null,
-      "call_type": "Setter"
+      "date": "2026-03-24",
+      "call_type": "Closer"
     },
     "lead_777KGvipXKKmCnCQzZgGHett8GpIMCsQ7QUi5AghKEK": {
       "date": "2026-03-13",
@@ -17249,6 +17249,6 @@
       "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-24 09:02:15 UTC",
+  "saved_at": "2026-03-24 09:32:08 UTC",
   "count": 4312
 }
