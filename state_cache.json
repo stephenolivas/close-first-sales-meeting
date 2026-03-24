@@ -17343,8 +17343,12 @@
     "lead_w9prdcxRjuQUduyzVxWcQvzfXr090Qge6B6kzmprAmf": {
       "date": null,
       "call_type": "Setter"
+    },
+    "lead_i0LOKgsrYuXjx1aNX5boahUiCJgIXHtX0AfYStlVs9y": {
+      "date": "2026-03-26",
+      "call_type": "Closer"
     }
   },
-  "saved_at": "2026-03-24 20:06:11 UTC",
-  "count": 4336
+  "saved_at": "2026-03-24 20:32:17 UTC",
+  "count": 4337
 }
