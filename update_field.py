@@ -120,12 +120,22 @@ def classify_meeting(meeting: dict) -> str | None:
       "setter"  — discovery/setter meeting
       "scraper" — Vendingpreneur Next Steps meeting
       None      — irrelevant, ignore
-    """
-    if _is_hard_excluded(meeting):
-        return None
 
+    NOTE: Scraper is checked BEFORE hard excludes because "Vendingpreneur Next Steps"
+    contains "Next Steps" which would otherwise be caught by the followup hard exclude.
+    """
     user_id = meeting.get("user_id") or ""
     title   = (meeting.get("title") or "").strip()
+
+    # Scraper check first — title takes priority before any exclusion logic
+    # (prevents "Next Steps" in the title from triggering the followup hard exclude)
+    if RE_SCRAPER_TITLE.search(title):
+        # Still respect excluded owners (Stephen, Ahmad) but ignore nothing else
+        if user_id not in EXCLUDED_OWNERS:
+            return "scraper"
+
+    if _is_hard_excluded(meeting):
+        return None
 
     # Setter by owner — Kristin or Spencer's meetings are always setter
     if user_id in SETTER_OWNERS:
@@ -134,10 +144,6 @@ def classify_meeting(meeting: dict) -> str | None:
     # Setter by title — Vending Quick Discovery (any owner)
     if RE_DISCOVERY_TITLE.search(title):
         return "setter"
-
-    # Scraper Funnel — Vendingpreneur Next Steps (any owner)
-    if RE_SCRAPER_TITLE.search(title):
-        return "scraper"
 
     # Closer — must match a qualifying pattern
     for pattern in CLOSER_PATTERNS:
