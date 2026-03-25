@@ -1,7 +1,7 @@
 """
 Close CRM Field Updater
 ------------------------
-Updates two custom fields on each lead:
+Updates three custom fields on each lead:
 
 1. "First Sales Call Booked Date" (cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq)
    — Date of the earliest qualifying first sales (closer) meeting, in Pacific time.
@@ -14,6 +14,12 @@ Updates two custom fields on each lead:
          and no closer meeting → "Setter"
        • No meetings of either type → blank
        • NEVER downgrade from "Closer" — once set, it stays.
+
+3. "Scraper Funnel" (cf_69vb5dGu6FcBrnLGJFeHQviYQTkk7zpnLRgMPW2vipd)
+   — Dropdown: "YES" | blank
+   — Rules:
+       • Any meeting title matching "Vendingpreneur Next Steps" → "YES"
+       • NEVER cleared once set to "YES".
 
 Performance:
 - Always paginates ALL meetings (~107 API calls — Close ignores date filters)
@@ -43,11 +49,13 @@ PACIFIC = ZoneInfo("America/Los_Angeles")
 SLEEP_BETWEEN_CALLS = 0.5
 
 # Custom fields
-FIELD_DATE_ID      = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
-FIELD_CALLTYPE_ID  = "cf_6yy8dqzeiBIQD2dhDfaVeiCmEhTW6ycmM4SVQ5sO6CG"
-FIELD_DATE_KEY     = f"custom.{FIELD_DATE_ID}"
-FIELD_CALLTYPE_KEY = f"custom.{FIELD_CALLTYPE_ID}"
-FIELDS_PARAM       = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY}"
+FIELD_DATE_ID       = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
+FIELD_CALLTYPE_ID   = "cf_6yy8dqzeiBIQD2dhDfaVeiCmEhTW6ycmM4SVQ5sO6CG"
+FIELD_SCRAPER_ID    = "cf_69vb5dGu6FcBrnLGJFeHQviYQTkk7zpnLRgMPW2vipd"
+FIELD_DATE_KEY      = f"custom.{FIELD_DATE_ID}"
+FIELD_CALLTYPE_KEY  = f"custom.{FIELD_CALLTYPE_ID}"
+FIELD_SCRAPER_KEY   = f"custom.{FIELD_SCRAPER_ID}"
+FIELDS_PARAM        = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY}"
 
 CHECKPOINT_FILE  = "checkpoint.json"
 STATE_CACHE_FILE = "state_cache.json"
@@ -77,6 +85,7 @@ RE_CANCELED          = re.compile(r"^canceled[\s:]?", re.IGNORECASE)
 RE_FOLLOWUP          = re.compile(r"follow[\-\s]?up|fallow\s+up|f/u\b|next\s+steps|reschedul", re.IGNORECASE)
 RE_ENROLLMENT        = re.compile(r"enrollment|silver\s+start\s*up|bronze\s+enrollment|questions\s+on\s+enrollment", re.IGNORECASE)
 RE_DISCOVERY_TITLE   = re.compile(r"vending\s+quick\s+discovery", re.IGNORECASE)
+RE_SCRAPER_TITLE     = re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE)
 
 CLOSER_PATTERNS = [
     re.compile(r"vending\s+strategy\s+call", re.IGNORECASE),
@@ -107,9 +116,10 @@ def _is_hard_excluded(meeting: dict) -> bool:
 def classify_meeting(meeting: dict) -> str | None:
     """
     Returns the tier of this meeting:
-      "closer" — qualifying first sales meeting
-      "setter" — discovery/setter meeting
-      None     — irrelevant, ignore
+      "closer"  — qualifying first sales meeting
+      "setter"  — discovery/setter meeting
+      "scraper" — Vendingpreneur Next Steps meeting
+      None      — irrelevant, ignore
     """
     if _is_hard_excluded(meeting):
         return None
@@ -124,6 +134,10 @@ def classify_meeting(meeting: dict) -> str | None:
     # Setter by title — Vending Quick Discovery (any owner)
     if RE_DISCOVERY_TITLE.search(title):
         return "setter"
+
+    # Scraper Funnel — Vendingpreneur Next Steps (any owner)
+    if RE_SCRAPER_TITLE.search(title):
+        return "scraper"
 
     # Closer — must match a qualifying pattern
     for pattern in CLOSER_PATTERNS:
@@ -143,11 +157,13 @@ def calculate_desired_state(all_meetings: list) -> dict:
     {
       lead_id: {
         "date":      "YYYY-MM-DD" or None,  # earliest closer meeting date
-        "call_type": "Closer" | "Setter" | None
+        "call_type": "Closer" | "Setter" | None,
+        "scraper":   "YES" | None
       }
     }
 
     Tier hierarchy: Closer > Setter > None
+    Scraper is independent — a lead can be both Closer and scraper=YES.
     Zero API calls — pure Python.
     """
     # Group meetings by lead
@@ -161,6 +177,7 @@ def calculate_desired_state(all_meetings: list) -> dict:
     for lead_id, meetings in by_lead.items():
         closer_dates = []
         has_setter   = False
+        has_scraper  = False
 
         for m in meetings:
             tier = classify_meeting(m)
@@ -172,18 +189,22 @@ def calculate_desired_state(all_meetings: list) -> dict:
                     closer_dates.append(dt_pac.strftime("%Y-%m-%d"))
             elif tier == "setter":
                 has_setter = True
+            elif tier == "scraper":
+                has_scraper = True
 
         if closer_dates:
-            desired[lead_id] = {
-                "date":      min(closer_dates),
-                "call_type": "Closer",
-            }
+            call_type = "Closer"
         elif has_setter:
+            call_type = "Setter"
+        else:
+            call_type = None
+
+        if call_type is not None or has_scraper:
             desired[lead_id] = {
-                "date":      None,
-                "call_type": "Setter",
+                "date":      min(closer_dates) if closer_dates else None,
+                "call_type": call_type,
+                "scraper":   "YES" if has_scraper else None,
             }
-        # leads with no relevant meetings are not included
 
     return desired
 
@@ -364,10 +385,12 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
     """
     Compares current vs desired state for one lead and writes only what changed.
 
-    current / desired format: { "date": "YYYY-MM-DD"|None, "call_type": "Closer"|"Setter"|None }
+    current / desired format:
+      { "date": "YYYY-MM-DD"|None, "call_type": "Closer"|"Setter"|None, "scraper": "YES"|None }
 
     Rules:
     - Never downgrade call_type from "Closer"
+    - Never clear scraper once set to "YES"
     - Only write fields that actually changed
 
     Returns the final state written (or None if nothing changed).
@@ -386,10 +409,21 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
 
     # Never downgrade from Closer
     if cur_type == "Closer" and new_type != "Closer":
-        new_type = "Closer"  # Hold it
+        new_type = "Closer"
 
     if cur_type != new_type:
         payload[FIELD_CALLTYPE_KEY] = new_type
+
+    # ── Scraper Funnel field ────────────────────────────────────────────────
+    cur_scraper = current.get("scraper")
+    new_scraper = desired.get("scraper")
+
+    # Never clear once set to YES
+    if cur_scraper == "YES":
+        new_scraper = "YES"
+
+    if cur_scraper != new_scraper:
+        payload[FIELD_SCRAPER_KEY] = new_scraper
 
     if not payload:
         return None  # Nothing to write
@@ -401,12 +435,15 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
         changes.append(f"date: {cur_date or 'blank'} → {new_date or 'cleared'}")
     if FIELD_CALLTYPE_KEY in payload:
         changes.append(f"type: {cur_type or 'blank'} → {new_type or 'cleared'}")
+    if FIELD_SCRAPER_KEY in payload:
+        changes.append(f"scraper: {cur_scraper or 'blank'} → {new_scraper or 'cleared'}")
 
     print(f"  Updated: {lead_name} | {' | '.join(changes)}", flush=True)
 
     return {
-        "date":      new_date,
-        "call_type": new_type,
+        "date":      new_date if FIELD_DATE_KEY in payload else cur_date,
+        "call_type": new_type if FIELD_CALLTYPE_KEY in payload else cur_type,
+        "scraper":   new_scraper if FIELD_SCRAPER_KEY in payload else cur_scraper,
     }
 
 
@@ -464,6 +501,7 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
             current   = {
                 "date":      lead_data.get(FIELD_DATE_KEY),
                 "call_type": lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":   lead_data.get(FIELD_SCRAPER_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
@@ -514,6 +552,7 @@ def backfill(desired_state: dict, already_processed: set) -> tuple[dict, set]:
             current   = {
                 "date":      lead_data.get(FIELD_DATE_KEY),
                 "call_type": lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":   lead_data.get(FIELD_SCRAPER_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
@@ -551,7 +590,7 @@ def main():
     print(
         f"═══════════════════════════════════════════\n"
         f"Close CRM Field Updater\n"
-        f"Fields: First Sales Call Booked Date | Closer / Setter Call\n"
+        f"Fields: First Sales Call Booked Date | Closer / Setter Call | Scraper Funnel\n"
         f"Started: {start.strftime('%Y-%m-%d %H:%M:%S UTC')}\n"
         f"═══════════════════════════════════════════\n",
         flush=True,
