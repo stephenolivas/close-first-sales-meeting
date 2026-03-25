@@ -515,6 +515,9 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
             errors += 1
             print(f"  [{i}/{len(all_changes)}] ERROR on {lead_id}: {e}", flush=True)
 
+        if i % 100 == 0:
+            print(f"  [{i}/{len(all_changes)}] still processing... ({updated} updated so far)", flush=True)
+
     print(f"\nRoutine run complete. Updated: {updated} | Errors: {errors}", flush=True)
     return new_cache
 
