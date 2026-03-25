@@ -6714,7 +6714,7 @@
     "lead_vs3OtFXX7tQLG7fmc9I2Zwj8mIfYDkzuNTOZfBMNMoa": {
       "date": null,
       "call_type": "Setter",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_9z1CAYuzBhcfFgzxSe29bZdMOEI8OaeccgfMh6rdH9Z": {
       "date": "2026-02-16",
@@ -9304,7 +9304,7 @@
     "lead_lF8mWSzkQLHIbKxHXiC5CtURKL7c3IVS4D8FhXEcsnd": {
       "date": "2026-02-04",
       "call_type": "Closer",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_O7KDeeSOKwVIU4hKAbMZ2AzfRRpOktno7a7m8k1GjiY": {
       "date": null,
@@ -9414,7 +9414,7 @@
     "lead_Agr9LdZBAezNL7wrCDvwZbK0u60iEYYV8FbjUQ5skiS": {
       "date": "2026-01-14",
       "call_type": "Closer",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_QFTyXLYft6kdiyNhmCjKVZlFmA2amrdpcN0OxVFctvY": {
       "date": null,
@@ -10279,7 +10279,7 @@
     "lead_i9sxPl4UITPz30tlcf6oLojntgicqcbGKQ894AmFGzs": {
       "date": null,
       "call_type": "Setter",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_oA0I2xS8JGxVinuuPqzZveuzgSlKtfjetisEoBSCjbF": {
       "date": null,
@@ -10554,7 +10554,7 @@
     "lead_0HK1Eyn3pJPNBUobpqHMHIE5jlZXbkwO3OVISuAdQCW": {
       "date": null,
       "call_type": "Setter",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_VI8oyduzGH9f8l7kCwpoB8S8Z8ldjFh1hyuEPAI5hkA": {
       "date": "2025-12-04",
@@ -12199,7 +12199,7 @@
     "lead_cE8G6sE0BT2IYPhUxlhEekEfom1Rk7D1dEbzdyEpfW2": {
       "date": null,
       "call_type": "Setter",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_dLUdQoy8T1Z2wsNqP3benLDFqzjh5iFsGFVbY8ZFNr7": {
       "date": null,
@@ -14164,12 +14164,12 @@
     "lead_Gu3R6K9lwEnuJ3Kxzu3bGm4qSvmGio0onK1TkZugqnw": {
       "date": null,
       "call_type": "Setter",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_59QD2ynAfM7E9o2EoEME3coXOYjsE1CzxiYUtjg3Oz2": {
       "date": null,
       "call_type": "Setter",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_RSRZcB0zc3yIydd9Huj3HFmpO8EoCfe43at6lrK4TxP": {
       "date": null,
@@ -15994,7 +15994,7 @@
     "lead_Ow7jNne1OD5jirUI6B3w0ZjrvYmKzvXLPOh11PjG9sf": {
       "date": null,
       "call_type": "Setter",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_FjbAXQeYT7Cm8Hle9pesZX9nJUNbWQ2B63A6VAwYnMx": {
       "date": null,
@@ -20269,7 +20269,7 @@
     "lead_ehNgb2DyjxwlE0kbCqoeT4ecYmmaA15xtTPZ5CYe27T": {
       "date": "2025-08-26",
       "call_type": "Closer",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_9JOWHtgQmobTrEQ5PAAzb8bxT9YooPjq6Yl09Hvt7rz": {
       "date": "2025-10-01",
@@ -20464,7 +20464,7 @@
     "lead_r4UDAFcBtIC83rbDrLaNpkU9sitU2uohVOGQiUXhhoh": {
       "date": "2025-09-05",
       "call_type": "Closer",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_DsHdGUF84zT9VQpIqp4XZnGBVZSCUNwcDTKLgVlIBGE": {
       "date": "2025-09-02",
@@ -21584,7 +21584,7 @@
     "lead_e0QCUgWi7Zpf9jypCsGkyj9KR5MP3vEfppOWR7nAHXP": {
       "date": "2026-03-24",
       "call_type": "Closer",
-      "scraper": null
+      "scraper": "YES"
     },
     "lead_0L6PPAsntqkC68xcKqkTJlZwojMYLJxrgAOYUBZ2klj": {
       "date": "2026-03-26",
@@ -21771,8 +21771,7 @@
     },
     "lead_2OOB8RIdEZfmeaGyuxryAf76zcG065RGLWrTjZCxGnn": {
       "date": null,
-      "call_type": "Closer",
-      "scraper": null
+      "call_type": null
     },
     "lead_xkVczb39irln0Pck8NE3RjhgHMiuEGTD6YvhJtMaJ9q": {
       "date": null,
@@ -21997,7 +21996,7 @@
       "scraper": null
     },
     "lead_xVcAv93sseKMmZgr6FYl45e9Efg7MgHTmTdwuxp86p7": {
-      "date": "2026-03-25",
+      "date": null,
       "call_type": "Closer",
       "scraper": null
     },
@@ -22074,8 +22073,648 @@
       "date": "2026-03-26",
       "call_type": "Closer",
       "scraper": null
+    },
+    "lead_VYXG8SCYzLNWIk3aUMszAuqjUUfAkIzeJbZ8Z6HA7ye": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_8ZoAoz70ATYdqykcMzN27bqSo4q6QM1L4c2wjItB5M5": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_fg0WAEAiV2DR767mTZjqRBGta7jBqMf2414Qa2hCI6w": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_C9ghUY4BGTyaTMqp0Fywg2g3ixOgdcJwuhcpSVzJ75q": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_D5Z1TC6jfEl0Q2e4kE3vJWSeb83AifqHNqctLgAZ6XK": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_WquIaqx00mmzjg0z1ULREH1tWpD8N4q8vwXAH6Vv0RT": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_AFNVfZNkvNSJm8JUk3pn2DrC8Nel1KWwR2NwpRIcMA7": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_RXAxB86CeNMSFXAxoWTmX2v9De5J77Kx2IvFoL0kNQn": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_tqgSKXVoMeODCoCnZoOPGecwdwey1Sk4Vl5MaFCG55H": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_SZEpcd3VorU8TBQ6zOK6wGwvxiuhux6ya6gjFOkXpUx": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_NedFNrWQA4k0PWRA7lMk5vJUc192jPRnLDm5vxLGPfK": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_LY4E57NXddysAyuEjLKo69WWVJMDU4Qs8ieQ3COA4np": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_rldkjM48E2f9q4EgF8HcyMaPRluLrtbDXi05SdVxUYT": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_ZV1zjIwJX0AG3BjevHXzKWjrvYa3Zxzd94n6mM4P8ej": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_C50F8gCns68Ix6yjN3DCMsF5c3sIxTKMlhaxokCRGOP": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_20UxyqAGHlIUFYlkDwWGc6fGApaH5mXMg4qO0Ol0kMy": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_lnRZtJlxAyK0V6MFLYniWuc4PAHpJqrdB92ebvPRp1M": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_14d3NCodHHztBcKkTszjpD9Zhmc6z9ZBBUyJCqAskE1": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_RYgu51fOLtCYZ7IopvRvl2nEeloPZb9H4zrIlefzBxz": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_9k8phMjGFcMteg25n93oCH0exKA9NnOK3ngu9Fwpl9r": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_XCPEoqWP2otH1FBFlDSwsupLuD70n1glGEyYLvrddiT": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_0HKfKyaaMUfWdt5mnuapKHw7nA3S4Ve52rMt0MemIdV": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_0xQP2dQFxkcAFfPniHFh8zuQGJP6xEzTD3z5JDd890p": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_PeFj8E2k9p3DYbAqhJoQOR6vTmV4XQmKzqr5YjTF7Qd": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_GRYQRxRyax1R2rOYLCdYb9MgyDJZo17EwnMWVknRcY7": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_kEZ4ByLvYnk1wlgVBkMC9j9C26vxQ3WGyNvcTe7KIkM": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_ir4IPM1dOX1cK63meh2QxCjMLe5MYRIOlCf1xXanRFr": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_WRYCyxvLhihvpVUTwFJn4ezIGUrYz9pppFps8tPF7cd": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_2vJzrRVB2GGnmYgWn9BKuWVc2uyBObJnBgqTgr1EXqO": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_Pw28I4Dp5yxKydyErB4hh64aUYgbIfoHwIvb4N70ul9": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_atLZTgWlOsNGqjRRFpsrwISFWgQqFvmow9pBfByTNuD": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_Cn1e9XtJU4N89VIOBZZHlxZajqilWfjxx8K4CFzImTp": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_ILnCBe3mcaH9tk4PjUptr04A6QfCNfqnW5trTP6fYSQ": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_q9uXsF23OQ41mQRZVikJB82akCFSSU7F6diyr3ys0L0": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_sUZpJ4v32Zth8RPjeVj4stg7fjqY3Huc5JbwwwzilIo": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_bKI35ecwK5VUYOPoctPIjUit3EHjAuc4xbcVz55pvtw": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_nuY4q9cZ0WxsLhKpO300A4hyzAReQn5R0mQP0ivzH3d": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_30oFuAvf9vTa1jzcN1xnvOMKi2qPduiZ3ytqG06EBjI": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_EEZgsP0msQ5pBzF0IeyDhaMf3NmAwTYaZHJmVIgcmod": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_JdIHH8fydSHzTWaMutGXNkmo5wzKa7wbI5y13cZExDS": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_P0NXDXye1gJZQAf6Y94eSFXazRiU3QrRRA0oT8bOgQ1": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_nL0npF6MHgjOTwlJAhQnh535Kwsp2Q6io4tmQaHVmpR": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_gmVEz4xAjENI0yn2S3MUfL0h1cDf8xlhYiyRSLlkMfT": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_M1sb0ZVGyQKeIpjWn8V0BPQu5fAljv0ZQ7oPJNJ8dpK": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_FQvK2INENkMxnb1e5BZ4PkP4xeew5ZzAGDMPJK9x6GM": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_DE3zVj0DgRsabAsw24NzHeSDTyTGgVoKgP5a7eyCNhR": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_q09kkhdzZCkMm4QCNBqAG9RlrGlSsXdngi9h1PRakXb": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_49dVfKnoAxjl4XNswqQxDM0qrrxgaIbgEAxMvyLcVXV": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_p2STtIghGEEkA1PpDBAYnDevILxHvP94hPSrhDcnmnH": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_HvF8wdvHBD8ikGs6MsNylm1TR0AnzUWhsod8IJ7fXfg": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_fktuNBkdF7IZ54On4D0nqeTYWiJhQmgUhmVZBEKexKh": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_xz5zLzSWxdl23D1nWix8W1fMBIPquyePO8kllp3MuNA": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_WqD60lkap99Qh9pmvrDhoBJeU15upIYCEoB3Q6hUUfz": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_f3xUrFFJPkfuJd6QQT8TuFJwnMxELUZJNCsiSobyk92": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_PCYvQAv3WC7uu3GTf1B8uZm8Fw0hfWBO4BbmyvSuZ7S": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_7CVhrcDF1zB13khCMdTAyWKErZNyoxN6J9ncgpjwM7I": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_94iCGFZtr92dtK3qTZZ2Wm5zKQped4boXPmnNgdczjw": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_ZLtGxai0fs8cTZVlTRf2hBaRI674vSNds2bAhH8jhbj": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_wroSHhjftdFYeVijazfvyaxhtmDnY287jw97Ur4bI2T": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_vGLangQL3Rp2E6dbeXlSknIAV1CG9oFEas44KIm8RlX": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_upgt1veNHK4IZJkEKM5QhEjLjP8FbSuitUUMDtL3359": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_iTyrufjHDMlsqVPELT8LCMcnVwm7XpY128XVCuUxRh6": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_qTnDlC5t3EzdXILxzPPF2LsjVvG0kBk16Sqpcs4R33I": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_mVFIQc8aR0u4FRliHd7wTduDOzHN23JWDK3jVn6Cd6F": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_yXzoFO8iwHWtJM61yXCHhaxXotL11ek6WmcMITLFqW0": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_D8du61VZjZmKIHMfUiNySRU01HmwdDiUJrJU3HrjnL2": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_iRnWIabr9jGegl07h4W03bDY7knFvzzWLtKqMKPGodf": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_OZlYGiLfvyHDnM4ieBHUBl7cr94KKeW7ZGcwysGrqi8": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_LyaylUAWNPVPvVwlWwCdD3Z4FhOS2XfZGZwQTw8ZeiG": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_RwaOiut5NiOh7rh0Zv6gbTYF44RGKCP1yVI17GuyJTb": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_FxcjLf7MCqcoZM83RvPoexdxcYiwcmknfoYtR0t3k3l": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_aKDfYy8fmDMzBVhWkQm7An6n8nLfm06dGkKGHKoeFkn": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_5FO3IdDbZ8HczUrd7FZ8kaIvpsIE7WdAdcnKJBVTNlT": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_01F04xk8jM4b1f3eo3mTLPm0cCg0I1vfe6nzkddQzcG": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_BLsDDNJfWHnM0t3Qb6LJ1jhEvfXZqTlb4iFnGeLQVxl": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_xpuAc3pFNHZIdtUgnYLtaMaNeYVgNHvJK9IJo01v85c": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_wXKWcSWa89t2mcMu1kUyD8dmKTMzHxfBvqs13f3z3XH": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_XiAG2Lb07r2SFNwlog9Czl07pCcM6BFBviwXVqV6xFB": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_FGqZM3xgbGoRKUuOCbV0sYFHI0UFsfH4VLWDgpWhBrQ": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_uV5pVWz7UkvJGrV9YRBUqTA23Uq1aWze1qT2Gx91Nj6": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_3aehjPhfcRIHS7oVdgUqB3fK4XsDT6MsszqdDq2K4Zw": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_cQQjw6G0LDQdxLIRO4vow04K0DN4yT21KHSErk2a5bq": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_6wOdWSXFVJaHgezMeG80hfaFiZseab5AlS22QGJixaE": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_Q2IpjtKOtPJAqcLNeDVSaIljXX5FFFtIUjDIAWYXNC2": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_60Xaw5lJ1W5GdbkGRqh0VFwGQQezhpU4V6lRWRefzXp": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_dODqmbefhjvSdmniRZGA6AxE3bUbiDzyTKwAkXPMAcN": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_T6OTxvmM0bJ85Jda9z5b6kjvtg8m7uqjzlepIVBMWw8": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_seb5sMWzcaMn9cTgLy4OTQL65EIywwzil7qo91pl1fQ": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_yM3TL2DOIHlzwbG6ZXKSuvedfvJZXGf0rgGRHiecUFg": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_teDEyn9ZDS5giwqz2JFalr58jMtLtiRNkgSNTHMH0j4": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_eEmVD43PoTrTrxOTApB9cv2u1dMA02jv7NRNKgQEkXe": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_1lTVD6cm2L17JYVFdy2wvL91KeMYOklzxnnlBfHn5TL": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_0o8yFMji3kB8qC3PwGqPlTNheBK9Z9RDf0S6grOzEwi": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_Y3jX98icyrSmM7u4UiPLAYvMIwpNvGmgErCEJOUf4MP": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_E42hLi4tdGDjbZ0PetgVQI6lxQMN5DEINdnqghNNljf": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_dxnonQcsQLxA5iHAM8jbjjTvCocqkgc7uIDqKRHP5IR": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_LR63cS9SAUCvpmrvRwdDBY36hF2GgvhZx2iUeBmDfHo": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_lkzFueyg3SA7MrF1Q3V7ofwmK5U4yj4rshMLHV6H9Nw": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_bcLnVSm70robPkBSedXpitoNs90cg1fppy2rJASgeM7": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_W1my151wL9VEv0PtYuGkM5jhhI99J5pejLbj6N8UzUC": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_cHamvlTLfgWOtTNbqjOJtnxPoTsaMSktjfO8oFXR7po": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_a0HjTcQgWRTyLKKSAFb0oXgRm4MRg0dMrzhGzHjIN5Z": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_R6GLDvU3uVbHU1qGe49Qwc7lfzCIPrzzaH6SmI0vBiF": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_MAsyxyA9WAh6EDJDSqaxDEpLO7HIZ0CMW4Vz8jAuqST": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_WA7C40lFt8Aqm3lCKm5AdoWofDwgBUUVQV0K6wHol3R": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_ifQO91745WtXNhcFH3GLJRH3P49Uhknjc3zWOwCYkrP": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_KxdcIyxwpMmt0jBgbDcG53DyZEJbnR0Ef1hTU4xvZgf": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_mFu6Ud6Z952SQ1uzkgMCuclO6JiL859g8au2IgDXSJD": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_wjsUrAzH1DG3AgBY44JGWJPwOCGhWJV6UaUQh00zZFi": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_4Et4czbdelqGY7diUgTbFVBqWK4HQZ8PcJJ2GIc3o8J": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_UHpqjmDRVNR80FAl64sAOJ7CiehjqiVE8lc2W1eOFj7": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_pLAn5WbMtspyirme6FQgcQEhW4QMkuMz8sUpNQ9omy5": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_ntjliuNp1PbfO8dNlK0mlpa6CpowYfMaUOeYSUCN1Kt": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_XMOSUZAaearwIlIZA8aQiqml0GMdpMrRovjCehGOeRR": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_2xqeIWTh52uU45qdy4TMU8J7Y6yzvM7jFOuoKQLOi7e": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_ScXNsSpc25UUTIUhIGqgzeyzaToJixSali8WlFQer7H": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_rHTgT7VWC1kdhl3ut6UZEml9p0WhF4iy2G18z9OTWUd": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_U4iRXHXXSVrfZbhALdijnIC1v4kHazCfO0gEPiZu794": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_vRMWhzhQ70u6UZbtv4r8O7CQGm6PDS2zyVC75KsFRqt": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_l7tRpKtvspIle6XRmfb98vexgWW978XLGM1ZYMTdM60": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_9cKkID7E1BydT7fbHOkEV9x466QhQZbIst2XR7nQzrb": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_Bj7V6AlmdfgWE2wowUoesGeNqFxVA1MsurOnP1MM7IO": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_j5UKtURSBsWjR21ssDIl2F9mZUgljjMY6fnIir7q0gc": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_XgdbBkTKpmdxaG8l21iKhb0giK55lkSQO8i3Bt26dIq": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_kW4Mmcee9wBObMO8l99djL7GJoiZV5Bx6a2REbnoc24": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_IESC9Vqzvt0EypNSsvI3Op5zhNOvWX9Wasqui7yoJEI": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_5HTwdvpd3dDhSvp8h6dj0FsTmOd3JYEcdkCFu0XZ7VX": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
+    },
+    "lead_WiYwaiXx7JdLD4srECfXVHNW9KteLnI8aed0nwMNC0s": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES"
     }
   },
-  "saved_at": "2026-03-25 23:02:27 UTC",
-  "count": 4424
+  "saved_at": "2026-03-25 23:18:20 UTC",
+  "count": 4552
 }
