@@ -21512,8 +21512,8 @@
       "scraper": null
     },
     "lead_8b8BI3wYUBYVfneygICNTNy4qcPazMz1Td7qd0ZrhxN": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-03-26",
+      "call_type": "Closer",
       "scraper": null
     },
     "lead_COoN53JhjLqE7p3w475NtzLYJCJRURB0qHa6WLXOfye": {
@@ -21770,7 +21770,7 @@
       "scraper": null
     },
     "lead_2OOB8RIdEZfmeaGyuxryAf76zcG065RGLWrTjZCxGnn": {
-      "date": "2026-03-27",
+      "date": null,
       "call_type": "Closer",
       "scraper": null
     },
@@ -22049,8 +22049,33 @@
       "date": "2026-03-26",
       "call_type": "Closer",
       "scraper": null
+    },
+    "lead_CCPZ087tkG9YhfsQ1LZ2nHsXxTa80gBaKen7WPIM0ua": {
+      "date": "2026-03-26",
+      "call_type": "Closer",
+      "scraper": null
+    },
+    "lead_Z2jrVkl6IWTJHipkzQ990tCOML9IxGf9dalnfxnfn65": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null
+    },
+    "lead_qR9FVsNEBNTyLLTGThWpDIbkimfzO9orOe8LyY1EcUS": {
+      "date": "2026-03-26",
+      "call_type": "Closer",
+      "scraper": null
+    },
+    "lead_8cP1yFBzBj1x4T9H6U5DHBXTwXQ7ym6cMAOlkDxMA2D": {
+      "date": "2026-03-26",
+      "call_type": "Closer",
+      "scraper": null
+    },
+    "lead_lHJflBwkwbAAv606xg12e0ZyQzxxEjDfW2LB66Kkyqq": {
+      "date": "2026-03-26",
+      "call_type": "Closer",
+      "scraper": null
     }
   },
-  "saved_at": "2026-03-25 22:47:38 UTC",
-  "count": 4419
+  "saved_at": "2026-03-25 23:02:27 UTC",
+  "count": 4424
 }
