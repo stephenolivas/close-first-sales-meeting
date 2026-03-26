@@ -21667,8 +21667,7 @@
     },
     "lead_5SqWV3KIz55hGUQQzlEFnmKuu8tgXx1xqHZvWpoVXdy": {
       "date": null,
-      "call_type": "Closer",
-      "scraper": null
+      "call_type": null
     },
     "lead_5oHSuQPJCt06tymvVFkdBnFMemcYQMGVo1xoVBITrIL": {
       "date": null,
@@ -22778,6 +22777,6 @@
       "scraper": null
     }
   },
-  "saved_at": "2026-03-26 05:32:17 UTC",
+  "saved_at": "2026-03-26 05:58:12 UTC",
   "count": 4565
 }
