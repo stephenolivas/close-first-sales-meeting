@@ -49,13 +49,15 @@ PACIFIC = ZoneInfo("America/Los_Angeles")
 SLEEP_BETWEEN_CALLS = 0.5
 
 # Custom fields
-FIELD_DATE_ID       = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
-FIELD_CALLTYPE_ID   = "cf_6yy8dqzeiBIQD2dhDfaVeiCmEhTW6ycmM4SVQ5sO6CG"
-FIELD_SCRAPER_ID    = "cf_69vb5dGu6FcBrnLGJFeHQviYQTkk7zpnLRgMPW2vipd"
-FIELD_DATE_KEY      = f"custom.{FIELD_DATE_ID}"
-FIELD_CALLTYPE_KEY  = f"custom.{FIELD_CALLTYPE_ID}"
-FIELD_SCRAPER_KEY   = f"custom.{FIELD_SCRAPER_ID}"
-FIELDS_PARAM        = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY}"
+FIELD_DATE_ID        = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
+FIELD_CALLTYPE_ID    = "cf_6yy8dqzeiBIQD2dhDfaVeiCmEhTW6ycmM4SVQ5sO6CG"
+FIELD_SCRAPER_ID     = "cf_69vb5dGu6FcBrnLGJFeHQviYQTkk7zpnLRgMPW2vipd"
+FIELD_POSTWEBINAR_ID = "cf_inRBDlgKLV9CgE7gBgzoQB0CAhwwuOoTHWclHxZoZQW"
+FIELD_DATE_KEY       = f"custom.{FIELD_DATE_ID}"
+FIELD_CALLTYPE_KEY   = f"custom.{FIELD_CALLTYPE_ID}"
+FIELD_SCRAPER_KEY    = f"custom.{FIELD_SCRAPER_ID}"
+FIELD_POSTWEBINAR_KEY = f"custom.{FIELD_POSTWEBINAR_ID}"
+FIELDS_PARAM         = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY}"
 
 CHECKPOINT_FILE  = "checkpoint.json"
 STATE_CACHE_FILE = "state_cache.json"
@@ -86,6 +88,7 @@ RE_FOLLOWUP          = re.compile(r"follow[\-\s]?up|fallow\s+up|f/u\b|next\s+ste
 RE_ENROLLMENT        = re.compile(r"enrollment|silver\s+start\s*up|bronze\s+enrollment|questions\s+on\s+enrollment", re.IGNORECASE)
 RE_DISCOVERY_TITLE   = re.compile(r"vending\s+quick\s+discovery", re.IGNORECASE)
 RE_SCRAPER_TITLE     = re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE)
+RE_POSTWEBINAR_TITLE = re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE)
 
 CLOSER_PATTERNS = [
     re.compile(r"vending\s+strategy\s+call", re.IGNORECASE),
@@ -93,6 +96,7 @@ CLOSER_PATTERNS = [
     re.compile(r"vendingpren[eu]+rs?\s+strategy\s+call", re.IGNORECASE),
     re.compile(r"new\s+vendingpren[eu]+r\s+strategy\s+call", re.IGNORECASE),
     re.compile(r"vending\s+consult\b", re.IGNORECASE),
+    re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE),
 ]
 
 
@@ -116,10 +120,11 @@ def _is_hard_excluded(meeting: dict) -> bool:
 def classify_meeting(meeting: dict) -> str | None:
     """
     Returns the tier of this meeting:
-      "closer"  — qualifying first sales meeting
-      "setter"  — discovery/setter meeting
-      "scraper" — Vendingpreneur Next Steps meeting
-      None      — irrelevant, ignore
+      "closer"       — qualifying first sales meeting
+      "setter"       — discovery/setter meeting
+      "scraper"      — Vendingpreneur Next Steps meeting
+      "post_webinar" — Post Masterclass Strategy Call (also counts as closer)
+      None           — irrelevant, ignore
 
     NOTE: Scraper is checked BEFORE hard excludes because "Vendingpreneur Next Steps"
     contains "Next Steps" which would otherwise be caught by the followup hard exclude.
@@ -127,10 +132,8 @@ def classify_meeting(meeting: dict) -> str | None:
     user_id = meeting.get("user_id") or ""
     title   = (meeting.get("title") or "").strip()
 
-    # Scraper check first — title takes priority before any exclusion logic
-    # (prevents "Next Steps" in the title from triggering the followup hard exclude)
+    # Scraper check first — before hard excludes
     if RE_SCRAPER_TITLE.search(title):
-        # Still respect excluded owners (Stephen, Ahmad) but ignore nothing else
         if user_id not in EXCLUDED_OWNERS:
             return "scraper"
 
@@ -144,6 +147,10 @@ def classify_meeting(meeting: dict) -> str | None:
     # Setter by title — Vending Quick Discovery (any owner)
     if RE_DISCOVERY_TITLE.search(title):
         return "setter"
+
+    # Post Masterclass Strategy Call — closer AND sets post-webinar flag
+    if RE_POSTWEBINAR_TITLE.search(title):
+        return "post_webinar"
 
     # Closer — must match a qualifying pattern
     for pattern in CLOSER_PATTERNS:
@@ -181,18 +188,21 @@ def calculate_desired_state(all_meetings: list) -> dict:
 
     desired = {}
     for lead_id, meetings in by_lead.items():
-        closer_dates = []
-        has_setter   = False
-        has_scraper  = False
+        closer_dates   = []
+        has_setter     = False
+        has_scraper    = False
+        has_postwebinar = False
 
         for m in meetings:
             tier = classify_meeting(m)
-            if tier == "closer":
+            if tier in ("closer", "post_webinar"):
                 starts_at = m.get("starts_at")
                 if starts_at:
-                    dt_utc    = datetime.fromisoformat(starts_at.replace("Z", "+00:00"))
-                    dt_pac    = dt_utc.astimezone(PACIFIC)
+                    dt_utc = datetime.fromisoformat(starts_at.replace("Z", "+00:00"))
+                    dt_pac = dt_utc.astimezone(PACIFIC)
                     closer_dates.append(dt_pac.strftime("%Y-%m-%d"))
+                if tier == "post_webinar":
+                    has_postwebinar = True
             elif tier == "setter":
                 has_setter = True
             elif tier == "scraper":
@@ -205,11 +215,12 @@ def calculate_desired_state(all_meetings: list) -> dict:
         else:
             call_type = None
 
-        if call_type is not None or has_scraper:
+        if call_type is not None or has_scraper or has_postwebinar:
             desired[lead_id] = {
-                "date":      min(closer_dates) if closer_dates else None,
-                "call_type": call_type,
-                "scraper":   "YES" if has_scraper else None,
+                "date":         min(closer_dates) if closer_dates else None,
+                "call_type":    call_type,
+                "scraper":      "YES" if has_scraper else None,
+                "post_webinar": "YES" if has_postwebinar else None,
             }
 
     return desired
@@ -392,11 +403,11 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
     Compares current vs desired state for one lead and writes only what changed.
 
     current / desired format:
-      { "date": "YYYY-MM-DD"|None, "call_type": "Closer"|"Setter"|None, "scraper": "YES"|None }
+      { "date": ..., "call_type": ..., "scraper": ..., "post_webinar": ... }
 
     Rules:
     - Never downgrade call_type from "Closer"
-    - Never clear scraper once set to "YES"
+    - Never clear scraper or post_webinar once set to "YES"
     - Only write fields that actually changed
 
     Returns the final state written (or None if nothing changed).
@@ -431,6 +442,17 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
     if cur_scraper != new_scraper:
         payload[FIELD_SCRAPER_KEY] = new_scraper
 
+    # ── Post-Webinar Sales Booked field ─────────────────────────────────────
+    cur_postwebinar = current.get("post_webinar")
+    new_postwebinar = desired.get("post_webinar")
+
+    # Never clear once set to YES
+    if cur_postwebinar == "YES":
+        new_postwebinar = "YES"
+
+    if cur_postwebinar != new_postwebinar:
+        payload[FIELD_POSTWEBINAR_KEY] = new_postwebinar
+
     if not payload:
         return None  # Nothing to write
 
@@ -443,13 +465,16 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
         changes.append(f"type: {cur_type or 'blank'} → {new_type or 'cleared'}")
     if FIELD_SCRAPER_KEY in payload:
         changes.append(f"scraper: {cur_scraper or 'blank'} → {new_scraper or 'cleared'}")
+    if FIELD_POSTWEBINAR_KEY in payload:
+        changes.append(f"post-webinar: {cur_postwebinar or 'blank'} → {new_postwebinar or 'cleared'}")
 
     print(f"  Updated: {lead_name} | {' | '.join(changes)}", flush=True)
 
     return {
-        "date":      new_date if FIELD_DATE_KEY in payload else cur_date,
-        "call_type": new_type if FIELD_CALLTYPE_KEY in payload else cur_type,
-        "scraper":   new_scraper if FIELD_SCRAPER_KEY in payload else cur_scraper,
+        "date":         new_date if FIELD_DATE_KEY in payload else cur_date,
+        "call_type":    new_type if FIELD_CALLTYPE_KEY in payload else cur_type,
+        "scraper":      new_scraper if FIELD_SCRAPER_KEY in payload else cur_scraper,
+        "post_webinar": new_postwebinar if FIELD_POSTWEBINAR_KEY in payload else cur_postwebinar,
     }
 
 
@@ -471,7 +496,7 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
 
     # Leads cached as having a value but no longer in desired (stale)
     stale = {
-        lead_id: {"date": None, "call_type": None}
+        lead_id: {"date": None, "call_type": None, "scraper": None, "post_webinar": None}
         for lead_id, cached in cached_state.items()
         if lead_id not in desired_state
         and (cached.get("date") or cached.get("call_type"))
@@ -505,9 +530,10 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
             lead_data = api_get(f"/lead/{lead_id}/", params={"_fields": FIELDS_PARAM})
             lead_name = lead_data.get("display_name", lead_id)
             current   = {
-                "date":      lead_data.get(FIELD_DATE_KEY),
-                "call_type": lead_data.get(FIELD_CALLTYPE_KEY),
-                "scraper":   lead_data.get(FIELD_SCRAPER_KEY),
+                "date":         lead_data.get(FIELD_DATE_KEY),
+                "call_type":    lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":      lead_data.get(FIELD_SCRAPER_KEY),
+                "post_webinar": lead_data.get(FIELD_POSTWEBINAR_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
@@ -559,9 +585,10 @@ def backfill(desired_state: dict, already_processed: set) -> tuple[dict, set]:
             lead_data = api_get(f"/lead/{lead_id}/", params={"_fields": FIELDS_PARAM})
             lead_name = lead_data.get("display_name", lead_id)
             current   = {
-                "date":      lead_data.get(FIELD_DATE_KEY),
-                "call_type": lead_data.get(FIELD_CALLTYPE_KEY),
-                "scraper":   lead_data.get(FIELD_SCRAPER_KEY),
+                "date":         lead_data.get(FIELD_DATE_KEY),
+                "call_type":    lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":      lead_data.get(FIELD_SCRAPER_KEY),
+                "post_webinar": lead_data.get(FIELD_POSTWEBINAR_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
