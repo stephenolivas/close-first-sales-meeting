@@ -26177,7 +26177,7 @@
     },
     "lead_ci4FBqroNMk64DQqjzIIumTgrB5ENORCCTVpeRHQMd8": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null
     },
@@ -27538,6 +27538,6 @@
       "post_webinar": null
     }
   },
-  "saved_at": "2026-03-26 22:57:35 UTC",
+  "saved_at": "2026-03-26 23:02:25 UTC",
   "count": 4606
 }
