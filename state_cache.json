@@ -21538,8 +21538,7 @@
     },
     "lead_Z2FO11jsI1Xg6TbZGAb28nzQqt5wxBe3cHS711cSTBB": {
       "date": null,
-      "call_type": "Closer",
-      "scraper": null
+      "call_type": null
     },
     "lead_J5oflZuDnXE9eqBu09xUbXbkFE0DLlgXcck3yKSOqPH": {
       "date": null,
@@ -22722,8 +22721,18 @@
       "date": "2026-03-26",
       "call_type": "Closer",
       "scraper": null
+    },
+    "lead_IhylQHr2JCdPxIrvenFE483l6NMPaumvSGCncHm5ilP": {
+      "date": "2026-03-27",
+      "call_type": "Closer",
+      "scraper": null
+    },
+    "lead_biB9hJjZSrWWc2rymyHtir9TOyKLCW0pUmboyQv4L0g": {
+      "date": "2026-03-27",
+      "call_type": "Closer",
+      "scraper": null
     }
   },
-  "saved_at": "2026-03-26 00:02:23 UTC",
-  "count": 4554
+  "saved_at": "2026-03-26 00:32:32 UTC",
+  "count": 4556
 }
