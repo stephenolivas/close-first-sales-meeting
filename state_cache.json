@@ -25524,7 +25524,7 @@
     },
     "lead_hl7IefKaSsSE9h6rT6jSWFPzTQo0c9pcNd8xbOnzniu": {
       "date": null,
-      "call_type": "Setter",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null
     },
@@ -27443,7 +27443,7 @@
     },
     "lead_eUXXCnfepx83dT8BwDWCHP7PsRBP3BX9C4c9RPf5y7c": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null
     },
@@ -27700,6 +27700,6 @@
       "post_webinar": null
     }
   },
-  "saved_at": "2026-03-27 20:32:38 UTC",
+  "saved_at": "2026-03-27 20:43:54 UTC",
   "count": 4633
 }
