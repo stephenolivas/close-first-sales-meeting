@@ -27590,8 +27590,14 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null
+    },
+    "lead_vVJg8lwgTTPeFLf3czMEk0Vlb2fA8K8idX5aFDip3OY": {
+      "date": "2026-03-31",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null
     }
   },
-  "saved_at": "2026-03-27 12:32:37 UTC",
-  "count": 4615
+  "saved_at": "2026-03-27 12:58:51 UTC",
+  "count": 4616
 }
