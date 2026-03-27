@@ -26247,7 +26247,7 @@
     },
     "lead_keYOE9Zy2J9iUGPT84t9m3QLBVVGpvNY7ycRGmU8eIa": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null
     },
@@ -27728,8 +27728,14 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null
+    },
+    "lead_iLcMVn8XDBmPEr5hd3CHPaibpcyTYewsreLUH03On8m": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null
     }
   },
-  "saved_at": "2026-03-27 23:02:34 UTC",
-  "count": 4638
+  "saved_at": "2026-03-27 23:30:52 UTC",
+  "count": 4639
 }
