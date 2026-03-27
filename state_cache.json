@@ -27548,8 +27548,14 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null
+    },
+    "lead_hSIiq8tXoj6NOBCS7vfcsCDNWCYORrJsTBV4UfY6agF": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null
     }
   },
-  "saved_at": "2026-03-27 00:32:38 UTC",
-  "count": 4608
+  "saved_at": "2026-03-27 01:02:28 UTC",
+  "count": 4609
 }
