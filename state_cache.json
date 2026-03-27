@@ -27602,8 +27602,14 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null
+    },
+    "lead_CTyEbYkRUmE6Jblf99T5tK7IuOZSliAC785YiyQED56": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null
     }
   },
-  "saved_at": "2026-03-27 13:32:26 UTC",
-  "count": 4617
+  "saved_at": "2026-03-27 14:02:44 UTC",
+  "count": 4618
 }
