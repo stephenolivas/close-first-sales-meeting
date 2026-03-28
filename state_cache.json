@@ -27800,8 +27800,14 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null
+    },
+    "lead_EqZZ9mZm1Ayzdi02J8uU3AMbWthMF8DPCGZ0jXFAbTR": {
+      "date": "2026-04-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null
     }
   },
-  "saved_at": "2026-03-28 07:02:30 UTC",
-  "count": 4650
+  "saved_at": "2026-03-28 07:32:23 UTC",
+  "count": 4651
 }
