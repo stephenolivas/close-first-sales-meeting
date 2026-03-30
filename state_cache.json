@@ -27916,7 +27916,7 @@
       "post_webinar": null
     },
     "lead_3OecBSBN9sPHGUpxHDq26PpQfirqdfDYQKi86tXbwRs": {
-      "date": "2026-03-30",
+      "date": "2026-03-31",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null
@@ -28148,8 +28148,14 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null
+    },
+    "lead_J4L0pTIJkvpnZ1F017XC7oQwI3dLRUlyqh9qhLxcGAq": {
+      "date": null,
+      "call_type": null,
+      "scraper": "YES",
+      "post_webinar": null
     }
   },
-  "saved_at": "2026-03-30 20:02:36 UTC",
-  "count": 4708
+  "saved_at": "2026-03-30 20:32:42 UTC",
+  "count": 4709
 }
