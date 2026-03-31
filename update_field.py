@@ -453,6 +453,21 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
     if cur_postwebinar != new_postwebinar:
         payload[FIELD_POSTWEBINAR_KEY] = new_postwebinar
 
+    # ── Reactivation - Setter Name field ──────────────────────────────────────────
+    cur_reactivation       = current.get("reactivation")
+    new_reactivation_label = desired.get("reactivation")  # human label e.g. "Mallory Kent"
+
+    # Never overwrite once set
+    if cur_reactivation:
+        new_reactivation_label = None
+
+    if new_reactivation_label and not cur_reactivation:
+        choice_id = reactivation_choice_ids.get(new_reactivation_label)
+        if choice_id:
+            payload[FIELD_REACTIVATION_KEY] = choice_id
+        else:
+            print(f"  WARNING: no choice ID for reactivation label '{new_reactivation_label}'", flush=True)
+
     if not payload:
         return None  # Nothing to write
 
@@ -467,14 +482,19 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
         changes.append(f"scraper: {cur_scraper or 'blank'} → {new_scraper or 'cleared'}")
     if FIELD_POSTWEBINAR_KEY in payload:
         changes.append(f"post-webinar: {cur_postwebinar or 'blank'} → {new_postwebinar or 'cleared'}")
+    if FIELD_REACTIVATION_KEY in payload:
+        changes.append(f"reactivation: {cur_reactivation or 'blank'} → {new_reactivation_label}")
 
     print(f"  Updated: {lead_name} | {' | '.join(changes)}", flush=True)
 
+    final_reactivation = new_reactivation_label if FIELD_REACTIVATION_KEY in payload else cur_reactivation
+
     return {
-        "date":         new_date if FIELD_DATE_KEY in payload else cur_date,
-        "call_type":    new_type if FIELD_CALLTYPE_KEY in payload else cur_type,
-        "scraper":      new_scraper if FIELD_SCRAPER_KEY in payload else cur_scraper,
-        "post_webinar": new_postwebinar if FIELD_POSTWEBINAR_KEY in payload else cur_postwebinar,
+        "date":          new_date if FIELD_DATE_KEY in payload else cur_date,
+        "call_type":     new_type if FIELD_CALLTYPE_KEY in payload else cur_type,
+        "scraper":       new_scraper if FIELD_SCRAPER_KEY in payload else cur_scraper,
+        "post_webinar":  new_postwebinar if FIELD_POSTWEBINAR_KEY in payload else cur_postwebinar,
+        "reactivation":  final_reactivation,
     }
 
 
@@ -496,7 +516,7 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
 
     # Leads cached as having a value but no longer in desired (stale)
     stale = {
-        lead_id: {"date": None, "call_type": None, "scraper": None, "post_webinar": None}
+        lead_id: {"date": None, "call_type": None, "scraper": None, "post_webinar": None, "reactivation": None}
         for lead_id, cached in cached_state.items()
         if lead_id not in desired_state
         and (cached.get("date") or cached.get("call_type"))
@@ -530,10 +550,11 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
             lead_data = api_get(f"/lead/{lead_id}/", params={"_fields": FIELDS_PARAM})
             lead_name = lead_data.get("display_name", lead_id)
             current   = {
-                "date":         lead_data.get(FIELD_DATE_KEY),
-                "call_type":    lead_data.get(FIELD_CALLTYPE_KEY),
-                "scraper":      lead_data.get(FIELD_SCRAPER_KEY),
-                "post_webinar": lead_data.get(FIELD_POSTWEBINAR_KEY),
+                "date":          lead_data.get(FIELD_DATE_KEY),
+                "call_type":     lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":       lead_data.get(FIELD_SCRAPER_KEY),
+                "post_webinar":  lead_data.get(FIELD_POSTWEBINAR_KEY),
+                "reactivation":  lead_data.get(FIELD_REACTIVATION_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
@@ -585,10 +606,11 @@ def backfill(desired_state: dict, already_processed: set) -> tuple[dict, set]:
             lead_data = api_get(f"/lead/{lead_id}/", params={"_fields": FIELDS_PARAM})
             lead_name = lead_data.get("display_name", lead_id)
             current   = {
-                "date":         lead_data.get(FIELD_DATE_KEY),
-                "call_type":    lead_data.get(FIELD_CALLTYPE_KEY),
-                "scraper":      lead_data.get(FIELD_SCRAPER_KEY),
-                "post_webinar": lead_data.get(FIELD_POSTWEBINAR_KEY),
+                "date":          lead_data.get(FIELD_DATE_KEY),
+                "call_type":     lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":       lead_data.get(FIELD_SCRAPER_KEY),
+                "post_webinar":  lead_data.get(FIELD_POSTWEBINAR_KEY),
+                "reactivation":  lead_data.get(FIELD_REACTIVATION_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
@@ -637,10 +659,25 @@ def main():
     is_resuming_backfill = os.path.exists(CHECKPOINT_FILE)
     is_backfill          = not cached_state and not is_resuming_backfill
 
-    # 2. Fetch ALL meetings (always required — Close ignores date filters)
+    # 2. Resolve Reactivation - Setter Name choice IDs from Close API
+    print("Resolving Reactivation - Setter Name choice IDs...", flush=True)
+    try:
+        field_def = api_get(f"/custom_field/lead/{FIELD_REACTIVATION_ID}/")
+        for choice in field_def.get("choices", []):
+            label = choice.get("display_value") or choice.get("value", "")
+            if label in REACTIVATION_LABELS:
+                reactivation_choice_ids[label] = choice.get("id", "")
+        print(f"  Resolved: {reactivation_choice_ids}", flush=True)
+        missing = [l for l in REACTIVATION_LABELS if l not in reactivation_choice_ids]
+        if missing:
+            print(f"  WARNING: could not resolve IDs for: {missing}", flush=True)
+    except Exception as e:
+        print(f"  WARNING: could not fetch reactivation choices ({e}). Field will not be written.", flush=True)
+
+    # 3. Fetch ALL meetings (always required — Close ignores date filters)
     all_meetings = fetch_all_meetings()
 
-    # 3. Calculate desired state in Python — zero API calls
+    # 4. Calculate desired state in Python — zero API calls
     desired_state = calculate_desired_state(all_meetings)
 
     closer_count = sum(1 for v in desired_state.values() if v.get("call_type") == "Closer")
@@ -651,7 +688,7 @@ def main():
         flush=True,
     )
 
-    # 4. Update Close
+    # 5. Update Close
     if cached_state and not is_resuming_backfill:
         # ── Fast routine path ───────────────────────────────────────────────
         print("\nMode: ROUTINE", flush=True)
