@@ -25211,8 +25211,8 @@
       "post_webinar": null
     },
     "lead_XycmbdkXR64MDu9PVglQbjlbxFvfbXXhW6JAQskeDJf": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-03-31",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null
     },
@@ -28186,6 +28186,6 @@
       "post_webinar": null
     }
   },
-  "saved_at": "2026-03-31 00:02:45 UTC",
+  "saved_at": "2026-03-31 00:32:30 UTC",
   "count": 4714
 }
