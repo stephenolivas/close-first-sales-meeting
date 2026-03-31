@@ -61,9 +61,7 @@ FIELD_POSTWEBINAR_KEY  = f"custom.{FIELD_POSTWEBINAR_ID}"
 FIELD_REACTIVATION_KEY = f"custom.{FIELD_REACTIVATION_ID}"
 FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY},{FIELD_REACTIVATION_KEY}"
 
-# Reactivation dropdown labels — choice IDs resolved at runtime from Close API
-REACTIVATION_LABELS    = ["Mallory Kent", "Kristin Nelson", "Spencer Reynolds"]
-reactivation_choice_ids: dict = {}  # populated in main() before any lead processing
+# Reactivation dropdown — Close accepts label strings directly for choice fields
 
 CHECKPOINT_FILE  = "checkpoint.json"
 STATE_CACHE_FILE = "state_cache.json"
@@ -504,11 +502,7 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
         new_reactivation_label = None
 
     if new_reactivation_label and not cur_reactivation:
-        choice_id = reactivation_choice_ids.get(new_reactivation_label)
-        if choice_id:
-            payload[FIELD_REACTIVATION_KEY] = choice_id
-        else:
-            print(f"  WARNING: no choice ID for reactivation label '{new_reactivation_label}'", flush=True)
+        payload[FIELD_REACTIVATION_KEY] = new_reactivation_label
 
     if not payload:
         return None  # Nothing to write
@@ -701,25 +695,10 @@ def main():
     is_resuming_backfill = os.path.exists(CHECKPOINT_FILE)
     is_backfill          = not cached_state and not is_resuming_backfill
 
-    # 2. Resolve Reactivation - Setter Name choice IDs from Close API
-    print("Resolving Reactivation - Setter Name choice IDs...", flush=True)
-    try:
-        field_def = api_get(f"/custom_field/lead/{FIELD_REACTIVATION_ID}/")
-        for choice in field_def.get("choices", []):
-            label = choice.get("display_value") or choice.get("value", "")
-            if label in REACTIVATION_LABELS:
-                reactivation_choice_ids[label] = choice.get("id", "")
-        print(f"  Resolved: {reactivation_choice_ids}", flush=True)
-        missing = [l for l in REACTIVATION_LABELS if l not in reactivation_choice_ids]
-        if missing:
-            print(f"  WARNING: could not resolve IDs for: {missing}", flush=True)
-    except Exception as e:
-        print(f"  WARNING: could not fetch reactivation choices ({e}). Field will not be written.", flush=True)
-
-    # 3. Fetch ALL meetings (always required — Close ignores date filters)
+    # 2. Fetch ALL meetings (always required — Close ignores date filters)
     all_meetings = fetch_all_meetings()
 
-    # 4. Calculate desired state in Python — zero API calls
+    # 2. Calculate desired state in Python — zero API calls
     desired_state = calculate_desired_state(all_meetings)
 
     closer_count = sum(1 for v in desired_state.values() if v.get("call_type") == "Closer")
@@ -730,7 +709,7 @@ def main():
         flush=True,
     )
 
-    # 5. Update Close
+    # 3. Update Close
     if cached_state and not is_resuming_backfill:
         # ── Fast routine path ───────────────────────────────────────────────
         print("\nMode: ROUTINE", flush=True)
