@@ -49,15 +49,21 @@ PACIFIC = ZoneInfo("America/Los_Angeles")
 SLEEP_BETWEEN_CALLS = 0.5
 
 # Custom fields
-FIELD_DATE_ID        = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
-FIELD_CALLTYPE_ID    = "cf_6yy8dqzeiBIQD2dhDfaVeiCmEhTW6ycmM4SVQ5sO6CG"
-FIELD_SCRAPER_ID     = "cf_69vb5dGu6FcBrnLGJFeHQviYQTkk7zpnLRgMPW2vipd"
-FIELD_POSTWEBINAR_ID = "cf_inRBDlgKLV9CgE7gBgzoQB0CAhwwuOoTHWclHxZoZQW"
-FIELD_DATE_KEY       = f"custom.{FIELD_DATE_ID}"
-FIELD_CALLTYPE_KEY   = f"custom.{FIELD_CALLTYPE_ID}"
-FIELD_SCRAPER_KEY    = f"custom.{FIELD_SCRAPER_ID}"
-FIELD_POSTWEBINAR_KEY = f"custom.{FIELD_POSTWEBINAR_ID}"
-FIELDS_PARAM         = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY}"
+FIELD_DATE_ID          = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
+FIELD_CALLTYPE_ID      = "cf_6yy8dqzeiBIQD2dhDfaVeiCmEhTW6ycmM4SVQ5sO6CG"
+FIELD_SCRAPER_ID       = "cf_69vb5dGu6FcBrnLGJFeHQviYQTkk7zpnLRgMPW2vipd"
+FIELD_POSTWEBINAR_ID   = "cf_inRBDlgKLV9CgE7gBgzoQB0CAhwwuOoTHWclHxZoZQW"
+FIELD_REACTIVATION_ID  = "cf_vz6kNiu4ItFxRA8Y9HKlWIoQMq3TsdaQqKekQ2YuxVk"
+FIELD_DATE_KEY         = f"custom.{FIELD_DATE_ID}"
+FIELD_CALLTYPE_KEY     = f"custom.{FIELD_CALLTYPE_ID}"
+FIELD_SCRAPER_KEY      = f"custom.{FIELD_SCRAPER_ID}"
+FIELD_POSTWEBINAR_KEY  = f"custom.{FIELD_POSTWEBINAR_ID}"
+FIELD_REACTIVATION_KEY = f"custom.{FIELD_REACTIVATION_ID}"
+FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY},{FIELD_REACTIVATION_KEY}"
+
+# Reactivation dropdown labels — choice IDs resolved at runtime from Close API
+REACTIVATION_LABELS    = ["Mallory Kent", "Kristin Nelson", "Spencer Reynolds"]
+reactivation_choice_ids: dict = {}  # populated in main() before any lead processing
 
 CHECKPOINT_FILE  = "checkpoint.json"
 STATE_CACHE_FILE = "state_cache.json"
@@ -87,8 +93,16 @@ RE_CANCELED          = re.compile(r"^canceled[\s:]?", re.IGNORECASE)
 RE_FOLLOWUP          = re.compile(r"follow[\-\s]?up|fallow\s+up|f/u\b|next\s+steps|reschedul", re.IGNORECASE)
 RE_ENROLLMENT        = re.compile(r"enrollment|silver\s+start\s*up|bronze\s+enrollment|questions\s+on\s+enrollment", re.IGNORECASE)
 RE_DISCOVERY_TITLE   = re.compile(r"vending\s+quick\s+discovery", re.IGNORECASE)
-RE_SCRAPER_TITLE     = re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE)
 RE_POSTWEBINAR_TITLE = re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE)
+
+# Scraper meeting titles — all contain "Next Steps" so checked before hard excludes.
+# Each maps to a setter label for the Reactivation - Setter Name field.
+# ORDER MATTERS: most specific pattern first (longer title before shorter).
+SCRAPER_TITLE_MAP = [
+    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps\s+call", re.IGNORECASE), "Kristin Nelson"),
+    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps(?!\s+call)", re.IGNORECASE), "Spencer Reynolds"),
+    (re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE), "Mallory Kent"),
+]
 
 CLOSER_PATTERNS = [
     re.compile(r"vending\s+strategy\s+call", re.IGNORECASE),
@@ -117,28 +131,52 @@ def _is_hard_excluded(meeting: dict) -> bool:
     return False
 
 
-def classify_meeting(meeting: dict) -> str | None:
+def classify_meeting(meeting: dict) -> tuple:
     """
-    Returns the tier of this meeting:
-      "closer"       — qualifying first sales meeting
-      "setter"       — discovery/setter meeting
-      "scraper"      — Vendingpreneur Next Steps meeting
-      "post_webinar" — Post Masterclass Strategy Call (also counts as closer)
+    Returns (tier, setter_name) where tier is one of:
+      "closer"       — qualifying first sales/closer meeting
+      "setter"       — discovery/setter meeting (not a closer call)
+      "post_webinar" — Post Masterclass Strategy Call (closer + post-webinar flag)
+      "scraper"      — scraper meeting title (closer + scraper + setter name)
       None           — irrelevant, ignore
 
-    NOTE: Scraper is checked BEFORE hard excludes because "Vendingpreneur Next Steps"
-    contains "Next Steps" which would otherwise be caught by the followup hard exclude.
+    setter_name is only populated for "scraper" tier.
+
+    NOTE: Scraper titles are checked BEFORE hard excludes — all three contain
+    "Next Steps" which would otherwise be caught by the followup hard exclude.
+    SCRAPER_TITLE_MAP order matters: most specific (longest) pattern first.
     """
     user_id = meeting.get("user_id") or ""
     title   = (meeting.get("title") or "").strip()
 
-    # Scraper check first — before hard excludes
-    if RE_SCRAPER_TITLE.search(title):
-        if user_id not in EXCLUDED_OWNERS:
-            return "scraper"
+    # Scraper check first — before hard excludes (titles contain "Next Steps")
+    for pattern, setter_name in SCRAPER_TITLE_MAP:
+        if pattern.search(title):
+            if user_id not in EXCLUDED_OWNERS:
+                return "scraper", setter_name
 
     if _is_hard_excluded(meeting):
-        return None
+        return None, None
+
+    # Setter by owner — Kristin or Spencer's meetings are always setter
+    if user_id in SETTER_OWNERS:
+        return "setter", None
+
+    # Setter by title — Vending Quick Discovery (any owner)
+    if RE_DISCOVERY_TITLE.search(title):
+        return "setter", None
+
+    # Post Masterclass Strategy Call — closer AND post-webinar flag
+    if RE_POSTWEBINAR_TITLE.search(title):
+        return "post_webinar", None
+
+    # Closer — must match a qualifying pattern
+    for pattern in CLOSER_PATTERNS:
+        if pattern.search(title):
+            return "closer", None
+
+    return None, None
+
 
     # Setter by owner — Kristin or Spencer's meetings are always setter
     if user_id in SETTER_OWNERS:
@@ -188,14 +226,15 @@ def calculate_desired_state(all_meetings: list) -> dict:
 
     desired = {}
     for lead_id, meetings in by_lead.items():
-        closer_dates   = []
-        has_setter     = False
-        has_scraper    = False
+        closer_dates    = []
+        has_setter      = False
+        has_scraper     = False
         has_postwebinar = False
+        reactivation    = None  # setter label from first scraper meeting found
 
         for m in meetings:
-            tier = classify_meeting(m)
-            if tier in ("closer", "post_webinar"):
+            tier, setter_name = classify_meeting(m)
+            if tier in ("closer", "post_webinar", "scraper"):
                 starts_at = m.get("starts_at")
                 if starts_at:
                     dt_utc = datetime.fromisoformat(starts_at.replace("Z", "+00:00"))
@@ -203,10 +242,12 @@ def calculate_desired_state(all_meetings: list) -> dict:
                     closer_dates.append(dt_pac.strftime("%Y-%m-%d"))
                 if tier == "post_webinar":
                     has_postwebinar = True
+                elif tier == "scraper":
+                    has_scraper = True
+                    if reactivation is None:
+                        reactivation = setter_name  # first match wins
             elif tier == "setter":
                 has_setter = True
-            elif tier == "scraper":
-                has_scraper = True
 
         if closer_dates:
             call_type = "Closer"
@@ -217,10 +258,11 @@ def calculate_desired_state(all_meetings: list) -> dict:
 
         if call_type is not None or has_scraper or has_postwebinar:
             desired[lead_id] = {
-                "date":         min(closer_dates) if closer_dates else None,
-                "call_type":    call_type,
-                "scraper":      "YES" if has_scraper else None,
-                "post_webinar": "YES" if has_postwebinar else None,
+                "date":          min(closer_dates) if closer_dates else None,
+                "call_type":     call_type,
+                "scraper":       "YES" if has_scraper else None,
+                "post_webinar":  "YES" if has_postwebinar else None,
+                "reactivation":  reactivation,
             }
 
     return desired
