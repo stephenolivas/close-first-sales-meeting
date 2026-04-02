@@ -33368,8 +33368,15 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Kristin Nelson"
+    },
+    "lead_qK5aotXVIoeoCDaNLzUb81WN9SVBL19zuFFC79pNpXj": {
+      "date": "2026-04-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-02 17:51:58 UTC",
-  "count": 4792
+  "saved_at": "2026-04-02 18:02:56 UTC",
+  "count": 4793
 }
