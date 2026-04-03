@@ -33573,7 +33573,7 @@
       "reactivation": null
     },
     "lead_kjnkNyXBgLuUlYqp3At98erX1MXkO14y3GMxJTGtDbR": {
-      "date": "2026-04-06",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
@@ -33594,6 +33594,6 @@
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-03 19:02:55 UTC",
+  "saved_at": "2026-04-03 19:32:46 UTC",
   "count": 4824
 }
