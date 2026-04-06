@@ -33324,8 +33324,8 @@
       "reactivation": null
     },
     "lead_OztlTjfbnB9L1gx36AWORo8LkGMgdjfWNZ1wk6o1Z38": {
-      "date": null,
-      "call_type": null,
+      "date": "2026-04-06",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null
@@ -33891,6 +33891,6 @@
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-06 13:32:53 UTC",
+  "saved_at": "2026-04-06 13:53:23 UTC",
   "count": 4866
 }
