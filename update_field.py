@@ -254,13 +254,16 @@ def calculate_desired_state(all_meetings: list) -> dict:
         else:
             call_type = None
 
+        earliest_scraper_date = min(closer_dates) if (has_scraper and closer_dates) else None
+
         if call_type is not None or has_scraper or has_postwebinar:
             desired[lead_id] = {
-                "date":          min(closer_dates) if closer_dates else None,
-                "call_type":     call_type,
-                "scraper":       "YES" if has_scraper else None,
-                "post_webinar":  "YES" if has_postwebinar else None,
-                "reactivation":  reactivation,
+                "date":                  min(closer_dates) if closer_dates else None,
+                "call_type":             call_type,
+                "scraper":               "YES" if has_scraper else None,
+                "post_webinar":          "YES" if has_postwebinar else None,
+                "reactivation":          reactivation,
+                "earliest_scraper_date": earliest_scraper_date,
             }
 
     return desired
@@ -438,6 +441,39 @@ def fetch_all_meetings() -> list:
 # Write fields to a single lead
 # ─────────────────────────────────────────────
 
+def get_active_opportunity(lead_id: str) -> str | None:
+    """Returns the ID of the lead's most recently updated opportunity, or None."""
+    try:
+        data = api_get(
+            "/opportunity/",
+            params={"lead_id": lead_id, "_order_by": "-date_updated", "_fields": "id,status_type", "_limit": 10},
+        )
+        opps = data.get("data", [])
+        # Prefer active over won/lost
+        for opp in opps:
+            if opp.get("status_type") not in ("won", "lost"):
+                return opp["id"]
+        return opps[0]["id"] if opps else None
+    except Exception as e:
+        print(f"  WARNING: could not fetch opportunity for {lead_id}: {e}", flush=True)
+        return None
+
+
+def write_opportunity_funnel(lead_id: str, lead_name: str) -> bool:
+    """Sets Funnel Name DEAL = "Reactivation Scrapers" on the lead's opportunity."""
+    opp_id = get_active_opportunity(lead_id)
+    if not opp_id:
+        print(f"  [opp] No opportunity found for {lead_name} — skipping Funnel Name DEAL", flush=True)
+        return False
+    try:
+        api_put(f"/opportunity/{opp_id}/", {OPP_FUNNEL_KEY: OPP_FUNNEL_VALUE})
+        print(f"  [opp] {lead_name} → Funnel Name DEAL = {OPP_FUNNEL_VALUE}", flush=True)
+        return True
+    except Exception as e:
+        print(f"  [opp] ERROR writing Funnel Name DEAL for {lead_name}: {e}", flush=True)
+        return False
+
+
 def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> dict | None:
     """
     Compares current vs desired state for one lead and writes only what changed.
@@ -552,7 +588,7 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
 
     # Leads cached as having a value but no longer in desired (stale)
     stale = {
-        lead_id: {"date": None, "call_type": None, "scraper": None, "post_webinar": None, "reactivation": None}
+        lead_id: {"date": None, "call_type": None, "scraper": None, "post_webinar": None, "reactivation": None, "earliest_scraper_date": None}
         for lead_id, cached in cached_state.items()
         if lead_id not in desired_state
         and (cached.get("date") or cached.get("call_type"))
@@ -598,7 +634,13 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
                 updated += 1
                 new_cache[lead_id] = result
             else:
-                new_cache[lead_id] = desired  # Cache was stale but Close already correct
+                new_cache[lead_id] = desired
+
+            # Opp field: write Funnel Name DEAL if this is a newly detected scraper lead
+            scraper_date     = desired.get("earliest_scraper_date")
+            was_already_scraper = cached_state.get(lead_id, {}).get("scraper") == "YES"
+            if scraper_date and scraper_date >= SCRAPER_FUNNEL_CUTOFF and not was_already_scraper:
+                write_opportunity_funnel(lead_id, lead_name)
 
         except Exception as e:
             errors += 1
@@ -656,6 +698,11 @@ def backfill(desired_state: dict, already_processed: set) -> tuple[dict, set]:
             else:
                 skipped += 1
                 built_cache[lead_id] = desired
+
+            # Opp field: write Funnel Name DEAL for qualifying new scraper leads
+            scraper_date = desired.get("earliest_scraper_date")
+            if scraper_date and scraper_date >= SCRAPER_FUNNEL_CUTOFF:
+                write_opportunity_funnel(lead_id, lead_name)
 
             processed.add(lead_id)
 
