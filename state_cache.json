@@ -38948,9 +38948,10 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-07 15:36:59 UTC",
+  "saved_at": "2026-04-07 15:59:30 UTC",
   "count": 4925
 }
