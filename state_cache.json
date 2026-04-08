@@ -39140,114 +39140,130 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_WQLWUrYHY7ZboqV7WmNYGNrDV4blRxsZKhI0u3T0wke": {
       "date": "2026-04-07",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_3fFOoVMSN0HOtlauYtryYwSZ4irobHRo7mLFqsVJuCY": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_KiAyw7rdyo82kD5lZi1AAU1am0RHNhqKbagxPnww2H7": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_fKpxT5EdTi0KeIgsAIuJ0XFaeyV3Zf4lkdpm2giQbil": {
       "date": "2026-04-07",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_3X8NqxAODl3wCAwp5I093sdbzoDPFfKmZulnw7uaNei": {
       "date": "2026-04-08",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_M5HKGwVSkqFg1YtwccMbbKzCzRNhADPvg1JDqSnpJmv": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_ItTZg0lYYQGCSniuAqrygvYa6T24TIzCZj4hTkk5zHF": {
       "date": null,
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_UM8ZAqIKjN7g2yJhtfs8GxjUz55GrMeaAgmUEAmOb5C": {
       "date": "2026-04-08",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_dSnHQwXSMnybQAA3CzwUSky4tKxGe1cmyFbdrbf3sPj": {
       "date": null,
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_5xm5ie2PH6iWyYofe7PVKwrdjtz9b4W5DgXN40etm5x": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_G5qfKrQKnsE0e0W0po6xfwDFAcb2E2F5V4yaXxNLNMh": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_5eD1NQD3hohOVdu68gUufER0BuS5bbkH0lCV0XhizVt": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_8rHrFZJivGYL9rc9i0m04HQP5vQanF3KoP4yH23BaDR": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_K1JEp5knzeAaxEkX6RRxFr9FJDzm9a0xOQl0kze006J": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_uE8369aSGzEvMpX2qNA8PuACbJdn1CzaYs8qXRry17j": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-08 02:06:42 UTC",
+  "saved_at": "2026-04-08 02:36:43 UTC",
   "count": 4964
 }
