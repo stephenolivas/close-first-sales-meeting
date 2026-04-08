@@ -39332,16 +39332,18 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_GOkVv7TaxQ1iHrY91Wl4WmLPIICicDrjHDUkdka3vaG": {
       "date": "2026-04-09",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-08 12:06:19 UTC",
+  "saved_at": "2026-04-08 12:36:48 UTC",
   "count": 4974
 }
