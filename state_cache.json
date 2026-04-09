@@ -39675,9 +39675,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-09 11:36:05 UTC",
+  "saved_at": "2026-04-09 11:58:32 UTC",
   "count": 5016
 }
