@@ -34264,9 +34264,10 @@
     },
     "lead_pjH0joLb1be5OJNWNL5cl8SEHgGtgIKgc3y0DNeVf00": {
       "date": null,
-      "call_type": null,
+      "call_type": "Setter",
       "scraper": null,
-      "post_webinar": null
+      "post_webinar": null,
+      "reactivation": null
     },
     "lead_BkSZUDfYmUGAHuL4KWt4jQKdYGwqYwy4ihjwlCHgoev": {
       "date": "2026-03-24",
@@ -39693,8 +39694,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_JQXHHX7aHp5fFu8wHcNlLj8ZB1o0pa8QrxQS4lbMSkN": {
+      "date": "2026-04-10",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-09 13:22:39 UTC",
-  "count": 5018
+  "saved_at": "2026-04-09 13:37:05 UTC",
+  "count": 5019
 }
