@@ -40474,9 +40474,17 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_HArLyme47SfJ4eTyPR0bLo0ExAWMpqkvNx37pwqr6GP": {
+      "date": "2026-04-14",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-11 15:06:29 UTC",
-  "count": 5116
+  "saved_at": "2026-04-11 15:35:22 UTC",
+  "count": 5117
 }
