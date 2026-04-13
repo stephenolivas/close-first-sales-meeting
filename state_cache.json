@@ -36097,12 +36097,11 @@
       "earliest_scraper_date": null
     },
     "lead_kVfl9rDilyuku7FqwOXfHyvq3Fgnb3FRJtjkE6CXdvn": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-04-16",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_ppe8w3pTkE9DTkAWVYZwIhvrnZDsJjbKT3ENMWteWku": {
       "date": "2026-03-26",
@@ -36771,12 +36770,11 @@
       "earliest_scraper_date": null
     },
     "lead_ZlfU47UVc9mCaBAyRbk8AuZfkPcfGvAg7uqElotJkWs": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-04-14",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_gtFhsToeZnRhtcUfD4vChiue4Wzvsr2IjiWuMGsAZBk": {
       "date": null,
@@ -40048,12 +40046,11 @@
       "earliest_scraper_date": null
     },
     "lead_vVH4E9dBmFNCxgAm4sTcmpkFcMZ2w7cVOtzQiIZgOHV": {
-      "date": "2026-04-13",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_S1df9JYJ4YeRPhFkP9WFLUUoSjJmUnO9P5irb4LMb5v": {
       "date": "2026-04-13",
@@ -41001,16 +40998,82 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_cuqdhA15HUTxWzSVaSeA70kgO93Uo928AqnqVUKR2Bj": {
       "date": "2026-04-14",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_6PcNj7KQPIwJdE9M1hGgGq0Jx1TwABJmVKY36Rkpssu": {
+      "date": "2026-04-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_W8G5woPb0SMzVZ6bWDNOXNEQ0hAtlfB0rNOKfxuNQaT": {
+      "date": "2026-04-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_mbEFR04gyshMuvwzpVWQ82Rf5m3Op3zM6uL7Ff2JPiN": {
+      "date": "2026-04-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_ivYp97Pc9SjyQ0vGqLp2Odz6Gh8HMoa9p2M3L8QwDJm": {
+      "date": "2026-04-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_SBBQsMVyZjkmLpKLgVjDV0fw4wLc0XuyC9hmjdcdsuv": {
+      "date": "2026-04-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_R4UGz9ITeD8G2CwvXZIJyBvKnykXVImfe9aJhcJyMIv": {
+      "date": "2026-04-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_oA5CL3mgMue3RZqGLnLGWoSuN9RIRSB248kca4RysIk": {
+      "date": "2026-04-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_M8DiFpt4U8IrBVvCL5ojjTDRoXJBXkYU84hXPUsnoAx": {
+      "date": "2026-04-17",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_muBB9m1tbxZvA8V0qwxeYng5MuGaJe2xogN0haT0FWX": {
+      "date": "2026-04-14",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_Ou3SfWDBY7E6mzf85YENxvMwe3P1EMGHyJX359SoAUK": {
       "date": "2026-04-15",
       "call_type": "Closer",
       "scraper": null,
@@ -41018,6 +41081,6 @@
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-13 15:37:44 UTC",
-  "count": 5184
+  "saved_at": "2026-04-13 16:07:53 UTC",
+  "count": 5193
 }
