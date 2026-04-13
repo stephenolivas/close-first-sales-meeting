@@ -40843,8 +40843,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_ILDuNYekL20kTq0aDLbBvokvpGKOxEBHkH7P9BLNyNo": {
+      "date": "2026-04-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-13 00:36:25 UTC",
-  "count": 5162
+  "saved_at": "2026-04-13 01:06:16 UTC",
+  "count": 5163
 }
