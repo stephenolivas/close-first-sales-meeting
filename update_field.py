@@ -63,6 +63,14 @@ FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY}
 
 # Reactivation dropdown — Close accepts label strings directly for choice fields
 
+# Opportunity field — Funnel Name DEAL
+OPP_FUNNEL_ID      = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
+OPP_FUNNEL_KEY     = f"custom.{OPP_FUNNEL_ID}"
+OPP_FUNNEL_VALUE   = "Reactivation Scrapers"
+
+# Only apply Funnel Name DEAL override for scraper meetings on/after this date
+SCRAPER_FUNNEL_CUTOFF = "2026-04-06"  # YYYY-MM-DD Pacific
+
 CHECKPOINT_FILE  = "checkpoint.json"
 STATE_CACHE_FILE = "state_cache.json"
 CHECKPOINT_EVERY = 200
