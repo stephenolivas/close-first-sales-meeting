@@ -40619,12 +40619,11 @@
       "earliest_scraper_date": null
     },
     "lead_HGyKv7pnBD7e1DwLL0i4Uu3sgHRXnxdwDQ5iC50gAnZ": {
-      "date": "2026-04-14",
+      "date": "2026-04-17",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_1KhvbLqH7xY0bjxU9o0uiX2CKSTvWrsTFu6QSMvhkiH": {
       "date": "2026-04-15",
@@ -40663,7 +40662,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_mMotTfWftnNyb035EYG0xohU2JM75l0G5uusHABIpy0": {
       "date": "2026-04-15",
@@ -41587,7 +41587,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_b7llyFYCAI2GhoPC7a8GYOFpezYkl0fmLP5twNSHcZw": {
       "date": "2026-04-17",
@@ -41596,8 +41597,16 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_w4MLpsUI1PTMl5DEzogkH7cmQUxdSsC1x4fuxy70k3I": {
+      "date": "2026-04-17",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "earliest_scraper_date": "2026-04-17"
     }
   },
-  "saved_at": "2026-04-14 19:37:20 UTC",
-  "count": 5257
+  "saved_at": "2026-04-14 20:07:18 UTC",
+  "count": 5258
 }
