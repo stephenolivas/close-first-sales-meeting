@@ -40279,10 +40279,9 @@
     "lead_ZVRV8KgmT5204BCP0G8oQZCrmuBHLi8fUZkW4LmcZ5i": {
       "date": "2026-04-14",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "Kristin Nelson"
     },
     "lead_OyWgwlOCp0Z64o9CmlFcaGQvTNRqwXCv5JtABffBrVf": {
       "date": "2026-04-13",
@@ -41358,9 +41357,17 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_oIvsjjobE3C6OkriXYFaKaPn5bxon4wlWOBDuyKnPgB": {
+      "date": "2026-04-17",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Kristin Nelson"
     }
   },
-  "saved_at": "2026-04-14 02:06:26 UTC",
-  "count": 5227
+  "saved_at": "2026-04-14 02:36:52 UTC",
+  "count": 5228
 }
