@@ -41318,9 +41318,24 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_vwYBaQSwb5NKRjwXc3EMUOyVg3sBeI20FxcQ8Kx0PqZ": {
+      "date": "2026-04-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_MJLwxC4Wnp0Futkyc2PBxnxsOItX6mnYF4uGZLMVEU5": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-13 23:44:30 UTC",
-  "count": 5222
+  "saved_at": "2026-04-14 00:06:55 UTC",
+  "count": 5224
 }
