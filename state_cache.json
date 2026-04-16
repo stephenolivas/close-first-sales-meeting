@@ -42258,8 +42258,29 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Vince Bartolini"
+    },
+    "lead_cAEsGtfRXRskfoqx806iNUpvF1nTACZapwJsanm39SE": {
+      "date": "2026-04-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_JfdTjVImG9PMIzvPZDBnR8FLWoGnIfnyG5lC0FjFuGZ": {
+      "date": "2026-04-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_JhmlC3cEVR7oRHgP42UylESMCU40V4fMQyOKXSMq44h": {
+      "date": "2026-04-17",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-16 20:51:03 UTC",
-  "count": 5340
+  "saved_at": "2026-04-16 21:08:05 UTC",
+  "count": 5343
 }
