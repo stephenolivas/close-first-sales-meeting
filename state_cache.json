@@ -42400,8 +42400,22 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_x5sUPf7iODFR3lrIldcIiL2Wqe8gfxqo4mC3zKEqFHF": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_qZ3HB829m4IrnVpWNcWw7k8Z0ahiu6m0ZFnAxYxaNhG": {
+      "date": "2026-04-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-17 04:07:06 UTC",
-  "count": 5358
+  "saved_at": "2026-04-17 04:37:47 UTC",
+  "count": 5360
 }
