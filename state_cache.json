@@ -42376,8 +42376,22 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_l8bm3IlCA6BcdwhnSo9itydqWqM6RDqk8dhXJIU19R1": {
+      "date": "2026-04-22",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_tKwzhEj8hbGsvvUhNozPWI5Yr34PGVn2bBwk3mHAHsg": {
+      "date": "2026-04-21",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-17 01:37:26 UTC",
-  "count": 5355
+  "saved_at": "2026-04-17 02:07:56 UTC",
+  "count": 5357
 }
