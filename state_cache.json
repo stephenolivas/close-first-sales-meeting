@@ -42446,16 +42446,18 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_Sel4WPUNHFVRUy2ulN65Aevp5Uhd0eYVKDBtIasJ4rB": {
       "date": "2026-04-20",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-17 10:07:43 UTC",
+  "saved_at": "2026-04-17 10:27:01 UTC",
   "count": 5365
 }
