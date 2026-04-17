@@ -41169,12 +41169,11 @@
       "reactivation": "Spencer Reynolds"
     },
     "lead_WoUzFzhy97wFUPbcomLOAumUta3K7UEac1KMfG8G0OI": {
-      "date": "2026-04-17",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_kBV7lEd78J4rLtd2rBmboTKCGI5MTpCWpkJaKOvKx4Y": {
       "date": "2026-04-15",
@@ -42406,16 +42405,25 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_qZ3HB829m4IrnVpWNcWw7k8Z0ahiu6m0ZFnAxYxaNhG": {
       "date": "2026-04-20",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_UX0GWZG2hFQSEbT2jOhe2XxfP0ZHRbSyyDEPIstB7lD": {
+      "date": "2026-04-17",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-17 04:37:47 UTC",
-  "count": 5360
+  "saved_at": "2026-04-17 05:07:37 UTC",
+  "count": 5361
 }
