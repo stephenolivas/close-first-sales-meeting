@@ -42760,8 +42760,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_RnPNurlaw7q5LzvsFKDZkIWX7QXksx8b8EbAKSW0KcW": {
+      "date": "2026-04-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-18 07:07:05 UTC",
-  "count": 5404
+  "saved_at": "2026-04-18 07:37:34 UTC",
+  "count": 5405
 }
