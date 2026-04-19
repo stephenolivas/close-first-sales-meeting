@@ -43030,9 +43030,17 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_sCJmpqA2SqrJyv595dB5sliBo7Oa0yY7IaeoWKmBRE2": {
+      "date": "2026-04-21",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-19 21:07:35 UTC",
-  "count": 5438
+  "saved_at": "2026-04-19 21:37:34 UTC",
+  "count": 5439
 }
