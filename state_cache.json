@@ -43103,8 +43103,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_VKm4EZGonv8hGycvWqPgvJSjNdg38GO2pcExkGL9mAU": {
+      "date": "2026-04-22",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-20 01:37:36 UTC",
-  "count": 5447
+  "saved_at": "2026-04-20 02:07:48 UTC",
+  "count": 5448
 }
