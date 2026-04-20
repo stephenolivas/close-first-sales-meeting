@@ -42762,10 +42762,11 @@
     },
     "lead_RnPNurlaw7q5LzvsFKDZkIWX7QXksx8b8EbAKSW0KcW": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_M2ztfl7IiinFummr62KKgabHIK05wDIdoBrOOST2M42": {
       "date": "2026-04-21",
@@ -43112,6 +43113,6 @@
       "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-20 03:37:28 UTC",
+  "saved_at": "2026-04-20 04:04:10 UTC",
   "count": 5448
 }
