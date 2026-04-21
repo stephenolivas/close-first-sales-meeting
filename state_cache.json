@@ -43869,8 +43869,15 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Spencer Reynolds"
+    },
+    "lead_qUwebaEE23Whosh3EDFpI0oHP6AbEgcr83OJuEdW9pB": {
+      "date": "2026-04-24",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-04-21 23:07:50 UTC",
-  "count": 5544
+  "saved_at": "2026-04-21 23:37:59 UTC",
+  "count": 5545
 }
