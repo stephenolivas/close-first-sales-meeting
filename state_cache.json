@@ -43813,16 +43813,18 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_1Zhup3FnIJnGSdLzCdApygkHAV9DbpUSQ2IZiG0nxZG": {
       "date": "2026-04-21",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-21 19:08:45 UTC",
+  "saved_at": "2026-04-21 19:22:46 UTC",
   "count": 5538
 }
