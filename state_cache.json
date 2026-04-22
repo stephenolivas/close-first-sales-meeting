@@ -44138,9 +44138,17 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_LStRT87KTFkPeqnJZm5u9digw8b9Wtxw1uSkiGEtnLg": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-22 17:08:34 UTC",
-  "count": 5578
+  "saved_at": "2026-04-22 17:38:15 UTC",
+  "count": 5579
 }
