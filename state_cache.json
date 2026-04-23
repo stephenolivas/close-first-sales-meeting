@@ -44368,16 +44368,25 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_PKSONLScoU7b6h1kMi3yeMXCRtulxfK9whPdSdASjPI": {
       "date": "2026-04-28",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_Fx5BeCFuQTtdvgmScisBINYe8sdMIAdSQv5OOT0aZ0u": {
+      "date": "2026-04-27",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-23 12:07:34 UTC",
-  "count": 5608
+  "saved_at": "2026-04-23 12:38:04 UTC",
+  "count": 5609
 }
