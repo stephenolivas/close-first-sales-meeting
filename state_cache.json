@@ -43622,7 +43622,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_nxK3fiUdEBAsOygBoKPKB0fCYUcuGcXpXc50KAi4w3V": {
       "date": null,
@@ -44658,6 +44659,6 @@
       "reactivation": "Mallory Kent"
     }
   },
-  "saved_at": "2026-04-24 11:37:41 UTC",
+  "saved_at": "2026-04-24 12:02:05 UTC",
   "count": 5643
 }
