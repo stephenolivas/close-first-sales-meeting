@@ -44972,9 +44972,17 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_M645oB5yBCIcGw7SJNhNL39nAjXdvbm4ls2rGMmoDBo": {
+      "date": "2026-04-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-25 17:38:22 UTC",
-  "count": 5683
+  "saved_at": "2026-04-25 18:07:39 UTC",
+  "count": 5684
 }
