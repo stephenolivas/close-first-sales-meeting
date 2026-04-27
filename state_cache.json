@@ -45100,7 +45100,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_gT3HvjYsthchX2Dm1p9LzBIbzt4UUuDcTRNn6xVuGzx": {
       "date": "2026-04-28",
@@ -45111,6 +45112,6 @@
       "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-26 23:38:09 UTC",
+  "saved_at": "2026-04-27 00:08:28 UTC",
   "count": 5700
 }
