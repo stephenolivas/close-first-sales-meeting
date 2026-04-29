@@ -45722,9 +45722,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-04-29 06:37:57 UTC",
+  "saved_at": "2026-04-29 07:07:43 UTC",
   "count": 5777
 }
