@@ -45056,10 +45056,11 @@
     },
     "lead_vIoUjMeCRpiUSF1di6VJCR6pkXMCutr1BKIe1zLyuzB": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_t18jmmPCXAoFGoMQy5zGazflEvxtq4S0DrnMq1UkuAJ": {
       "date": "2026-04-30",
@@ -45646,10 +45647,11 @@
     },
     "lead_wb6ompGVUWwTA9qaWO1AaKf44UzzX3lvEnfFeaBa0oI": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_AUoAe9Qj4bS1BdGIB6glKKRhjPNHfGNc3fvC3D0N6hX": {
       "date": "2026-05-05",
@@ -45700,12 +45702,11 @@
       "earliest_scraper_date": null
     },
     "lead_d5ZqXKrfQKQi7u5hYp6VJDTPCzT3azHKixiuVpmuban": {
-      "date": "2026-04-30",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_Lp9Xk2IpE3Cnw1uL4g4uDXmdlUWvn1lkU4syDGFKn2c": {
       "date": "2026-05-01",
@@ -45800,16 +45801,25 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_lS5EBmc3hMAN5KKFdp3tLJfW2qblkCvMkSAAq3rBtUh": {
       "date": "2026-05-01",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_twukogyOfrEEACLi80asK5NgIy2KmL0TZefxiDKlUrN": {
+      "date": "2026-04-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-29 18:39:14 UTC",
-  "count": 5788
+  "saved_at": "2026-04-29 19:09:10 UTC",
+  "count": 5789
 }
