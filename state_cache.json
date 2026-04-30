@@ -45222,12 +45222,11 @@
       "reactivation": "Spencer Reynolds"
     },
     "lead_CIolgkkM3uv39eYlJ8bWRpdInMBvWS2M4TnRFhp6EgZ": {
-      "date": "2026-04-30",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_wIrUONP1S7OTMjbpmjF4S9zX4sqipSj6Vhdzwjh33G1": {
       "date": "2026-04-28",
@@ -46058,23 +46057,61 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_ORN0HiTuciWQyxqUi3KtSktX0uGGhFeJLmD60TlpO9v": {
       "date": "2026-05-04",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_8bWuJQYR6fHrbFya8goSrCl8mptGKt28Td8OMG2NRgL": {
       "date": "2026-05-05",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_6mDTkkFcgtKjBj4yjweTxPNhsL5vortnOHvztWGZkcL": {
+      "date": "2026-05-04",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_xkfZx1S6MWK4vpXmZP5DlGJJg3FFYPtpdFOSqh2XQoT": {
+      "date": "2026-05-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_Z7lvLlnnwhss0bI6tsTb2ylSfIxjXXw6jdp8G8rkuQx": {
+      "date": "2026-05-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_kVT1x1UltJsZ65Kz8gdUe5kZCEZHsAsaLDaENJPagot": {
+      "date": "2026-05-04",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_gWfpoPMtzW1eS2RG06rdjIZ2sFrmzfkl2kggqzD1Kcp": {
+      "date": "2026-05-04",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-04-30 19:38:31 UTC",
-  "count": 5821
+  "saved_at": "2026-04-30 20:09:12 UTC",
+  "count": 5826
 }
