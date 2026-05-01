@@ -35917,7 +35917,8 @@
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
-      "reactivation": "Mallory Kent"
+      "reactivation": "Mallory Kent",
+      "earliest_scraper_date": "2026-01-23"
     },
     "lead_pLAn5WbMtspyirme6FQgcQEhW4QMkuMz8sUpNQ9omy5": {
       "date": "2026-01-21",
@@ -46259,6 +46260,6 @@
       "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-01 03:38:15 UTC",
+  "saved_at": "2026-05-01 04:08:22 UTC",
   "count": 5844
 }
