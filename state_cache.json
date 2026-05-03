@@ -47151,16 +47151,18 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_cM1JGcnazmIJM8ldBhIXfAgwH5A09pxRckBDFOUjSV6": {
       "date": "2026-05-07",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-03 17:07:58 UTC",
+  "saved_at": "2026-05-03 17:38:50 UTC",
   "count": 5957
 }
