@@ -119,6 +119,7 @@ CLOSER_PATTERNS = [
     re.compile(r"vending\s+consult\b", re.IGNORECASE),
     re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE),
     re.compile(r"vending\s+route\s+consultation", re.IGNORECASE),
+    re.compile(r"cash[\-\s]flowing\s+vending\s+route\s+advisory\s+interview", re.IGNORECASE),
 ]
 
 
