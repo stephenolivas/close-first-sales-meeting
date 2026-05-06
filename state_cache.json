@@ -48289,23 +48289,26 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_GW8dJsb3UBmqPioIg0WqVi0hsrPV0RIfYseyIJD0ccF": {
       "date": null,
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_54hTkI72blZ061IjPD3aNrdULTw3qGGMmf1dPuclovL": {
       "date": "2026-05-06",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-06 12:34:16 UTC",
+  "saved_at": "2026-05-06 13:09:24 UTC",
   "count": 6100
 }
