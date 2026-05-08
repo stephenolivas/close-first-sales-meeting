@@ -47055,20 +47055,18 @@
       "earliest_scraper_date": null
     },
     "lead_h5CnJRVgrMfW8AT8nb7dmI494nvlg2VOyC7RKiZQ7r6": {
-      "date": "2026-05-08",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_xzO8JUo252q0YpG4aLdADQ5CF9VW4f24uK7octpQ0XU": {
-      "date": "2026-05-08",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_9WBCBwLPlgiDqL7dh75VdL6rD3dDMHIjerbUs9GWtUC": {
       "date": "2026-05-07",
@@ -47103,12 +47101,11 @@
       "earliest_scraper_date": null
     },
     "lead_6heeczxV6IclD8U0y4C9enBYGxAiWpGdQiLLH9WP7mi": {
-      "date": "2026-05-08",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_pMQr1bJKABCvQLoOHowytFJss1xcHw9hxTNQrCWe6ao": {
       "date": "2026-05-08",
@@ -49039,16 +49036,26 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_iSYbq1vVxqbhTxjckcdZ83wtb5YcIzG9G83YuoC5rDw": {
       "date": "2026-05-11",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_6QVR4pohHWoyIpNkj4lDUVtUhvSh67kQB1ge6BFOMXC": {
+      "date": "2026-05-12",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_HINT2WSVtVNBJO7BFYzIsI1rIG3RlKKTrJjId37bjm1": {
       "date": "2026-05-12",
       "call_type": "Closer",
       "scraper": null,
@@ -49056,6 +49063,6 @@
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-08 03:08:37 UTC",
-  "count": 6194
+  "saved_at": "2026-05-08 03:38:58 UTC",
+  "count": 6195
 }
