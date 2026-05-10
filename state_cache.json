@@ -50001,16 +50001,61 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_kgVy2C1BTnk5bUtPaYEeJV6Zch5Z3fA8zAqjYwblBVg": {
       "date": "2026-05-11",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_w5dyooAdRoocQTP33LlnJmO3P8U7uuyS0kgGUipJ8nC": {
+      "date": "2026-05-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_TP6gWEpG8t8koz2SdACmFgRezqie7poGnzMEMnRb8gI": {
+      "date": "2026-05-11",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_q8BecZBvzOm4JYvFiD60eSVJNMNkLhPcp3p4IJrC1fW": {
+      "date": "2026-05-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_UilkLyYpgMPBhRftONOpii2OVdA6F26sF1JG9MRQfif": {
+      "date": "2026-05-12",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_7090RAWVU2ZOcvH7qrunUmBdzBMp7aiMOsdQXlgS353": {
+      "date": "2026-05-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_yDLMWSTtZnEVfQz8O7vb8a281x3CpXaep7ppgBE5Xqe": {
+      "date": "2026-05-12",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_o28z416vjDNRsFERQUyppaGcGBFomAqu0r9f1ZmpVHH": {
       "date": "2026-05-13",
       "call_type": "Closer",
       "scraper": null,
@@ -50018,6 +50063,6 @@
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-10 08:08:46 UTC",
-  "count": 6314
+  "saved_at": "2026-05-10 08:32:53 UTC",
+  "count": 6320
 }
