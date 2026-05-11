@@ -48989,12 +48989,11 @@
       "earliest_scraper_date": null
     },
     "lead_SaWFm5GKscZ8Uz8UKDXpC2dktRBCyhPn8FNZqh8yuIh": {
-      "date": "2026-05-11",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_fxq5NKgEj6TcLUrqqyXqnGDzuUaz8XJY16SkfFFPIgD": {
       "date": "2026-05-11",
@@ -49014,10 +49013,11 @@
     },
     "lead_sBL16I5Inz8KaAbjzXrSiXYbIVEswMZBk5hR9lCMLSU": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_HRGiXpjBYNargZJkOxf682ieXWl0piQ7z9CTyy3NjaQ": {
       "date": "2026-05-12",
@@ -49044,12 +49044,11 @@
       "earliest_scraper_date": null
     },
     "lead_iSYbq1vVxqbhTxjckcdZ83wtb5YcIzG9G83YuoC5rDw": {
-      "date": "2026-05-11",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_6QVR4pohHWoyIpNkj4lDUVtUhvSh67kQB1ge6BFOMXC": {
       "date": "2026-05-12",
@@ -49532,12 +49531,11 @@
       "earliest_scraper_date": null
     },
     "lead_g1hRAEFL50NnVr3M4aL7VBe0TKWufisnIsDhSIZkjVv": {
-      "date": "2026-05-11",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_00Cdy7Cl2rPp6DHSYJhTnJ3qdtuz7zP0bMq089mtElb": {
       "date": null,
@@ -49900,12 +49898,11 @@
       "earliest_scraper_date": null
     },
     "lead_GI0rRjRaM9AenEtncZ8uYzivMcKXpFbkyBZH2ZLnHXC": {
-      "date": "2026-05-11",
+      "date": "2026-05-14",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_7dUnOMs3LdvhlQunxxc9xT94ALH6OUp55cO4Scdql8u": {
       "date": "2026-05-11",
@@ -50284,12 +50281,11 @@
       "earliest_scraper_date": null
     },
     "lead_m0jsqSFYyMH7grvMOrfsYaVpcmzETOnkeneZZgcEKeF": {
-      "date": "2026-05-12",
+      "date": "2026-05-11",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_bJtx3Snubpife4tMzMtXncwJvUWoxwAMSr4rBywo12L": {
       "date": "2026-05-13",
@@ -50783,16 +50779,46 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_GlWw3o0y80VZZJcAzZxbLl4CFLDkHOdBL7aV6NUxWks": {
       "date": "2026-05-18",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_IBCU7Wmyc5zjj9dLumkrdU6yaDS2NKBaPAOBo5yg789": {
+      "date": "2026-05-14",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_QWt3vvFiLLOFZ6hT3luN9eV4df0wQkVbQsU6Dw2pNjt": {
+      "date": "2026-05-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Mallory Kent"
+    },
+    "lead_PAbXZDo5m1aktpoOPaqgWwKJOJrdjW0pU2wa278DPNw": {
+      "date": "2026-05-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_nJikO88ZoHVq8aPl4vgpQhMFpOmBOvZLRmuoXNdk2fu": {
+      "date": "2026-05-12",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-11 20:39:06 UTC",
-  "count": 6411
+  "saved_at": "2026-05-11 21:08:37 UTC",
+  "count": 6415
 }
