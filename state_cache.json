@@ -51266,12 +51266,11 @@
       "reactivation": "Mallory Kent"
     },
     "lead_czrMuY2suw9wNGeM15MnspZk1OD1wIqjg3Sf7FsAuQJ": {
-      "date": "2026-05-13",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_WQKPJXoNSri2OV1FfTIaVg0z3GtutxZwyPFHvTCOqMv": {
       "date": "2026-05-15",
@@ -51311,8 +51310,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_7atnF9CseGeE27q27k1P1PE8b39AGuUoyEv3wREfpnm": {
+      "date": "2026-05-18",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-05-12 19:10:46 UTC",
-  "count": 6476
+  "saved_at": "2026-05-12 19:39:46 UTC",
+  "count": 6477
 }
