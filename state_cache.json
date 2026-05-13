@@ -48794,7 +48794,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_78aaJq8nGLLA2cjKfMTytS8dsl3wJA3TcZpVU3zBlAK": {
       "date": null,
@@ -52179,16 +52180,60 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_YVFuIndzRrPr4mPQCZPtmMb855m8oF80kdGgVptGf69": {
       "date": "2026-05-20",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_CNmi8gK7L2JzUnK4lQU35jb8yNdF4AgjLNvbDHIjGr8": {
+      "date": "2026-05-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_E8AuqXk2WgHY8ATerdWzfj58Mep1h5oZdDYe0ahhiqw": {
+      "date": "2026-05-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_OjRJvcAwMT4yiZsyZLofzemWV26E1dh1ekpa7Ciem5S": {
+      "date": "2026-05-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_rfccFhOMnHLil9CP5DEuz9wds8lufVHexDRKi25ggjO": {
+      "date": "2026-05-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_eJnRVlVON76UC8089dqKX7SWNyKy2uHDM9Mvf6gZavJ": {
+      "date": "2026-05-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_LEJGp9erhrc37JAJRUuU6CehkAq5EqDXcmOSJznRvQ8": {
+      "date": "2026-05-19",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-13 19:10:17 UTC",
-  "count": 6586
+  "saved_at": "2026-05-13 19:24:46 UTC",
+  "count": 6592
 }
