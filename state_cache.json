@@ -52507,58 +52507,66 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_3rG6f6AzXF3kKKEPsBhajqGHy5v2rnqRy4PR6OSeME8": {
       "date": "2026-05-18",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_v3W7Gdx4YC3lesrRsOhNtd76I9sFAzcckVoInsRM38d": {
       "date": "2026-05-14",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_UtZU96m5yqpIo1mMgDyTgHp9WYxvcLj63ZjsG39Odbh": {
       "date": "2026-05-18",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_Voe0xEXNNSoojkIlt6I005RNuCLdFKAqeludsbO8LYr": {
       "date": "2026-05-18",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_5KewllSg5W12H4aK2TJOqHBjaeewwGium5UW8rSyxwp": {
       "date": "2026-05-14",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_efJqVwxMQ3ZP1kLX51lB04dtGvgnOQ7knz1Nl13iLa9": {
       "date": "2026-05-18",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_6lY1HLVvfoJeM3Q3H8QxvrPm5wnD3ehHrmR1ULndEcT": {
       "date": "2026-05-18",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-14 15:40:03 UTC",
+  "saved_at": "2026-05-14 16:09:04 UTC",
   "count": 6633
 }
