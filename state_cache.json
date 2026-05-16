@@ -53003,16 +53003,25 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_cXxubB1MGCuktOPszdRaCgfcCLlIe7bCcab8mjXSffj": {
       "date": "2026-05-19",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_rJIKSt0T7pC1UqSslVmNlpZxSocZkmrKKLpWGqqRXJk": {
+      "date": "2026-05-18",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-16 04:38:11 UTC",
-  "count": 6689
+  "saved_at": "2026-05-16 05:08:40 UTC",
+  "count": 6690
 }
