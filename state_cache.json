@@ -52183,12 +52183,11 @@
       "earliest_scraper_date": null
     },
     "lead_YVFuIndzRrPr4mPQCZPtmMb855m8oF80kdGgVptGf69": {
-      "date": "2026-05-20",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_CNmi8gK7L2JzUnK4lQU35jb8yNdF4AgjLNvbDHIjGr8": {
       "date": "2026-05-15",
@@ -53680,9 +53679,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-19 06:09:07 UTC",
+  "saved_at": "2026-05-19 06:38:21 UTC",
   "count": 6773
 }
