@@ -53833,8 +53833,22 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_F3wQoLDr1apuqiBG9pn80tSzhSper3RS9sUfrKelWe0": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_p6id16QOvGVX9vvqcRBnuUYBBEhDzGbFizTml3tlT04": {
+      "date": "2026-05-21",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Mallory Kent"
     }
   },
-  "saved_at": "2026-05-19 22:38:22 UTC",
-  "count": 6792
+  "saved_at": "2026-05-19 22:51:09 UTC",
+  "count": 6794
 }
