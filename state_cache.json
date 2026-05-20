@@ -54096,8 +54096,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_aXRzX0cYRCS4U6Ix085LZoem9pwmDSrFJesdhQ6cSEA": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-05-20 13:08:28 UTC",
-  "count": 6825
+  "saved_at": "2026-05-20 13:40:15 UTC",
+  "count": 6826
 }
