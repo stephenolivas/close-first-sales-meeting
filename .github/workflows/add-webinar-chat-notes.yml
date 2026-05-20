@@ -1,0 +1,26 @@
+name: Add Webinar Chat Notes
+
+on:
+  workflow_dispatch:
+    inputs:
+      csv_path:
+        description: "Path to CSV file in the repo"
+        required: true
+        default: "webinar_chat_notes.csv"
+
+jobs:
+  add-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests
+
+      - name: Post notes to Close
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+        run: python add_webinar_chat_notes.py "${{ inputs.csv_path }}"
