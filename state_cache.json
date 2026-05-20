@@ -54182,16 +54182,25 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_m1k53pwwhXkb2FvCZ0kXBHL9iC8ayZGZz8mch5n8jRL": {
       "date": "2026-05-21",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_pVI5lg5LgOnoiT8WjUIcZ68j1Avr2KSoi6thCDktYGi": {
+      "date": "2026-05-22",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-20 18:39:14 UTC",
-  "count": 6837
+  "saved_at": "2026-05-20 19:09:40 UTC",
+  "count": 6838
 }
