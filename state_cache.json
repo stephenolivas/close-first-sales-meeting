@@ -53294,10 +53294,11 @@
     },
     "lead_FVOmFvQ1Q1cdjpUCfslGRBDlqnKzv6wm0pMDCqzfPx9": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_fBbeahGcEws6D5pB480c4bt2QO1h4CBRKpgmaXA1EY0": {
       "date": "2026-05-22",
@@ -53349,10 +53350,11 @@
     },
     "lead_a4uUhmzYe4hqg9dPJYDNpfBgJz0RxjjaJBMryog7HAR": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_lQosdLJQht6bqOruJOzAT5jAR7Mq3rAfynoCaRyF0BS": {
       "date": "2026-05-19",
@@ -53444,10 +53446,11 @@
     },
     "lead_1nFlgKP7MQXYQpEST81w0Tgn69UH4zTVC2PjqdOCIOV": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_5OktXm7A0cTHwnuIU3b5wxaQsyfTCmQ7cYu6O4pk57J": {
       "date": "2026-05-19",
@@ -53618,10 +53621,11 @@
     },
     "lead_hazt8cxODbfjQBM9wKu34og1FtC6ErFktG2nmHq9ozH": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_dzsZnHUlgwOD2Egr9FONYvZNK3dvvVwQ3x98i5pZ3yw": {
       "date": "2026-05-20",
@@ -53831,12 +53835,11 @@
       "earliest_scraper_date": null
     },
     "lead_F3wQoLDr1apuqiBG9pn80tSzhSper3RS9sUfrKelWe0": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-05-21",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_p6id16QOvGVX9vvqcRBnuUYBBEhDzGbFizTml3tlT04": {
       "date": "2026-05-21",
@@ -53846,6 +53849,6 @@
       "reactivation": "Mallory Kent"
     }
   },
-  "saved_at": "2026-05-19 23:38:58 UTC",
+  "saved_at": "2026-05-20 00:07:39 UTC",
   "count": 6794
 }
