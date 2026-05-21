@@ -54326,16 +54326,18 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_R827bMLs6varXCXKKCtC3ErlC8PFd1Hakb9nFHWb7qx": {
       "date": "2026-05-26",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-21 08:39:19 UTC",
+  "saved_at": "2026-05-21 09:08:59 UTC",
   "count": 6855
 }
