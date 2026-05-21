@@ -7,6 +7,11 @@ across its Note and Email activities. The "Files" tab in the Close UI
 aggregates attachments from these activity types — there is no separate
 file resource on the lead itself.
 
+Specifically checks for a "coaching agreement" in any attachment filename
+(case-insensitive, tolerant of underscores/hyphens between words). This is
+the same matching logic the production alert would use to decide whether
+a lead moved to Contract Sent / Closed-Won is missing its signed contract.
+
 Usage:
     CLOSE_API_KEY=... LEAD_ID=lead_xxx python3 test_lead_attachments.py
 
@@ -16,8 +21,8 @@ Or pass the lead ID as the first arg:
 Output (stdout):
     - Lead name + status confirmation
     - Each Note / Email activity with attachment count, filenames,
-      sizes, and content types
-    - Summary count at the end
+      sizes, and content types — coaching agreement matches flagged
+    - Summary including verdict on whether an alert would fire
 
 This is purely a read-only diagnostic — it does not modify any data.
 """
@@ -43,6 +48,15 @@ if not LEAD_ID:
 
 BASE = "https://api.close.com/api/v1"
 AUTH = (CLOSE_API_KEY, "")
+
+# Production matching logic — flexible to spacing/case/separator variations.
+# Matches: "Coaching Agreement.pdf", "coaching_agreement_v2.pdf",
+# "Final Coaching-Agreement - Smith.pdf", "COACHINGAGREEMENT.pdf", etc.
+CONTRACT_PATTERN = re.compile(r"coaching[\s_-]*agreement", re.IGNORECASE)
+
+
+def is_coaching_agreement(filename):
+    return bool(filename) and bool(CONTRACT_PATTERN.search(filename))
 
 
 def fmt_size(num_bytes):
@@ -83,7 +97,7 @@ def get_activities(lead_id, activity_type):
 
 
 def describe_activity(activity, activity_type):
-    """Print attachments for one activity."""
+    """Print attachments for one activity. Returns (total_count, contract_count)."""
     attachments = activity.get("attachments") or []
     activity_id = activity.get("id", "?")
     date = activity.get("date_created", "?")[:10]
@@ -92,19 +106,28 @@ def describe_activity(activity, activity_type):
     header = f"  [{activity_type}] {activity_id}  ·  {date}  ·  by {user}"
     if not attachments:
         print(f"{header}  →  no attachments")
-        return 0
+        return 0, 0
 
     print(f"{header}  →  {len(attachments)} attachment(s):")
+    contract_count = 0
     for i, att in enumerate(attachments, 1):
         filename = att.get("filename", "?")
         content_type = att.get("content_type", "?")
         size = fmt_size(att.get("size"))
         url = att.get("url", "")
-        print(f"     {i}. {filename}")
+
+        is_contract = is_coaching_agreement(filename)
+        if is_contract:
+            contract_count += 1
+            marker = "  🎯 COACHING AGREEMENT MATCH"
+        else:
+            marker = ""
+
+        print(f"     {i}. {filename}{marker}")
         print(f"        type: {content_type}   size: {size}")
         if url:
             print(f"        url:  {url}")
-    return len(attachments)
+    return len(attachments), contract_count
 
 
 def main():
@@ -127,40 +150,55 @@ def main():
     print("📝 Note activities")
     print("-" * 70)
     notes = get_activities(LEAD_ID, "Note")
-    note_attachment_count = 0
+    note_total = note_contracts = 0
     if not notes:
         print("  (no notes on this lead)")
     else:
         for n in notes:
-            note_attachment_count += describe_activity(n, "Note")
+            t, c = describe_activity(n, "Note")
+            note_total += t
+            note_contracts += c
     print()
 
     # 3. Pull Email activities
     print("✉️  Email activities")
     print("-" * 70)
     emails = get_activities(LEAD_ID, "Email")
-    email_attachment_count = 0
+    email_total = email_contracts = 0
     if not emails:
         print("  (no emails on this lead)")
     else:
         for e in emails:
-            email_attachment_count += describe_activity(e, "Email")
+            t, c = describe_activity(e, "Email")
+            email_total += t
+            email_contracts += c
     print()
 
     # 4. Summary
-    total = note_attachment_count + email_attachment_count
+    total_files = note_total + email_total
+    total_contracts = note_contracts + email_contracts
     print("=" * 70)
     print("📊 Summary")
-    print(f"  Notes:        {len(notes)} ({note_attachment_count} attachments)")
-    print(f"  Emails:       {len(emails)} ({email_attachment_count} attachments)")
-    print(f"  TOTAL FILES:  {total}")
+    print(f"  Notes:               {len(notes)} ({note_total} attachments, "
+          f"{note_contracts} coaching agreement)")
+    print(f"  Emails:              {len(emails)} ({email_total} attachments, "
+          f"{email_contracts} coaching agreement)")
+    print(f"  TOTAL FILES:         {total_files}")
+    print(f"  COACHING AGREEMENTS: {total_contracts}")
     print()
 
-    if total == 0:
-        print("⚠️  No attachments found on this lead.")
-        print("   In a real alert scenario, this rep would get a 'missing contract' nudge.")
+    # 5. Verdict — mirrors what the production alert would do
+    print("=" * 70)
+    print("🚦 Verdict (production alert simulation)")
+    if total_contracts > 0:
+        print(f"  ✅ Contract on file — {total_contracts} coaching agreement match(es).")
+        print("     No alert would fire if this lead moved to Contract Sent / Closed-Won.")
+    elif total_files > 0:
+        print(f"  ⚠️  {total_files} file(s) attached, but none match 'coaching agreement'.")
+        print("     An alert WOULD fire — rep would be nudged to verify the contract.")
     else:
-        print(f"✅ Found {total} attachment(s). Visible via API, filenames captured.")
+        print("  ⚠️  No attachments at all on this lead.")
+        print("     An alert WOULD fire on Contract Sent / Closed-Won.")
 
 
 if __name__ == "__main__":
