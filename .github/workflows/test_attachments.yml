@@ -1,0 +1,31 @@
+name: Test Lead Attachments
+
+on:
+  workflow_dispatch:
+    inputs:
+      lead_id:
+        description: 'Close lead ID to inspect (e.g. lead_KwD00BYbXCHiPWj68LxFkxaeWuULpZ7awzm6LqeFs0h)'
+        required: true
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Inspect attachments on lead
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+          LEAD_ID: ${{ inputs.lead_id }}
+          PYTHONUNBUFFERED: "1"
+        run: python3 -u test_lead_attachments.py
