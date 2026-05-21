@@ -23,14 +23,22 @@ This is purely a read-only diagnostic — it does not modify any data.
 """
 
 import os
+import re
 import sys
 import requests
 
 CLOSE_API_KEY = os.environ["CLOSE_API_KEY"]
-LEAD_ID = (sys.argv[1] if len(sys.argv) > 1 else os.environ.get("LEAD_ID", "")).strip()
+raw_input_id = (sys.argv[1] if len(sys.argv) > 1 else os.environ.get("LEAD_ID", "")).strip()
+
+# Accept either a bare lead ID (lead_xxx) or a full Close URL pasted in.
+# Extract the lead_... token regardless of what the user pastes.
+match = re.search(r"lead_[A-Za-z0-9]+", raw_input_id)
+LEAD_ID = match.group(0) if match else ""
 
 if not LEAD_ID:
-    print("❌ No LEAD_ID provided. Pass via env var or as first argument.")
+    print(f"❌ No valid lead ID found in input: {raw_input_id!r}")
+    print("   Expected something like: lead_WjclPeKa9QGzQ27RBvIoUhE6JVFWAdLjSJOPnjweSsd")
+    print("   (Full Close URLs are also fine — the script will extract the ID.)")
     sys.exit(1)
 
 BASE = "https://api.close.com/api/v1"
