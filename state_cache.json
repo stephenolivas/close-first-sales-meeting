@@ -54342,16 +54342,25 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_aFuHSkFaOoriIjhtnbyEhbHundQATTesQCcGRWE0IP2": {
       "date": "2026-05-22",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_G4UQyHUMDoH0ouijHn6igxjBFAVGgwd4xi5iWGfoagK": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-21 16:10:05 UTC",
-  "count": 6857
+  "saved_at": "2026-05-21 16:39:58 UTC",
+  "count": 6858
 }
