@@ -54677,16 +54677,17 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_WiDLxuQNocSlTJLM1Jwj6xdo505tospdjObkmfAXk4G": {
-      "date": "2026-05-29",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-23 19:08:53 UTC",
+  "saved_at": "2026-05-23 19:38:25 UTC",
   "count": 6899
 }
