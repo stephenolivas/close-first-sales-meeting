@@ -54800,8 +54800,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_juA4T11TQ7bu6WcnokZzW4r4ahQpsPknzCjI0Ztwn00": {
+      "date": "2026-05-27",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-05-24 06:39:09 UTC",
-  "count": 6913
+  "saved_at": "2026-05-24 07:09:15 UTC",
+  "count": 6914
 }
