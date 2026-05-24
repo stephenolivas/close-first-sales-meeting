@@ -54767,8 +54767,24 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_vFni2vfDzkFFOBU7QCAjOPrlT4gWyouFqlFhFo42lpj": {
+      "date": "2026-05-27",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_F1lXKqBBjMGxUtAEs3NB2N7YYPFuu3pi19GS4TjZ5a3": {
+      "date": "2026-05-27",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-24 01:08:37 UTC",
-  "count": 6909
+  "saved_at": "2026-05-24 01:38:17 UTC",
+  "count": 6911
 }
