@@ -55030,16 +55030,18 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_3vjfs0eKuptGwytSVnMTfb0nsRqK0Jd3rEEoYtam6Zl": {
       "date": "2026-05-29",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-25 14:53:52 UTC",
+  "saved_at": "2026-05-25 15:08:41 UTC",
   "count": 6943
 }
