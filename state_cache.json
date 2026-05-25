@@ -54930,8 +54930,8 @@
       "earliest_scraper_date": null
     },
     "lead_uRxe5PKcewDVjDLHgGFiyjkoE9cAheh4otET635sZTw": {
-      "date": "2026-05-28",
-      "call_type": "Closer",
+      "date": null,
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
@@ -55018,6 +55018,6 @@
       "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-25 08:39:14 UTC",
+  "saved_at": "2026-05-25 09:38:57 UTC",
   "count": 6940
 }
