@@ -1,0 +1,39 @@
+name: Update Follow-Up Dates
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Offset from update_field.py (which runs at :00 and :30)
+    # so we don't compete for Close API throughput.
+    - cron: '15,45 * * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run follow-up updater
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+        run: python update_followups.py
+
+      - name: Commit state cache
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add followups_state_cache.json
+          git diff --staged --quiet || git commit -m "Update follow-ups state cache [skip ci]"
+          git push
