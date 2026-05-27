@@ -35731,7 +35731,7 @@
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
-      "reactivation": "Mallory Kent"
+      "reactivation": "Vince Bartolini"
     },
     "lead_60Xaw5lJ1W5GdbkGRqh0VFwGQQezhpU4V6lRWRefzXp": {
       "date": "2025-12-15",
@@ -54858,8 +54858,8 @@
       "earliest_scraper_date": null
     },
     "lead_WUDhlB7IQcdv41DYTQXYMWfWGmPewf7CLoI4eXIhreI": {
-      "date": "2026-05-28",
-      "call_type": "Closer",
+      "date": null,
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
@@ -55369,12 +55369,11 @@
       "earliest_scraper_date": null
     },
     "lead_rydZkNZPuQIxtjYJ3FZTdp1Y1P8Tp4kRKH4W3Y3vlSa": {
-      "date": "2026-05-27",
+      "date": "2026-06-02",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_We3HtBrvUWWsOxw2IIQmabs9n1EHIBYGxMiuISZhbKB": {
       "date": "2026-05-27",
@@ -55437,16 +55436,34 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_BLJKaLTktrvItpuFR8RDyESY0lvVwS9aIBxd1EuuOCN": {
       "date": "2026-06-01",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_OMYEsiDgUJEJosOeOTezZ74CRcH2fwGPMoTZEeEzfzf": {
+      "date": "2026-06-01",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_hgDXsYg5MoxeHFTjOEJvvxmOEsB8UhkRKZrSw2576xR": {
+      "date": "2026-06-02",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-27 16:10:35 UTC",
-  "count": 6994
+  "saved_at": "2026-05-27 17:40:17 UTC",
+  "count": 6996
 }
