@@ -219,16 +219,27 @@ def fetch_all_meetings() -> list:
 
 
 def get_lead_followup_fields(lead_id: str) -> dict:
-    """Fetch a lead's current values for the three follow-up date fields."""
+    """Fetch a lead's current values for the three follow-up date fields.
+
+    Close returns custom field values keyed as 'custom.cf_xxx' on the
+    lead GET response, so we read from that path. The returned dict
+    is keyed by the bare 'cf_xxx' ID for internal consistency.
+    """
     resp = session.get(f"{BASE_URL}/lead/{lead_id}/", timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
     lead = resp.json()
-    return {f: lead.get(f) for f in FOLLOWUP_FIELDS}
+    return {f: lead.get(f"custom.{f}") for f in FOLLOWUP_FIELDS}
 
 
 def patch_lead(lead_id: str, updates: dict) -> None:
-    """Patch a lead with the given custom-field updates."""
-    resp = session.put(f"{BASE_URL}/lead/{lead_id}/", json=updates, timeout=REQUEST_TIMEOUT)
+    """Patch a lead with the given custom-field updates.
+
+    The caller passes updates keyed by bare 'cf_xxx' IDs; Close's PUT
+    endpoint expects 'custom.cf_xxx' keys in the request body, so we
+    rekey at the API boundary.
+    """
+    payload = {f"custom.{k}": v for k, v in updates.items()}
+    resp = session.put(f"{BASE_URL}/lead/{lead_id}/", json=payload, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
 
 
