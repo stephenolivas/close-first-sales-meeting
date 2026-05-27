@@ -40,10 +40,11 @@ BASE_URL = "https://api.close.com/api/v1"
 STATE_CACHE_FILE = "followups_state_cache.json"
 PACIFIC = ZoneInfo("America/Los_Angeles")
 
-# Lead custom field IDs — the three follow-up date fields
-FIELD_FOLLOWUP_1 = "cf_sUqvdTNI5E34j8E4IHf8bFKRw3T50UPfnVHzpMPXTOQ"
-FIELD_FOLLOWUP_2 = "cf_R1ufHBNOf56U1n8R0RSTKi8qGIe515U0oDuaH94pcJr"
-FIELD_FOLLOWUP_3 = "cf_XqgAFX26tWkDIbqLSvM3PNHQ4drCtUarYukRC9HMUR9"
+# Lead custom field IDs — the three date-only Follow Up Call fields
+# (Original date+time fields were replaced with date-only ones on 2026-05-27)
+FIELD_FOLLOWUP_1 = "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG"
+FIELD_FOLLOWUP_2 = "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV"
+FIELD_FOLLOWUP_3 = "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R"
 FOLLOWUP_FIELDS = [FIELD_FOLLOWUP_1, FIELD_FOLLOWUP_2, FIELD_FOLLOWUP_3]
 
 # Carry-over from update_field.py
