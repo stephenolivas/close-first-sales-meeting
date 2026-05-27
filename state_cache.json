@@ -52188,7 +52188,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_CNmi8gK7L2JzUnK4lQU35jb8yNdF4AgjLNvbDHIjGr8": {
       "date": "2026-05-15",
@@ -55424,6 +55425,6 @@
       "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-27 10:09:29 UTC",
+  "saved_at": "2026-05-27 10:39:10 UTC",
   "count": 6991
 }
