@@ -151,7 +151,6 @@ else:
 # 5. Custom field schema & current values on the lead
 # ---------------------------------------------------------------------------
 print(f"\n[5] Custom field schema → lead value lookup")
-print("    (only showing populated fields, plus the three target follow-up fields)")
 
 schema = {}
 skip = 0
@@ -164,30 +163,53 @@ while True:
     if not j.get("has_more") or len(j.get("data", [])) < 100:
         break
     skip += 100
+print(f"    {len(schema)} custom fields defined on Lead\n")
 
 r = s.get(f"{BASE_URL}/lead/{LEAD_ID}/", timeout=30)
 r.raise_for_status()
 lead = r.json()
 
-target_ids = {FIELD_FOLLOWUP_1, FIELD_FOLLOWUP_2, FIELD_FOLLOWUP_3}
-print(f"\n    {'FIELD ID':<55} {'TYPE':<10} {'NAME':<35} VALUE")
-print("    " + "-" * 130)
-for k in sorted(lead.keys()):
-    if not k.startswith("cf_"):
-        continue
-    v = lead[k]
-    is_target = k in target_ids
-    if v in (None, "", []) and not is_target:
-        continue
-    meta = schema.get(k, {})
+# Investigate the actual key format Close uses for this lead's custom fields
+print(f"    Total keys in lead response: {len(lead.keys())}")
+cf_prefix = sum(1 for k in lead if k.startswith("cf_"))
+custom_prefix = sum(1 for k in lead if k.startswith("custom."))
+print(f"    Keys with 'cf_' prefix:      {cf_prefix}")
+print(f"    Keys with 'custom.' prefix:  {custom_prefix}")
+
+# Show a sample of each format that exists
+samples_cf = sorted([k for k in lead if k.startswith("cf_")])[:5]
+samples_custom = sorted([k for k in lead if k.startswith("custom.")])[:5]
+if samples_cf:
+    print(f"\n    Sample 'cf_*' keys:")
+    for k in samples_cf:
+        v = lead[k]
+        if isinstance(v, str) and len(v) > 60:
+            v = v[:60] + "..."
+        print(f"      {k} = {v!r}")
+if samples_custom:
+    print(f"\n    Sample 'custom.*' keys:")
+    for k in samples_custom:
+        v = lead[k]
+        if isinstance(v, str) and len(v) > 60:
+            v = v[:60] + "..."
+        print(f"      {k} = {v!r}")
+
+# Look up the three target follow-up fields in BOTH possible formats
+print(f"\n    Target follow-up field lookups (in both formats):")
+target_ids = [(FIELD_FOLLOWUP_1, "FOLLOWUP_1"), (FIELD_FOLLOWUP_2, "FOLLOWUP_2"), (FIELD_FOLLOWUP_3, "FOLLOWUP_3")]
+for fid, label in target_ids:
+    meta = schema.get(fid, {})
     name = meta.get("name", "(not in schema)")
     ftype = meta.get("type", "?")
-    marker = " ← TARGET" if is_target else ""
-    print(f"    {k:<55} {ftype:<10} {name[:35]:<35} {v!r}{marker}")
+    val_cf = lead.get(fid)
+    val_custom = lead.get(f"custom.{fid}")
+    print(f"      {label}: {name!r} (type: {ftype})")
+    print(f"        as '{fid}'         → {val_cf!r}")
+    print(f"        as 'custom.{fid}'  → {val_custom!r}")
 
-# Also flag if any of the target field IDs are NOT in the schema
+# Schema validity check
 print()
-for fid, label in [(FIELD_FOLLOWUP_1, "FOLLOWUP_1"), (FIELD_FOLLOWUP_2, "FOLLOWUP_2"), (FIELD_FOLLOWUP_3, "FOLLOWUP_3")]:
+for fid, label in target_ids:
     if fid not in schema:
         print(f"    ⚠  {label} ({fid}) is NOT a valid Lead custom field ID")
     else:
