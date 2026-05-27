@@ -1,0 +1,30 @@
+name: Diagnose Lead
+
+on:
+  workflow_dispatch:
+    inputs:
+      lead_id:
+        description: 'Close lead ID to diagnose (defaults to the Daria lead)'
+        required: false
+        default: 'lead_pVI5lg5LgOnoiT8WjUIcZ68j1Avr2KSoi6thCDktYGi'
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run diagnostic
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+        run: python diagnose_lead.py "${{ github.event.inputs.lead_id }}"
