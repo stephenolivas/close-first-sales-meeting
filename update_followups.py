@@ -188,15 +188,19 @@ def fetch_users() -> dict:
 
 
 def fetch_all_meetings() -> list:
-    """Paginate every meeting activity in the org."""
+    """Paginate every meeting activity in the org.
+
+    Uses offset pagination (_skip + _limit) which is what Close's
+    /activity/meeting/ endpoint supports. Stops when `has_more` is false
+    or a short page is returned.
+    """
     meetings = []
-    cursor = None
+    skip = 0
+    limit = 100
     page = 0
     while True:
         page += 1
-        params = {"_limit": 100}
-        if cursor:
-            params["_cursor"] = cursor
+        params = {"_limit": limit, "_skip": skip}
         resp = session.get(
             f"{BASE_URL}/activity/meeting/",
             params=params,
@@ -208,9 +212,9 @@ def fetch_all_meetings() -> list:
         meetings.extend(batch)
         if page % 10 == 0:
             print(f"    Page {page}: {len(meetings)} meetings fetched so far")
-        cursor = data.get("cursor_next")
-        if not cursor:
+        if not data.get("has_more") or len(batch) < limit:
             break
+        skip += limit
     return meetings
 
 
