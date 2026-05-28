@@ -582,7 +582,7 @@
   "lead_4NHwBNNk4w0VBXjil7tHfJmkhnbcIKTDdEQrdZEj4Su": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-05-28",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
-    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
+    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": "2026-05-29"
   },
   "lead_4PVuiVHECB2pcgte4z0KOVFqoMMvjHlVZkJybv5InFU": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-02-04",
@@ -2209,6 +2209,11 @@
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
   },
+  "lead_IsyLtVeWJXN5EPO6DB44YfJtQlqRTl5kbyZnmSCTVqH": {
+    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-02",
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
+  },
   "lead_IyTMmxUf1TLOK74cEQjYCUisDujCAKesDwz6WQ5bXHr": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2025-12-09",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
@@ -2653,6 +2658,11 @@
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-01-07",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": "2026-05-11"
+  },
+  "lead_MWesZj4G3qmWveQU983118i3sawxnPjUU9QDpkLXBuD": {
+    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-02",
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
   },
   "lead_MXYUKcEfs7yvSCekCjm8yKr7ctpFbjGD4mzdJ5epbTk": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-02-20",
