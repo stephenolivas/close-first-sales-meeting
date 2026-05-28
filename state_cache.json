@@ -55766,16 +55766,26 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_ZEc8zVpzzRfFWkPdpTBdy0TNCPoQpc0q8XhFOhk8G5t": {
       "date": "2026-06-04",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_ffFKjAskTDGl9oq8ZeFdCb35QkTwwXrKJhVx6IIpEaJ": {
+      "date": "2026-06-01",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-28 22:39:36 UTC",
-  "count": 7036
+  "saved_at": "2026-05-28 23:08:46 UTC",
+  "count": 7037
 }
