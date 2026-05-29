@@ -1,0 +1,19 @@
+name: Reassign Prior-Day Lost Deals to John Kirk
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * *'  # 6am PST / 7am PDT
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python update_lost_deals.py
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
