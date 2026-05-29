@@ -20,7 +20,8 @@ Idempotent: skips leads whose Lead Owner is already John Kirk.
 
 Environment variables:
   CLOSE_API_KEY   (required)
-  DRY_RUN         (optional, set to "true" to log without writing)
+  DRY_RUN         (optional, "true" to log without writing)
+  SKIP_TASKS      (optional, "true" to update lead fields only, no tasks)
 """
 
 import json
@@ -31,7 +32,8 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 CLOSE_API_KEY = os.environ["CLOSE_API_KEY"]
-DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
+DRY_RUN    = os.environ.get("DRY_RUN", "false").lower() == "true"
+SKIP_TASKS = os.environ.get("SKIP_TASKS", "false").lower() == "true"
 
 BASE = "https://api.close.com/api/v1"
 AUTH = (CLOSE_API_KEY, "")
@@ -188,7 +190,7 @@ def update_lead(lead_id):
 
 
 def create_task(lead_id, lead_name, sales_call_date_iso):
-    if DRY_RUN:
+    if DRY_RUN or SKIP_TASKS:
         return
     today = datetime.now(PACIFIC).strftime("%Y-%m-%d")
     pretty_date = format_call_date(sales_call_date_iso)
@@ -211,6 +213,10 @@ def main():
     if DRY_RUN:
         print("=" * 60)
         print("  DRY RUN MODE — no writes will be made")
+        print("=" * 60)
+    elif SKIP_TASKS:
+        print("=" * 60)
+        print("  SKIP_TASKS MODE — updating lead fields only, no tasks")
         print("=" * 60)
 
     dates = get_lookback_dates()
@@ -250,7 +256,8 @@ def main():
         else:
             update_lead(lead_id)             # raises if Lead Owner didn't take
             create_task(lead_id, name, sales_call_iso)
-            print(f"  DONE   {name}")
+            suffix = " (task skipped)" if SKIP_TASKS else ""
+            print(f"  DONE   {name}{suffix}")
         processed += 1
 
     verb = "Would process" if DRY_RUN else "Processed"
