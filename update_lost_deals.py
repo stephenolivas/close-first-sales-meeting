@@ -23,6 +23,7 @@ Environment variables:
   DRY_RUN         (optional, set to "true" to log without writing)
 """
 
+import json
 import os
 import sys
 import requests
@@ -62,37 +63,65 @@ def get_lost_status_id():
     sys.exit(f"Could not find lead status: {LOST_STATUS_LABEL}")
 
 
+def date_clause(date_str):
+    return {
+        "type": "field_condition",
+        "field": {
+            "type": "custom_field",
+            "custom_field_id": FIRST_SALES_CALL_FIELD,  # keep cf_ prefix
+        },
+        "condition": {"type": "term", "values": [date_str]},
+    }
+
+
 def build_query(dates, lost_status_id):
-    """Build a Close query DSL string — same syntax as Smart Views."""
-    field_path = f"custom.{FIRST_SALES_CALL_FIELD}"
+    """Structured Close search query — format verified via diagnose_query.py."""
     if len(dates) == 1:
-        date_clause = f'{field_path}:"{dates[0]}"'
+        date_filter = date_clause(dates[0])
     else:
-        parts = [f'{field_path}:"{d}"' for d in dates]
-        date_clause = "(" + " or ".join(parts) + ")"
-    return f'{date_clause} and lead_status_id:"{lost_status_id}"'
+        date_filter = {
+            "type": "or",
+            "queries": [date_clause(d) for d in dates],
+        }
+
+    status_filter = {
+        "type": "field_condition",
+        "field": {
+            "type": "regular_field",
+            "object_type": "lead",
+            "field_name": "status_id",
+        },
+        "condition": {"type": "term", "values": [lost_status_id]},
+    }
+
+    return {"type": "and", "queries": [date_filter, status_filter]}
 
 
 def search_matching_leads(query):
-    """Paginate through Close's /lead/ list endpoint with the query DSL."""
-    leads, skip = [], 0
+    """Paginate /data/search/ with cursor-based pagination."""
+    leads, cursor = [], None
     while True:
-        params = {
+        payload = {
             "query": query,
-            "_fields": (
-                f"id,display_name,"
-                f"{FIRST_SALES_CALL_FIELD},{LEAD_OWNER_FIELD}"
-            ),
-            "_limit": 100,
-            "_skip": skip,
+            "_fields": {
+                "lead": [
+                    "id",
+                    "display_name",
+                    FIRST_SALES_CALL_FIELD,
+                    LEAD_OWNER_FIELD,
+                ]
+            },
+            "results_limit": 100,
         }
-        r = requests.get(f"{BASE}/lead/", params=params, auth=AUTH)
+        if cursor:
+            payload["cursor"] = cursor
+        r = requests.post(f"{BASE}/data/search/", json=payload, auth=AUTH)
         r.raise_for_status()
         data = r.json()
         leads.extend(data.get("data", []))
-        if not data.get("has_more"):
+        cursor = data.get("cursor")
+        if not cursor:
             break
-        skip += 100
     return leads
 
 
@@ -146,7 +175,11 @@ def main():
 
     lost_status_id = get_lost_status_id()
     query = build_query(dates, lost_status_id)
-    print(f"Query: {query}\n")
+
+    if DRY_RUN:
+        print("Query JSON:")
+        print(json.dumps(query, indent=2))
+        print()
 
     leads = search_matching_leads(query)
     print(f"Found {len(leads)} matching leads\n")
