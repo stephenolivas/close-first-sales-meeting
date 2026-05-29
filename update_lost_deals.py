@@ -43,12 +43,12 @@ LANE_2_HANDRAISER_FIELD = "cf_Q1hRv8It46xsAEmpv4PRKdI1y0sPJnrnQrgRbIlF8uL"
 LOST_STATUS_LABEL       = "💔 Lost"
 HANDRAISER_VALUE        = "Prior Day Lost Deals"
 
-# Close's GET /lead/{id}/ returns custom fields under `custom`, keyed by
-# display name (not cf_xxx ID). Writes still use cf_xxx in PUT payloads.
+# Close returns custom fields under `custom`, keyed by display name.
 # If any of these field names get renamed in Close, this dict needs updating.
 FIELD_DISPLAY_NAMES = {
-    FIRST_SALES_CALL_FIELD: "First Sales Call Booked Date",
+    FIRST_SALES_CALL_FIELD:  "First Sales Call Booked Date",
     LEAD_OWNER_FIELD:        "Lead Owner",
+    LANE_2_HANDRAISER_FIELD: "Lane 2 Handraiser",
 }
 
 PACIFIC = ZoneInfo("America/Los_Angeles")
@@ -78,7 +78,6 @@ def get_custom_field(lead, field_id):
     name = FIELD_DISPLAY_NAMES.get(field_id)
     if name and name in custom:
         return custom[name]
-    # Fallback paths
     if field_id in lead:
         return lead[field_id]
     if field_id in custom:
@@ -166,14 +165,26 @@ def get_current_owner_id(lead):
 
 
 def update_lead(lead_id):
+    """PUT custom fields with `custom.cf_xxx` key prefix. Verify the response
+    reflects the new Lead Owner; otherwise raise."""
     if DRY_RUN:
         return
     payload = {
-        LEAD_OWNER_FIELD: JOHN_KIRK_USER_ID,
-        LANE_2_HANDRAISER_FIELD: HANDRAISER_VALUE,
+        f"custom.{LEAD_OWNER_FIELD}":        JOHN_KIRK_USER_ID,
+        f"custom.{LANE_2_HANDRAISER_FIELD}": HANDRAISER_VALUE,
     }
     r = requests.put(f"{BASE}/lead/{lead_id}/", json=payload, auth=AUTH)
     r.raise_for_status()
+    updated = r.json()
+
+    # Verify the owner actually changed before we move on
+    new_owner = get_current_owner_id(updated)
+    if new_owner != JOHN_KIRK_USER_ID:
+        raise RuntimeError(
+            f"Lead Owner update for {lead_id} did NOT take. "
+            f"Expected {JOHN_KIRK_USER_ID}, got {new_owner!r}. "
+            f"Payload sent: {payload}"
+        )
 
 
 def create_task(lead_id, lead_name, sales_call_date_iso):
@@ -237,7 +248,7 @@ def main():
             print(f"           → Lane 2 Handraiser: {HANDRAISER_VALUE}")
             print(f"           → task: 'First sales call was {pretty_date}'")
         else:
-            update_lead(lead_id)
+            update_lead(lead_id)             # raises if Lead Owner didn't take
             create_task(lead_id, name, sales_call_iso)
             print(f"  DONE   {name}")
         processed += 1
