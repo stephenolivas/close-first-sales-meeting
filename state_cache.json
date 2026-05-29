@@ -55806,16 +55806,18 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_8uhyWzVfHp681mhfjnWBHvAs11u3Rq1hOFksaVO0pxJ": {
       "date": "2026-06-04",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-29 01:38:54 UTC",
+  "saved_at": "2026-05-29 02:09:27 UTC",
   "count": 7041
 }
