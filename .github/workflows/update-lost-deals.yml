@@ -2,8 +2,13 @@ name: Reassign Prior-Day Lost Deals to John Kirk
 
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (log only, no writes)'
+        type: boolean
+        default: false
   schedule:
-    - cron: '0 14 * * *'  # 6am PST / 7am PDT
+    - cron: '0 14 * * 1-5'  # 6am PST / 7am PDT, Mon-Fri only
 
 jobs:
   run:
@@ -17,3 +22,4 @@ jobs:
       - run: python update_lost_deals.py
         env:
           CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
