@@ -12,7 +12,13 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: '0 14 * * 1-5'  # 6am PST / 7am PDT, Mon-Fri only
+    # Triple-tap each weekday morning Pacific. The script is idempotent,
+    # so runs after the first one are no-ops. This is a fallback layer —
+    # the primary trigger should be cron-job.org hitting workflow_dispatch,
+    # since GitHub Actions schedules can be delayed or skipped under load.
+    - cron: '0 14 * * 1-5'  # 6am PST / 7am PDT
+    - cron: '0 15 * * 1-5'  # 7am PST / 8am PDT
+    - cron: '0 16 * * 1-5'  # 8am PST / 9am PDT
 
 jobs:
   run:
