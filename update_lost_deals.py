@@ -63,19 +63,42 @@ def get_lost_status_id():
     sys.exit(f"Could not find lead status: {LOST_STATUS_LABEL}")
 
 
+def get_custom_field(lead, field_id):
+    """Search responses can put custom fields at top-level OR under .custom,
+    with OR without the cf_ prefix. Check all paths."""
+    if field_id in lead:
+        return lead[field_id]
+    custom = lead.get("custom") or {}
+    if field_id in custom:
+        return custom[field_id]
+    bare = field_id.removeprefix("cf_")
+    if bare in custom:
+        return custom[bare]
+    return None
+
+
+def format_call_date(iso_str):
+    """Convert '2026-05-28' → 'Thu May 28'. Falls back gracefully."""
+    try:
+        d = datetime.strptime(iso_str, "%Y-%m-%d").date()
+        return d.strftime("%a %b %d")
+    except (ValueError, TypeError):
+        return iso_str or "recently"
+
+
 def date_clause(date_str):
     return {
         "type": "field_condition",
         "field": {
             "type": "custom_field",
-            "custom_field_id": FIRST_SALES_CALL_FIELD,  # keep cf_ prefix
+            "custom_field_id": FIRST_SALES_CALL_FIELD,
         },
         "condition": {"type": "term", "values": [date_str]},
     }
 
 
 def build_query(dates, lost_status_id):
-    """Structured Close search query — format verified via diagnose_query.py."""
+    """Structured Close search query — verified via diagnose_query.py."""
     if len(dates) == 1:
         date_filter = date_clause(dates[0])
     else:
@@ -107,8 +130,7 @@ def search_matching_leads(query):
                 "lead": [
                     "id",
                     "display_name",
-                    FIRST_SALES_CALL_FIELD,
-                    LEAD_OWNER_FIELD,
+                    "custom",  # include all custom fields
                 ]
             },
             "results_limit": 100,
@@ -126,8 +148,8 @@ def search_matching_leads(query):
 
 
 def get_current_owner_id(lead):
-    """User-type custom fields can return either an ID string or {id, name}."""
-    val = lead.get(LEAD_OWNER_FIELD)
+    """User-type custom fields can return ID string or {id, name}."""
+    val = get_custom_field(lead, LEAD_OWNER_FIELD)
     if isinstance(val, dict):
         return val.get("id")
     return val
@@ -144,10 +166,11 @@ def update_lead(lead_id):
     r.raise_for_status()
 
 
-def create_task(lead_id, lead_name, sales_call_date):
+def create_task(lead_id, lead_name, sales_call_date_iso):
     if DRY_RUN:
         return
     today = datetime.now(PACIFIC).strftime("%Y-%m-%d")
+    pretty_date = format_call_date(sales_call_date_iso)
     payload = {
         "_type": "lead",
         "lead_id": lead_id,
@@ -155,7 +178,7 @@ def create_task(lead_id, lead_name, sales_call_date):
         "date": today,
         "text": (
             f"Prior Day Lost Deal — {lead_name}. "
-            f"First sales call was {sales_call_date}. "
+            f"First sales call was {pretty_date}. "
             f"Lead reassigned to you for review/outreach."
         ),
     }
@@ -187,21 +210,23 @@ def main():
     processed = skipped = 0
     for lead in leads:
         name = lead.get("display_name", "(no name)")
-        sales_call_date = lead.get(FIRST_SALES_CALL_FIELD) or "recently"
+        sales_call_iso = get_custom_field(lead, FIRST_SALES_CALL_FIELD)
+        pretty_date = format_call_date(sales_call_iso)
+        current_owner = get_current_owner_id(lead)
 
-        if get_current_owner_id(lead) == JOHN_KIRK_USER_ID:
+        if current_owner == JOHN_KIRK_USER_ID:
             print(f"  SKIP   {name} — Lead Owner is already John")
             skipped += 1
             continue
 
         if DRY_RUN:
-            print(f"  WOULD  {name}")
+            print(f"  WOULD  {name}  (current owner: {current_owner or 'none'})")
             print(f"           → Lead Owner: John Kirk")
             print(f"           → Lane 2 Handraiser: {HANDRAISER_VALUE}")
-            print(f"           → create task for John (first call: {sales_call_date})")
+            print(f"           → task: 'First sales call was {pretty_date}'")
         else:
             update_lead(lead["id"])
-            create_task(lead["id"], name, sales_call_date)
+            create_task(lead["id"], name, sales_call_iso)
             print(f"  DONE   {name}")
         processed += 1
 
