@@ -64,8 +64,7 @@ def get_lost_status_id():
 
 
 def get_custom_field(lead, field_id):
-    """Search responses can put custom fields at top-level OR under .custom,
-    with OR without the cf_ prefix. Check all paths."""
+    """Custom fields might live at various paths in the response."""
     if field_id in lead:
         return lead[field_id]
     custom = lead.get("custom") or {}
@@ -120,19 +119,13 @@ def build_query(dates, lost_status_id):
     return {"type": "and", "queries": [date_filter, status_filter]}
 
 
-def search_matching_leads(query):
-    """Paginate /data/search/ with cursor-based pagination."""
-    leads, cursor = [], None
+def search_lead_ids(query):
+    """Search returns lead IDs only — we'll fetch each lead in full separately."""
+    ids, cursor = [], None
     while True:
         payload = {
             "query": query,
-            "_fields": {
-                "lead": [
-                    "id",
-                    "display_name",
-                    "custom",  # include all custom fields
-                ]
-            },
+            "_fields": {"lead": ["id"]},
             "results_limit": 100,
         }
         if cursor:
@@ -140,11 +133,18 @@ def search_matching_leads(query):
         r = requests.post(f"{BASE}/data/search/", json=payload, auth=AUTH)
         r.raise_for_status()
         data = r.json()
-        leads.extend(data.get("data", []))
+        ids.extend(lead["id"] for lead in data.get("data", []))
         cursor = data.get("cursor")
         if not cursor:
             break
-    return leads
+    return ids
+
+
+def get_lead(lead_id):
+    """Fetch a single lead with all fields, including custom."""
+    r = requests.get(f"{BASE}/lead/{lead_id}/", auth=AUTH)
+    r.raise_for_status()
+    return r.json()
 
 
 def get_current_owner_id(lead):
@@ -186,6 +186,21 @@ def create_task(lead_id, lead_name, sales_call_date_iso):
     r.raise_for_status()
 
 
+def debug_dump_lead_shape(lead):
+    """In dry-run, dump just the keys that look like custom fields, to verify
+    where they actually live in the response."""
+    print("--- DEBUG: structure of first lead ---")
+    relevant = {}
+    for k, v in lead.items():
+        if k.startswith("cf_") or k in ("custom", "display_name", "id", "name"):
+            # Truncate long values for readability
+            if isinstance(v, str) and len(v) > 80:
+                v = v[:80] + "…"
+            relevant[k] = v
+    print(json.dumps(relevant, indent=2, default=str))
+    print("--- end debug ---\n")
+
+
 def main():
     if DRY_RUN:
         print("=" * 60)
@@ -204,11 +219,16 @@ def main():
         print(json.dumps(query, indent=2))
         print()
 
-    leads = search_matching_leads(query)
-    print(f"Found {len(leads)} matching leads\n")
+    lead_ids = search_lead_ids(query)
+    print(f"Found {len(lead_ids)} matching leads\n")
 
     processed = skipped = 0
-    for lead in leads:
+    for i, lead_id in enumerate(lead_ids):
+        lead = get_lead(lead_id)
+
+        if DRY_RUN and i == 0:
+            debug_dump_lead_shape(lead)
+
         name = lead.get("display_name", "(no name)")
         sales_call_iso = get_custom_field(lead, FIRST_SALES_CALL_FIELD)
         pretty_date = format_call_date(sales_call_iso)
@@ -225,8 +245,8 @@ def main():
             print(f"           → Lane 2 Handraiser: {HANDRAISER_VALUE}")
             print(f"           → task: 'First sales call was {pretty_date}'")
         else:
-            update_lead(lead["id"])
-            create_task(lead["id"], name, sales_call_iso)
+            update_lead(lead_id)
+            create_task(lead_id, name, sales_call_iso)
             print(f"  DONE   {name}")
         processed += 1
 
