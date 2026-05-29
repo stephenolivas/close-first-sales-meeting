@@ -43,6 +43,14 @@ LANE_2_HANDRAISER_FIELD = "cf_Q1hRv8It46xsAEmpv4PRKdI1y0sPJnrnQrgRbIlF8uL"
 LOST_STATUS_LABEL       = "💔 Lost"
 HANDRAISER_VALUE        = "Prior Day Lost Deals"
 
+# Close's GET /lead/{id}/ returns custom fields under `custom`, keyed by
+# display name (not cf_xxx ID). Writes still use cf_xxx in PUT payloads.
+# If any of these field names get renamed in Close, this dict needs updating.
+FIELD_DISPLAY_NAMES = {
+    FIRST_SALES_CALL_FIELD: "First Sales Call Booked Date",
+    LEAD_OWNER_FIELD:        "Lead Owner",
+}
+
 PACIFIC = ZoneInfo("America/Los_Angeles")
 
 
@@ -64,15 +72,17 @@ def get_lost_status_id():
 
 
 def get_custom_field(lead, field_id):
-    """Custom fields might live at various paths in the response."""
+    """Look up a custom field's value. Primary path: lead.custom[<display name>].
+    Falls back to cf_xxx-keyed paths in case the response shape ever changes."""
+    custom = lead.get("custom") or {}
+    name = FIELD_DISPLAY_NAMES.get(field_id)
+    if name and name in custom:
+        return custom[name]
+    # Fallback paths
     if field_id in lead:
         return lead[field_id]
-    custom = lead.get("custom") or {}
     if field_id in custom:
         return custom[field_id]
-    bare = field_id.removeprefix("cf_")
-    if bare in custom:
-        return custom[bare]
     return None
 
 
@@ -120,7 +130,7 @@ def build_query(dates, lost_status_id):
 
 
 def search_lead_ids(query):
-    """Search returns lead IDs only — we'll fetch each lead in full separately."""
+    """Search returns lead IDs only — we fetch each in full separately."""
     ids, cursor = [], None
     while True:
         payload = {
@@ -186,21 +196,6 @@ def create_task(lead_id, lead_name, sales_call_date_iso):
     r.raise_for_status()
 
 
-def debug_dump_lead_shape(lead):
-    """In dry-run, dump just the keys that look like custom fields, to verify
-    where they actually live in the response."""
-    print("--- DEBUG: structure of first lead ---")
-    relevant = {}
-    for k, v in lead.items():
-        if k.startswith("cf_") or k in ("custom", "display_name", "id", "name"):
-            # Truncate long values for readability
-            if isinstance(v, str) and len(v) > 80:
-                v = v[:80] + "…"
-            relevant[k] = v
-    print(json.dumps(relevant, indent=2, default=str))
-    print("--- end debug ---\n")
-
-
 def main():
     if DRY_RUN:
         print("=" * 60)
@@ -223,11 +218,8 @@ def main():
     print(f"Found {len(lead_ids)} matching leads\n")
 
     processed = skipped = 0
-    for i, lead_id in enumerate(lead_ids):
+    for lead_id in lead_ids:
         lead = get_lead(lead_id)
-
-        if DRY_RUN and i == 0:
-            debug_dump_lead_shape(lead)
 
         name = lead.get("display_name", "(no name)")
         sales_call_iso = get_custom_field(lead, FIRST_SALES_CALL_FIELD)
