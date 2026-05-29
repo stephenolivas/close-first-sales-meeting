@@ -7,6 +7,10 @@ on:
         description: 'Dry run (log only, no writes)'
         type: boolean
         default: false
+      skip_tasks:
+        description: 'Skip task creation (still updates lead fields)'
+        type: boolean
+        default: false
   schedule:
     - cron: '0 14 * * 1-5'  # 6am PST / 7am PDT, Mon-Fri only
 
@@ -23,3 +27,4 @@ jobs:
         env:
           CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          SKIP_TASKS: ${{ inputs.skip_tasks || 'false' }}
