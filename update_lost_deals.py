@@ -8,15 +8,15 @@ Reassigns leads to John Kirk when:
 Lookback window:
   - Monday: Friday + Saturday + Sunday (covers the weekend)
   - Tue-Fri: yesterday only
-  - Sat/Sun: yesterday only (the scheduler skips weekends, but a manual
-    trigger will still behave sensibly)
+  - Sat/Sun: yesterday only (the scheduler skips weekends; manual triggers
+    still behave sensibly)
 
 For each matched lead, sets:
-  - lead_owner_id → John Kirk
+  - Lead Owner (custom field) → John Kirk
   - Lane 2 Handraiser → "Prior Day Lost Deals"
   - Creates a Close task for John, due today
 
-Idempotent: skips leads already owned by John.
+Idempotent: skips leads whose Lead Owner is already John Kirk.
 
 Environment variables:
   CLOSE_API_KEY   (required)
@@ -37,6 +37,7 @@ AUTH = (CLOSE_API_KEY, "")
 
 JOHN_KIRK_USER_ID       = "user_5pAfnzGONQLUVLKqFQVpQ3570YV1gurVCTp1MMgfCDL"
 FIRST_SALES_CALL_FIELD  = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
+LEAD_OWNER_FIELD        = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 LANE_2_HANDRAISER_FIELD = "cf_Q1hRv8It46xsAEmpv4PRKdI1y0sPJnrnQrgRbIlF8uL"
 LOST_STATUS_LABEL       = "💔 Lost"
 HANDRAISER_VALUE        = "Prior Day Lost Deals"
@@ -45,16 +46,10 @@ PACIFIC = ZoneInfo("America/Los_Angeles")
 
 
 def get_lookback_dates():
-    """
-    Build the list of date strings to search.
-    Monday → Fri/Sat/Sun. Every other day → yesterday only.
-    """
+    """Monday → Fri/Sat/Sun. Every other day → yesterday only."""
     today = datetime.now(PACIFIC).date()
     weekday = today.weekday()  # Mon=0 ... Sun=6
-    if weekday == 0:  # Monday
-        offsets = (3, 2, 1)  # Fri, Sat, Sun
-    else:
-        offsets = (1,)
+    offsets = (3, 2, 1) if weekday == 0 else (1,)
     return [(today - timedelta(days=n)).strftime("%Y-%m-%d") for n in offsets]
 
 
@@ -67,51 +62,53 @@ def get_lost_status_id():
     sys.exit(f"Could not find lead status: {LOST_STATUS_LABEL}")
 
 
-def search_matching_leads(dates, lost_status_id):
-    """Multi-value `term` acts as OR across the supplied dates."""
-    query = {
-        "query": {
-            "type": "and",
-            "queries": [
-                {
-                    "type": "field_condition",
-                    "field": {
-                        "type": "custom_field",
-                        "custom_field_id": FIRST_SALES_CALL_FIELD.removeprefix("cf_"),
-                    },
-                    "condition": {"type": "term", "values": dates},
-                },
-                {
-                    "type": "field_condition",
-                    "field": {
-                        "type": "regular_field",
-                        "object_type": "lead",
-                        "field_name": "status_id",
-                    },
-                    "condition": {"type": "term", "values": [lost_status_id]},
-                },
-            ],
-        },
-        "_fields": {
-            "lead": [
-                "id",
-                "display_name",
-                "lead_owner_id",
-                FIRST_SALES_CALL_FIELD,
-            ]
-        },
-        "results_limit": 200,
-    }
-    r = requests.post(f"{BASE}/data/search/", json=query, auth=AUTH)
-    r.raise_for_status()
-    return r.json().get("data", [])
+def build_query(dates, lost_status_id):
+    """Build a Close query DSL string — same syntax as Smart Views."""
+    field_path = f"custom.{FIRST_SALES_CALL_FIELD}"
+    if len(dates) == 1:
+        date_clause = f'{field_path}:"{dates[0]}"'
+    else:
+        parts = [f'{field_path}:"{d}"' for d in dates]
+        date_clause = "(" + " or ".join(parts) + ")"
+    return f'{date_clause} and lead_status_id:"{lost_status_id}"'
+
+
+def search_matching_leads(query):
+    """Paginate through Close's /lead/ list endpoint with the query DSL."""
+    leads, skip = [], 0
+    while True:
+        params = {
+            "query": query,
+            "_fields": (
+                f"id,display_name,"
+                f"{FIRST_SALES_CALL_FIELD},{LEAD_OWNER_FIELD}"
+            ),
+            "_limit": 100,
+            "_skip": skip,
+        }
+        r = requests.get(f"{BASE}/lead/", params=params, auth=AUTH)
+        r.raise_for_status()
+        data = r.json()
+        leads.extend(data.get("data", []))
+        if not data.get("has_more"):
+            break
+        skip += 100
+    return leads
+
+
+def get_current_owner_id(lead):
+    """User-type custom fields can return either an ID string or {id, name}."""
+    val = lead.get(LEAD_OWNER_FIELD)
+    if isinstance(val, dict):
+        return val.get("id")
+    return val
 
 
 def update_lead(lead_id):
     if DRY_RUN:
         return
     payload = {
-        "lead_owner_id": JOHN_KIRK_USER_ID,
+        LEAD_OWNER_FIELD: JOHN_KIRK_USER_ID,
         LANE_2_HANDRAISER_FIELD: HANDRAISER_VALUE,
     }
     r = requests.put(f"{BASE}/lead/{lead_id}/", json=payload, auth=AUTH)
@@ -148,7 +145,10 @@ def main():
     print(f"Today is {today_name}. Lookback window: {dates}")
 
     lost_status_id = get_lost_status_id()
-    leads = search_matching_leads(dates, lost_status_id)
+    query = build_query(dates, lost_status_id)
+    print(f"Query: {query}\n")
+
+    leads = search_matching_leads(query)
     print(f"Found {len(leads)} matching leads\n")
 
     processed = skipped = 0
@@ -156,14 +156,14 @@ def main():
         name = lead.get("display_name", "(no name)")
         sales_call_date = lead.get(FIRST_SALES_CALL_FIELD) or "recently"
 
-        if lead.get("lead_owner_id") == JOHN_KIRK_USER_ID:
-            print(f"  SKIP   {name} — already owned by John")
+        if get_current_owner_id(lead) == JOHN_KIRK_USER_ID:
+            print(f"  SKIP   {name} — Lead Owner is already John")
             skipped += 1
             continue
 
         if DRY_RUN:
             print(f"  WOULD  {name}")
-            print(f"           → lead_owner_id: John Kirk")
+            print(f"           → Lead Owner: John Kirk")
             print(f"           → Lane 2 Handraiser: {HANDRAISER_VALUE}")
             print(f"           → create task for John (first call: {sales_call_date})")
         else:
