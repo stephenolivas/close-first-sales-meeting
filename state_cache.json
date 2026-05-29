@@ -55816,8 +55816,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_kVclVYLnqAQKE2eB5HoFxBnCERa7fCATdpy2sRd3tGk": {
+      "date": "2026-06-04",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-05-29 02:39:00 UTC",
-  "count": 7041
+  "saved_at": "2026-05-29 03:08:52 UTC",
+  "count": 7042
 }
