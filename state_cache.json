@@ -56100,16 +56100,18 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_Gdpzp0LCU6pLc9PIwqNj8jjeXTwB2JpWnWax5vKQxqi": {
       "date": "2026-06-02",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-30 20:39:23 UTC",
+  "saved_at": "2026-05-30 20:59:01 UTC",
   "count": 7078
 }
