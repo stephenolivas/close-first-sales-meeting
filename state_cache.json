@@ -56092,9 +56092,10 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-30 19:55:43 UTC",
+  "saved_at": "2026-05-30 20:09:23 UTC",
   "count": 7076
 }
