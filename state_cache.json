@@ -56292,9 +56292,17 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_pX5Fl35gSKlMYL6bTJiOkiz8UAYtvzinvpeforfelRm": {
+      "date": "2026-06-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-05-31 22:39:30 UTC",
-  "count": 7101
+  "saved_at": "2026-05-31 23:06:57 UTC",
+  "count": 7102
 }
