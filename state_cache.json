@@ -56228,9 +56228,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-05-31 16:49:16 UTC",
+  "saved_at": "2026-05-31 17:09:36 UTC",
   "count": 7093
 }
