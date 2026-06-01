@@ -436,7 +436,7 @@
   },
   "lead_30oFuAvf9vTa1jzcN1xnvOMKi2qPduiZ3ytqG06EBjI": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-03-14",
-    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": "2026-06-04",
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": "2026-05-28"
   },
   "lead_31f2B2EDdjNUTMgLv2nHcql9hCazEh5HHhbUCsyeNbL": {
@@ -3496,6 +3496,11 @@
   },
   "lead_Sm7iLsi8wewxWdQWLphBkqFeDQFaeY0UzWcb3vAb882": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-02-09",
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
+  },
+  "lead_SmVHUzGNqW5iG0QJGhFGytWbkljBmY0zwwCMQRCcRNo": {
+    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-05",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
   },
