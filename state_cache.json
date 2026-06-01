@@ -56308,9 +56308,10 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-06-01 00:09:30 UTC",
+  "saved_at": "2026-06-01 00:38:57 UTC",
   "count": 7103
 }
