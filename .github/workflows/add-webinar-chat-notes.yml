@@ -7,6 +7,13 @@ on:
         description: "Path to CSV file in the repo"
         required: true
         default: "webinar_chat_notes.csv"
+      note_date:
+        description: "Webinar date for the note header (YYYY-MM-DD)"
+        required: true
+      dry_run:
+        description: "Dry run? (preview only — flip to false to actually post)"
+        type: boolean
+        default: true
 
 jobs:
   add-notes:
@@ -23,4 +30,10 @@ jobs:
       - name: Post notes to Close
         env:
           CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
-        run: python add_webinar_chat_notes.py "${{ inputs.csv_path }}"
+          NOTE_DATE: ${{ inputs.note_date }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python add_webinar_chat_notes.py "${{ inputs.csv_path }}" --dry-run
+          else
+            python add_webinar_chat_notes.py "${{ inputs.csv_path }}"
+          fi
