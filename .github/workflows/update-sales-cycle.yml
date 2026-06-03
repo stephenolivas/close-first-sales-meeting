@@ -1,0 +1,49 @@
+name: Update Sales Cycle (Days)
+
+on:
+  # Runs 4x/day. Offset to :05 so it doesn't collide with update_field.py (:00/:30)
+  # or update_followups.py (:15/:45) for Close API throughput.
+  schedule:
+    - cron: '5 */6 * * *'        # 00:05, 06:05, 12:05, 18:05 UTC
+  # Manual trigger (and the cron-job.org webhook). Flip `backfill` on to ignore
+  # the state cache and recompute every won lead from scratch.
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: 'Full backfill (ignore state cache)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # needed to commit the updated state cache back to the repo
+
+concurrency:
+  group: update-sales-cycle
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run updater
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+          BACKFILL: ${{ inputs.backfill && '1' || '0' }}
+        run: python update_sales_cycle.py
+
+      - name: Commit updated state cache
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sales_cycle_state_cache.json
+          git diff --staged --quiet || git commit -m "Update sales cycle state cache [skip ci]"
+          git push
