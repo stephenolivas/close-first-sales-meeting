@@ -118,37 +118,67 @@ def _rate_limit_wait(resp) -> float:
 # Data fetching
 # --------------------------------------------------------------------------- #
 
+def _read_cf(lead: dict, field_id: str):
+    """
+    Read a custom field off a lead object. Close can surface custom fields a
+    couple of ways depending on endpoint, so check each shape.
+    """
+    key = f"custom.{field_id}"
+    if key in lead:
+        return lead[key]
+    custom = lead.get("custom")
+    if isinstance(custom, dict):
+        return custom.get(field_id) or custom.get(key)
+    return None
+
+
 def get_won_leads() -> list[dict]:
     """
     All leads currently in Closed/Won, each with its First Sales Call date.
 
-    The first-call date rides along in the lead payload (via _fields), so we
-    don't need a separate fetch for it — the only per-lead call we'll make later
-    is for the won-date status change.
+    Uses Close's Advanced Filtering endpoint (POST /data/search/), which filters
+    leads by status_id reliably. The simple `/lead/?query=` endpoint treats
+    `lead_status_id:...` as free text and silently matches nothing.
+
+    The first-call date rides along in the payload (via _fields), so the only
+    per-lead call we make later is for the won-date status change.
     """
-    fields = ",".join(["id", "display_name", "status_id", f"custom.{FIELD_FIRST_SALES_CALL}"])
-    leads, skip = [], 0
+    body = {
+        "_limit": PAGE_SIZE,
+        "query": {
+            "type": "and",
+            "queries": [
+                {"type": "object_type", "object_type": "lead"},
+                {
+                    "type": "field_condition",
+                    "field": {
+                        "type": "regular_field",
+                        "object_type": "lead",
+                        "field_name": "status_id",
+                    },
+                    "condition": {"type": "term", "values": [WON_STATUS_ID]},
+                },
+            ],
+        },
+        "_fields": {
+            "lead": ["id", "display_name", "status_id", f"custom.{FIELD_FIRST_SALES_CALL}"]
+        },
+    }
+
+    leads, cursor = [], None
     while True:
-        page = _request(
-            "GET",
-            "/lead/",
-            params={
-                "query": f'lead_status_id:"{WON_STATUS_ID}"',
-                "_fields": fields,
-                "_limit": PAGE_SIZE,
-                "_skip": skip,
-            },
-        )
-        data = page.get("data", [])
-        for lead in data:
+        if cursor:
+            body["cursor"] = cursor
+        page = _request("POST", "/data/search/", json=body)
+        for lead in page.get("data", []):
             leads.append({
                 "id": lead["id"],
                 "name": lead.get("display_name", ""),
-                "first_call_date": lead.get(f"custom.{FIELD_FIRST_SALES_CALL}"),
+                "first_call_date": _read_cf(lead, FIELD_FIRST_SALES_CALL),
             })
-        if not page.get("has_more"):
+        cursor = page.get("cursor")
+        if not cursor:
             break
-        skip += PAGE_SIZE
     return leads
 
 
