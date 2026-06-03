@@ -57163,8 +57163,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_RBG8tyw5nb2QKeTZn6quiWIgtxDTzH5kK2rKXR2gcr8": {
+      "date": "2026-06-08",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-06-03 17:36:02 UTC",
-  "count": 7210
+  "saved_at": "2026-06-03 18:10:56 UTC",
+  "count": 7211
 }
