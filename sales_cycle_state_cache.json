@@ -1,1 +1,2990 @@
-{}
+{
+  "lead_0GNwmJ8iGe4iz3gJCEfBFyOEhwDkPMkR0eI78igRbp9": {
+    "cycle_days": 38,
+    "first_call_date": "2026-03-24",
+    "name": "Jeff Warren",
+    "won_date": "2026-05-01"
+  },
+  "lead_0HK1Eyn3pJPNBUobpqHMHIE5jlZXbkwO3OVISuAdQCW": {
+    "cycle_days": 1,
+    "first_call_date": "2026-01-22",
+    "name": "Isaac Zetter",
+    "won_date": "2026-01-23"
+  },
+  "lead_0TWTUTUyipk1EgWDUddh1N0K5BmbGiCqoQ1J7bPi42Y": {
+    "cycle_days": 6,
+    "first_call_date": "2026-04-22",
+    "name": "Charles Coles",
+    "won_date": "2026-04-28"
+  },
+  "lead_0arduSNn8NFy6BJ94dLQPvlLLdh5UwPbWsROOQlbMMg": {
+    "cycle_days": 0,
+    "first_call_date": "2026-01-28",
+    "name": "Paulus Reyes",
+    "won_date": "2026-01-28"
+  },
+  "lead_0gNTrCNFFiqToGO1I6Y5WfLoELSF58l2Cp5eJB7f1rk": {
+    "cycle_days": 178,
+    "first_call_date": "2025-10-20",
+    "name": "Miguel talamantes",
+    "won_date": "2026-04-16"
+  },
+  "lead_155eHMxdO5BFOE0QMzPfHRSEFbXGM9AmGyIxOPRRg7C": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-15",
+    "name": "Kiran Malhi",
+    "won_date": "2026-04-15"
+  },
+  "lead_1FRetUa2h60momY8sMew06HTrLEYGqFVPXqsS45yGpn": {
+    "cycle_days": 0,
+    "first_call_date": "2026-06-02",
+    "name": "Michael Parrish",
+    "won_date": "2026-06-02"
+  },
+  "lead_1PxL4ImwjvAAiWPd91ibVcY3iCNkTGPI73yH4VOzwRT": {
+    "cycle_days": 104,
+    "first_call_date": "2026-01-17",
+    "name": "Benton Buss",
+    "won_date": "2026-05-01"
+  },
+  "lead_1R3Ua8M1Y8R5GtrgTHdkdDkaR71ixFK76zXF1DEyvBV": {
+    "cycle_days": 3,
+    "first_call_date": "2026-02-02",
+    "name": "Gabe Jensen",
+    "won_date": "2026-02-05"
+  },
+  "lead_1RgICt2701XaSe8Ls8POsnCHrG0bsxnVoN4pahbNRmI": {
+    "cycle_days": 6,
+    "first_call_date": "2026-03-18",
+    "name": "Paul & Veronica Ortega",
+    "won_date": "2026-03-24"
+  },
+  "lead_1UqXFFEbJGeDphjgFGUDFLPdKwntQdl5g3Wr1vMgtFm": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-25",
+    "name": "Josh Gartenbaum",
+    "won_date": "2026-03-25"
+  },
+  "lead_1UxvbaQlOCyV8Wun4WjdEUxNzfKBnWZVbfX7XDc8mLV": {
+    "cycle_days": 97,
+    "first_call_date": "2025-12-16",
+    "name": "James Breeding - Codie Sanchez",
+    "won_date": "2026-03-23"
+  },
+  "lead_1WJvyD7fpVOYs5il64uBRru8RVdc3rcHHxlFQkEpYL3": {
+    "cycle_days": 29,
+    "first_call_date": "2026-02-17",
+    "name": "Erik Haan",
+    "won_date": "2026-03-18"
+  },
+  "lead_1cnK4EirNtT56IPwF57GbFkubygcsqQMRhyZU3ndfTo": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-10",
+    "name": "Camron Calvert",
+    "won_date": "2026-04-10"
+  },
+  "lead_1kx3gmOxovEXOm0jAMrHkxVeROQbCK8oYu3RvWQOgDm": {
+    "cycle_days": 99,
+    "first_call_date": "2026-01-28",
+    "name": "Benjamin Lebaron",
+    "won_date": "2026-05-07"
+  },
+  "lead_1lfD1lJ5BwekdeaeeSQpHf1HoPACxreMieiy5wKc6Tv": {
+    "cycle_days": 182,
+    "first_call_date": "2025-10-16",
+    "name": "Cathy Gregory-Walker",
+    "won_date": "2026-04-16"
+  },
+  "lead_1mBfCAtP2PYLki1yMTyG3ZpbgTy3Kwfz3flxdv8d47p": {
+    "cycle_days": 19,
+    "first_call_date": "2026-03-18",
+    "name": "Adam Lynch",
+    "won_date": "2026-04-06"
+  },
+  "lead_1uCPwWhxXd6cJCenOGvccs30QsozGc1MaGj85R3cyBK": {
+    "cycle_days": 60,
+    "first_call_date": "2025-12-13",
+    "name": "Colin Alford",
+    "won_date": "2026-02-11"
+  },
+  "lead_22yyOUmG7BJPSl6NUiYTKic6o6HX2xdgy11QiniE20z": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-12",
+    "name": "Kyle Monroe",
+    "won_date": "2026-02-13"
+  },
+  "lead_25uO9iR7MeeXleQwEmu7BlkhZSFClwOraeyqWwxamO7": {
+    "cycle_days": 115,
+    "first_call_date": "2025-12-22",
+    "name": "Carson Vaughn",
+    "won_date": "2026-04-16"
+  },
+  "lead_28iBlKkG0xHMCmnzpglshCkdK70lgS2Xuzb1YnMod0r": {
+    "cycle_days": 2,
+    "first_call_date": "2026-02-09",
+    "name": "Seth Sternberg",
+    "won_date": "2026-02-11"
+  },
+  "lead_2AjPbUdK06EsepZtbyiKRGugGZpTEjbW1pfvL4g9TWk": {
+    "cycle_days": 128,
+    "first_call_date": "2025-12-09",
+    "name": "Parker Watson",
+    "won_date": "2026-04-16"
+  },
+  "lead_2DxpJ1lkqFNwJaP2IyfFvMSSzAjBN1BiqheW7pSfsN1": {
+    "cycle_days": 1,
+    "first_call_date": "2026-05-21",
+    "name": "Jonathan Redd",
+    "won_date": "2026-05-22"
+  },
+  "lead_2GtSzNm501ApC1v31Ko1zIopNbV3TsMKVherHB6Outx": {
+    "cycle_days": 4,
+    "first_call_date": "2026-04-24",
+    "name": "Emily Ausbrook",
+    "won_date": "2026-04-28"
+  },
+  "lead_2It35PpIKR6byevAfMpqEDIQ1u3YkLUNt9CSyiNZtrF": {
+    "cycle_days": 3,
+    "first_call_date": "2026-05-01",
+    "name": "Angelika Roerig",
+    "won_date": "2026-05-04"
+  },
+  "lead_2Km8VffHe7qP8P7L1HCDyBRSdBsbyoEnCSM1SsqSHqU": {
+    "cycle_days": 48,
+    "first_call_date": "2026-04-08",
+    "name": "Karen Seavy",
+    "won_date": "2026-05-26"
+  },
+  "lead_2QBCvmquAwby5LE6c61JBqljJDK5IlDyE42niuYK9Se": {
+    "cycle_days": 15,
+    "first_call_date": "2026-05-04",
+    "name": "Octavio valenzuela",
+    "won_date": "2026-05-19"
+  },
+  "lead_2V8wwoAl2cKoZdHkABmaVUQwzngrHFPVW3LWv61SLGP": {
+    "cycle_days": 78,
+    "first_call_date": "2025-12-19",
+    "name": "Kevin Maxwell",
+    "won_date": "2026-03-07"
+  },
+  "lead_2ZGRDLqejb4Aoqpvr6eIV4Dl3uImS4xXBS6uRIaUOLB": {
+    "cycle_days": 23,
+    "first_call_date": "2026-04-08",
+    "name": "Michael Bittler",
+    "won_date": "2026-05-01"
+  },
+  "lead_2ZSerHK43aSSXTbJ6UvqTsjV3bCTQdXWpI4mWhSjFmc": {
+    "cycle_days": 9,
+    "first_call_date": "2026-03-03",
+    "name": "Lucas Ray",
+    "won_date": "2026-03-12"
+  },
+  "lead_2b8MV7kOxKOZnANLQ43tKzusoWBNOZCSg0zKZVCkNWO": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-03",
+    "name": "Stephanie Herscu",
+    "won_date": "2026-03-04"
+  },
+  "lead_2kHhuRbsMwWLEQMxJ5wNX9EgRIc3WsjuSpGoBH4bpeA": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-16",
+    "name": "Javier Cruz",
+    "won_date": "2026-03-16"
+  },
+  "lead_2kWh1IYdRaavcVIujrGmp3zLGENIV6OqTwxz1Si8dMo": {
+    "cycle_days": 2,
+    "first_call_date": "2026-04-29",
+    "name": "Victor Figueroa",
+    "won_date": "2026-05-01"
+  },
+  "lead_2nB7F9FgTFYwwznwqTBP7VQfvYuEXzluey2iaFQN3uZ": {
+    "cycle_days": 33,
+    "first_call_date": "2026-01-08",
+    "name": "Don Bassett",
+    "won_date": "2026-02-10"
+  },
+  "lead_2w5ZGMGP9UV64BQY9pe1jQjktY7WVqnRipDeKjvyUA8": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-24",
+    "name": "Savannah Olvera",
+    "won_date": "2026-03-24"
+  },
+  "lead_35NlYZ3JXMwrFEKbnSzIiOhKjPYzNXswYdOS7iOs5oL": {
+    "cycle_days": 67,
+    "first_call_date": "2026-02-12",
+    "name": "Martin Cervantez",
+    "won_date": "2026-04-20"
+  },
+  "lead_3HE2WdHMpNF0aQkxNuTC3AXhabgwaOb0Ab6YoQ3uYk7": {
+    "cycle_days": 39,
+    "first_call_date": "2026-01-02",
+    "name": "Alison DerHagopian",
+    "won_date": "2026-02-10"
+  },
+  "lead_3KfmsF2iqMPhiFPTljX3OhYNcJNl4G5wrNThLYgcnbp": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-17",
+    "name": "Marquel King",
+    "won_date": "2026-04-17"
+  },
+  "lead_3RGEAvUuYCx1EQGJlmIA1EzjM3Q7Ra1D1ljJbRX0uU3": {
+    "cycle_days": 9,
+    "first_call_date": "2026-01-21",
+    "name": "Kenddy Diaz Solano",
+    "won_date": "2026-01-30"
+  },
+  "lead_3YpiQ7JCo4igmVbPdk5Fd019zng5f271eShTqqocemd": {
+    "cycle_days": 159,
+    "first_call_date": "2025-11-08",
+    "name": "Denise Tindall",
+    "won_date": "2026-04-16"
+  },
+  "lead_3eejd6bWsv0j3Wk5orCTbr4cRgy0J6ICjKhFdpIwMrl": {
+    "cycle_days": 24,
+    "first_call_date": "2026-03-20",
+    "name": "Travis Sydow",
+    "won_date": "2026-04-13"
+  },
+  "lead_3fFOoVMSN0HOtlauYtryYwSZ4irobHRo7mLFqsVJuCY": {
+    "cycle_days": 4,
+    "first_call_date": "2026-04-09",
+    "name": "Kevin McPherson",
+    "won_date": "2026-04-13"
+  },
+  "lead_3fQlz3A5T4t5xt7xSeTCVsyb0SaDvWEuI4i5QDlLApV": {
+    "cycle_days": 16,
+    "first_call_date": "2026-05-13",
+    "name": "Len Heath",
+    "won_date": "2026-05-29"
+  },
+  "lead_3qMfzzq4eMwN56ew7b46X3HgwDW4MaYlaCWJRKgoGRM": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-01",
+    "name": "Donnell Calhoun",
+    "won_date": "2026-04-01"
+  },
+  "lead_4KRcSZvEgmAHWTi0Wtu7G66rW6JrT849l0VAG8CuykH": {
+    "cycle_days": 7,
+    "first_call_date": "2026-04-30",
+    "name": "William Fish",
+    "won_date": "2026-05-07"
+  },
+  "lead_4PVuiVHECB2pcgte4z0KOVFqoMMvjHlVZkJybv5InFU": {
+    "cycle_days": 21,
+    "first_call_date": "2026-01-21",
+    "name": "Jeffrey Palermo",
+    "won_date": "2026-02-11"
+  },
+  "lead_4RFcm3Mt9LlE4w1lsbuJBAWjXnQmLRJBAcLWjuJhTvE": {
+    "cycle_days": 90,
+    "first_call_date": "2025-12-05",
+    "name": "Ade Popoola",
+    "won_date": "2026-03-05"
+  },
+  "lead_4SV4Y9EN7JecGe3LBoZXVsrh1DVqlGkGvbWZqtLblj0": {
+    "cycle_days": 15,
+    "first_call_date": "2026-04-20",
+    "name": "Xochitl gomez",
+    "won_date": "2026-05-05"
+  },
+  "lead_4T2d2vfO6zWR7olH1KMBga2cm5xbuZoTGGLcafRrbi4": {
+    "cycle_days": 14,
+    "first_call_date": "2026-02-23",
+    "name": "Dex Caguiat",
+    "won_date": "2026-03-09"
+  },
+  "lead_5nLd0VXDlT4IiKTjxhWQmcLDZBmIfDUWSBhjkO1JTO0": {
+    "cycle_days": 28,
+    "first_call_date": "2026-03-10",
+    "name": "Brad Bilderback",
+    "won_date": "2026-04-07"
+  },
+  "lead_5w9D2yhctVuCeuhS1FKdkxlctRckJBQdvtlBnJXIpqz": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-05",
+    "name": "Raul Guevara",
+    "won_date": "2026-03-05"
+  },
+  "lead_5wobDeQjzgIR4iiLKGUCnMo2leYsjz2MHvWaRkjTJZe": {
+    "cycle_days": 26,
+    "first_call_date": "2026-01-02",
+    "name": "Mario Suazo",
+    "won_date": "2026-01-28"
+  },
+  "lead_6OQedZEEl8HeQ2FDVKPD6iDThglyNrxtsYEkTHyuFYB": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-14",
+    "name": "Chase Taylor",
+    "won_date": "2026-05-14"
+  },
+  "lead_6lx0v6PprCwrk4G1sXr59omLMC650zhs6H4f3qtKuhE": {
+    "cycle_days": 4,
+    "first_call_date": "2026-03-27",
+    "name": "Corey Van de Boogaard",
+    "won_date": "2026-03-31"
+  },
+  "lead_6tyLoLQMRmanauCJtsZGHeEoXIW0GAWHzCxFGUkpHOv": {
+    "cycle_days": 143,
+    "first_call_date": "2025-11-24",
+    "name": "Michael Simon",
+    "won_date": "2026-04-16"
+  },
+  "lead_73wyWzITEQfQdvsxcKF4cNsz6lpnMW3JU6Gi6nmCpAK": {
+    "cycle_days": 2,
+    "first_call_date": "2026-02-10",
+    "name": "John Duppenthaler",
+    "won_date": "2026-02-12"
+  },
+  "lead_7RBNtXbbDtbDnaJTc0rAp4tGlaDpZY9E4NDMhylPXPY": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-25",
+    "name": "Teshannee Moye",
+    "won_date": "2026-02-25"
+  },
+  "lead_7d9eEqRsNE7UUUeQk7jKzQiyjgxOuRVdoHCC44FZclp": {
+    "cycle_days": 74,
+    "first_call_date": "2026-01-09",
+    "name": "Chris Willcox",
+    "won_date": "2026-03-24"
+  },
+  "lead_7fxgw73yEwMlqBRpATHXH1dH5dv3zI40xZRfNLfWql4": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-27",
+    "name": "Justin Mbah",
+    "won_date": "2026-05-27"
+  },
+  "lead_7npJMARs87YzDtpmxwwpbkvrgO3oZ9FbWQ4NZ1a1bq7": {
+    "cycle_days": 101,
+    "first_call_date": "2026-01-05",
+    "name": "Wilson Montalvo",
+    "won_date": "2026-04-16"
+  },
+  "lead_7oqkuuPQ5mYddJNxGSpKlJ6zsHvOE73ojVXimly73Iw": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-13",
+    "name": "Jaida West",
+    "won_date": "2026-04-13"
+  },
+  "lead_7pVNMBYRP6nk3XjrVShEmVHTASO6PiSvzpG1I3VfpaD": {
+    "cycle_days": 34,
+    "first_call_date": "2026-02-10",
+    "name": "Brady Montague",
+    "won_date": "2026-03-16"
+  },
+  "lead_7ti3FCbcOophfuOpEQAQ3KcleSW2Eo0H3l6mwOxCZkR": {
+    "cycle_days": 21,
+    "first_call_date": "2026-05-12",
+    "name": "Joey Hochstetler",
+    "won_date": "2026-06-02"
+  },
+  "lead_8LX3UHAVXIFdKyPO31EYWk2pd2IN2eM3YsaktBb8QmL": {
+    "cycle_days": 8,
+    "first_call_date": "2026-04-06",
+    "name": "Nicolas Huguenin",
+    "won_date": "2026-04-14"
+  },
+  "lead_8TGt5mw0mu3Dtg39wPEcZxSHSx1V7tSKrGBMh0eGfBy": {
+    "cycle_days": 3,
+    "first_call_date": "2026-03-02",
+    "name": "Casey Ervin",
+    "won_date": "2026-03-05"
+  },
+  "lead_8dB6GcgUltcNvKAVFbVy7bAXU27Zw8OlM5IN2lczO1b": {
+    "cycle_days": 67,
+    "first_call_date": "2025-12-12",
+    "name": "Naomi Starr",
+    "won_date": "2026-02-17"
+  },
+  "lead_8eUs82nqpsnpCrJ7GDKgUCTcstzLxhKgAsmGAgd2XC4": {
+    "cycle_days": 0,
+    "first_call_date": "2026-01-26",
+    "name": "Kristen & Jonathan Morse",
+    "won_date": "2026-01-26"
+  },
+  "lead_8mNWbEd8GGtf2u8awDo3Q7pD0mq50VwkN7iiN6DcWJS": {
+    "cycle_days": 141,
+    "first_call_date": "2025-11-26",
+    "name": "Justin Lahr",
+    "won_date": "2026-04-16"
+  },
+  "lead_8wXLUaOzYosozbpaVPSmRDdR0WNRc1viXRNE9GZVGYP": {
+    "cycle_days": 25,
+    "first_call_date": "2026-01-08",
+    "name": "Vikki Gonzales",
+    "won_date": "2026-02-02"
+  },
+  "lead_8wdVcdh6dSKavRfIrFJxnHzFaQjsiCdtKyoLztZBcZc": {
+    "cycle_days": 2,
+    "first_call_date": "2026-02-25",
+    "name": "Michael Peters",
+    "won_date": "2026-02-27"
+  },
+  "lead_94PZbivYbDTzyVRlVpvEigkdMNjGaJCbXtzZ6GUjr6Z": {
+    "cycle_days": 15,
+    "first_call_date": "2026-05-07",
+    "name": "Tim Bousquet",
+    "won_date": "2026-05-22"
+  },
+  "lead_9Cai83GSoSGJbwufnLslps52h7BUSyANrsjGdedySdm": {
+    "cycle_days": 6,
+    "first_call_date": "2026-03-25",
+    "name": "Hannah Hoffman",
+    "won_date": "2026-03-31"
+  },
+  "lead_9Krh4c2auU6NNZwfhTyMzWTJYJZ8ybodqJu0VURL0WG": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-09",
+    "name": "Serge Zadorozhny",
+    "won_date": "2026-02-09"
+  },
+  "lead_9OpjPEq0s3odPv2MCcvE9YcDYwMZtazfolK3jdmTjrD": {
+    "cycle_days": 13,
+    "first_call_date": "2026-03-12",
+    "name": "Corry Mazza",
+    "won_date": "2026-03-25"
+  },
+  "lead_9PiQNZc1w8d1xJXmyW9XqN91p4mGabzfwfX1Tn1Xvwi": {
+    "cycle_days": 121,
+    "first_call_date": "2025-12-16",
+    "name": "Maxime Turcotte",
+    "won_date": "2026-04-16"
+  },
+  "lead_9o7k1Ir1qpIQJGOw0h0xY7X55WoK4DWdGuQ6ndgcbR6": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-17",
+    "name": "Jonathan Tomlinson",
+    "won_date": "2026-02-18"
+  },
+  "lead_9yj8a7BhvyzZJAtQpoE4PFWH7MyLnSAqggHUZS7KQ1j": {
+    "cycle_days": 168,
+    "first_call_date": "2025-10-30",
+    "name": "Shawn Kagwa",
+    "won_date": "2026-04-16"
+  },
+  "lead_9zTNTdCpayGbxuq25qmUF2SOTcH1UVyB4rbetJHh3Qq": {
+    "cycle_days": 61,
+    "first_call_date": "2025-12-04",
+    "name": "Doug Mitchell",
+    "won_date": "2026-02-03"
+  },
+  "lead_A6QlVzbwTuS9royYXIfq7oVf1KIpqfkZr2FSBEDGON5": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-08",
+    "name": "Lazar Dresevic",
+    "won_date": "2026-04-08"
+  },
+  "lead_ASAxYtCQmSBZ9YPXFjtwuvQBVuuhyogeNvHk8AvmP9n": {
+    "cycle_days": 2,
+    "first_call_date": "2026-01-23",
+    "name": "Matt Benson",
+    "won_date": "2026-01-25"
+  },
+  "lead_AVkFIs2StxGQyNbTld1RP2itA8doK4bn8Soex4hFo9x": {
+    "cycle_days": 131,
+    "first_call_date": "2025-12-06",
+    "name": "Cubahama",
+    "won_date": "2026-04-16"
+  },
+  "lead_AW10nrFJWoBTKXIBhNbGxv4jhB1MC4s3Uv8MSGxgyhJ": {
+    "cycle_days": 178,
+    "first_call_date": "2025-10-20",
+    "name": "StephanieHoyle",
+    "won_date": "2026-04-16"
+  },
+  "lead_AegrbWNaajEPQUWKg4acJ7P2dnDZIVXiHT6MBQOprch": {
+    "cycle_days": 0,
+    "first_call_date": "2026-06-03",
+    "name": "Peter Ellestad",
+    "won_date": "2026-06-03"
+  },
+  "lead_AsCwzYYzIeWQuIAzqb6NDSTcPKXIVnz1pT3Zew60ngE": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-04",
+    "name": "Norman Eidelman",
+    "won_date": "2026-03-04"
+  },
+  "lead_B7GCwgM1muXiuoCdus9AUCOKOucE3zTwqj3UXQx89PR": {
+    "cycle_days": 126,
+    "first_call_date": "2025-12-11",
+    "name": "Silvano Matthews",
+    "won_date": "2026-04-16"
+  },
+  "lead_BDgIgE7v5K0Uf2bWtFDfSsDieFA6AtmRtU02sHNZyb8": {
+    "cycle_days": 25,
+    "first_call_date": "2026-01-08",
+    "name": "Jason Sanders",
+    "won_date": "2026-02-02"
+  },
+  "lead_BNVaKsD9ys5g8iYUz4Wm8hNrnoETfP0G3UTaGv9R9kW": {
+    "cycle_days": 8,
+    "first_call_date": "2026-01-20",
+    "name": "Jackson Hamm",
+    "won_date": "2026-01-28"
+  },
+  "lead_BXiclpnBKN6NuCnUgAbKE05nCmXx5bkiN11UxcFrYRN": {
+    "cycle_days": 169,
+    "first_call_date": "2025-10-29",
+    "name": "Lauren Hellerman",
+    "won_date": "2026-04-16"
+  },
+  "lead_BdLQF98vNhczEHpZhK6oQUY9c5SZ0MdnD3T5YFQmfZ0": {
+    "cycle_days": 2,
+    "first_call_date": "2026-01-21",
+    "name": "Jeffrey Gibbons",
+    "won_date": "2026-01-23"
+  },
+  "lead_Bh7GXNx3con0Lq4ycMZ2yFLiTm0c3qyeCZLIcdNCTvW": {
+    "cycle_days": 0,
+    "first_call_date": "2026-01-23",
+    "name": "SAHIBPREET OTAL",
+    "won_date": "2026-01-23"
+  },
+  "lead_BnVbgGQVoVgVuKI8zUoLSg2a4WIQQl213w4bJM2ZrZO": {
+    "cycle_days": 64,
+    "first_call_date": "2025-12-29",
+    "name": "Elliot Zatzkis",
+    "won_date": "2026-03-03"
+  },
+  "lead_Bw5K3rb3LYyjHTxoCj2qnOE1xJboOtj9UcHSyArWC3K": {
+    "cycle_days": 211,
+    "first_call_date": "2025-09-17",
+    "name": "Genesis Filoteo",
+    "won_date": "2026-04-16"
+  },
+  "lead_ByzFfqlWhfVoBOYd7Yz2ED6Uo2GupoMwm4I0jIa2cUI": {
+    "cycle_days": 37,
+    "first_call_date": "2026-01-08",
+    "name": "Brian Loewen",
+    "won_date": "2026-02-14"
+  },
+  "lead_C2RmGLshr5EMHIA7ehfJOPf81k22TVopeddrTw5G9nZ": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-03",
+    "name": "Crystal Santiago / Anthony Joseph",
+    "won_date": "2026-03-03"
+  },
+  "lead_CAVwDgU6mpOVVYmwy5lYmvKyuUoxUxMznfXBydEPXbP": {
+    "cycle_days": 21,
+    "first_call_date": "2026-02-11",
+    "name": "John Sherrill",
+    "won_date": "2026-03-04"
+  },
+  "lead_CM0wCtOjdHqvta8ULDpaQrr59XBO8J8yKLgbNzwcFNg": {
+    "cycle_days": 2,
+    "first_call_date": "2026-03-10",
+    "name": "Brandon I. Anderson Torain",
+    "won_date": "2026-03-12"
+  },
+  "lead_CQS3UgjkFoec9FofxRkcH6NHvLgEe3CQgyx6FXqJueg": {
+    "cycle_days": 218,
+    "first_call_date": "2025-09-10",
+    "name": "Angus McLaughlin",
+    "won_date": "2026-04-16"
+  },
+  "lead_CcPorIeypfd5ZY2oGEMdO8VBR0tm6sgHDTfdLO5hbB4": {
+    "cycle_days": 125,
+    "first_call_date": "2025-12-12",
+    "name": "Trevor Anderson",
+    "won_date": "2026-04-16"
+  },
+  "lead_D73rhkkGNDkcuOXEk7IQEGsbkiwzGEnNgbjlLgkHIwG": {
+    "cycle_days": 101,
+    "first_call_date": "2026-01-05",
+    "name": "Leroy Fonseca",
+    "won_date": "2026-04-16"
+  },
+  "lead_D8kCaoTCZm1qZsH7KCCGWVVmAsDwR6MYugaVAMJP5WL": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-23",
+    "name": "Wesley Jow",
+    "won_date": "2026-02-23"
+  },
+  "lead_DMX2kCDfoI7LRlNsi0w2M4WSPTa4EZyYjsx2s6uMEsB": {
+    "cycle_days": 134,
+    "first_call_date": "2025-12-03",
+    "name": "Casey Hodges",
+    "won_date": "2026-04-16"
+  },
+  "lead_DQrUxNs9aJPfV3Dg0nWDNkjSLtyQlefB15cky30HVx9": {
+    "cycle_days": 114,
+    "first_call_date": "2025-12-23",
+    "name": "Can It Redemption Center",
+    "won_date": "2026-04-16"
+  },
+  "lead_DW7E77Vkc7Md0Tiomy8YwrlrlpT9YzoPTnld7leDwMC": {
+    "cycle_days": 11,
+    "first_call_date": "2026-03-02",
+    "name": "Shamoon Ebrahimi",
+    "won_date": "2026-03-13"
+  },
+  "lead_DZ4y0gorOGlud0UViLnJXl6snTneLunWjOIU096Su2v": {
+    "cycle_days": 30,
+    "first_call_date": "2026-01-05",
+    "name": "Tyler",
+    "won_date": "2026-02-04"
+  },
+  "lead_Ddz1le6An9uzcfTYORzZmct1ycJSTHN7IdCQBaAkObf": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-20",
+    "name": "Palak Amin",
+    "won_date": "2026-05-20"
+  },
+  "lead_DsHdGUF84zT9VQpIqp4XZnGBVZSCUNwcDTKLgVlIBGE": {
+    "cycle_days": 226,
+    "first_call_date": "2025-09-02",
+    "name": "Braxton Cook",
+    "won_date": "2026-04-16"
+  },
+  "lead_DsTVuj48DWblrD2amzqbqZj65mNeX0D1C2otX3cyLI6": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-11",
+    "name": "Kate Berg",
+    "won_date": "2026-03-11"
+  },
+  "lead_DvugbcBeBokRRw7rvh7sOhYIJjCGRSJHkCojoE4FzbP": {
+    "cycle_days": 70,
+    "first_call_date": "2026-03-20",
+    "name": "Jeffery Ramirez",
+    "won_date": "2026-05-29"
+  },
+  "lead_E1kq2cJer1g2JI6oNAegB1w6ti1OVn8iKw7tjdGudjX": {
+    "cycle_days": 100,
+    "first_call_date": "2025-12-29",
+    "name": "Joe Bordieri",
+    "won_date": "2026-04-08"
+  },
+  "lead_EBxVPDRicrsunmgQWuygOFLIw9QwlyO90SF0ZNmrxbI": {
+    "cycle_days": 156,
+    "first_call_date": "2025-12-16",
+    "name": "Ryan Stockwell",
+    "won_date": "2026-05-21"
+  },
+  "lead_EJFqpRssIVoqjzayE6GPvG8f7xndv8v7IgXJH8BStRW": {
+    "cycle_days": 13,
+    "first_call_date": "2026-03-20",
+    "name": "Ana C",
+    "won_date": "2026-04-02"
+  },
+  "lead_ENytvtf0WSc5uyXmIepr9ytnlwagzzUW3uvpWTUN9cW": {
+    "cycle_days": 9,
+    "first_call_date": "2026-01-23",
+    "name": "Aliyah Scott",
+    "won_date": "2026-02-01"
+  },
+  "lead_EgijiyitAQKhZDASN8HsLEexbS9lUmsIVYoboHTphSb": {
+    "cycle_days": 11,
+    "first_call_date": "2026-02-02",
+    "name": "Bucky Jacobsen",
+    "won_date": "2026-02-13"
+  },
+  "lead_EhMGs6JklhWZ2rbZ6DOQqFG2bXBMbv77yxSHP7DnZko": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-10",
+    "name": "Heather Moseley",
+    "won_date": "2026-04-10"
+  },
+  "lead_Evnjny4boUnR9vFEZirO5d3C42TEWzRjM3R2nqt8MWB": {
+    "cycle_days": 107,
+    "first_call_date": "2025-11-07",
+    "name": "Victor Dominguez",
+    "won_date": "2026-02-22"
+  },
+  "lead_FDEzA8NPKFk0ly6wNyj8rokmAkT1T0efdBz6k0kYdoI": {
+    "cycle_days": 4,
+    "first_call_date": "2026-03-12",
+    "name": "Jayson Love / Edward Kemp",
+    "won_date": "2026-03-16"
+  },
+  "lead_FDmdMAqfXpjjdXCDqUxWqIZfUx5Oz2p08dk5EcPySyL": {
+    "cycle_days": 148,
+    "first_call_date": "2025-11-19",
+    "name": "Brian Daugherty",
+    "won_date": "2026-04-16"
+  },
+  "lead_FWrpFkKddThMRHnzaeJgA1gdKHNOsYiiGIDj5Pfs2ZK": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-20",
+    "name": "Dustin Gerald",
+    "won_date": "2026-02-20"
+  },
+  "lead_FiWKoHkbTDQOIpQJGv4oUcEKdLSWpyFSVGrXSK2Nn6k": {
+    "cycle_days": 14,
+    "first_call_date": "2026-02-13",
+    "name": "Dick Blumberg",
+    "won_date": "2026-02-27"
+  },
+  "lead_FkKQilPei8cEeEhn8Lba4GQOyhQZ3DwzkousQ8DCzZE": {
+    "cycle_days": 5,
+    "first_call_date": "2026-03-30",
+    "name": "Mike Ventura",
+    "won_date": "2026-04-04"
+  },
+  "lead_Fo0Fz21c3OSNJKd01nsGwyxkF0nPGfUJ7w9SGiAZHLX": {
+    "cycle_days": 6,
+    "first_call_date": "2026-02-12",
+    "name": "Sengphet Sayaphanthong",
+    "won_date": "2026-02-18"
+  },
+  "lead_FrMf5GvPbXXshyTfipqb4QAbsmdAVS0SMyA6f1B9oii": {
+    "cycle_days": 50,
+    "first_call_date": "2025-12-30",
+    "name": "Andre Reynolds",
+    "won_date": "2026-02-18"
+  },
+  "lead_G04ndABCncvR4i5R24mzdtJs9vDjbvk5OLnFZbt8V1V": {
+    "cycle_days": 36,
+    "first_call_date": "2026-04-15",
+    "name": "Kelly Campbell",
+    "won_date": "2026-05-21"
+  },
+  "lead_G4NSxAHlwvgM6EDYf3bsleXkmq264aqVf4P3y7ADuNv": {
+    "cycle_days": 13,
+    "first_call_date": "2026-02-12",
+    "name": "Elijah Sortino",
+    "won_date": "2026-02-25"
+  },
+  "lead_G6ftEEppm45h3bJw2Iz05kO8ATafxY1awsQGL69w19s": {
+    "cycle_days": 127,
+    "first_call_date": "2025-12-10",
+    "name": "Steven Felde",
+    "won_date": "2026-04-16"
+  },
+  "lead_G7Xdybhs56uyvsNomUDOPDSWgMUdQbobgIO3gLaDRYW": {
+    "cycle_days": 98,
+    "first_call_date": "2026-01-08",
+    "name": "Joe Alabek",
+    "won_date": "2026-04-16"
+  },
+  "lead_GAW2QTadcmQvXZw31mhZnnhHHwyMczRua8BErmsVbFS": {
+    "cycle_days": 11,
+    "first_call_date": "2026-03-01",
+    "name": "Zach Wevers",
+    "won_date": "2026-03-12"
+  },
+  "lead_GIJjoroQ7HlZQNFN2WI6QUB5prNj3isivHgVdb2dL6j": {
+    "cycle_days": 50,
+    "first_call_date": "2026-02-04",
+    "name": "Chris LaPorte",
+    "won_date": "2026-03-26"
+  },
+  "lead_GJMWIlmV5uDULkfT8fuSRjpPsqsrIl3h826ybDVWxgd": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-21",
+    "name": "Lowell Hale",
+    "won_date": "2026-05-21"
+  },
+  "lead_GTDcirCFpaVI7W8KZhHcM5zy5T8lQm2fuYlb6DXMg47": {
+    "cycle_days": 29,
+    "first_call_date": "2026-04-08",
+    "name": "Luke Rakowsky",
+    "won_date": "2026-05-07"
+  },
+  "lead_GTnvO6sqwblNn4L3OHLfBUw2nGYYSprwGbRelaVxxjs": {
+    "cycle_days": 120,
+    "first_call_date": "2025-12-17",
+    "name": "Luke Hamilton",
+    "won_date": "2026-04-16"
+  },
+  "lead_GXTecZf4grScZDbMQq5DfwrAGo25kZiUryv1ce4kKpZ": {
+    "cycle_days": 101,
+    "first_call_date": "2025-10-21",
+    "name": "Michael Anding",
+    "won_date": "2026-01-30"
+  },
+  "lead_GaLYPAQi5YIUPOCiMpuKQQeXlu0KQYpGZQoYJVY5xTq": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-10",
+    "name": "Johnnie Ginn III",
+    "won_date": "2026-02-10"
+  },
+  "lead_GfeqZ6sKHZm2GGGfv1ss8WlRF5CpDeyENatK4SLydjZ": {
+    "cycle_days": 29,
+    "first_call_date": "2026-01-12",
+    "name": "Daniel Dubov",
+    "won_date": "2026-02-10"
+  },
+  "lead_GjtwFMMwl9CyFDC2dlPzPko5VtgvhPWfU5xATAt71oA": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-29",
+    "name": "Arun Kumar",
+    "won_date": "2026-05-29"
+  },
+  "lead_Gt4zrF66TGDpRVzovAOa1ebwYOkZVYIKSu9TmR8nkjz": {
+    "cycle_days": 3,
+    "first_call_date": "2026-01-27",
+    "name": "Earl Finlay",
+    "won_date": "2026-01-30"
+  },
+  "lead_GvBvWLKmkTBcBOwbrny3HcMA6RnWeigCSFl2e7LIKZj": {
+    "cycle_days": 182,
+    "first_call_date": "2025-10-16",
+    "name": "Herman Hill",
+    "won_date": "2026-04-16"
+  },
+  "lead_HH6Pqc74JlqEWZCoAebdiCTUjCCtmRmpBbgm6M9X21G": {
+    "cycle_days": 7,
+    "first_call_date": "2026-01-28",
+    "name": "Jon Hatzell",
+    "won_date": "2026-02-04"
+  },
+  "lead_HHTe2YdrFbzUiTnBt8Xp6EUPpvzYGKaHY5X2d0iEFKC": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-17",
+    "name": "Andrew Dudun",
+    "won_date": "2026-04-17"
+  },
+  "lead_HUA3Efrpw51WkxQZAZ4QofVSOBaG36WtR7OG33YGYS5": {
+    "cycle_days": 184,
+    "first_call_date": "2025-10-14",
+    "name": "Ricardo Perez",
+    "won_date": "2026-04-16"
+  },
+  "lead_HUrSAAnmL1v1C4M2pZBICh86hBCIv2guaa4bIX1MxEY": {
+    "cycle_days": 4,
+    "first_call_date": "2026-02-13",
+    "name": "Jeff Edison",
+    "won_date": "2026-02-17"
+  },
+  "lead_IHZeMuOiEdEGGTDm2mTEfTGe1G4Rb9uPkZ1WHWUQ9Xv": {
+    "cycle_days": 170,
+    "first_call_date": "2025-10-28",
+    "name": "Stacy Raab",
+    "won_date": "2026-04-16"
+  },
+  "lead_IQiFm8YVpeQs7DE3T58KHP9Ne1HvcLnruLnzKLq6Wzs": {
+    "cycle_days": 17,
+    "first_call_date": "2026-02-23",
+    "name": "JUSTIN BATCHELOR",
+    "won_date": "2026-03-12"
+  },
+  "lead_IXaKS5KBbGq8C1O60wpTXeNTi6vchQBaDlwx5XBVupT": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-03",
+    "name": "Jeremy Sanchez",
+    "won_date": "2026-02-03"
+  },
+  "lead_IcoS1Zpy93DWNTsmb9lzLCGvNp194ojQlw6AiIkD8eH": {
+    "cycle_days": 1,
+    "first_call_date": "2026-01-21",
+    "name": "Eddie Crockett",
+    "won_date": "2026-01-22"
+  },
+  "lead_IkRrEpXfixV8lQ0nhZLETkadtCpJAnlLbHDcA5r9R6T": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-27",
+    "name": "Tasha Mack",
+    "won_date": "2026-02-27"
+  },
+  "lead_Ipwao0xusq2kGuDGvbt94L2fHRoRb4genam9kK6xNyS": {
+    "cycle_days": 142,
+    "first_call_date": "2025-11-25",
+    "name": "Rubina Calcano",
+    "won_date": "2026-04-16"
+  },
+  "lead_IxlIo3zd8bF4Yc0i5PUkCrJtnxjeq5VyT9i1od9THlj": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-05",
+    "name": "John Wrobel III",
+    "won_date": "2026-05-05"
+  },
+  "lead_IyTMmxUf1TLOK74cEQjYCUisDujCAKesDwz6WQ5bXHr": {
+    "cycle_days": 129,
+    "first_call_date": "2025-12-08",
+    "name": "Neal Hooper",
+    "won_date": "2026-04-16"
+  },
+  "lead_JAfqFdtNwhpsn4pZ66LRy7HBSszS45TC75Gw6w8IRxI": {
+    "cycle_days": 7,
+    "first_call_date": "2026-05-06",
+    "name": "Nicholas Adkins",
+    "won_date": "2026-05-13"
+  },
+  "lead_JDG0AcMeZvRnnL9wfOjSFw2EkOHpQSTz1JudM0NHCnP": {
+    "cycle_days": 50,
+    "first_call_date": "2026-04-09",
+    "name": "Luis",
+    "won_date": "2026-05-29"
+  },
+  "lead_JQXHHX7aHp5fFu8wHcNlLj8ZB1o0pa8QrxQS4lbMSkN": {
+    "cycle_days": 47,
+    "first_call_date": "2026-04-10",
+    "name": "Gary Stoeber",
+    "won_date": "2026-05-27"
+  },
+  "lead_JTcvtd29En9RrJXeECjhWRqPhAYGxjSACZyQhY1bKBA": {
+    "cycle_days": 2,
+    "first_call_date": "2026-03-03",
+    "name": "Amy Showers",
+    "won_date": "2026-03-05"
+  },
+  "lead_Jb3O78yPDmPoKhXqR9EEQgnO5Hzey6dcgkD7ze5A09r": {
+    "cycle_days": 2,
+    "first_call_date": "2026-05-06",
+    "name": "Joe Schroeder",
+    "won_date": "2026-05-08"
+  },
+  "lead_JsAhAsAMDOAGEK3wyHG91Iy7C7bFihTcfWCx5LGqlPL": {
+    "cycle_days": 7,
+    "first_call_date": "2026-04-23",
+    "name": "Katherine Scott",
+    "won_date": "2026-04-30"
+  },
+  "lead_K3WMoyWggVeUxCJQX1gkgCZO2WlHYtNSNMzWVrq2THN": {
+    "cycle_days": 6,
+    "first_call_date": "2026-05-27",
+    "name": "Carlos Williams",
+    "won_date": "2026-06-02"
+  },
+  "lead_K62BGt85ZdhrkpgvGOsr9lpeP2W0u3HzRv9YEth5SnL": {
+    "cycle_days": 28,
+    "first_call_date": "2026-02-27",
+    "name": "Vincent Kirby",
+    "won_date": "2026-03-27"
+  },
+  "lead_KJffXsTTMpv4o5bUd4Be8feb5nkOe7zNJiAhUCcH9i6": {
+    "cycle_days": 7,
+    "first_call_date": "2026-02-13",
+    "name": "John-Paul",
+    "won_date": "2026-02-20"
+  },
+  "lead_KYGFu6iTS31pdbo5bkVk5L87Ud1o06OgG1uGidSO8oM": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-04",
+    "name": "DESHAWN BAXTER",
+    "won_date": "2026-03-04"
+  },
+  "lead_KoQamaVupHyYHUxSJEdY6l7FxPcnvlz9Ka2Ik8fyq6M": {
+    "cycle_days": 21,
+    "first_call_date": "2026-02-06",
+    "name": "Kimberly Cleary",
+    "won_date": "2026-02-27"
+  },
+  "lead_L83AzV9kyYZqdzxjcb0HyKzmJFyaRLzWAd3QSZ8Rijg": {
+    "cycle_days": 176,
+    "first_call_date": "2025-10-22",
+    "name": "Garner Webber",
+    "won_date": "2026-04-16"
+  },
+  "lead_LCOJFXovGXbshJxwWOHKSmSgxjlSuvuSrn2wEd9iCaP": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-07",
+    "name": "Catriona Swift",
+    "won_date": "2026-02-07"
+  },
+  "lead_LQkwsxhL3VRDNoKEd45b6xtkKiX3LdSgtFj5WpkzZJ5": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-06",
+    "name": "Jackson Vaughn",
+    "won_date": "2026-03-06"
+  },
+  "lead_LSJ9cLf2r11zsFQoUl9zhE7rq029oXV5y2U3QcczGp7": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-19",
+    "name": "Alexandru Midrigan",
+    "won_date": "2026-02-19"
+  },
+  "lead_LVqAheg0v4ni30sOHBvMljSZnoeQIRnTuSpjY58LX6e": {
+    "cycle_days": 14,
+    "first_call_date": "2026-02-13",
+    "name": "Luke Neal",
+    "won_date": "2026-02-27"
+  },
+  "lead_LY8xuA9I7DxvHcugEWpZrmxiQQO7jBSRCQEiRWRARzu": {
+    "cycle_days": 24,
+    "first_call_date": "2026-03-03",
+    "name": "Daniel Grogan",
+    "won_date": "2026-03-27"
+  },
+  "lead_LaLqO1aqZQFX2LzBs8wss07DsHNSUC2PFwoa6speAUC": {
+    "cycle_days": 160,
+    "first_call_date": "2025-11-07",
+    "name": "Esteban Cardona",
+    "won_date": "2026-04-16"
+  },
+  "lead_LzKaa7W09mfkeQpv2z3I6UcLVSX9mRClaiUi3fF3kKx": {
+    "cycle_days": 75,
+    "first_call_date": "2025-12-04",
+    "name": "Martin Michele",
+    "won_date": "2026-02-17"
+  },
+  "lead_M1woiEyscEEr4JxMGUqmGXXG079slzccZlf1lPsaCwX": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-18",
+    "name": "Felipe Rios",
+    "won_date": "2026-02-18"
+  },
+  "lead_M2hz5wFsnmUHBQ3UpfWZpOplDPL3p5pO5s12qqKaZ2Z": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-09",
+    "name": "Nestor Pierre val",
+    "won_date": "2026-02-09"
+  },
+  "lead_M8DiFpt4U8IrBVvCL5ojjTDRoXJBXkYU84hXPUsnoAx": {
+    "cycle_days": 3,
+    "first_call_date": "2026-04-17",
+    "name": "Wesley Schumacher",
+    "won_date": "2026-04-20"
+  },
+  "lead_MDAvA3XE9oqMACMYLMrTbYQf3I8wiqYNx8noHNtYAYj": {
+    "cycle_days": 70,
+    "first_call_date": "2025-11-14",
+    "name": "Nox Bryant",
+    "won_date": "2026-01-23"
+  },
+  "lead_MPAXeUHoLSeCvCKht4aoTskwOFl2qsUAJjjbehijJMf": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-28",
+    "name": "Alfredo Santana",
+    "won_date": "2026-05-28"
+  },
+  "lead_MXYUKcEfs7yvSCekCjm8yKr7ctpFbjGD4mzdJ5epbTk": {
+    "cycle_days": 19,
+    "first_call_date": "2026-02-12",
+    "name": "Jonathan (Bart) Chinn",
+    "won_date": "2026-03-03"
+  },
+  "lead_MbzbHrPEGfv5Mr5nJzrxOudqdoXyolQJZ33r2Ec2r5U": {
+    "cycle_days": 30,
+    "first_call_date": "2026-02-09",
+    "name": "Daniel Norris",
+    "won_date": "2026-03-11"
+  },
+  "lead_MosCYxIJQQjYM6F8eHxO9KBo8bkxfh606IiDwjNckhF": {
+    "cycle_days": 103,
+    "first_call_date": "2025-11-05",
+    "name": "Haleigh Ververs",
+    "won_date": "2026-02-16"
+  },
+  "lead_N0F1vDQGOcEUedXOhU2HpBWzgzQuZpIBPGCvRz1zXu0": {
+    "cycle_days": 58,
+    "first_call_date": "2026-01-28",
+    "name": "Lisa M Hajj",
+    "won_date": "2026-03-27"
+  },
+  "lead_N37rfOSq2kwZCFBLHfghQjX9yGzS8vOog3KO3st9G0E": {
+    "cycle_days": 129,
+    "first_call_date": "2025-12-08",
+    "name": "Clay Brough",
+    "won_date": "2026-04-16"
+  },
+  "lead_N8NyuCFlcs7v0Gvu1unrlZuOxHIeQwLLtpClliu2GGJ": {
+    "cycle_days": 56,
+    "first_call_date": "2026-03-16",
+    "name": "Joshua Baker",
+    "won_date": "2026-05-11"
+  },
+  "lead_NLRLxCWCRNfcHyeieUVXwUHfeZiLbDPEANYcXJDvFpS": {
+    "cycle_days": 21,
+    "first_call_date": "2026-03-10",
+    "name": "Terence Bow",
+    "won_date": "2026-03-31"
+  },
+  "lead_NNZbUO7l5wWLbDEWIiUKswK8M8uBFk2tjDwxqvnBMQ0": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-04",
+    "name": "Yisbai",
+    "won_date": "2026-02-04"
+  },
+  "lead_NbNI3qjj4PYrtYyokZ8wIRmd7TknX59bTDDiPZ7vh62": {
+    "cycle_days": 153,
+    "first_call_date": "2025-11-14",
+    "name": "Matthew Morgeson",
+    "won_date": "2026-04-16"
+  },
+  "lead_NnHSoA6ik16TRkwKTYR098GaTEB1s7PrZGQBOwuMMcG": {
+    "cycle_days": 4,
+    "first_call_date": "2026-03-25",
+    "name": "Andrew Summer",
+    "won_date": "2026-03-29"
+  },
+  "lead_NwgjGbez9ke7661YgPeflRtQqzxmYUZbs2BqjYQGe32": {
+    "cycle_days": 200,
+    "first_call_date": "2025-09-18",
+    "name": "Will Chehayeb",
+    "won_date": "2026-04-06"
+  },
+  "lead_O34vexuLTOdINpLd6GD12LhZkvHupHmtVptsga7uRtf": {
+    "cycle_days": 10,
+    "first_call_date": "2026-04-06",
+    "name": "Scott Cherry",
+    "won_date": "2026-04-16"
+  },
+  "lead_O3UoIkuFNukvPBrKo5fWsPFmSGaz2RIw9usGBHR6lDn": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-02",
+    "name": "Mark Harmon",
+    "won_date": "2026-02-03"
+  },
+  "lead_O6ksnq4qsJA0liT8aVhgebBnvVAcJhDs1xo64duV8qf": {
+    "cycle_days": 111,
+    "first_call_date": "2025-12-26",
+    "name": "Alpha School",
+    "won_date": "2026-04-16"
+  },
+  "lead_OAFIW1Ctop3byhrhG1J7dsBLsgou0J7MCxBFHGgsIU3": {
+    "cycle_days": 14,
+    "first_call_date": "2026-04-14",
+    "name": "Caitlin Wendler",
+    "won_date": "2026-04-28"
+  },
+  "lead_OJD9L1tON9vNL2GQqtee6F8nM9AYm15JVWfthf3Oa1g": {
+    "cycle_days": 4,
+    "first_call_date": "2026-03-23",
+    "name": "Rija Masood",
+    "won_date": "2026-03-27"
+  },
+  "lead_OP7wOAMPPMN7UebuHkcUZbaqBuk0QSgtUeb3j8Bmq1N": {
+    "cycle_days": 21,
+    "first_call_date": "2026-02-13",
+    "name": "Dominique Harris",
+    "won_date": "2026-03-06"
+  },
+  "lead_OaqLyliB3wdL2uCLKyXzgxdpH9iRE7bSEMwMvMdebVv": {
+    "cycle_days": 122,
+    "first_call_date": "2025-12-15",
+    "name": "Timothy Majors",
+    "won_date": "2026-04-16"
+  },
+  "lead_ObzA7PDn7cSxT3IwyHDwDDvrs5obhazF2eWbvsczICH": {
+    "cycle_days": 210,
+    "first_call_date": "2025-09-18",
+    "name": "Paul Buckley",
+    "won_date": "2026-04-16"
+  },
+  "lead_OdeRwsUpAn3CSJXptbIdK5xKn8Mr04cnt88yjIweV7c": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-14",
+    "name": "Marcus Farris",
+    "won_date": "2026-04-14"
+  },
+  "lead_OffYCw3xPh9dSWtj9nYYjF4vAh9CHvdTvTz18OK9N2e": {
+    "cycle_days": 6,
+    "first_call_date": "2026-02-06",
+    "name": "Nate Greenberg",
+    "won_date": "2026-02-12"
+  },
+  "lead_OgvORdUaTBfyyR9AymRRQuFi7NnFZG8fJgg1sg2x2Tq": {
+    "cycle_days": 78,
+    "first_call_date": "2026-02-18",
+    "name": "Christopher Burbank",
+    "won_date": "2026-05-07"
+  },
+  "lead_OhskH0Sxgxca4ne1XHcJ3R26qGhY0ZlQxYkA2NjE6RJ": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-23",
+    "name": "Hector Flores",
+    "won_date": "2026-02-23"
+  },
+  "lead_Oj6rhrccldVlckfKonDaMf2Pfx2QFER7AhSRlGx6CCN": {
+    "cycle_days": 218,
+    "first_call_date": "2025-09-10",
+    "name": "Jen -",
+    "won_date": "2026-04-16"
+  },
+  "lead_OlHJWK9N25L58o45P6LeyEF7J6ZAw7riPxhxjwb99lY": {
+    "cycle_days": 12,
+    "first_call_date": "2026-02-05",
+    "name": "Tina Cheshmaghil",
+    "won_date": "2026-02-17"
+  },
+  "lead_PNHa8NLMyCDpxvFXblwya3kvmWKPfDZSgxWH6Qab7DP": {
+    "cycle_days": 118,
+    "first_call_date": "2025-12-19",
+    "name": "LLmon Watt",
+    "won_date": "2026-04-16"
+  },
+  "lead_PTzjOWiFlyXnjoiPYl1fgQusdG4G1RWoXJDhkMO21se": {
+    "cycle_days": 162,
+    "first_call_date": "2025-11-05",
+    "name": "Trish Stewart",
+    "won_date": "2026-04-16"
+  },
+  "lead_PawE5geeQZammR2f9QLRNiVxvxn7PBcKLOPR0FhDqQo": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-16",
+    "name": "Naeema Vanpetten",
+    "won_date": "2026-02-16"
+  },
+  "lead_PgA1bn4o7kzTBHL5OSA72HQfnO7HLaTZoUOGaA7v2il": {
+    "cycle_days": 25,
+    "first_call_date": "2026-01-08",
+    "name": "Bruce Ngo",
+    "won_date": "2026-02-02"
+  },
+  "lead_PioeAZWRO0qUEV7koWsgqfLQYbpheOBbMv6sU7tKZ7R": {
+    "cycle_days": 28,
+    "first_call_date": "2026-01-30",
+    "name": "Aubrey Andersen",
+    "won_date": "2026-02-27"
+  },
+  "lead_Pkf8cxF9s0PXTh28v0XMJqavKfvXJ5WP54NGXRAGUle": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-17",
+    "name": "Perry Kendrick",
+    "won_date": "2026-03-17"
+  },
+  "lead_Pp92tvh5DF9bqhZL6gJOtUZAZRvhNyNmUKPIZWhh3L0": {
+    "cycle_days": 15,
+    "first_call_date": "2026-02-26",
+    "name": "Ed Christy",
+    "won_date": "2026-03-13"
+  },
+  "lead_Q3wtbZoiZyxsV6zMKwQApNb73xwjkg1ppWQt8F7vB12": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-23",
+    "name": "Kelsey",
+    "won_date": "2026-04-23"
+  },
+  "lead_Q7DeXFcR3j8GWWZriYobWFahHgBxNu3zv9PEEATUXZL": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-15",
+    "name": "Pedro Velazco / Juan Diego Montiel",
+    "won_date": "2026-04-15"
+  },
+  "lead_Q7aKvo2Lm8g1kR7PJ4Kl1r9Bw5amASaBoDrSplNUktC": {
+    "cycle_days": 75,
+    "first_call_date": "2026-02-19",
+    "name": "Jordan Spencer",
+    "won_date": "2026-05-05"
+  },
+  "lead_QIbOGydRWMV1uVCPjGgfleKjLLDPE1b3cjWjiTJMAuT": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-13",
+    "name": "Mody Zikas",
+    "won_date": "2026-02-13"
+  },
+  "lead_QxKnLaEllLtLjPwFpi6j2zgqjwIXPAd0MFE91jpjghL": {
+    "cycle_days": 114,
+    "first_call_date": "2025-12-10",
+    "name": "Justin Jordan",
+    "won_date": "2026-04-03"
+  },
+  "lead_QxLjwuoUJadgGrlAaDxFaR9PNGMKVkrkQ1eOaixFYrz": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-24",
+    "name": "Herb Hall",
+    "won_date": "2026-03-25"
+  },
+  "lead_QyYjOwZwAnhYWbRyCDv4VDbDcWbBaxBH7fuC1teWYor": {
+    "cycle_days": 4,
+    "first_call_date": "2026-05-01",
+    "name": "Carlee Schaeffer",
+    "won_date": "2026-05-05"
+  },
+  "lead_RIuXCuGeehCQPGWTkuiSjh313RyEeYUQmcsOAMEsnBD": {
+    "cycle_days": 91,
+    "first_call_date": "2025-11-11",
+    "name": "Glenn Diggs",
+    "won_date": "2026-02-10"
+  },
+  "lead_RLmF8YbuvLyXBy8Z3THqcw1j2UFyAdKp85qNukyVOxE": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-30",
+    "name": "Jacob Yoon",
+    "won_date": "2026-03-30"
+  },
+  "lead_RNkFAJzAUjeYZ0AbEug8MrWeI2dNkNJge0B7k3XW9o3": {
+    "cycle_days": 76,
+    "first_call_date": "2025-11-20",
+    "name": "Robert Hofert",
+    "won_date": "2026-02-04"
+  },
+  "lead_ROKlm1mtzrV8etUtxa3A5EV2sYAALnnUvgpJqiy7Xal": {
+    "cycle_days": 162,
+    "first_call_date": "2025-11-05",
+    "name": "PayClearly",
+    "won_date": "2026-04-16"
+  },
+  "lead_RjevrMbkGJ849V5x8sTxZZx5fhV8IlZb8vJYrf43Jxb": {
+    "cycle_days": 8,
+    "first_call_date": "2026-02-05",
+    "name": "Westyn Anke",
+    "won_date": "2026-02-13"
+  },
+  "lead_Rmqxgu1Aii9Iw4hYRIhwnYglVsvXPhS7LWp7cRY2cGD": {
+    "cycle_days": 156,
+    "first_call_date": "2025-11-11",
+    "name": "Joseph Buono",
+    "won_date": "2026-04-16"
+  },
+  "lead_RvNx00LtVm8wGVhMUT3zny1GxIcBLaRGOjuzTXWrtMI": {
+    "cycle_days": 177,
+    "first_call_date": "2025-10-21",
+    "name": "Marla Myint",
+    "won_date": "2026-04-16"
+  },
+  "lead_S2ig7UBNpgyIVWQtGmUbe0ocmja6ZwvI1HnFLxgLGii": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-30",
+    "name": "Carlton Levell Holloway",
+    "won_date": "2026-03-31"
+  },
+  "lead_S6kZK2onVarX4Gnictog3wpHpzoyoKalNNsr2btb1B3": {
+    "cycle_days": 115,
+    "first_call_date": "2025-11-17",
+    "name": "Emmett McGovern Jr",
+    "won_date": "2026-03-12"
+  },
+  "lead_SI1xwwNE0CnjLyjohs77rACbonOqYQV4x6peg2nJ8ji": {
+    "cycle_days": 11,
+    "first_call_date": "2026-02-09",
+    "name": "Bill Kowske",
+    "won_date": "2026-02-20"
+  },
+  "lead_SRQnXbRDPAPgzxjxQvDAGxwrL0GC1aZkPZ4iHuNQbfn": {
+    "cycle_days": 135,
+    "first_call_date": "2025-12-02",
+    "name": "Jim Hill",
+    "won_date": "2026-04-16"
+  },
+  "lead_SUP3gnSdOWHYB7Q93UEx3ZJakaQAuqs6O08mqce5BYw": {
+    "cycle_days": 16,
+    "first_call_date": "2026-03-03",
+    "name": "Greg Miller",
+    "won_date": "2026-03-19"
+  },
+  "lead_SWwDEFO0hVJivpLbNrQATPKMKIiD7Fpt3ZVPitZq2Yk": {
+    "cycle_days": 51,
+    "first_call_date": "2025-12-16",
+    "name": "Michael Rudderow",
+    "won_date": "2026-02-05"
+  },
+  "lead_SbOFHwveVfUtdNyoM2cMTVpMlIN3IQoeisSjY35vQNt": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-02",
+    "name": "Zago Capital",
+    "won_date": "2026-04-02"
+  },
+  "lead_ScQx4TuKH1UUbZp8jy6grq6VThuzjxZSdG4KvnuPyvI": {
+    "cycle_days": 1,
+    "first_call_date": "2026-04-02",
+    "name": "Chandler Schaefer",
+    "won_date": "2026-04-03"
+  },
+  "lead_Sdafq5PHvvdHuv8s8yeVAcwfvNZuXItPDr7YQRsH1sA": {
+    "cycle_days": 30,
+    "first_call_date": "2026-03-02",
+    "name": "Brandon Morgan",
+    "won_date": "2026-04-01"
+  },
+  "lead_SgJbFxPlL9ERBXSTgCsiz6IdkVSKjpf3nqnNzbB0lf4": {
+    "cycle_days": 100,
+    "first_call_date": "2026-01-06",
+    "name": "Don S",
+    "won_date": "2026-04-16"
+  },
+  "lead_Ss3FtfkCDd15H0I9UT3PiPUqVFzwGKe7fYTO8zkacN8": {
+    "cycle_days": 135,
+    "first_call_date": "2025-12-02",
+    "name": "Mark Freeman",
+    "won_date": "2026-04-16"
+  },
+  "lead_TB0opU8kQFK2OBefQmU1sFrf06AzYMYOeuN4f9DDeyg": {
+    "cycle_days": 76,
+    "first_call_date": "2026-02-18",
+    "name": "Cale Schmidt",
+    "won_date": "2026-05-05"
+  },
+  "lead_TCH0xQxxkvFtPVl6h4maniADZ7MER4FzPM57xAzPzXs": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-02",
+    "name": "Antiuwan Jones",
+    "won_date": "2026-02-03"
+  },
+  "lead_TExm3KiX0KRgWriEG4tAq1Q1OjjHdNUdejeO7Owtyvo": {
+    "cycle_days": 49,
+    "first_call_date": "2025-12-10",
+    "name": "C2 Solutions",
+    "won_date": "2026-01-28"
+  },
+  "lead_TF5ku4J8NhidqpNqoiIzyE2phETWck7fI0tohXynVbA": {
+    "cycle_days": 136,
+    "first_call_date": "2025-12-01",
+    "name": "Brandon Culbertson",
+    "won_date": "2026-04-16"
+  },
+  "lead_TMc4wjaqSJXzvG9DFsghsG42Jpepy7e9wuhnwN9wHGi": {
+    "cycle_days": 228,
+    "first_call_date": "2025-08-31",
+    "name": "Hernando Ramirez",
+    "won_date": "2026-04-16"
+  },
+  "lead_TQe7RIbtckve3pK5wA5V1R7jQhjcck14ktzGBnjV4WE": {
+    "cycle_days": 8,
+    "first_call_date": "2026-04-29",
+    "name": "Matt Kreida",
+    "won_date": "2026-05-07"
+  },
+  "lead_TX5YYNvNCdoGMr40b3bayO8s9GEH8kIMXspApQ4aUkP": {
+    "cycle_days": 15,
+    "first_call_date": "2026-01-28",
+    "name": "Khang Tran",
+    "won_date": "2026-02-12"
+  },
+  "lead_TaarDm5KslUukfg6GFgUtzDj6FZquoEF5Ib5VKtIhX0": {
+    "cycle_days": 0,
+    "first_call_date": "2026-01-29",
+    "name": "Edwine Etienne",
+    "won_date": "2026-01-29"
+  },
+  "lead_Tk7GmRSxyFZJdtyw5wi6QsRfWtn3TtYFomeSeMreKOy": {
+    "cycle_days": 4,
+    "first_call_date": "2026-01-29",
+    "name": "Carlos Cisneros",
+    "won_date": "2026-02-02"
+  },
+  "lead_TnMJuZZoXKexAFshJAsNtP2fuTVTcikasjIn1UgOVvp": {
+    "cycle_days": 50,
+    "first_call_date": "2025-12-16",
+    "name": "Karis Lo",
+    "won_date": "2026-02-04"
+  },
+  "lead_TrHTt45Oq5VpMwyw8akQxujbBnXXiuTYnz6Si2BsVer": {
+    "cycle_days": 15,
+    "first_call_date": "2026-01-13",
+    "name": "Joey Mesa",
+    "won_date": "2026-01-28"
+  },
+  "lead_UDlNqaX0UpZFOWxyuKsWY3ptzGQRdjw9l6EQHWyKC8D": {
+    "cycle_days": 50,
+    "first_call_date": "2025-12-17",
+    "name": "Phillip Scott",
+    "won_date": "2026-02-05"
+  },
+  "lead_ULrVS9VfxWA75ObIW98JOKoHAovfZ3bUE0JnEeS5cZM": {
+    "cycle_days": 3,
+    "first_call_date": "2026-01-20",
+    "name": "Jeffrey Collins",
+    "won_date": "2026-01-23"
+  },
+  "lead_UPe6VMNPXGrUDRpxrFFqjdgoGCcc2LgOKWDoXsZ2qJX": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-19",
+    "name": "Kam Siam",
+    "won_date": "2026-02-20"
+  },
+  "lead_UiYsKzPdjVfRK5IRGq7RWQOpPxTNEgcOUzfnKMYrsAL": {
+    "cycle_days": 6,
+    "first_call_date": "2026-01-27",
+    "name": "Frank Wees",
+    "won_date": "2026-02-02"
+  },
+  "lead_UkfGs1ARS1iIai0OTVdga7fQi7wiEKK0HKErNECaV5o": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-06",
+    "name": "Nicola Arnold",
+    "won_date": "2026-02-06"
+  },
+  "lead_Un6FAVEbntnaiTnIQG1xjBET1jidJHxFTin0FwiJkLS": {
+    "cycle_days": 35,
+    "first_call_date": "2026-01-28",
+    "name": "Brian Johnson",
+    "won_date": "2026-03-04"
+  },
+  "lead_V9AtpHd28T6lRts5HiOjzwuoUvdegiSLxVJMmLHxAvv": {
+    "cycle_days": 154,
+    "first_call_date": "2025-11-13",
+    "name": "David Hall",
+    "won_date": "2026-04-16"
+  },
+  "lead_VDXvAsnUbBuXImzDtP3riUs3I68cXgo4PYmVGnktMKi": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-17",
+    "name": "Reese DeCristoforo",
+    "won_date": "2026-02-18"
+  },
+  "lead_VMcOKCzOoM63WwmUeA25ZOCpyDnqGCH4rQjMszjWOqd": {
+    "cycle_days": 6,
+    "first_call_date": "2026-02-19",
+    "name": "Cory Jensen",
+    "won_date": "2026-02-25"
+  },
+  "lead_VXSCE5E3VaMWZpTgSfcjk1tgWAigGvFiWS1qAj6Y2ec": {
+    "cycle_days": 4,
+    "first_call_date": "2026-02-20",
+    "name": "Peter Tooker",
+    "won_date": "2026-02-24"
+  },
+  "lead_Vb2UuFadFGTke6m7MVLuAv6bL0K8lMZQBEqjSfclj8v": {
+    "cycle_days": 92,
+    "first_call_date": "2026-01-14",
+    "name": "Jason Bowman",
+    "won_date": "2026-04-16"
+  },
+  "lead_VeJHlRPzO3JtDXqyW2khTMDnB3cUKm2qiWUXRaXFy3e": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-30",
+    "name": "Dennis Moody",
+    "won_date": "2026-03-30"
+  },
+  "lead_VoG3wobG7PHmyoA0Z7QaFOfuAeknfYDHPVdMfWMoAQ1": {
+    "cycle_days": 143,
+    "first_call_date": "2025-11-24",
+    "name": "Michael Dacko",
+    "won_date": "2026-04-16"
+  },
+  "lead_Vp9sVgizvfVgWrzoiyjripm3ws1dymzzdNM815PGTZE": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-30",
+    "name": "Jo-Ann Rutledge",
+    "won_date": "2026-03-31"
+  },
+  "lead_Vuh3fPzBkxnx9g7Gy0mSABAA8BYehfvxkWY94bKjeO3": {
+    "cycle_days": 143,
+    "first_call_date": "2025-11-24",
+    "name": "Joshua Tichenor",
+    "won_date": "2026-04-16"
+  },
+  "lead_WBObAs8pcoRsdmTFOgUJme56XCKS2C0gLWXtEIxXWzP": {
+    "cycle_days": 14,
+    "first_call_date": "2026-05-15",
+    "name": "Denise Smith",
+    "won_date": "2026-05-29"
+  },
+  "lead_WFJVAMQDiV9YHChdNWuHoeibzOAQBZld95bOrtHaAPO": {
+    "cycle_days": 35,
+    "first_call_date": "2026-01-15",
+    "name": "Britney McClung",
+    "won_date": "2026-02-19"
+  },
+  "lead_WNM4C10lsatHyQthnkqaYI5ZjdT7hWvwDUBHDrC8dKQ": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-12",
+    "name": "Benny Rangel",
+    "won_date": "2026-03-13"
+  },
+  "lead_WPQfCQaBg58FVBEwNtfaoZF08fnxkGEAG68bKL4A0WF": {
+    "cycle_days": 5,
+    "first_call_date": "2026-02-18",
+    "name": "Patrick Mertilus",
+    "won_date": "2026-02-23"
+  },
+  "lead_WSKc1z0rPcpkVsjOc1JktZ9W6CwiFmh41nD2NAYKves": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-24",
+    "name": "Vanessa Castellano",
+    "won_date": "2026-04-24"
+  },
+  "lead_WT4jVX1Zutn2vwM2PCNRf79o9MdFImTOZP3ol1hUPjl": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-22",
+    "name": "MICAH MONONO",
+    "won_date": "2026-05-22"
+  },
+  "lead_WdLroT7058Sy0max0mQ8srIXwml9gGBFleYJxtebVCJ": {
+    "cycle_days": 38,
+    "first_call_date": "2026-01-20",
+    "name": "Dovid Silberman",
+    "won_date": "2026-02-27"
+  },
+  "lead_Wh3OQtNZCnAJaCoPbhZcaX7gyPOofKKd65CJXLucqwB": {
+    "cycle_days": 7,
+    "first_call_date": "2026-03-24",
+    "name": "Emily Moyer",
+    "won_date": "2026-03-31"
+  },
+  "lead_WjclPeKa9QGzQ27RBvIoUhE6JVFWAdLjSJOPnjweSsd": {
+    "cycle_days": 29,
+    "first_call_date": "2026-04-20",
+    "name": "Jordan Fleming",
+    "won_date": "2026-05-19"
+  },
+  "lead_WoV2DULnRjIzgl5lE9KaJ6l1PtkS291ZlxwsOxMoh9U": {
+    "cycle_days": 40,
+    "first_call_date": "2026-01-29",
+    "name": "Curt Olson",
+    "won_date": "2026-03-10"
+  },
+  "lead_WpxTZoLHISbkSXckuTKnZZ3KhF0K2l1GhbLSp57yHZI": {
+    "cycle_days": 72,
+    "first_call_date": "2026-01-07",
+    "name": "Jesse Walters",
+    "won_date": "2026-03-20"
+  },
+  "lead_WrAbI1cVrRDlPLkYD8jUhTTUCAWWfktG4K2aeHTzD9G": {
+    "cycle_days": 7,
+    "first_call_date": "2026-02-12",
+    "name": "Peyton Schlemmer",
+    "won_date": "2026-02-19"
+  },
+  "lead_WwFOJCdUHvmOSvsZHLCXMpswgFrPsBbAVkrQny7jegj": {
+    "cycle_days": 14,
+    "first_call_date": "2026-03-30",
+    "name": "Jonathan and Ashley Jackson",
+    "won_date": "2026-04-13"
+  },
+  "lead_WwIL7aDJxFYWc0Qxws1SdAlG1YJa06CMNGYzNDhMfYw": {
+    "cycle_days": 21,
+    "first_call_date": "2026-01-19",
+    "name": "Michael Stitt",
+    "won_date": "2026-02-09"
+  },
+  "lead_X2gpwjCIxnFKwRiFhh3amoBIvfqW6S3ApKaG8Rqpds0": {
+    "cycle_days": 68,
+    "first_call_date": "2026-02-26",
+    "name": "Dan Radford",
+    "won_date": "2026-05-05"
+  },
+  "lead_X5MC6klS4WOP2ISK5iGcgL3uO5FOZgi98cj22ajvzvy": {
+    "cycle_days": 1,
+    "first_call_date": "2026-01-30",
+    "name": "Harold Curry",
+    "won_date": "2026-01-31"
+  },
+  "lead_XZKmWq4vtmas6F4tyHdMo3tk0VBCwrbWHE5DWS6iZVc": {
+    "cycle_days": 15,
+    "first_call_date": "2026-02-05",
+    "name": "Pamela Carias",
+    "won_date": "2026-02-20"
+  },
+  "lead_XbXE8c6DyYiGo1JRo4nxJsMnHfkLitBugg5QzArXxIV": {
+    "cycle_days": 3,
+    "first_call_date": "2026-03-06",
+    "name": "Eric & Heather Phillips",
+    "won_date": "2026-03-09"
+  },
+  "lead_XiCdCBeAeW6JukNrsJl2OKv9tQigH42AyciSKV4dOgP": {
+    "cycle_days": 98,
+    "first_call_date": "2025-12-22",
+    "name": "Jamiar Tate",
+    "won_date": "2026-03-30"
+  },
+  "lead_YR5po0ItkT6cDH3D9WYD0D1jPlrTCPLi7LTg9NJXi6o": {
+    "cycle_days": 178,
+    "first_call_date": "2025-10-20",
+    "name": "Russell Rosado",
+    "won_date": "2026-04-16"
+  },
+  "lead_YaUlcevbWiC47rvp2fK38WGacrqKfgTk4PSx1lDWKb0": {
+    "cycle_days": 6,
+    "first_call_date": "2026-01-23",
+    "name": "Malcolm Jefferson",
+    "won_date": "2026-01-29"
+  },
+  "lead_YgUTGsV1hR2S7yfrFOt2IuXK5dTcuAg0sQdzqSBrQHt": {
+    "cycle_days": 98,
+    "first_call_date": "2026-01-08",
+    "name": "Jerri Citty",
+    "won_date": "2026-04-16"
+  },
+  "lead_YnY5J4YEeb8bFxJgaACj3HiAQY8LU2aufYNYYbDuUra": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-09",
+    "name": "Joseph Bourke",
+    "won_date": "2026-03-09"
+  },
+  "lead_Z4qyIag5RMYwkUf4TeRA7tJkw4b6kAZqB13NWidg7eM": {
+    "cycle_days": 14,
+    "first_call_date": "2026-01-20",
+    "name": "Dustin Kane",
+    "won_date": "2026-02-03"
+  },
+  "lead_ZB7SYnAG1TiUf3MMI3njEAz8gyzbkhvtWyBrdCb52pS": {
+    "cycle_days": 7,
+    "first_call_date": "2026-05-20",
+    "name": "Mary Blevins",
+    "won_date": "2026-05-27"
+  },
+  "lead_ZBqaaoVTHKgeoZx07vJHRGJW4ka8ezXtQcGFQMd4W7v": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-20",
+    "name": "Wally Aime",
+    "won_date": "2026-05-20"
+  },
+  "lead_ZIT6qdUys20IXCphoW5vQLQ7s8C4D3AIRv3JEW09oNv": {
+    "cycle_days": 91,
+    "first_call_date": "2025-12-16",
+    "name": "Mike Hitt",
+    "won_date": "2026-03-17"
+  },
+  "lead_ZUcGVfjKDLoJe6cJ5ntq0pBDeJ2ppiYJJs0VFdCDJEm": {
+    "cycle_days": 115,
+    "first_call_date": "2025-12-22",
+    "name": "Bruce Kalman",
+    "won_date": "2026-04-16"
+  },
+  "lead_ZWnR8AhaGwvbfxKizOM0z6c7HyZmou8U9MQuPM1h8Rt": {
+    "cycle_days": 38,
+    "first_call_date": "2025-12-26",
+    "name": "Chris Redfern",
+    "won_date": "2026-02-02"
+  },
+  "lead_ZizGoxebIKpkVL0hMXP08XqRDAcn0Mou2tp6Zp4yGOL": {
+    "cycle_days": 170,
+    "first_call_date": "2025-10-28",
+    "name": "Amber Srisarakorn",
+    "won_date": "2026-04-16"
+  },
+  "lead_ZlUNDjNAgo6c6BeGKLukUyNeArH5Ch2Mq4ezLmbj1Id": {
+    "cycle_days": 23,
+    "first_call_date": "2026-04-14",
+    "name": "John Subia",
+    "won_date": "2026-05-07"
+  },
+  "lead_ZmZJRex6Brkq5gsp4XPlciRJIw7xkMEO489uWtN3jED": {
+    "cycle_days": 11,
+    "first_call_date": "2026-02-26",
+    "name": "Thomas Walker",
+    "won_date": "2026-03-09"
+  },
+  "lead_ZqFKeQzJsgXWaBp6PsRuIw2VFqoznqIP4sS6RjRmdsj": {
+    "cycle_days": 226,
+    "first_call_date": "2025-09-02",
+    "name": "Naomi Starr",
+    "won_date": "2026-04-16"
+  },
+  "lead_ZvLnZYF5sJEft5qlC4VH9bqqXOmxGb2mQpV5o9tllAz": {
+    "cycle_days": 54,
+    "first_call_date": "2026-01-22",
+    "name": "Andrew Schexnayder",
+    "won_date": "2026-03-17"
+  },
+  "lead_ZwRBR4uPx4nI8kJpEo2PRo9GSYzTV8Kbg5cOispRnxM": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-23",
+    "name": "Adam Ruth",
+    "won_date": "2026-02-24"
+  },
+  "lead_aXZDfSCVcGYoqEzSLcFjBKuFiBb2jzRWjKo04sXn9p8": {
+    "cycle_days": 16,
+    "first_call_date": "2026-05-05",
+    "name": "Robert Castro",
+    "won_date": "2026-05-21"
+  },
+  "lead_aptZN2XchYiCZnbP0CFGmutim6SBo9v13a05n9GnUQz": {
+    "cycle_days": 121,
+    "first_call_date": "2025-12-16",
+    "name": "Spencer Dunn",
+    "won_date": "2026-04-16"
+  },
+  "lead_auu90hJNStX37EgR7VdduNL87n9eAFhLoGHNYeqHe6k": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-17",
+    "name": "Aprill Garza",
+    "won_date": "2026-04-17"
+  },
+  "lead_bAOU7uKOYPP6fQxuWYI0yRnG6Iq4LshexDRdaqU3gYD": {
+    "cycle_days": 15,
+    "first_call_date": "2026-05-14",
+    "name": "Sophia Winfrey",
+    "won_date": "2026-05-29"
+  },
+  "lead_bBp3y3usBVBkLv1xn5WibD4rb70FzNUhguubUy4wZuZ": {
+    "cycle_days": 24,
+    "first_call_date": "2026-04-28",
+    "name": "Brian Blanchard",
+    "won_date": "2026-05-22"
+  },
+  "lead_bE9cBu2yIxWcXgj4YqyRxvdM6LlNTyJBL3FbitOvQIK": {
+    "cycle_days": 14,
+    "first_call_date": "2026-01-27",
+    "name": "Alyssa Rose-Miller",
+    "won_date": "2026-02-10"
+  },
+  "lead_bGD4ZQ5NQ0CDmeCx1iWLEjC9dBpxY8QZbJt7PQufa0t": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-11",
+    "name": "Tyler Dixon",
+    "won_date": "2026-03-12"
+  },
+  "lead_bZZJH3Je47pBQdiRa7UxzlebpvhKpjqgsCBx2dfNAQv": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-13",
+    "name": "Victor Brandao",
+    "won_date": "2026-02-13"
+  },
+  "lead_bbYciAFE8CDzXu53QOqtlJGb5Ec7Emg8RIR0vnXKJT5": {
+    "cycle_days": 27,
+    "first_call_date": "2026-03-04",
+    "name": "Camille Holcomb",
+    "won_date": "2026-03-31"
+  },
+  "lead_bfdVHaoqej73TDSCuMRFrCP9ylZKroSsFQHJhqj30AS": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-30",
+    "name": "Ethan Mendoza",
+    "won_date": "2026-03-30"
+  },
+  "lead_biCiwUxKPAuvMMu1G1hmMdj6zzhr6unNDJ01HgOhARS": {
+    "cycle_days": 7,
+    "first_call_date": "2026-02-09",
+    "name": "Kyle Graham",
+    "won_date": "2026-02-16"
+  },
+  "lead_blcdrH4nwn12WUWNIh3Uzq4TDH1TCB5It42pnXym7HE": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-09",
+    "name": "Cristy Carasi Medina",
+    "won_date": "2026-04-09"
+  },
+  "lead_bmCgqvUl5ekIegj5zOpTQ9rsEx9du6Skn32u8wMjEvt": {
+    "cycle_days": 68,
+    "first_call_date": "2025-11-19",
+    "name": "Jeff Young",
+    "won_date": "2026-01-26"
+  },
+  "lead_cBNtXyIWovMVT7cnhOKDdwjR6LobgTF5jfsy8ZEFQXJ": {
+    "cycle_days": 121,
+    "first_call_date": "2025-12-16",
+    "name": "William Stout",
+    "won_date": "2026-04-16"
+  },
+  "lead_cXP54E1W2Ygu8AuiolszvOPSvAI8awXtGdgKNE80syx": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-03",
+    "name": "Nicholas Herrera",
+    "won_date": "2026-03-03"
+  },
+  "lead_cYLutTuSbVQd1A1smIac4UfHzti8zEtkFWyJmC5F7p2": {
+    "cycle_days": 84,
+    "first_call_date": "2025-11-18",
+    "name": "Angela Wells",
+    "won_date": "2026-02-10"
+  },
+  "lead_ch5R5Rk07j2V2fXwd7VQ9HJFgX04ukDE4OJwPRHRUw8": {
+    "cycle_days": 1,
+    "first_call_date": "2026-04-08",
+    "name": "Lance Little",
+    "won_date": "2026-04-09"
+  },
+  "lead_cqx8NQOiOgHuypPEh6E2Bk62eetBPDkCIrc9wSFGyLh": {
+    "cycle_days": 59,
+    "first_call_date": "2026-01-26",
+    "name": "Katie Ritchie",
+    "won_date": "2026-03-26"
+  },
+  "lead_cvzos89VqBorirMvI8Faqy99ULsDMdk5t317BDihoZc": {
+    "cycle_days": 43,
+    "first_call_date": "2025-12-18",
+    "name": "Jeff Worthington",
+    "won_date": "2026-01-30"
+  },
+  "lead_dAHBcfSijHqRUy8oC6N56xZNRirM8ka6CLfxsL4yT4k": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-19",
+    "name": "Kevin Petry",
+    "won_date": "2026-02-19"
+  },
+  "lead_dHGnCK9xY4wEEGac2VYfN2UpdbKkpnizvZ7NGTRR4yo": {
+    "cycle_days": 223,
+    "first_call_date": "2025-09-05",
+    "name": "Paul Nykamp",
+    "won_date": "2026-04-16"
+  },
+  "lead_dJyz5FSwzZbjpMzffyaqyMPwp3gX3QrI5uV8qeJmrGY": {
+    "cycle_days": 7,
+    "first_call_date": "2026-01-21",
+    "name": "Sergiy Poklonsky",
+    "won_date": "2026-01-28"
+  },
+  "lead_dQvcjM6uM0b5QOpvcvsVqeqdjpRb81xjhFFG8bFHbx1": {
+    "cycle_days": 106,
+    "first_call_date": "2025-12-31",
+    "name": "Liv Solar",
+    "won_date": "2026-04-16"
+  },
+  "lead_dUn8Gg1BkLtreoda9pQbvVrcf6qONx6Di7R2rc2OITD": {
+    "cycle_days": 43,
+    "first_call_date": "2026-03-03",
+    "name": "Max Barlow",
+    "won_date": "2026-04-15"
+  },
+  "lead_diYFmlCHGlcx4oDNSCgHod6SkOruOf4QgeK950iHBac": {
+    "cycle_days": 114,
+    "first_call_date": "2025-12-23",
+    "name": "cory simon",
+    "won_date": "2026-04-16"
+  },
+  "lead_dmOS2eDVjpkHkeIrZDvmKDQ6GwJb1i81DbEpictTtfU": {
+    "cycle_days": 17,
+    "first_call_date": "2026-05-12",
+    "name": "Chance Dite",
+    "won_date": "2026-05-29"
+  },
+  "lead_dt6FfUHnON8mx65eXRSb8KMKT12ezUeDEziS1ERZb4R": {
+    "cycle_days": 72,
+    "first_call_date": "2025-12-16",
+    "name": "Christopher Cooper",
+    "won_date": "2026-02-26"
+  },
+  "lead_e2mLP2RCJlkLTJyXFD8eJfgOyyU8dj8ak5YzvJF2igt": {
+    "cycle_days": 5,
+    "first_call_date": "2026-04-22",
+    "name": "Brittany Fierro",
+    "won_date": "2026-04-27"
+  },
+  "lead_eGUIp2x1XBghk7YgNAZMOc6zAIccyG1Ajwi4Bt59xGA": {
+    "cycle_days": 4,
+    "first_call_date": "2026-02-27",
+    "name": "Jessica Hair",
+    "won_date": "2026-03-03"
+  },
+  "lead_eXWnmrEm4U6Dp12bqXQ7LnHSKljrJizChyQFqUZKVTQ": {
+    "cycle_days": 1,
+    "first_call_date": "2026-05-07",
+    "name": "Josh Greenman",
+    "won_date": "2026-05-08"
+  },
+  "lead_ehNgb2DyjxwlE0kbCqoeT4ecYmmaA15xtTPZ5CYe27T": {
+    "cycle_days": 233,
+    "first_call_date": "2025-08-26",
+    "name": "Christina Lutz",
+    "won_date": "2026-04-16"
+  },
+  "lead_eiLQHNS9Woy8pjLXPcONWIcAyBznrRfHiEG1SyV0bLv": {
+    "cycle_days": 119,
+    "first_call_date": "2025-12-18",
+    "name": "mysite",
+    "won_date": "2026-04-16"
+  },
+  "lead_er6mUP1ZQAqilhhDmmj778lZYIwy8CCY3LVtKk3LFzf": {
+    "cycle_days": 90,
+    "first_call_date": "2025-12-09",
+    "name": "Scott Bishop",
+    "won_date": "2026-03-09"
+  },
+  "lead_esPwCDX7U9uBuPiJQ7PwKY7CFUka6Piqqi7dH2qE5sN": {
+    "cycle_days": 2,
+    "first_call_date": "2026-04-01",
+    "name": "Alex Perdomo",
+    "won_date": "2026-04-03"
+  },
+  "lead_ewysfUdBGck7rFE83BSQRch1z4xRAw0Wvy3dkrFswCN": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-24",
+    "name": "Michelle",
+    "won_date": "2026-04-24"
+  },
+  "lead_f6plpO1I13vmTvuXK1tZkGKONaVPniWGw7bQMd02PUX": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-19",
+    "name": "Timothy Wharton",
+    "won_date": "2026-03-19"
+  },
+  "lead_fGtLId9P1rtH4bPVs1ZdF0AJ68RNejQAs7kMRKKMZNs": {
+    "cycle_days": 135,
+    "first_call_date": "2025-12-02",
+    "name": "David Espejo",
+    "won_date": "2026-04-16"
+  },
+  "lead_fKqooYxaSWVn9QW1G3EFotyLKipQTJN2QxqzYRhqokP": {
+    "cycle_days": 89,
+    "first_call_date": "2026-02-05",
+    "name": "Brennan Reid",
+    "won_date": "2026-05-05"
+  },
+  "lead_fLT15M9TjX21TQtnxwcGN5fEVDQOdbw1k4vlPw3pMfh": {
+    "cycle_days": 108,
+    "first_call_date": "2025-12-29",
+    "name": "Kevin Shannon",
+    "won_date": "2026-04-16"
+  },
+  "lead_fMjXT0w3SSwLYoRehpYa1G7bh2oCotx6YtFYCa4IJPp": {
+    "cycle_days": 61,
+    "first_call_date": "2025-12-04",
+    "name": "Jared Abruzzo",
+    "won_date": "2026-02-03"
+  },
+  "lead_fRKDDYHkLuxYprjooJuzxkdMlT3zvJOR5sftaYPBLvY": {
+    "cycle_days": 22,
+    "first_call_date": "2026-01-06",
+    "name": "Santiago Salas Oliva",
+    "won_date": "2026-01-28"
+  },
+  "lead_fpsrWfYfJpLBcReVXAFcXYfGYAvhKfK4iP8T2NSXq22": {
+    "cycle_days": 6,
+    "first_call_date": "2026-04-22",
+    "name": "JASON BERNO",
+    "won_date": "2026-04-28"
+  },
+  "lead_fr10CXBdv4xDgf86G6VuaqfZxg0Su1jCMRCHPj9aaEC": {
+    "cycle_days": 1,
+    "first_call_date": "2026-02-25",
+    "name": "Lance Parnell",
+    "won_date": "2026-02-26"
+  },
+  "lead_g0XcQDjIxiojARk4iS94yp87WMNE44hrH4OkMt0Xp4y": {
+    "cycle_days": 33,
+    "first_call_date": "2026-01-09",
+    "name": "Leah Brooks",
+    "won_date": "2026-02-11"
+  },
+  "lead_gDqM29Ni9D5bHLzrMt57MC0Yw1nIViEdbAAQ2W4lvIk": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-13",
+    "name": "Dillan Pak",
+    "won_date": "2026-03-13"
+  },
+  "lead_gJchKq61noRIq9RXm00nq55dPc6pI4fpixz71TMtt7c": {
+    "cycle_days": 10,
+    "first_call_date": "2026-03-03",
+    "name": "Andrew McCullough",
+    "won_date": "2026-03-13"
+  },
+  "lead_gT3HvjYsthchX2Dm1p9LzBIbzt4UUuDcTRNn6xVuGzx": {
+    "cycle_days": 2,
+    "first_call_date": "2026-04-28",
+    "name": "Andrew Salomon",
+    "won_date": "2026-04-30"
+  },
+  "lead_gWSwjzhbZuFoYmdt634F0GFYJS7zR4p79s2XciTn9Ou": {
+    "cycle_days": 171,
+    "first_call_date": "2025-10-27",
+    "name": "Frank Florentine",
+    "won_date": "2026-04-16"
+  },
+  "lead_gkSD2hJAm2DAALK087zztTiKqSv7AR40lNpczanSOUa": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-26",
+    "name": "Michael Gentry",
+    "won_date": "2026-02-26"
+  },
+  "lead_gviYBlQgbRfT5qufuv4hoTAR8LrRed1IbajWDvchV2a": {
+    "cycle_days": 51,
+    "first_call_date": "2026-03-23",
+    "name": "Evan Spirk",
+    "won_date": "2026-05-13"
+  },
+  "lead_gxWdlOJDzFKDyP0QGOnn4bYWTJrJzZ0lI6CFHPHqvsW": {
+    "cycle_days": 100,
+    "first_call_date": "2026-01-06",
+    "name": "Landon Reid",
+    "won_date": "2026-04-16"
+  },
+  "lead_h8GAgnne5Fy3PRDk1gKc9L9nz2SjmVZvUSr7kQ3956H": {
+    "cycle_days": 14,
+    "first_call_date": "2026-03-10",
+    "name": "Lisa Butler",
+    "won_date": "2026-03-24"
+  },
+  "lead_h9AiL1JGf4NN1xA6TTYfdAycx0OcnjpNQ9WLVRpvwaz": {
+    "cycle_days": 26,
+    "first_call_date": "2026-02-06",
+    "name": "Darshan Patel",
+    "won_date": "2026-03-04"
+  },
+  "lead_hHBYBFqztA2SkHRtrpWUVsSHZsU0um4WxVqKO1xBAIw": {
+    "cycle_days": 107,
+    "first_call_date": "2025-12-30",
+    "name": "Austin Oleksyn",
+    "won_date": "2026-04-16"
+  },
+  "lead_hLOlf1vxTI7VLcznjOK9CbkoVWkWHso89ddSmNaY9CJ": {
+    "cycle_days": 4,
+    "first_call_date": "2026-04-02",
+    "name": "Tim Kauppinen",
+    "won_date": "2026-04-06"
+  },
+  "lead_hSTfFXQtaBwTNjcpcUyF94eZMONMt9HWMcWChE3BTL9": {
+    "cycle_days": 26,
+    "first_call_date": "2026-02-13",
+    "name": "Sanjay Chintalapalli",
+    "won_date": "2026-03-11"
+  },
+  "lead_haMFU0AxUT41zcs0e6nrzIWG2rQ5K8mxVBdWYH1ylMV": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-24",
+    "name": "Justin Myers",
+    "won_date": "2026-03-24"
+  },
+  "lead_hdsei10zinarRovdWWwzZFfzrA1fuhqMp93HJDL2axG": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-13",
+    "name": "James Vital",
+    "won_date": "2026-05-13"
+  },
+  "lead_he9Qt6ndFlM7NDCETRQkPVUmejVZUlKf3mJMLmRYVDB": {
+    "cycle_days": 162,
+    "first_call_date": "2025-11-05",
+    "name": "Benjamin Davis",
+    "won_date": "2026-04-16"
+  },
+  "lead_hfixbnzQh7b1fBSacfeGMhpvYDPDvbGLL0faeBJ98nl": {
+    "cycle_days": 15,
+    "first_call_date": "2026-01-20",
+    "name": "Bright Life Solar",
+    "won_date": "2026-02-04"
+  },
+  "lead_huOZJAlNXWYiE4s9xEDrF7dXVyXVwzQHiIKcJmYkNYd": {
+    "cycle_days": 2,
+    "first_call_date": "2026-03-02",
+    "name": "Josh Schonert",
+    "won_date": "2026-03-04"
+  },
+  "lead_iFrVbpkUBohpIVnoC5R3MoGbCPI9D3ytuPFiQz98tpi": {
+    "cycle_days": 8,
+    "first_call_date": "2026-05-21",
+    "name": "Logan Fuchs",
+    "won_date": "2026-05-29"
+  },
+  "lead_iGY9HGcteQ13iIAuNdofO8vJvF8xUEdFvoU2HAgoXWX": {
+    "cycle_days": 29,
+    "first_call_date": "2026-01-13",
+    "name": "Edward Burke & William Thornton",
+    "won_date": "2026-02-11"
+  },
+  "lead_iKhHTnY0XhcSXtFnIyRfopl2CcIKJohGjUJCI1rAvVK": {
+    "cycle_days": 9,
+    "first_call_date": "2026-04-13",
+    "name": "Quran mcdonald",
+    "won_date": "2026-04-22"
+  },
+  "lead_iSAeQP2cTTObKEdDcE8e0oZ1CdL3Go8riYG6cpZ6pBN": {
+    "cycle_days": 63,
+    "first_call_date": "2025-12-03",
+    "name": "Akeem Mason",
+    "won_date": "2026-02-04"
+  },
+  "lead_iScX907yujljOsetoxS0GWXxFQeRA7YbhVRhkJvETho": {
+    "cycle_days": 3,
+    "first_call_date": "2026-01-26",
+    "name": "Joseph Hayes",
+    "won_date": "2026-01-29"
+  },
+  "lead_iWevJiI0rb7wnYxle1m2kfWoxnmV1HDwyHOJZBPGmMr": {
+    "cycle_days": 146,
+    "first_call_date": "2025-11-21",
+    "name": "Mark Berberich",
+    "won_date": "2026-04-16"
+  },
+  "lead_iXW7R5TwPPhWEAjh2gYgmj51Ob2AvKcVOBwbVWBsN29": {
+    "cycle_days": 40,
+    "first_call_date": "2026-04-01",
+    "name": "Danielle Alexander",
+    "won_date": "2026-05-11"
+  },
+  "lead_jEh3jdspBkxSly2bxDh8t7xy7mngyzX0zy35AhaZARu": {
+    "cycle_days": 237,
+    "first_call_date": "2025-08-22",
+    "name": "Michael Lavachia",
+    "won_date": "2026-04-16"
+  },
+  "lead_jHBkDByqqqc5c2Ki9fZTbRRX0NIMPXGABxyVJA3IOze": {
+    "cycle_days": 0,
+    "first_call_date": "2026-01-26",
+    "name": "Justin",
+    "won_date": "2026-01-26"
+  },
+  "lead_jMCYymEemd3Ml2kR4CiI6YVrvzp5NEYBoG2vheE4EZp": {
+    "cycle_days": 3,
+    "first_call_date": "2026-05-11",
+    "name": "Eddie Bernard",
+    "won_date": "2026-05-14"
+  },
+  "lead_jXtHFumaEe2QIKgvvJfdbBCtytvu1ASxJrYiIz7641d": {
+    "cycle_days": 5,
+    "first_call_date": "2026-04-24",
+    "name": "Zach Truss",
+    "won_date": "2026-04-29"
+  },
+  "lead_jeQhRNKSZ0HaaZ3wi1gTfvvmbFM1WJUPfePyoOywYnT": {
+    "cycle_days": 223,
+    "first_call_date": "2025-09-05",
+    "name": "Vincent Villalobos",
+    "won_date": "2026-04-16"
+  },
+  "lead_jfQBcsbrCiPaBb4fQFyksquQfEatrJ8l0XYIO6t8yQy": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-05",
+    "name": "Dan Stavish",
+    "won_date": "2026-02-05"
+  },
+  "lead_jhoAaSHFQ7lstlBBLSMReeY0AZnCLe18fZMMt9ju0TX": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-03",
+    "name": "Pablo Martinez",
+    "won_date": "2026-04-03"
+  },
+  "lead_jtjiuSAOdoXComaxhoe1xRYWxLK1F7QYA8vbGiHHYbQ": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-01",
+    "name": "Victor Ruben",
+    "won_date": "2026-05-01"
+  },
+  "lead_k0xmPIJb6RKeRF384tpOjUOCWOSEK4IdCi9nDqoQ4vf": {
+    "cycle_days": 54,
+    "first_call_date": "2025-12-18",
+    "name": "Kenzie Hutton",
+    "won_date": "2026-02-10"
+  },
+  "lead_kB4i2h68EZKbl04LfZ26dF5tco9aIAZHRXtGiQMxCN0": {
+    "cycle_days": 181,
+    "first_call_date": "2025-10-17",
+    "name": "Duane Jordan",
+    "won_date": "2026-04-16"
+  },
+  "lead_kEmboiRMWzQT6gGIrs3sHhcM4e4CkHRfUmH5Axyz5Rs": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-27",
+    "name": "Joel Hernandez",
+    "won_date": "2026-04-27"
+  },
+  "lead_kOAlR22PmnrBqRRr4pryauFDdmdCOEcbpdOS74gjwnj": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-06",
+    "name": "Aaron Matteson",
+    "won_date": "2026-04-06"
+  },
+  "lead_kVeBUJZ9Gs5A4MbYYFNLru8Vj4XHySblPryiH33skto": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-12",
+    "name": "Marco Paquette",
+    "won_date": "2026-03-12"
+  },
+  "lead_kgsgggZ1LOpUD2ZWtYAyFXtCJ1IpzcA0lP0je4pIWfT": {
+    "cycle_days": 2,
+    "first_call_date": "2026-02-18",
+    "name": "Kraig Price",
+    "won_date": "2026-02-20"
+  },
+  "lead_kj883MNIBTTOHbWrUTfRwQncskSjgkbqI2eudzvm7Ta": {
+    "cycle_days": 83,
+    "first_call_date": "2025-12-09",
+    "name": "Nicholas Lynch",
+    "won_date": "2026-03-02"
+  },
+  "lead_kvhuCQWDaivRKQa96gNRWmvV8zX6T6jeGzxh6Df4YlM": {
+    "cycle_days": 113,
+    "first_call_date": "2025-12-15",
+    "name": "Gerardo Robles",
+    "won_date": "2026-04-07"
+  },
+  "lead_kwuQkU3obTd6vVfRVEFjRYP5FXBC8VJllCgtZlx2v5e": {
+    "cycle_days": 125,
+    "first_call_date": "2025-12-12",
+    "name": "Spencer Ward",
+    "won_date": "2026-04-16"
+  },
+  "lead_kxUUH3GcA2gvwKXZ051uPSlNtNG4GpsMxJKyHLsvsKS": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-21",
+    "name": "Kiya Daniels",
+    "won_date": "2026-04-21"
+  },
+  "lead_kxvnjT7nLTeGzlP31Up09FOrAAvJZEAxRJm5cgBQi6g": {
+    "cycle_days": 76,
+    "first_call_date": "2026-01-29",
+    "name": "Ashleigh Johnigan",
+    "won_date": "2026-04-15"
+  },
+  "lead_l5r6FjZTNxxvfHk7dByU9VrcLmcXmWp6yIKaBkG8wdy": {
+    "cycle_days": 2,
+    "first_call_date": "2026-05-19",
+    "name": "Jayce Roth",
+    "won_date": "2026-05-21"
+  },
+  "lead_lDfoY5tFljEnPeF39SeqU407szKRQ5WCNQap4bSqi40": {
+    "cycle_days": 8,
+    "first_call_date": "2026-04-23",
+    "name": "Daniel Del Monte",
+    "won_date": "2026-05-01"
+  },
+  "lead_lLvbPxeVu4SRVk86yX6OmnJkPmRz8qe0mA49dAllCVZ": {
+    "cycle_days": 64,
+    "first_call_date": "2025-12-08",
+    "name": "Jared Spane",
+    "won_date": "2026-02-10"
+  },
+  "lead_lQ0NIz7w5PiOOFbqlIh8i0rl9Yo5IZ87EHwdu9nG0L6": {
+    "cycle_days": 77,
+    "first_call_date": "2025-11-25",
+    "name": "Heather Haas",
+    "won_date": "2026-02-10"
+  },
+  "lead_lT0Jc7JjZRl7EwubU8pyBAsyBbUi5bAFejvl6HMdtVt": {
+    "cycle_days": 63,
+    "first_call_date": "2025-12-18",
+    "name": "Reggie Guy",
+    "won_date": "2026-02-19"
+  },
+  "lead_lYn1rwXKX0ufvvT3TpUr6LszZkOwSTfKnFz22doLuwS": {
+    "cycle_days": 34,
+    "first_call_date": "2026-03-19",
+    "name": "Aris Peralta",
+    "won_date": "2026-04-22"
+  },
+  "lead_lZZSQTx0nnt3C3DOeJhD9WMDMEPynk1R4WKGPd0qRBM": {
+    "cycle_days": 78,
+    "first_call_date": "2025-12-17",
+    "name": "Troy Nelson",
+    "won_date": "2026-03-05"
+  },
+  "lead_la9ILo6v4yqwCk054DRxTLEVFcdzp2FkFR0p4LkE8gS": {
+    "cycle_days": 40,
+    "first_call_date": "2026-03-06",
+    "name": "E\u2019J Logan",
+    "won_date": "2026-04-15"
+  },
+  "lead_lcsgNe8JlTQ4CS7LzVJLmvWHjXC5fGLKrAS3ua8Ziaa": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-14",
+    "name": "Gustavo E Padres",
+    "won_date": "2026-04-14"
+  },
+  "lead_lsN12ZaLPRUDzJayXSsxxSbLOn20ThloFTzWj1FJFYt": {
+    "cycle_days": 4,
+    "first_call_date": "2026-05-27",
+    "name": "Charles Akrong",
+    "won_date": "2026-05-31"
+  },
+  "lead_m0jsqSFYyMH7grvMOrfsYaVpcmzETOnkeneZZgcEKeF": {
+    "cycle_days": 3,
+    "first_call_date": "2026-05-11",
+    "name": "Jalal Sayed",
+    "won_date": "2026-05-14"
+  },
+  "lead_m1SOUJ5hRTVRn3KN3D6OrihN3kvGn7L0RWh67YqJfyX": {
+    "cycle_days": 6,
+    "first_call_date": "2026-02-04",
+    "name": "Anna Marie",
+    "won_date": "2026-02-10"
+  },
+  "lead_m3Uz0GtC85Tw64ASRAGijFoWOKFWU6Vtq4U72EjaWtO": {
+    "cycle_days": 12,
+    "first_call_date": "2026-02-12",
+    "name": "Stephen Doug Dillard",
+    "won_date": "2026-02-24"
+  },
+  "lead_mFFYjyWbTGL5j1V9cQdhx2vt6OUGnMhg8dbNYn8Ayx3": {
+    "cycle_days": 35,
+    "first_call_date": "2026-01-06",
+    "name": "Jon C",
+    "won_date": "2026-02-10"
+  },
+  "lead_mO7Xl6jTSHkGdenIKVeTtrDNBQeJQv3q14MpiTAUhiX": {
+    "cycle_days": 1,
+    "first_call_date": "2026-05-20",
+    "name": "Roman Oben",
+    "won_date": "2026-05-21"
+  },
+  "lead_mXWXPnjiRAcwqyZcJYp8Rhg3iLtUswTvvAxkDb7rWpo": {
+    "cycle_days": 127,
+    "first_call_date": "2025-12-10",
+    "name": "Carlos Limardo",
+    "won_date": "2026-04-16"
+  },
+  "lead_mqAW9Y9ZJMvYDCzDlSXwLBNcPAS9j7HM4aFnydcs13S": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-10",
+    "name": "Christopher P Tresco",
+    "won_date": "2026-02-10"
+  },
+  "lead_mrlDWIRVTAJwkH0bp7sddjnL96hH3ZYqVq8tu6Uf8uz": {
+    "cycle_days": 123,
+    "first_call_date": "2025-10-17",
+    "name": "Khalil Hardwick",
+    "won_date": "2026-02-17"
+  },
+  "lead_n0UH75vCjwZeoBwR941cil3H56SWjX0ojhZTUwG9xgg": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-18",
+    "name": "David Tomlinson",
+    "won_date": "2026-05-18"
+  },
+  "lead_n3NpWnvKn2pWmkdgBql935qkwChvoMvas9AkpDyiv6d": {
+    "cycle_days": 3,
+    "first_call_date": "2026-03-20",
+    "name": "Nate Harness",
+    "won_date": "2026-03-23"
+  },
+  "lead_nBNvqNoa3H31xqSMey85SsU7aNAZ5l454Tg4ctCWoMV": {
+    "cycle_days": 16,
+    "first_call_date": "2026-03-02",
+    "name": "Shayne Siegman",
+    "won_date": "2026-03-18"
+  },
+  "lead_nHp0T07oCpsGTjayOKmgcLrQGjkYpMRfWM1Q198uruJ": {
+    "cycle_days": 4,
+    "first_call_date": "2026-03-26",
+    "name": "Allen Henderson",
+    "won_date": "2026-03-30"
+  },
+  "lead_nLDMJj5ldpSQnBVnuQMZITkVHcLQtWVWmPHMUFJnCUA": {
+    "cycle_days": 30,
+    "first_call_date": "2026-01-26",
+    "name": "Kim Rittmaster",
+    "won_date": "2026-02-25"
+  },
+  "lead_nTR1g7Uhbsa9VsBB9drVB7ECpW3mIcZe93CHXxcjlYB": {
+    "cycle_days": 1,
+    "first_call_date": "2026-04-01",
+    "name": "Tiran Williams",
+    "won_date": "2026-04-02"
+  },
+  "lead_nV0q3BbboC0R4xTL07cFnpWxmBzreF6xL1Mh3w204SJ": {
+    "cycle_days": 88,
+    "first_call_date": "2026-01-29",
+    "name": "Claudia Mason",
+    "won_date": "2026-04-27"
+  },
+  "lead_nn1zsaOq0wU3gq0ibQXVk90FIxFQche6gAPwElowfXc": {
+    "cycle_days": 7,
+    "first_call_date": "2026-03-27",
+    "name": "Juan Zuniga",
+    "won_date": "2026-04-03"
+  },
+  "lead_nn35qYvX5DtF8ESYuquTQc9hqtzbk8x4LuGyQEEjoaB": {
+    "cycle_days": 16,
+    "first_call_date": "2026-02-03",
+    "name": "Gabe Meis",
+    "won_date": "2026-02-19"
+  },
+  "lead_nxysWrBQFqpSYHjr8NFI1DdFh10JM24xwbYln1ZkBCe": {
+    "cycle_days": 14,
+    "first_call_date": "2026-04-29",
+    "name": "Madison Conway-Payne",
+    "won_date": "2026-05-13"
+  },
+  "lead_nzrStcfp8T9nUSwaugrsPTwX5t2pKPIiI0yNEPIDbro": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-09",
+    "name": "Alexander Park",
+    "won_date": "2026-02-09"
+  },
+  "lead_o0TScaCxMaU3QXe9eB3d2rVMQvXj0cSUNM14am62grx": {
+    "cycle_days": 115,
+    "first_call_date": "2025-12-22",
+    "name": "Brandon Aguirre",
+    "won_date": "2026-04-16"
+  },
+  "lead_o3xGo20TxEyUGsn6mopN6rT9t0JcZtr3EOHKeAG74ow": {
+    "cycle_days": 78,
+    "first_call_date": "2026-01-28",
+    "name": "Mysite",
+    "won_date": "2026-04-16"
+  },
+  "lead_oBKlOvlO92iECIDOKkcxWgPu7lH1AZAtXnUw3EcCB2i": {
+    "cycle_days": 64,
+    "first_call_date": "2025-12-18",
+    "name": "Christy Shank",
+    "won_date": "2026-02-20"
+  },
+  "lead_oFlWa55gNDAYbVMXEPPFqeFdmfniIy7HcwF6VvkHCkG": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-28",
+    "name": "Anthony Hernandez",
+    "won_date": "2026-03-28"
+  },
+  "lead_oGUalfOoxOUtJSLSH3XqikuKDnFafe3W76UgIoVsqsm": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-02",
+    "name": "Claude Milligan",
+    "won_date": "2026-02-02"
+  },
+  "lead_oQQYyOjCfroYVf2oLYbYIY4LcOM1CwsQ0ltbuvGE1oG": {
+    "cycle_days": 85,
+    "first_call_date": "2025-12-03",
+    "name": "Jonathan Stelly",
+    "won_date": "2026-02-26"
+  },
+  "lead_oWnIJQ59I1RHhumhjou26xsbbneqfz1QA9j9IgmhzrB": {
+    "cycle_days": 43,
+    "first_call_date": "2026-01-08",
+    "name": "Alvin Kennedy & Rodney Anderson",
+    "won_date": "2026-02-20"
+  },
+  "lead_oYVzU1FTaPyAAu1nIEPyETBlwAXGKAHQJKzY3aSvoCD": {
+    "cycle_days": 1,
+    "first_call_date": "2026-04-29",
+    "name": "Ryan Batla",
+    "won_date": "2026-04-30"
+  },
+  "lead_ombwpAyB7UUYqINYQdQd8VwL5VtOTx1Bp5WpUmVIYx1": {
+    "cycle_days": 2,
+    "first_call_date": "2026-02-24",
+    "name": "Joseph Casito",
+    "won_date": "2026-02-26"
+  },
+  "lead_p2SlPwLRSg3WftFRwsxWwZwgWlx12lwr57BUeXY6HmV": {
+    "cycle_days": 109,
+    "first_call_date": "2025-11-20",
+    "name": "William (David) Smith",
+    "won_date": "2026-03-09"
+  },
+  "lead_p492yfOQtVUEfO1z0jXx8ptEPiLPVl0EOjd9trWeyZD": {
+    "cycle_days": 104,
+    "first_call_date": "2026-01-02",
+    "name": "Kurtis Hon",
+    "won_date": "2026-04-16"
+  },
+  "lead_pBA1pNiFLlelK0H44l44gGFjdfaUqMqxeLy003n4bNR": {
+    "cycle_days": 49,
+    "first_call_date": "2026-01-19",
+    "name": "Benjamin Fultz",
+    "won_date": "2026-03-09"
+  },
+  "lead_pPqkKyI72WsVV02s34enOpdw27nPrHyetcAephbhCCd": {
+    "cycle_days": 1,
+    "first_call_date": "2026-04-01",
+    "name": "Joel Byrd",
+    "won_date": "2026-04-02"
+  },
+  "lead_pSO0nFzVG12HWO81VmC6WhtWw38nMyKuF6ELMheYa0d": {
+    "cycle_days": 28,
+    "first_call_date": "2026-01-06",
+    "name": "Angel el pollo",
+    "won_date": "2026-02-03"
+  },
+  "lead_pXcDOOdReySj1bqOuRAr2sfo0bmMpoA1BRI803GeUSU": {
+    "cycle_days": 21,
+    "first_call_date": "2026-02-13",
+    "name": "Blayne Goodman",
+    "won_date": "2026-03-06"
+  },
+  "lead_pYDglTL80MXTbc2PoEhy3gK1M6Jexr3NDPQM5ZqBTrf": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-02",
+    "name": "Jacob McPherson",
+    "won_date": "2026-02-02"
+  },
+  "lead_pa2Z8icpwu9eVtpwebGEXROGZrE6SwK2G4sFhZZH4wI": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-02",
+    "name": "Shaun Peahu",
+    "won_date": "2026-04-02"
+  },
+  "lead_pz5hBOzExaufFkOKOFicSY0YmstzXUN3GBE3IvLgae7": {
+    "cycle_days": 38,
+    "first_call_date": "2026-03-10",
+    "name": "Christopher Cummins",
+    "won_date": "2026-04-17"
+  },
+  "lead_q6jwTFrsTxOzZcf1SGpt4mRkQJYIxCi00qW3B0NTDEl": {
+    "cycle_days": 126,
+    "first_call_date": "2025-12-11",
+    "name": "Yehuda Kornbluh",
+    "won_date": "2026-04-16"
+  },
+  "lead_q8YcHDCSnj1814Dz7uSkujwbULFpKQitlad4bfNh84X": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-04",
+    "name": "Isaiac Saba",
+    "won_date": "2026-02-04"
+  },
+  "lead_q8ZIrpMRHAwK924HuzjrpzMUmXbI6j10hcNzCYMJrz3": {
+    "cycle_days": 0,
+    "first_call_date": "2026-06-03",
+    "name": "Heidi Stewart",
+    "won_date": "2026-06-03"
+  },
+  "lead_q9rHWAnC7YCkQeJIDHmRnMjhPuU5Si7O171w1AuAAdf": {
+    "cycle_days": 220,
+    "first_call_date": "2025-09-08",
+    "name": "Karen Gowing",
+    "won_date": "2026-04-16"
+  },
+  "lead_qBSCpBxAYABY6DYpmteEMKFpA4DGfS6FVuqi5ikAFn9": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-06",
+    "name": "Avi horovicz",
+    "won_date": "2026-02-06"
+  },
+  "lead_qEl1YskrUlD73UBDBxd2nEh7FAKKFVtbu1gURjSJGJK": {
+    "cycle_days": 5,
+    "first_call_date": "2026-01-30",
+    "name": "Dylan Starkey",
+    "won_date": "2026-02-04"
+  },
+  "lead_qHRBGBjF2gqiqdjSltRXRbvvGojkVvdknWPsiOguTeC": {
+    "cycle_days": 10,
+    "first_call_date": "2026-03-23",
+    "name": "Sheila and John Paulchek",
+    "won_date": "2026-04-02"
+  },
+  "lead_qLZdsdayUAvOTE9l6f1wCApn9Q2xt99snBkv2DxPIgA": {
+    "cycle_days": 5,
+    "first_call_date": "2026-03-18",
+    "name": "Karla Buitrago",
+    "won_date": "2026-03-23"
+  },
+  "lead_qPSOMXDj6xFjP46KumFXBb0oV9EhXyQxh7H6sMJhT1f": {
+    "cycle_days": 8,
+    "first_call_date": "2026-05-11",
+    "name": "mgo kalayjian",
+    "won_date": "2026-05-19"
+  },
+  "lead_qQeLaxz4lLqwuo3Lsp7y6O98McS1Suslc5aXiuuDti6": {
+    "cycle_days": 13,
+    "first_call_date": "2026-04-07",
+    "name": "Jeff Street",
+    "won_date": "2026-04-20"
+  },
+  "lead_qRl37twUko2yQzQR5PBXlgbu4N9K1A0GJlbyNsTLMau": {
+    "cycle_days": 2,
+    "first_call_date": "2026-02-10",
+    "name": "Chris Luciano",
+    "won_date": "2026-02-12"
+  },
+  "lead_qTnDlC5t3EzdXILxzPPF2LsjVvG0kBk16Sqpcs4R33I": {
+    "cycle_days": 9,
+    "first_call_date": "2026-02-17",
+    "name": "Carmela Roberts",
+    "won_date": "2026-02-26"
+  },
+  "lead_qYbYgKIyx8Bh5aa54YvHbUjINFRVAj889tFyQuSdvHp": {
+    "cycle_days": 122,
+    "first_call_date": "2025-12-15",
+    "name": "Andrew Dykzeul",
+    "won_date": "2026-04-16"
+  },
+  "lead_qgH14IVbIXerchLGOwy8bqx9oHESNqymK4A0UG3T1Ef": {
+    "cycle_days": 3,
+    "first_call_date": "2026-05-01",
+    "name": "Vaughn Creason",
+    "won_date": "2026-05-04"
+  },
+  "lead_qqWX6ko6u4buykwUrv990OS5lYvFubXfYFQFDNyniGN": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-25",
+    "name": "Makeba Mims",
+    "won_date": "2026-05-25"
+  },
+  "lead_qwBwyWQvKMhFBBRQ8USokcbHbf21O6AuDXzSJxjvY1L": {
+    "cycle_days": 129,
+    "first_call_date": "2025-12-08",
+    "name": "Aj Lotharp",
+    "won_date": "2026-04-16"
+  },
+  "lead_r5PiZadw8eriJRuAsduLxAKQDhkmkrsdjyDLMFubAhB": {
+    "cycle_days": 101,
+    "first_call_date": "2025-11-11",
+    "name": "Zion",
+    "won_date": "2026-02-20"
+  },
+  "lead_r70eViM0a4Oa8BynBCbTtzGwmQOiPK3VcaAWitGF9L3": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-13",
+    "name": "Lisa Kankoski",
+    "won_date": "2026-03-13"
+  },
+  "lead_rDk4PvbplilYVTSFx1TxTCjN5rAUrYK7sZgfIaKIDsm": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-11",
+    "name": "Daniel Dominguez",
+    "won_date": "2026-03-12"
+  },
+  "lead_rH0CvD7UafKtySk1kJK4idVr2F5nA58Qr6vW0ffZ97p": {
+    "cycle_days": 14,
+    "first_call_date": "2026-01-26",
+    "name": "Trey Smith",
+    "won_date": "2026-02-09"
+  },
+  "lead_rVlKmzvkofCmzHY2K5UzpqRuUcqkrGzC3DHs86VL3Qa": {
+    "cycle_days": 1,
+    "first_call_date": "2026-05-04",
+    "name": "Valeria Powell",
+    "won_date": "2026-05-05"
+  },
+  "lead_rWwxHdxFJtpMaGMtjbpXXu29r9hS4VL7J6t3FJIDgx9": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-10",
+    "name": "Anna Tsaturyan",
+    "won_date": "2026-04-10"
+  },
+  "lead_rcEtQcw0GoiNDHOeu20AY9SpFlFRzprWRBAfHKC1n1J": {
+    "cycle_days": 115,
+    "first_call_date": "2025-12-22",
+    "name": "Haydn Diaz",
+    "won_date": "2026-04-16"
+  },
+  "lead_reWqHpiyxQIASkucWikgOkBUYTvrQHBlvPQjXanojlJ": {
+    "cycle_days": 29,
+    "first_call_date": "2026-01-05",
+    "name": "Kevin Tucker",
+    "won_date": "2026-02-03"
+  },
+  "lead_reYyGVdkTvxY3Q9iGAPr9vzMNxyfnDGAQGvr0hYqL9K": {
+    "cycle_days": 135,
+    "first_call_date": "2025-12-02",
+    "name": "Marc Diette",
+    "won_date": "2026-04-16"
+  },
+  "lead_rn4NhCg87i6XPrU0NAjc7MBviOKXixt3hO0UQQeyUx7": {
+    "cycle_days": 3,
+    "first_call_date": "2026-02-25",
+    "name": "Lonnie Ratliff & Genet Woldai",
+    "won_date": "2026-02-28"
+  },
+  "lead_rqxRaK8vlsFArO8Qun9vopJ20vL9bDR9c2DfSNyChzF": {
+    "cycle_days": 15,
+    "first_call_date": "2026-01-26",
+    "name": "Daniel Rojas",
+    "won_date": "2026-02-10"
+  },
+  "lead_rsoM1uB2ZFqunYLx5KDMEtndvCkFGeJAdQm3suYzlW5": {
+    "cycle_days": 223,
+    "first_call_date": "2025-09-05",
+    "name": "William Steele",
+    "won_date": "2026-04-16"
+  },
+  "lead_rtg8gcXMXkWodnrYieg0GcoTktN6W4wMy5418wxwe98": {
+    "cycle_days": 3,
+    "first_call_date": "2026-03-13",
+    "name": "Alejandro Ruperti",
+    "won_date": "2026-03-16"
+  },
+  "lead_rygwJTv1Mz6KJu6Bf2YnPHAmcZNJ5fNjaBAfCdHZOG2": {
+    "cycle_days": 32,
+    "first_call_date": "2026-04-24",
+    "name": "Jimmy Cooper",
+    "won_date": "2026-05-26"
+  },
+  "lead_sGMiZT4vxs0sxim2vZ3gT4RXn95elgMj5KJBJE1fov9": {
+    "cycle_days": 6,
+    "first_call_date": "2026-04-01",
+    "name": "Sherrod Cole",
+    "won_date": "2026-04-07"
+  },
+  "lead_sYJ6Hzeq4KTjZ1b3iiRKsn1XGfxqV3QfZlxOWXVQ3Cz": {
+    "cycle_days": 5,
+    "first_call_date": "2026-03-20",
+    "name": "Ben Mendoza",
+    "won_date": "2026-03-25"
+  },
+  "lead_sdbsUxKg3CNRUQjIa5kGscBCPd55vS8TpRBb9viFT9e": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-17",
+    "name": "Cole Nicely-Green",
+    "won_date": "2026-02-17"
+  },
+  "lead_ssij1L2iBtcQWwFcZyWVP3Px53iwkMFbIxf6XtoSPmj": {
+    "cycle_days": 2,
+    "first_call_date": "2026-02-03",
+    "name": "Daniel Rasmussen",
+    "won_date": "2026-02-05"
+  },
+  "lead_sy5eTIHoKsRKUwkEmdQZjs0Km5G6PuzFt02Oidanxax": {
+    "cycle_days": 0,
+    "first_call_date": "2026-04-17",
+    "name": "Marcus and Tiffany Baker",
+    "won_date": "2026-04-17"
+  },
+  "lead_tFy1Eza9dobRw4cUfLsWLXMtHL7ujbzQSH1RmWVjAjD": {
+    "cycle_days": 9,
+    "first_call_date": "2026-01-14",
+    "name": "Nick Pohlmann",
+    "won_date": "2026-01-23"
+  },
+  "lead_tIU3OY7Sip7kKqjJjsj4EH7BBKePo7gZBMVe1H7Ot9p": {
+    "cycle_days": 232,
+    "first_call_date": "2025-08-27",
+    "name": "Mark Ayala",
+    "won_date": "2026-04-16"
+  },
+  "lead_tMqr56dPQz5vrutzA8sADNViwybPKoirghoz8xUjufm": {
+    "cycle_days": 67,
+    "first_call_date": "2025-12-05",
+    "name": "Robert Diaz",
+    "won_date": "2026-02-10"
+  },
+  "lead_tRCfUZlRSESGfme5EWc3PjNbReaNbpMYXkSLhYtgmVE": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-02",
+    "name": "Thomas Miller",
+    "won_date": "2026-02-02"
+  },
+  "lead_tm4i4MGKw7KKrTvMiOUvlUe4lPMcL3V4C4KzipDfslz": {
+    "cycle_days": 137,
+    "first_call_date": "2025-11-30",
+    "name": "Jennifer Hogue",
+    "won_date": "2026-04-16"
+  },
+  "lead_tr3ieY0CQMNU3XRobqkb5H336Rhm8c0nARVkZvhELeJ": {
+    "cycle_days": 143,
+    "first_call_date": "2025-11-24",
+    "name": "Blake Wardell",
+    "won_date": "2026-04-16"
+  },
+  "lead_twcYgU7MXfsDeOXcsrL2b7SQBr5fSDIt9nxKhYIYyzZ": {
+    "cycle_days": 2,
+    "first_call_date": "2026-04-08",
+    "name": "Neil Sullivan",
+    "won_date": "2026-04-10"
+  },
+  "lead_tzF93QC82T24so5qPoAuRW9efxeDNDmFxSIcChyux4G": {
+    "cycle_days": 3,
+    "first_call_date": "2026-01-26",
+    "name": "Justin Nussbaumer",
+    "won_date": "2026-01-29"
+  },
+  "lead_u1pF0p11Cc4n2BmivlugmvgcQWAy2xVeLfR8aZJbY1Y": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-31",
+    "name": "Sebastian Balcarcel",
+    "won_date": "2026-03-31"
+  },
+  "lead_u2ywE6e5xCLIXDYQv3OLIurKl6dserd8ExbEXrvQBFv": {
+    "cycle_days": 205,
+    "first_call_date": "2025-09-23",
+    "name": "Anderson Wingard",
+    "won_date": "2026-04-16"
+  },
+  "lead_u8tA2UygR4jA5rSbMXiPZc2noi2i2oqNqcuehJ3S6VC": {
+    "cycle_days": 85,
+    "first_call_date": "2025-12-11",
+    "name": "Radon Mcgregor",
+    "won_date": "2026-03-06"
+  },
+  "lead_uaynxi6PRXdIScg1lUNuogCjz0Wx9jcvA89jIcPz5UA": {
+    "cycle_days": 2,
+    "first_call_date": "2026-01-22",
+    "name": "Daniel Callahan",
+    "won_date": "2026-01-24"
+  },
+  "lead_umhhEsnPWsdU0T4MuioeFRKj89I10gP2y2x9t7lAHLJ": {
+    "cycle_days": 155,
+    "first_call_date": "2025-11-12",
+    "name": "David Burns",
+    "won_date": "2026-04-16"
+  },
+  "lead_uy87ZYNkDhiqHuJdW3qtWRrzmgCT3z77YzogklcEjpU": {
+    "cycle_days": 21,
+    "first_call_date": "2026-03-06",
+    "name": "Scott Marcom",
+    "won_date": "2026-03-27"
+  },
+  "lead_vD6tCd2TYyFCWG6m58tC0Dfordr3tWnQ4SJBXOutY7U": {
+    "cycle_days": 174,
+    "first_call_date": "2025-09-24",
+    "name": "Carmelo Calingasan",
+    "won_date": "2026-03-17"
+  },
+  "lead_vMIsscRfRUIhut1pNRe6lbpAU1lySJ71ySbOwmWBzaD": {
+    "cycle_days": 36,
+    "first_call_date": "2026-02-12",
+    "name": "Carolina Maurer",
+    "won_date": "2026-03-20"
+  },
+  "lead_vS8k00q1E3rLjFNLAdMDWswV8I8X1NNZhWafDmGAL4X": {
+    "cycle_days": 0,
+    "first_call_date": "2026-02-25",
+    "name": "Kirk Yates",
+    "won_date": "2026-02-25"
+  },
+  "lead_vWRdvW0y2ZLI0RCjElxKPJnKvKjxbjLIzk6hESF3g6e": {
+    "cycle_days": 7,
+    "first_call_date": "2026-05-27",
+    "name": "Robert Gellatly",
+    "won_date": "2026-06-03"
+  },
+  "lead_vgWlgTX3fegxOGOFb4XutBYpJOl7V86cEeA5GD3jzCA": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-14",
+    "name": "Michael Peralta",
+    "won_date": "2026-05-14"
+  },
+  "lead_wM5Ad9blZJHhZMjFnBCqdceMWyRGwjlMXA3eHePaB4M": {
+    "cycle_days": 145,
+    "first_call_date": "2025-11-22",
+    "name": "Aaron Barnes",
+    "won_date": "2026-04-16"
+  },
+  "lead_wRarFy8M1ODrEkgGmXUDf568a3765XJJIxv3VXzUaiB": {
+    "cycle_days": 60,
+    "first_call_date": "2026-01-30",
+    "name": "Ryan Nalls",
+    "won_date": "2026-03-31"
+  },
+  "lead_wds6ID3Xvfr52HGkxTZiEhr2NifZ11qH7LwflrEhM8y": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-02",
+    "name": "Maura Devereux",
+    "won_date": "2026-03-03"
+  },
+  "lead_wir75qfIIl6JSMcuNSaUonHsvOkW1Jukp2HhNqEIqn4": {
+    "cycle_days": 164,
+    "first_call_date": "2025-11-03",
+    "name": "AA Diamond Vending",
+    "won_date": "2026-04-16"
+  },
+  "lead_wns5QkpTjQojkFePx0bPP7QAHu0qMwKRCNY0KmNv75l": {
+    "cycle_days": 223,
+    "first_call_date": "2025-09-05",
+    "name": "Andrew Jackson",
+    "won_date": "2026-04-16"
+  },
+  "lead_wtwHEGYYkLaDTPggBDGDPgUmnJIwNuI4D49REJgJLs3": {
+    "cycle_days": 17,
+    "first_call_date": "2026-03-10",
+    "name": "Dave dickey",
+    "won_date": "2026-03-27"
+  },
+  "lead_wwYs6504JPluObW2Bl4LpKv9Uqeoqo03zlaiVpbtcmK": {
+    "cycle_days": 46,
+    "first_call_date": "2026-01-26",
+    "name": "Joe Hayes",
+    "won_date": "2026-03-13"
+  },
+  "lead_wzU3IALw0tFnEVH8WtE7cPpEFN7sjtVoDL47yfvyPlJ": {
+    "cycle_days": 171,
+    "first_call_date": "2025-10-27",
+    "name": "Kenney Wallingford",
+    "won_date": "2026-04-16"
+  },
+  "lead_x3ycUXsF4UwKA34TONb9x59U7mU2CnoAflRIVEIPPAr": {
+    "cycle_days": 0,
+    "first_call_date": "2026-03-26",
+    "name": "Steven parras",
+    "won_date": "2026-03-26"
+  },
+  "lead_xd3Z4UWdm8dYm23ory7Xk0erVkSC0HB88XwCUU0Z6xs": {
+    "cycle_days": 1,
+    "first_call_date": "2026-03-16",
+    "name": "Lisa Aliogo",
+    "won_date": "2026-03-17"
+  },
+  "lead_xmMDh3DrZdW8bffVxSqqbl7pMQNSm1UdWHZt0KSOEMU": {
+    "cycle_days": 17,
+    "first_call_date": "2026-04-21",
+    "name": "Amber A",
+    "won_date": "2026-05-08"
+  },
+  "lead_xnIuamhjojtqH0CtAbxEFED6M0cQlEx2Zdidil5jJsb": {
+    "cycle_days": 38,
+    "first_call_date": "2026-02-17",
+    "name": "Thomas Carlile",
+    "won_date": "2026-03-27"
+  },
+  "lead_xrXerlPhsY1dG3xY9yWyhkxE7j6GWV36Mu8655ZMLHW": {
+    "cycle_days": 15,
+    "first_call_date": "2026-05-14",
+    "name": "Tara Fiddler",
+    "won_date": "2026-05-29"
+  },
+  "lead_xrn4ZKBWDP87YV20upzc4TBdSOUXx6p4AZCICM3IQaD": {
+    "cycle_days": 98,
+    "first_call_date": "2026-01-08",
+    "name": "Austin Gilson",
+    "won_date": "2026-04-16"
+  },
+  "lead_y0RkwgPY1tnCrLWs4WdOW5DiojmFZcTebhiOD8DYdKN": {
+    "cycle_days": 0,
+    "first_call_date": "2026-05-13",
+    "name": "Brad Green",
+    "won_date": "2026-05-13"
+  },
+  "lead_y9vVRmBAJrV385H06TTlyCSrFWcMRZcdDITzkV1WXLZ": {
+    "cycle_days": 5,
+    "first_call_date": "2026-04-30",
+    "name": "John Witherspoon",
+    "won_date": "2026-05-05"
+  },
+  "lead_yHX76sTteu56lBuARnRHCTtIodUBFG5ahd4KGVYfK0M": {
+    "cycle_days": 134,
+    "first_call_date": "2025-12-03",
+    "name": "Ricky Fishbeck",
+    "won_date": "2026-04-16"
+  },
+  "lead_yLyl7o0ElprJyYujCPVsWf1ixPBWbvCSyjtPDR2dQj8": {
+    "cycle_days": 12,
+    "first_call_date": "2026-02-20",
+    "name": "Jessica Barrett",
+    "won_date": "2026-03-04"
+  },
+  "lead_yb9b94RYI9BknN479Cg2Bb4F7IEMlKCPxiAvJtwQoEs": {
+    "cycle_days": 4,
+    "first_call_date": "2026-03-20",
+    "name": "Richard Roach",
+    "won_date": "2026-03-24"
+  }
+}
