@@ -53231,12 +53231,11 @@
       "earliest_scraper_date": null
     },
     "lead_JOirqGUXvXqT7yy0htvMn30v52ZC7Y4IR8s9cbQplzL": {
-      "date": "2026-06-03",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_1F6JGEca5gZz2G8eJEXbBMXNfpM3UEBiuElSLKnQS1n": {
       "date": "2026-05-19",
@@ -54423,7 +54422,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_uXin3T6XCivNrCLXn4bz2Fvc2O0z44pwtTD4INB7p0I": {
       "date": "2026-05-22",
@@ -56812,12 +56812,11 @@
       "earliest_scraper_date": null
     },
     "lead_RcHV7Jy6IhXLvj9X8E7MOZNzOJRbqXhlOKKZ8hOwA0e": {
-      "date": "2026-06-03",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_uboIwU4xBjK08rd6Xvg5V9s71i3iX6P33Af2m9yJtZp": {
       "date": "2026-06-04",
@@ -57096,16 +57095,32 @@
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_LGCbkXbfLst8UO6zebSJj8yPKTOTWslpme5CnzXUwKM": {
       "date": null,
       "call_type": "Setter",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_ybGSroGvmNtjwQ7ZH0h9t3EZqHOEujLYHyfO2egVLYZ": {
+      "date": "2026-06-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_4WOafwK0xlRjXYijt97WJPIkO0LqbHWLCUMklCG9xvw": {
+      "date": "2026-06-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-06-03 15:11:07 UTC",
-  "count": 7203
+  "saved_at": "2026-06-03 15:42:25 UTC",
+  "count": 7205
 }
