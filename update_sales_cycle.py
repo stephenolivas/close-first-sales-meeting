@@ -14,10 +14,13 @@ Source of each value:
                               `First Sales Call Booked Date` (cf_LFdYEQ...),
                               which update_field.py already maintains. Single
                               source of truth; this script never re-derives it.
-  - won_date               -> the lead's *status-change activity* recording the
-                              transition INTO "🏆 Closed / Won". This is the
-                              reliable signal — the lead's date_updated is NOT
-                              (it moves on any edit).
+  - won_date               -> the lead's won *opportunity* `date_won`. This is
+                              the true close date and survived the HubSpot->Close
+                              migration intact. (The migration bulk-flipped *lead
+                              status* to won on one date, so the lead status-change
+                              timeline is unreliable; the opportunity won date is
+                              not.) Falls back to the status-change into Closed/Won
+                              only when a lead has no won opportunity.
 
 Runs a few times a day via GitHub Actions; supports a full backfill via the
 --backfill flag (or BACKFILL=1). Mirrors the architecture of update_field.py:
@@ -182,12 +185,48 @@ def get_won_leads() -> list[dict]:
     return leads
 
 
-def get_won_date(lead_id: str) -> date | None:
+def get_won_date(lead_id: str) -> tuple[date | None, str | None]:
     """
-    The Pacific-time date this lead entered Closed/Won, from its status-change
-    activity history. Returns None if no such transition is recorded (e.g. a
-    lead imported directly as won).
+    The date this deal was actually won, plus which source it came from.
+
+    Primary: the lead's won opportunity `date_won` — the real close date, which
+    the HubSpot->Close migration left intact. Fallback: the lead status-change
+    into Closed/Won, used only when a lead has no dated won opportunity. Returns
+    (None, None) when neither exists.
+
+    Why not lead status: the migration bulk-flipped lead status to Closed/Won on
+    a single date (2026-04-16), so ~98 already-closed deals would otherwise get a
+    cycle measured to that import date instead of their true close.
     """
+    won = _won_date_from_opportunity(lead_id)
+    if won is not None:
+        return won, "opportunity"
+    won = _won_date_from_status_change(lead_id)
+    if won is not None:
+        return won, "status_fallback"
+    return None, None
+
+
+def _won_date_from_opportunity(lead_id: str) -> date | None:
+    """Won date from the lead's won opportunity (`date_won`, else `close_at`)."""
+    page = _request(
+        "GET",
+        "/opportunity/",
+        params={"lead_id": lead_id, "_fields": "status_type,date_won,close_at", "_limit": PAGE_SIZE},
+    )
+    dates = [
+        (opp.get("date_won") or opp.get("close_at"))
+        for opp in page.get("data", [])
+        if opp.get("status_type") == "won" and (opp.get("date_won") or opp.get("close_at"))
+    ]
+    if not dates:
+        return None
+    chosen = max(dates) if WON_TRANSITION == "latest" else min(dates)
+    return _parse_close_date(chosen)
+
+
+def _won_date_from_status_change(lead_id: str) -> date | None:
+    """Fallback: Pacific date the lead's status changed into Closed/Won."""
     page = _request(
         "GET",
         "/activity/status_change/lead/",
@@ -202,6 +241,14 @@ def get_won_date(lead_id: str) -> date | None:
         return None
     chosen = max(transitions) if WON_TRANSITION == "latest" else min(transitions)
     return _to_pacific_date(chosen)
+
+
+def _parse_close_date(raw: str) -> date:
+    """Opportunity won dates are plain dates ('2024-12-10'); some payloads carry
+    a full timestamp. Handle both, converting any timestamp to Pacific."""
+    if "T" in raw:
+        return _to_pacific_date(raw)
+    return date.fromisoformat(raw[:10])
 
 
 def _to_pacific_date(iso_utc: str) -> date:
@@ -264,6 +311,7 @@ def main() -> None:
     print(f"Found {len(won_leads)} leads in Closed / Won.")
 
     updated = skipped_no_first_call = skipped_no_won_date = unchanged = anomalies = 0
+    won_via_fallback = 0
 
     for lead in won_leads:
         lid, name = lead["id"], lead["name"]
@@ -277,15 +325,17 @@ def main() -> None:
 
         # Reuse the cached won-date when the lead is unchanged: still won, same
         # first-call date, and we already resolved a won-date for it. Only newly
-        # won / changed leads trigger the per-lead status-change fetch.
+        # won / changed leads trigger the per-lead opportunity fetch.
         if cached and cached.get("first_call_date") == first_call and cached.get("won_date"):
             won_dt = date.fromisoformat(cached["won_date"])
         else:
-            won_dt = get_won_date(lid)
+            won_dt, source = get_won_date(lid)
             if won_dt is None:
                 skipped_no_won_date += 1
-                print(f"  · skip (no Closed/Won status change found): {name}")
+                print(f"  · skip (no won opportunity or status change): {name}")
                 continue
+            if source == "status_fallback":
+                won_via_fallback += 1
 
         cycle = compute_cycle(first_call, won_dt)
         if cycle is None:
@@ -318,6 +368,7 @@ def main() -> None:
     print(f"  no first call   : {skipped_no_first_call}")
     print(f"  no won date     : {skipped_no_won_date}")
     print(f"  anomalies       : {anomalies}")
+    print(f"  won via status fallback (no opp): {won_via_fallback}")
     if args.dry_run:
         print("  (dry-run: nothing was written to Close and the cache was not saved)")
 
