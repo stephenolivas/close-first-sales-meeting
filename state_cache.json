@@ -56981,12 +56981,11 @@
       "earliest_scraper_date": null
     },
     "lead_an7CRZ6j1FgVnMfXKuP1d8QzqekR6c0eXbm7k4Pp8rK": {
-      "date": "2026-06-05",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_wkQFrlCMhfnqOl5yDXIcJdKs4P6C1nzWvOD5YwtpKTs": {
       "date": null,
@@ -57412,6 +57411,6 @@
       "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-06-04 21:39:48 UTC",
+  "saved_at": "2026-06-04 22:09:02 UTC",
   "count": 7241
 }
