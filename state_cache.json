@@ -57469,7 +57469,7 @@
     },
     "lead_wQtHb9H0omYcZ00IhjOAeVVWnotexPnXJkRTd4zMwMl": {
       "date": null,
-      "call_type": "Setter",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null
@@ -57479,9 +57479,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-06-05 11:39:38 UTC",
+  "saved_at": "2026-06-05 12:07:46 UTC",
   "count": 7250
 }
