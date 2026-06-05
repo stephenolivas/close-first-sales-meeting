@@ -1,7 +1,7 @@
 """
 update_lost_deals.py
 
-Reassigns leads to John Kirk when:
+Reassigns leads to Jason Aaron when:
   - First Sales Call Booked Date falls in the lookback window (Pacific time)
   - Lead Status = 💔 Lost
 
@@ -12,11 +12,11 @@ Lookback window:
     still behave sensibly)
 
 For each matched lead, sets:
-  - Lead Owner (custom field) → John Kirk
+  - Lead Owner (custom field) → Jason Aaron
   - Lane 2 Handraiser → "Prior Day Lost Deals"
-  - Creates a Close task for John, due today
+  - Creates a Close task for Jason, due today
 
-Idempotent: skips leads whose Lead Owner is already John Kirk.
+Idempotent: skips leads whose Lead Owner is already Jason Aaron.
 
 Environment variables:
   CLOSE_API_KEY   (required)
@@ -38,7 +38,8 @@ SKIP_TASKS = os.environ.get("SKIP_TASKS", "false").lower() == "true"
 BASE = "https://api.close.com/api/v1"
 AUTH = (CLOSE_API_KEY, "")
 
-JOHN_KIRK_USER_ID       = "user_5pAfnzGONQLUVLKqFQVpQ3570YV1gurVCTp1MMgfCDL"
+ASSIGNEE_USER_ID        = "user_MrBLkl5wCqTm7QxHxPo2ydNV5KxMllg6YZDVc12Aqzj"  # Jason Aaron
+ASSIGNEE_NAME           = "Jason Aaron"
 FIRST_SALES_CALL_FIELD  = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
 LEAD_OWNER_FIELD        = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 LANE_2_HANDRAISER_FIELD = "cf_Q1hRv8It46xsAEmpv4PRKdI1y0sPJnrnQrgRbIlF8uL"
@@ -172,7 +173,7 @@ def update_lead(lead_id):
     if DRY_RUN:
         return
     payload = {
-        f"custom.{LEAD_OWNER_FIELD}":        JOHN_KIRK_USER_ID,
+        f"custom.{LEAD_OWNER_FIELD}":        ASSIGNEE_USER_ID,
         f"custom.{LANE_2_HANDRAISER_FIELD}": HANDRAISER_VALUE,
     }
     r = requests.put(f"{BASE}/lead/{lead_id}/", json=payload, auth=AUTH)
@@ -181,10 +182,10 @@ def update_lead(lead_id):
 
     # Verify the owner actually changed before we move on
     new_owner = get_current_owner_id(updated)
-    if new_owner != JOHN_KIRK_USER_ID:
+    if new_owner != ASSIGNEE_USER_ID:
         raise RuntimeError(
             f"Lead Owner update for {lead_id} did NOT take. "
-            f"Expected {JOHN_KIRK_USER_ID}, got {new_owner!r}. "
+            f"Expected {ASSIGNEE_USER_ID}, got {new_owner!r}. "
             f"Payload sent: {payload}"
         )
 
@@ -197,7 +198,7 @@ def create_task(lead_id, lead_name, sales_call_date_iso):
     payload = {
         "_type": "lead",
         "lead_id": lead_id,
-        "assigned_to": JOHN_KIRK_USER_ID,
+        "assigned_to": ASSIGNEE_USER_ID,
         "date": today,
         "text": (
             f"Prior Day Lost Deal — {lead_name}. "
@@ -243,14 +244,14 @@ def main():
         pretty_date = format_call_date(sales_call_iso)
         current_owner = get_current_owner_id(lead)
 
-        if current_owner == JOHN_KIRK_USER_ID:
-            print(f"  SKIP   {name} — Lead Owner is already John")
+        if current_owner == ASSIGNEE_USER_ID:
+            print(f"  SKIP   {name} — Lead Owner is already {ASSIGNEE_NAME}")
             skipped += 1
             continue
 
         if DRY_RUN:
             print(f"  WOULD  {name}  (current owner: {current_owner or 'none'})")
-            print(f"           → Lead Owner: John Kirk")
+            print(f"           → Lead Owner: {ASSIGNEE_NAME}")
             print(f"           → Lane 2 Handraiser: {HANDRAISER_VALUE}")
             print(f"           → task: 'First sales call was {pretty_date}'")
         else:
