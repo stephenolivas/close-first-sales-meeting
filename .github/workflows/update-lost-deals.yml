@@ -1,4 +1,4 @@
-name: Reassign Prior-Day Lost Deals to John Kirk
+name: Reassign Prior-Day Lost Deals to Jason Aaron
 
 on:
   workflow_dispatch:
