@@ -55684,12 +55684,11 @@
       "earliest_scraper_date": null
     },
     "lead_DUXYzaBlEizdl21IA4iKMXYsLFaTy9pv1o5f7DwfyjZ": {
-      "date": "2026-06-08",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_6kzvhkJRM1jcg2ki9P6dGVZitGaJ1NNxoCEP6heT6Ej": {
       "date": "2026-06-03",
@@ -57081,14 +57080,16 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_Ql3wcHSrULJtGQkrWhRQCkSi0x3FQcuwIUpSFzq0yYQ": {
       "date": "2026-06-11",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_kuHhokIEzJdLJM0E86TwE4JoxXbC99ESsjwEu0m7CJt": {
       "date": null,
@@ -57493,7 +57494,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_YKU8Io3uEZK8GPPFTLWi8nWXPmKwAnEAlXH0lf5jDWE": {
       "date": null,
@@ -57672,12 +57674,11 @@
       "earliest_scraper_date": null
     },
     "lead_AfSu133JNU2BQLZpvpclyEmJAwoU5Rxzm8Mfo2FPLHi": {
-      "date": "2026-06-08",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_HTyeWD7SenrWCqW2Lp7X5pnixS5h99ZO2vSClMss7ya": {
       "date": null,
@@ -57940,9 +57941,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-06-08 17:58:33 UTC",
+  "saved_at": "2026-06-08 18:40:44 UTC",
   "count": 7308
 }
