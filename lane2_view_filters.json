@@ -84,9 +84,6 @@
                 {
                   "condition": {
                     "before": {
-                      "type": "now"
-                    },
-                    "on_or_after": {
                       "direction": "past",
                       "moment": {
                         "type": "now"
@@ -103,6 +100,7 @@
                       "type": "offset",
                       "which_day_end": "start"
                     },
+                    "on_or_after": null,
                     "type": "moment_range"
                   },
                   "field": {
@@ -110,7 +108,7 @@
                     "object_type": "lead",
                     "type": "regular_field"
                   },
-                  "negate": true,
+                  "negate": false,
                   "type": "field_condition"
                 }
               ],
