@@ -307,13 +307,20 @@ def resolve_no_comms_bucket(query_node, no_comms_days, debug=False):
     """
     candidate_query = strip_condition_by_field(query_node, "last_communication_date")
     rows = search_leads_with_fields(candidate_query, ["id", "last_communication_date"])
-    cutoff = datetime.now(timezone.utc) - timedelta(days=no_comms_days)
+
+    # Match Close's filter exactly: it anchors "within the last N days" to the
+    # START of the day N days ago, in the org's (Pacific) timezone — not a rolling
+    # now-minus-N-hours. So a lead counts as "no comms" if its last communication
+    # is before midnight Pacific of (today - N days).
+    now_pac = datetime.now(PACIFIC)
+    cutoff_date = now_pac.date() - timedelta(days=no_comms_days)
+    cutoff = datetime(cutoff_date.year, cutoff_date.month, cutoff_date.day, tzinfo=PACIFIC)
 
     field_present = any("last_communication_date" in r for r in rows)
     if debug:
         print(f"  [no-comms] {len(rows)} candidate(s); "
               f"last_communication_date returned by search: {field_present}; "
-              f"cutoff (UTC) = {cutoff.isoformat()}")
+              f"cutoff (Pacific start-of-day) = {cutoff.isoformat()}")
         if not field_present and rows:
             print(f"  [no-comms] field not in search results — using per-lead "
                   f"activity lookup for {len(rows)} candidates")
