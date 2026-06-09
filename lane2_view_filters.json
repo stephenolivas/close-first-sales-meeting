@@ -118,18 +118,35 @@
               "negate": false,
               "queries": [
                 {
-                  "condition": {
-                    "gte": 0,
-                    "lte": 0,
-                    "type": "number_range"
-                  },
-                  "field": {
-                    "field_name": "num_upcoming_meetings",
-                    "object_type": "lead",
-                    "type": "regular_field"
-                  },
                   "negate": false,
-                  "type": "field_condition"
+                  "type": "or",
+                  "queries": [
+                    {
+                      "condition": {
+                        "lt": 1,
+                        "type": "number_range"
+                      },
+                      "field": {
+                        "field_name": "num_upcoming_meetings",
+                        "object_type": "lead",
+                        "type": "regular_field"
+                      },
+                      "negate": false,
+                      "type": "field_condition"
+                    },
+                    {
+                      "condition": {
+                        "type": "exists"
+                      },
+                      "field": {
+                        "field_name": "num_upcoming_meetings",
+                        "object_type": "lead",
+                        "type": "regular_field"
+                      },
+                      "negate": true,
+                      "type": "field_condition"
+                    }
+                  ]
                 }
               ],
               "type": "and"
