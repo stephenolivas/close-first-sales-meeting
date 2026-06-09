@@ -140,9 +140,19 @@ def search_lead_ids(query):
                 return lead_ids
             skip += len(data)
 
-    # Structured query -> /data/search/. Some saved searches embed the full
-    # request (with its own "query" key); unwrap if so.
-    base = query if (isinstance(query, dict) and "query" in query) else {"query": query}
+    # Structured query -> /data/search/.
+    #
+    # A saved search's s_query is the *query node* and must be sent wrapped as
+    # {"query": <node>}. Do NOT special-case nodes that happen to contain a
+    # nested "query" key (e.g. negated has-related-activity filters like the
+    # 14-day "no comms" view) — those still need the wrapper. Only treat the
+    # stored value as a complete request if it actually looks like one (carries
+    # request-level keys such as _limit / _fields / sort / results_limit).
+    REQUEST_KEYS = {"_limit", "_fields", "sort", "results", "results_limit", "include_counts"}
+    if isinstance(query, dict) and "query" in query and (REQUEST_KEYS & set(query.keys())):
+        base = dict(query)
+    else:
+        base = {"query": query}
 
     lead_ids, cursor = [], None
     while True:
@@ -252,6 +262,10 @@ def main():
         print(f"\n--- {b['label']}  (view {b['smart_view_id']}) ---")
 
         query = get_saved_search_query(b["smart_view_id"])
+        if dry_run:
+            shape = (f"dict keys={sorted(query.keys())}" if isinstance(query, dict)
+                     else f"{type(query).__name__}")
+            print(f"  [debug] fetched query: {shape}")
         lead_ids = search_lead_ids(query)
         print(f"View returned {len(lead_ids)} lead(s)")
 
