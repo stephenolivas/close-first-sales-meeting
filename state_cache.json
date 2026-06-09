@@ -57723,12 +57723,11 @@
       "earliest_scraper_date": null
     },
     "lead_HPCynXAiAHU2XIsekRBdCWq8umMQPcnEkAsIfcxnnXe": {
-      "date": "2026-06-09",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_LV7Sn8Ox31c6DGoPo2FJkkrpCORaLrkwBuYeEwAd22q": {
       "date": "2026-06-12",
@@ -58069,9 +58068,31 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_HXqcspnvwR9xgnAxa1oFTmRJkIlqgj6AehC0V6dUDDp": {
+      "date": "2026-06-12",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
+    },
+    "lead_3gsoYkTfownHtglXT4Vob8LknL2odtJMp9VlvRCrmHw": {
+      "date": "2026-06-12",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_jDBfLX2uNhbB01BhNQFNGu3OpIqAAC9l3lkY3o6IWPQ": {
+      "date": "2026-06-12",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Mallory Kent"
     }
   },
-  "saved_at": "2026-06-09 14:40:50 UTC",
-  "count": 7324
+  "saved_at": "2026-06-09 15:40:52 UTC",
+  "count": 7327
 }
