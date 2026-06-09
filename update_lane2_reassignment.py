@@ -109,56 +109,36 @@ def save_state(state):
 # Close API helpers
 # ---------------------------------------------------------------------------
 
-def get_saved_search_query(smart_view_id):
-    """Fetch a Smart View and return its query in /data/search/ form."""
+def get_saved_search(smart_view_id):
+    """Fetch the full Smart View (saved search) payload."""
     r = requests.get(f"{BASE}/saved_search/{smart_view_id}/", auth=AUTH)
     r.raise_for_status()
-    data = r.json()
-    # Newer Smart Views store a structured query under s_query; older ones a string in query.
-    return data.get("s_query") or data.get("query")
+    return r.json()
 
 
-def search_lead_ids(query):
+def structured_filter_node(saved_search):
     """
-    Run a Smart View query and return matching lead IDs.
-    Handles structured queries via /data/search/ and legacy string queries via /lead/.
+    Extract the actual filter node from a saved search's s_query.
+
+    Close stores s_query as a saved-search *wrapper*, e.g.:
+        {"query": <filter node>, "results_limit": ..., "sort": [...]}
+    Only the inner <filter node> is a valid /data/search/ query. The
+    results_limit / sort keys are smart-view display settings and must NOT be
+    forwarded to /data/search/ — doing so makes Close return zero matches.
     """
-    # Legacy string query -> classic lead listing endpoint.
-    if isinstance(query, str):
-        lead_ids, skip = [], 0
-        while True:
-            r = requests.get(
-                f"{BASE}/lead/",
-                params={"query": query, "_fields": "id", "_limit": 100, "_skip": skip},
-                auth=AUTH,
-            )
-            r.raise_for_status()
-            j = r.json()
-            data = j.get("data", [])
-            lead_ids += [d["id"] for d in data]
-            if not j.get("has_more"):
-                return lead_ids
-            skip += len(data)
+    sq = saved_search.get("s_query")
+    if isinstance(sq, dict):
+        return sq.get("query", sq)   # reach past the wrapper to the filter node
+    return sq                        # already a node, or None
 
-    # Structured query -> /data/search/.
-    #
-    # A saved search's s_query is the *query node* and must be sent wrapped as
-    # {"query": <node>}. Do NOT special-case nodes that happen to contain a
-    # nested "query" key (e.g. negated has-related-activity filters like the
-    # 14-day "no comms" view) — those still need the wrapper. Only treat the
-    # stored value as a complete request if it actually looks like one (carries
-    # request-level keys such as _limit / _fields / sort / results_limit).
-    REQUEST_KEYS = {"_limit", "_fields", "sort", "results", "results_limit", "include_counts"}
-    if isinstance(query, dict) and "query" in query and (REQUEST_KEYS & set(query.keys())):
-        base = dict(query)
-    else:
-        base = {"query": query}
 
+def search_via_data_search(filter_node, debug=False):
+    """Run a structured filter node through /data/search/ and return lead IDs."""
+    if debug:
+        print(f"  [debug] /data/search/ filter node: {json.dumps(filter_node)[:1200]}")
     lead_ids, cursor = [], None
     while True:
-        body = dict(base)
-        body["_fields"] = {"lead": ["id", "display_name"]}
-        body["_limit"] = 200
+        body = {"query": filter_node, "_fields": {"lead": ["id"]}, "_limit": 200}
         if cursor:
             body["cursor"] = cursor
         r = requests.post(f"{BASE}/data/search/", json=body, auth=AUTH)
@@ -168,6 +148,57 @@ def search_lead_ids(query):
         cursor = j.get("cursor")
         if not cursor:
             return lead_ids
+
+
+def search_via_legacy(query_string, debug=False):
+    """Run the saved search's query-language string through the legacy /lead/ endpoint.
+
+    This evaluates the query with Close's native parser — the same engine the
+    Smart View uses — so it faithfully reproduces filters (like 'no comms in
+    14 days') that don't always translate cleanly into a /data/search/ node.
+    """
+    if debug:
+        print(f"  [debug] legacy query string: {query_string!r}")
+    lead_ids, skip = [], 0
+    while True:
+        r = requests.get(
+            f"{BASE}/lead/",
+            params={"query": query_string, "_fields": "id", "_limit": 100, "_skip": skip},
+            auth=AUTH,
+        )
+        r.raise_for_status()
+        j = r.json()
+        data = j.get("data", [])
+        lead_ids += [d["id"] for d in data]
+        if not j.get("has_more"):
+            return lead_ids
+        skip += len(data)
+
+
+def get_view_lead_ids(smart_view_id, debug=False):
+    """
+    Resolve a Smart View to its current lead IDs.
+
+    Strategy: try the structured filter node via /data/search/ first; if that
+    yields nothing, fall back to the view's native query-language string. This
+    keeps the views as the source of truth while tolerating filters that the
+    structured endpoint can't reproduce.
+    """
+    ss = get_saved_search(smart_view_id)
+    node = structured_filter_node(ss)
+
+    ids = []
+    if isinstance(node, dict):
+        ids = search_via_data_search(node, debug=debug)
+
+    if not ids:
+        qstr = ss.get("query")
+        if isinstance(qstr, str) and qstr.strip():
+            if debug:
+                print("  [debug] structured search returned 0 — trying legacy query string")
+            ids = search_via_legacy(qstr, debug=debug)
+
+    return ids
 
 
 def get_lead(lead_id):
@@ -261,12 +292,7 @@ def main():
         idx_key = b["index_key"]
         print(f"\n--- {b['label']}  (view {b['smart_view_id']}) ---")
 
-        query = get_saved_search_query(b["smart_view_id"])
-        if dry_run:
-            shape = (f"dict keys={sorted(query.keys())}" if isinstance(query, dict)
-                     else f"{type(query).__name__}")
-            print(f"  [debug] fetched query: {shape}")
-        lead_ids = search_lead_ids(query)
+        lead_ids = get_view_lead_ids(b["smart_view_id"], debug=dry_run)
         print(f"View returned {len(lead_ids)} lead(s)")
 
         assigned = skipped_overlap = skipped_owned = 0
