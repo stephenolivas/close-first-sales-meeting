@@ -57530,10 +57530,9 @@
     "lead_HUJMYL1WmN4cF5uSHPCQo71axVO4v0UzMTYTwBBfR9y": {
       "date": "2026-06-08",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "Vince Bartolini"
     },
     "lead_umIhEbPsKZMwl1GaRDKbX15zXKuVhp9ePdAsznopeX4": {
       "date": "2026-06-02",
@@ -57568,10 +57567,9 @@
     "lead_Z6sYHG0FiWRB5VbRomOc8gLHkhFFBRgsMop2W0jemZB": {
       "date": "2026-06-09",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "Vince Bartolini"
     },
     "lead_d5MV4WoC49XODnIkCjDGvsRwi8cE6ZoCcTN2GScL5SS": {
       "date": "2026-06-09",
@@ -58130,10 +58128,9 @@
     "lead_fMPQjOPecWwJOQl8jMQbb9FLYyP0ORAuQcJzp3VHLBA": {
       "date": "2026-06-15",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "Vince Bartolini"
     },
     "lead_t2SF6s5miSACMv1gLbwNKK1LuXdX3V14ZEyn3vdimEx": {
       "date": "2026-06-10",
@@ -58165,8 +58162,29 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Vince Bartolini"
+    },
+    "lead_Amx6xRHRVwJQv2vniXAaOKWD2Nl0AubfUz1caJEXmqy": {
+      "date": "2026-06-11",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_0RgXkldRwFpMAvMKtfVOQcv3OQjujFcQYnWuhvHQOVC": {
+      "date": "2026-06-08",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini"
+    },
+    "lead_Xz6ejoQb4oZbfNmOsCdanJ4h7N5yBJE64so5c0yPFf4": {
+      "date": "2026-06-05",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini"
     }
   },
-  "saved_at": "2026-06-09 20:10:38 UTC",
-  "count": 7337
+  "saved_at": "2026-06-09 20:39:53 UTC",
+  "count": 7340
 }
