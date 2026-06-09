@@ -50,6 +50,13 @@ PACIFIC = ZoneInfo("America/Los_Angeles")
 
 STATE_FILE = "lane2_state_cache.json"
 
+# Exported "Copy Filters" JSON for each Smart View, keyed by bucket. These are
+# the real /data/search/-format queries (Close's saved-search s_query is an
+# internal dialect that does NOT replay reliably, so we use the exported form).
+# To refresh after editing a view in Close: open the view, ⋯ menu -> Copy
+# Filters, and paste the result under the matching bucket key in this file.
+VIEW_FILTERS_FILE = "lane2_view_filters.json"
+
 # Lane 2 reps, in round-robin order.
 REPS = [
     ("Cameron Caswell", "user_UpJb11fzX2TuFHf7fFyWpfXr84lg2Ui7i7p5CtQkIaW"),
@@ -109,36 +116,32 @@ def save_state(state):
 # Close API helpers
 # ---------------------------------------------------------------------------
 
-def get_saved_search(smart_view_id):
-    """Fetch the full Smart View (saved search) payload."""
-    r = requests.get(f"{BASE}/saved_search/{smart_view_id}/", auth=AUTH)
-    r.raise_for_status()
-    return r.json()
+def load_view_filters():
+    """Load the exported 'Copy Filters' JSON for both buckets."""
+    with open(VIEW_FILTERS_FILE) as f:
+        return json.load(f)
 
 
-def structured_filter_node(saved_search):
+def extract_query_node(blob):
     """
-    Extract the actual filter node from a saved search's s_query.
+    Return the /data/search/ query node from a 'Copy Filters' export.
 
-    Close stores s_query as a saved-search *wrapper*, e.g.:
-        {"query": <filter node>, "results_limit": ..., "sort": [...]}
-    Only the inner <filter node> is a valid /data/search/ query. The
-    results_limit / sort keys are smart-view display settings and must NOT be
-    forwarded to /data/search/ — doing so makes Close return zero matches.
+    Copy Filters wraps the query as {"limit": ..., "query": <node>,
+    "results_limit": ..., "sort": [...]}. Only <node> is sent to /data/search/;
+    the limit/results_limit/sort keys are display settings and are ignored here.
     """
-    sq = saved_search.get("s_query")
-    if isinstance(sq, dict):
-        return sq.get("query", sq)   # reach past the wrapper to the filter node
-    return sq                        # already a node, or None
+    if isinstance(blob, dict) and "query" in blob:
+        return blob["query"]
+    return blob   # already a bare node
 
 
-def search_via_data_search(filter_node, debug=False):
-    """Run a structured filter node through /data/search/ and return lead IDs."""
+def search_lead_ids(query_node, debug=False):
+    """Run a /data/search/ query node and return all matching lead IDs (paginated)."""
     if debug:
-        print(f"  [debug] /data/search/ filter node (full):\n{json.dumps(filter_node, indent=2)}")
+        print(f"  [debug] /data/search/ query node:\n{json.dumps(query_node, indent=2)}")
     lead_ids, cursor = [], None
     while True:
-        body = {"query": filter_node, "_fields": {"lead": ["id"]}, "_limit": 200}
+        body = {"query": query_node, "_fields": {"lead": ["id"]}, "_limit": 200}
         if cursor:
             body["cursor"] = cursor
         r = requests.post(f"{BASE}/data/search/", json=body, auth=AUTH)
@@ -148,57 +151,6 @@ def search_via_data_search(filter_node, debug=False):
         cursor = j.get("cursor")
         if not cursor:
             return lead_ids
-
-
-def search_via_legacy(query_string, debug=False):
-    """Run the saved search's query-language string through the legacy /lead/ endpoint.
-
-    This evaluates the query with Close's native parser — the same engine the
-    Smart View uses — so it faithfully reproduces filters (like 'no comms in
-    14 days') that don't always translate cleanly into a /data/search/ node.
-    """
-    if debug:
-        print(f"  [debug] legacy query string: {query_string!r}")
-    lead_ids, skip = [], 0
-    while True:
-        r = requests.get(
-            f"{BASE}/lead/",
-            params={"query": query_string, "_fields": "id", "_limit": 100, "_skip": skip},
-            auth=AUTH,
-        )
-        r.raise_for_status()
-        j = r.json()
-        data = j.get("data", [])
-        lead_ids += [d["id"] for d in data]
-        if not j.get("has_more"):
-            return lead_ids
-        skip += len(data)
-
-
-def get_view_lead_ids(smart_view_id, debug=False):
-    """
-    Resolve a Smart View to its current lead IDs.
-
-    Strategy: try the structured filter node via /data/search/ first; if that
-    yields nothing, fall back to the view's native query-language string. This
-    keeps the views as the source of truth while tolerating filters that the
-    structured endpoint can't reproduce.
-    """
-    ss = get_saved_search(smart_view_id)
-    node = structured_filter_node(ss)
-
-    ids = []
-    if isinstance(node, dict):
-        ids = search_via_data_search(node, debug=debug)
-
-    if not ids:
-        qstr = ss.get("query")
-        if isinstance(qstr, str) and qstr.strip():
-            if debug:
-                print("  [debug] structured search returned 0 — trying legacy query string")
-            ids = search_via_legacy(qstr, debug=debug)
-
-    return ids
 
 
 def get_lead(lead_id):
@@ -284,6 +236,7 @@ def main():
     print("=" * 64)
 
     state = load_state()
+    view_filters = load_view_filters()
     handled = set()                 # lead IDs already assigned this run (overlap guard)
     totals = {}
 
@@ -292,7 +245,13 @@ def main():
         idx_key = b["index_key"]
         print(f"\n--- {b['label']}  (view {b['smart_view_id']}) ---")
 
-        lead_ids = get_view_lead_ids(b["smart_view_id"], debug=dry_run)
+        blob = view_filters.get(key)
+        if not blob or "query" not in (blob if isinstance(blob, dict) else {}):
+            print(f"  SKIP bucket: no filter defined for '{key}' in {VIEW_FILTERS_FILE}")
+            totals[key] = 0
+            continue
+
+        lead_ids = search_lead_ids(extract_query_node(blob), debug=dry_run)
         print(f"View returned {len(lead_ids)} lead(s)")
 
         assigned = skipped_overlap = skipped_owned = 0
