@@ -38,7 +38,7 @@ import json
 import time
 import argparse
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 # ---------------------------------------------------------------------------
@@ -58,16 +58,6 @@ STATE_FILE = "lane2_state_cache.json"
 # To refresh after editing a view in Close: open the view, ⋯ menu -> Copy
 # Filters, and paste the result under the matching bucket key in this file.
 VIEW_FILTERS_FILE = "lane2_view_filters.json"
-
-# TEMPORARY (diagnostic only — remove once the 14-Day query is confirmed working).
-# Three leads known to be in the 14-Day Smart View (Ann, Kyle, Misty). On a
-# dry-run, each is tested against every condition individually to see which one
-# /data/search/ uses to (wrongly) exclude it. Override via DIAG_LEAD_IDS env var.
-DEFAULT_DIAG_LEAD_IDS = [
-    "lead_XzxuwaNQx9BGPjXdTZ9DcE0W3F6YLsCSoppp5xLGAI7",  # Ann Doan
-    "lead_E487kjYaOUTSxTQAP8zXuzvbpHHz8jpFi0YM0eqgx2Y",  # Kyle Mahoney
-    "lead_HINT2WSVtVNBJO7BFYzIsI1rIG3RlKKTrJjId37bjm1",  # Misty Bergeron
-]
 
 # Lane 2 reps, in round-robin order.
 REPS = [
@@ -93,6 +83,10 @@ BUCKETS = {
         "handraiser":    "No Activity / Past 14 Days",
         "task_text":     "New Lead Assigned: No Activity within Past 14 days- Please Review",
         "index_key":     "bucket1_index",
+        # /data/search/ can't filter on last_communication_date, so we strip that
+        # condition from the query and apply it in Python: keep leads whose last
+        # communication is older than this many days (or who have none).
+        "no_comms_days": 14,
     },
     "bucket2": {
         # TEMPORARILY DISABLED — Smart View is catching leads it shouldn't; the
@@ -209,108 +203,6 @@ def search_lead_ids(query_node, debug=False):
             return lead_ids
 
 
-def _describe_condition(group):
-    """Short human label for a condition group, for diagnostics."""
-    def find_fc(node):
-        if isinstance(node, dict):
-            if node.get("type") == "field_condition":
-                return node
-            for v in node.values():
-                r = find_fc(v)
-                if r:
-                    return r
-        elif isinstance(node, list):
-            for v in node:
-                r = find_fc(v)
-                if r:
-                    return r
-        return None
-
-    fc = find_fc(group)
-    if not fc:
-        return "(unknown condition)"
-    field = fc.get("field", {})
-    name = field.get("field_name") or field.get("custom_field_id") or field.get("type")
-    neg = " [negated]" if fc.get("negate") else ""
-    return f"{name}{neg}"
-
-
-def diagnose_query(query_node):
-    """
-    When a query returns 0, re-run it with each top-level condition removed one
-    at a time and report the count. The condition whose removal makes leads
-    appear is the one /data/search/ can't evaluate.
-    """
-    # Locate the inner group that holds the list of condition sub-groups.
-    inner = None
-    for q in query_node.get("queries", []):
-        if q.get("type") in ("and", "or") and isinstance(q.get("queries"), list) and len(q["queries"]) > 1:
-            inner = q
-            break
-    if not inner:
-        print("  [diagnose] could not locate the condition list — skipping isolation")
-        return
-
-    conds = inner["queries"]
-    print(f"  [diagnose] full query returned 0; testing {len(conds)} conditions individually:")
-    for i in range(len(conds)):
-        reduced = copy.deepcopy(query_node)
-        for q in reduced["queries"]:
-            if (q.get("type") in ("and", "or") and isinstance(q.get("queries"), list)
-                    and len(q["queries"]) == len(conds)):
-                del q["queries"][i]
-                break
-        try:
-            count = len(search_lead_ids(reduced))
-        except Exception as e:
-            count = f"ERROR ({e})"
-        note = "  <-- leads appear when this is removed" if isinstance(count, int) and count > 0 else ""
-        print(f"  [diagnose] drop [{i}] {_describe_condition(conds[i])}: {count} leads{note}")
-        time.sleep(0.6)   # gentle spacing so the burst doesn't trip Close's rate limit
-
-
-def diagnose_lead(query_node, lead_id):
-    """
-    Test ONE known lead against each condition individually via /data/search/
-    (object_type + id + single condition). Shows exactly which condition that
-    lead fails — the definitive way to find why a lead that should match doesn't.
-    """
-    inner = None
-    for q in query_node.get("queries", []):
-        if q.get("type") in ("and", "or") and isinstance(q.get("queries"), list) and len(q["queries"]) > 1:
-            inner = q
-            break
-    if not inner:
-        print(f"  [lead-diag {lead_id}] could not locate condition list")
-        return
-
-    conds = inner["queries"]
-
-    def base():
-        return {"type": "and", "negate": False, "queries": [
-            {"type": "object_type", "object_type": "lead", "negate": False},
-            {"type": "id", "value": lead_id},
-        ]}
-
-    try:
-        found = lead_id in search_lead_ids(base())
-    except Exception as e:
-        found = f"ERROR ({e})"
-    print(f"  [lead-diag {lead_id}] baseline (exists in search): {found}")
-    time.sleep(0.6)
-
-    for i, c in enumerate(conds):
-        test = base()
-        test["queries"].append(copy.deepcopy(c))
-        try:
-            ok = lead_id in search_lead_ids(test)
-            result = "PASS" if ok else "FAIL  <-- this condition excludes the lead"
-        except Exception as e:
-            result = f"ERROR ({e})"
-        print(f"  [lead-diag {lead_id}] cond[{i}] {_describe_condition(c)}: {result}")
-        time.sleep(0.6)
-
-
 def get_lead(lead_id):
     return close_request("GET", f"{BASE}/lead/{lead_id}/").json()
 
@@ -322,6 +214,121 @@ def read_lead_owner(lead):
             return lead[key]
     cust = lead.get("custom", {}) or {}
     return cust.get(LEAD_OWNER_FIELD) or cust.get(LEAD_OWNER_DISPLAY)
+
+
+# --- Python-side "no communication in N days" filter -----------------------
+# /data/search/ can't filter on the computed last_communication_date field, so
+# for that one condition we strip it from the query and evaluate it here.
+
+COMM_ACTIVITY_TYPES = {"Email", "Call", "SMS", "WhatsAppMessage"}
+
+
+def _group_references_field(group, field_name):
+    """True if a condition group references the given regular-field name anywhere."""
+    found = [False]
+
+    def walk(n):
+        if isinstance(n, dict):
+            if n.get("field", {}).get("field_name") == field_name:
+                found[0] = True
+            for v in n.values():
+                walk(v)
+        elif isinstance(n, list):
+            for v in n:
+                walk(v)
+
+    walk(group)
+    return found[0]
+
+
+def strip_condition_by_field(query_node, field_name):
+    """Deep-copy the query with any condition referencing field_name removed."""
+    node = copy.deepcopy(query_node)
+    for q in node.get("queries", []):
+        if q.get("type") in ("and", "or") and isinstance(q.get("queries"), list):
+            q["queries"] = [c for c in q["queries"]
+                            if not _group_references_field(c, field_name)]
+    return node
+
+
+def search_leads_with_fields(query_node, fields):
+    """Like search_lead_ids but returns full lead dicts with the requested fields."""
+    rows, cursor = [], None
+    while True:
+        body = {"query": query_node, "_fields": {"lead": fields}, "_limit": 200}
+        if cursor:
+            body["cursor"] = cursor
+        j = close_request("POST", f"{BASE}/data/search/", json=body).json()
+        rows += j.get("data", [])
+        cursor = j.get("cursor")
+        if not cursor:
+            return rows
+
+
+def _parse_dt(value):
+    """Parse a Close datetime/date string to an aware UTC datetime, or None."""
+    if not value:
+        return None
+    s = str(value).replace("Z", "+00:00")
+    try:
+        dt = datetime.fromisoformat(s)
+    except ValueError:
+        try:
+            dt = datetime.fromisoformat(s[:10])  # date-only fallback
+        except ValueError:
+            return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
+def last_communication_dt_via_activities(lead_id):
+    """Most recent communication activity datetime for a lead (UTC), or None."""
+    j = close_request("GET", f"{BASE}/activity/",
+                      params={"lead_id": lead_id, "_limit": 100}).json()
+    dates = []
+    for a in j.get("data", []):
+        if a.get("_type") in COMM_ACTIVITY_TYPES:
+            dt = _parse_dt(a.get("date") or a.get("date_created"))
+            if dt:
+                dates.append(dt)
+    return max(dates) if dates else None
+
+
+def resolve_no_comms_bucket(query_node, no_comms_days, debug=False):
+    """
+    Resolve the 14-Day bucket: run the candidate query without the
+    last_communication_date condition, then keep only leads whose last
+    communication is older than `no_comms_days` (or who have none).
+
+    Tries to read last_communication_date straight from the search results; if
+    Close doesn't return that field, falls back to scanning each candidate's
+    communication activities.
+    """
+    candidate_query = strip_condition_by_field(query_node, "last_communication_date")
+    rows = search_leads_with_fields(candidate_query, ["id", "last_communication_date"])
+    cutoff = datetime.now(timezone.utc) - timedelta(days=no_comms_days)
+
+    field_present = any("last_communication_date" in r for r in rows)
+    if debug:
+        print(f"  [no-comms] {len(rows)} candidate(s); "
+              f"last_communication_date returned by search: {field_present}; "
+              f"cutoff (UTC) = {cutoff.isoformat()}")
+        if not field_present and rows:
+            print(f"  [no-comms] field not in search results — using per-lead "
+                  f"activity lookup for {len(rows)} candidates")
+
+    kept = []
+    for r in rows:
+        lead_id = r["id"]
+        if "last_communication_date" in r:
+            last_dt = _parse_dt(r.get("last_communication_date"))
+        else:
+            last_dt = last_communication_dt_via_activities(lead_id)
+            time.sleep(0.15)
+        if last_dt is None or last_dt < cutoff:
+            kept.append(lead_id)
+    return kept
 
 
 def get_active_opportunities(lead_id):
@@ -408,16 +415,11 @@ def main():
             continue
 
         node = extract_query_node(blob)
-        lead_ids = search_lead_ids(node, debug=dry_run)
+        if b.get("no_comms_days"):
+            lead_ids = resolve_no_comms_bucket(node, b["no_comms_days"], debug=dry_run)
+        else:
+            lead_ids = search_lead_ids(node, debug=dry_run)
         print(f"View returned {len(lead_ids)} lead(s)")
-        if dry_run and len(lead_ids) == 0:
-            diagnose_query(node)
-        diag_ids = [x.strip() for x in os.environ.get("DIAG_LEAD_IDS", "").split(",") if x.strip()]
-        if not diag_ids:
-            diag_ids = DEFAULT_DIAG_LEAD_IDS
-        if dry_run and diag_ids:
-            for lid in diag_ids:
-                diagnose_lead(node, lid)
 
         assigned = skipped_overlap = skipped_owned = 0
 
