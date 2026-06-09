@@ -35,6 +35,7 @@ import os
 import sys
 import copy
 import json
+import time
 import argparse
 import requests
 from datetime import datetime
@@ -117,6 +118,44 @@ def save_state(state):
 # Close API helpers
 # ---------------------------------------------------------------------------
 
+def close_request(method, url, max_retries=6, **kwargs):
+    """
+    Wrapper around requests that retries on HTTP 429 (rate limit) with backoff.
+
+    Close returns 429 with a Retry-After header (and/or a rate_reset value in the
+    JSON body). We honor it, falling back to exponential backoff. This matters
+    both for the diagnostic (which bursts several searches) and for production
+    runs that issue many PUT/POST calls while reassigning leads.
+    """
+    kwargs.setdefault("auth", AUTH)
+    for attempt in range(max_retries + 1):
+        r = requests.request(method, url, **kwargs)
+        if r.status_code != 429:
+            r.raise_for_status()
+            return r
+        # Rate limited — figure out how long to wait.
+        wait = None
+        ra = r.headers.get("Retry-After")
+        if ra:
+            try:
+                wait = float(ra)
+            except ValueError:
+                wait = None
+        if wait is None:
+            try:
+                wait = float(r.json().get("error", {}).get("rate_reset", 0)) or None
+            except Exception:
+                wait = None
+        if wait is None:
+            wait = min(2 ** attempt, 30)   # exponential backoff, capped
+        if attempt < max_retries:
+            print(f"  [rate-limit] 429 received; waiting {wait:.1f}s (attempt {attempt + 1})")
+            time.sleep(wait + 0.25)
+        else:
+            r.raise_for_status()
+    raise RuntimeError("close_request: exhausted retries")
+
+
 def load_view_filters():
     """Load the exported 'Copy Filters' JSON for both buckets."""
     with open(VIEW_FILTERS_FILE) as f:
@@ -145,9 +184,7 @@ def search_lead_ids(query_node, debug=False):
         body = {"query": query_node, "_fields": {"lead": ["id"]}, "_limit": 200}
         if cursor:
             body["cursor"] = cursor
-        r = requests.post(f"{BASE}/data/search/", json=body, auth=AUTH)
-        r.raise_for_status()
-        j = r.json()
+        j = close_request("POST", f"{BASE}/data/search/", json=body).json()
         lead_ids += [row["id"] for row in j.get("data", [])]
         cursor = j.get("cursor")
         if not cursor:
@@ -209,14 +246,13 @@ def diagnose_query(query_node):
             count = len(search_lead_ids(reduced))
         except Exception as e:
             count = f"ERROR ({e})"
-        flag = "  <-- culprit" if isinstance(count, int) and count > 0 else ""
-        print(f"  [diagnose] drop [{i}] {_describe_condition(conds[i])}: {count} leads{flag}")
+        note = "  <-- leads appear when this is removed" if isinstance(count, int) and count > 0 else ""
+        print(f"  [diagnose] drop [{i}] {_describe_condition(conds[i])}: {count} leads{note}")
+        time.sleep(0.6)   # gentle spacing so the burst doesn't trip Close's rate limit
 
 
 def get_lead(lead_id):
-    r = requests.get(f"{BASE}/lead/{lead_id}/", auth=AUTH)
-    r.raise_for_status()
-    return r.json()
+    return close_request("GET", f"{BASE}/lead/{lead_id}/").json()
 
 
 def read_lead_owner(lead):
@@ -229,13 +265,11 @@ def read_lead_owner(lead):
 
 
 def get_active_opportunities(lead_id):
-    r = requests.get(
-        f"{BASE}/opportunity/",
+    j = close_request(
+        "GET", f"{BASE}/opportunity/",
         params={"lead_id": lead_id, "_fields": "id,user_id,status_type"},
-        auth=AUTH,
-    )
-    r.raise_for_status()
-    return [o for o in r.json().get("data", []) if o.get("status_type") == "active"]
+    ).json()
+    return [o for o in j.get("data", []) if o.get("status_type") == "active"]
 
 
 def reassign_lead(lead_id, rep_id, handraiser_value):
@@ -244,9 +278,8 @@ def reassign_lead(lead_id, rep_id, handraiser_value):
         f"custom.{LEAD_OWNER_FIELD}":       rep_id,
         f"custom.{LANE2_HANDRAISER_FIELD}": handraiser_value,
     }
-    r = requests.put(f"{BASE}/lead/{lead_id}/", json=payload, auth=AUTH)
-    r.raise_for_status()
-    new_owner = read_lead_owner(r.json())
+    updated = close_request("PUT", f"{BASE}/lead/{lead_id}/", json=payload).json()
+    new_owner = read_lead_owner(updated)
     if new_owner != rep_id:
         raise RuntimeError(
             f"Lead {lead_id}: owner update did not take "
@@ -255,8 +288,7 @@ def reassign_lead(lead_id, rep_id, handraiser_value):
 
 
 def reassign_opportunity(opp_id, rep_id):
-    r = requests.put(f"{BASE}/opportunity/{opp_id}/", json={"user_id": rep_id}, auth=AUTH)
-    r.raise_for_status()
+    close_request("PUT", f"{BASE}/opportunity/{opp_id}/", json={"user_id": rep_id})
 
 
 def create_task(lead_id, rep_id, text):
@@ -269,8 +301,7 @@ def create_task(lead_id, rep_id, text):
         "text":        text,
         "priority":    "high",      # the "high priority" checkbox
     }
-    r = requests.post(f"{BASE}/task/", json=payload, auth=AUTH)
-    r.raise_for_status()
+    close_request("POST", f"{BASE}/task/", json=payload)
 
 
 # ---------------------------------------------------------------------------
