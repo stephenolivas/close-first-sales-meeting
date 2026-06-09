@@ -165,5 +165,207 @@
     "results_limit": null,
     "sort": []
   },
-  "bucket2": null
+  "bucket2": {
+    "limit": null,
+    "query": {
+      "negate": false,
+      "queries": [
+        {
+          "negate": false,
+          "object_type": "lead",
+          "type": "object_type"
+        },
+        {
+          "negate": false,
+          "queries": [
+            {
+              "negate": false,
+              "queries": [
+                {
+                  "condition": {
+                    "object_ids": [
+                      "user_1xDZSeOa8omjfxHXD80twTf8OieXfQ6tNCaYbVygtv1",
+                      "user_7F059xEinVentOEvkRMP77fWZyvwUiTRTUOuhD11J0e",
+                      "user_F0VeLnOQlWpkDncNW8rBl1V2QJ08fnDt6DcUjNATUJK",
+                      "user_fYWHvOuCKDuaQxSp6lROlv2rmvZZYq1kzjGvaF7OrAL",
+                      "user_wF5aATmDljO6g6AHqehRPVmfCmH5j9VszbO6Q6Pjzm4",
+                      "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb"
+                    ],
+                    "reference_type": "user_or_group",
+                    "type": "reference"
+                  },
+                  "field": {
+                    "custom_field_id": "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd",
+                    "type": "custom_field"
+                  },
+                  "negate": false,
+                  "type": "field_condition"
+                }
+              ],
+              "type": "and"
+            },
+            {
+              "negate": false,
+              "queries": [
+                {
+                  "condition": {
+                    "before": {
+                      "direction": "past",
+                      "moment": {
+                        "type": "now"
+                      },
+                      "offset": {
+                        "days": 30,
+                        "hours": 0,
+                        "minutes": 0,
+                        "months": 0,
+                        "seconds": 0,
+                        "weeks": 0,
+                        "years": 0
+                      },
+                      "type": "offset",
+                      "which_day_end": "end"
+                    },
+                    "on_or_after": null,
+                    "type": "moment_range"
+                  },
+                  "field": {
+                    "custom_field_id": "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq",
+                    "type": "custom_field"
+                  },
+                  "negate": false,
+                  "type": "field_condition"
+                }
+              ],
+              "type": "and"
+            },
+            {
+              "negate": false,
+              "queries": [
+                {
+                  "condition": {
+                    "object_ids": [
+                      "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd",
+                      "stat_aR2jBa8YnTNZmHAnPsnlQuinBdaXpSBCkZGP3UvoBlV",
+                      "stat_vL6LDuMPhQHcpNvvT6bA6Ofc0soHWDBks1azdq8UTJk"
+                    ],
+                    "reference_type": "status.lead",
+                    "type": "reference"
+                  },
+                  "field": {
+                    "field_name": "status_id",
+                    "object_type": "lead",
+                    "type": "regular_field"
+                  },
+                  "negate": true,
+                  "type": "field_condition"
+                }
+              ],
+              "type": "and"
+            },
+            {
+              "negate": false,
+              "queries": [
+                {
+                  "condition": {
+                    "lt": 1,
+                    "type": "number_range"
+                  },
+                  "field": {
+                    "field_name": "num_upcoming_meetings",
+                    "object_type": "lead",
+                    "type": "regular_field"
+                  },
+                  "negate": false,
+                  "type": "field_condition"
+                }
+              ],
+              "type": "and"
+            },
+            {
+              "negate": false,
+              "queries": [
+                {
+                  "condition": {
+                    "lt": 1,
+                    "type": "number_range"
+                  },
+                  "field": {
+                    "field_name": "num_incomplete_tasks",
+                    "object_type": "lead",
+                    "type": "regular_field"
+                  },
+                  "negate": false,
+                  "type": "field_condition"
+                }
+              ],
+              "type": "and"
+            },
+            {
+              "negate": false,
+              "queries": [
+                {
+                  "condition": {
+                    "before": {
+                      "type": "now"
+                    },
+                    "on_or_after": {
+                      "direction": "past",
+                      "moment": {
+                        "type": "now"
+                      },
+                      "offset": {
+                        "days": 14,
+                        "hours": 0,
+                        "minutes": 0,
+                        "months": 0,
+                        "seconds": 0,
+                        "weeks": 0,
+                        "years": 0
+                      },
+                      "type": "offset",
+                      "which_day_end": "start"
+                    },
+                    "type": "moment_range"
+                  },
+                  "field": {
+                    "field_name": "last_activity_date",
+                    "object_type": "lead",
+                    "type": "regular_field"
+                  },
+                  "negate": false,
+                  "type": "field_condition"
+                }
+              ],
+              "type": "and"
+            },
+            {
+              "negate": false,
+              "queries": [
+                {
+                  "condition": {
+                    "type": "term",
+                    "values": [
+                      "Yes"
+                    ]
+                  },
+                  "field": {
+                    "custom_field_id": "cf_6PnYz6aaAkLzHMU3Faxz7kFurBEfadqlfGiBgfhjaVC",
+                    "type": "custom_field"
+                  },
+                  "negate": true,
+                  "type": "field_condition"
+                }
+              ],
+              "type": "and"
+            }
+          ],
+          "type": "and"
+        }
+      ],
+      "type": "and"
+    },
+    "results_limit": null,
+    "sort": []
+  }
 }
