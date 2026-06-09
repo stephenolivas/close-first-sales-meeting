@@ -32,7 +32,6 @@ Modes (CLI flags or env vars set by the GitHub workflow):
 """
 
 import os
-import sys
 import copy
 import json
 import time
@@ -481,7 +480,7 @@ def main():
     else:
         print(f"\n(dry run — pointers NOT persisted; preview ending state would be {state})")
 
-    print(f"\nSummary: " + ", ".join(f"{BUCKETS[k]['label']}={v}" for k, v in totals.items()))
+    print("\nSummary: " + ", ".join(f"{BUCKETS[k]['label']}={v}" for k, v in totals.items()))
 
 
 if __name__ == "__main__":
