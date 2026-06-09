@@ -135,7 +135,7 @@ def structured_filter_node(saved_search):
 def search_via_data_search(filter_node, debug=False):
     """Run a structured filter node through /data/search/ and return lead IDs."""
     if debug:
-        print(f"  [debug] /data/search/ filter node: {json.dumps(filter_node)[:1200]}")
+        print(f"  [debug] /data/search/ filter node (full):\n{json.dumps(filter_node, indent=2)}")
     lead_ids, cursor = [], None
     while True:
         body = {"query": filter_node, "_fields": {"lead": ["id"]}, "_limit": 200}
