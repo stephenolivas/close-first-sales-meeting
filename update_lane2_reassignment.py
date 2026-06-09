@@ -77,6 +77,7 @@ LEAD_OWNER_DISPLAY     = "Lead Owner"  # how Close keys it on reads
 # Bucket definitions. Processed in PROCESS_ORDER (Bucket 2 wins overlaps).
 BUCKETS = {
     "bucket1": {
+        "enabled":       True,
         "label":         "14-Day No Activity",
         "smart_view_id": "save_usGcGnOy1f5wIxt9jKGkACrfuQXgsKRwbzZSWhV2T8q",
         "handraiser":    "No Activity / Past 14 Days",
@@ -84,6 +85,10 @@ BUCKETS = {
         "index_key":     "bucket1_index",
     },
     "bucket2": {
+        # TEMPORARILY DISABLED — Smart View is catching leads it shouldn't; the
+        # 30-Day process is being revisited before it goes live. Flip back to
+        # True to re-enable (the query is still defined in lane2_view_filters.json).
+        "enabled":       False,
         "label":         "30-Day Aged",
         "smart_view_id": "save_vUj7qzI7VqAcOj0kiYJVoSPGtTQVRXB9nqFNjPfMxXU",
         "handraiser":    "30 Day Aged Deals",
@@ -177,7 +182,10 @@ def extract_query_node(blob):
 
 def search_lead_ids(query_node, debug=False):
     """Run a /data/search/ query node and return all matching lead IDs (paginated)."""
-    if debug:
+    if debug and os.environ.get("DUMP_QUERY", "").lower() == "true":
+        # Verbose: dump the full query JSON. Off by default — it's long and tends
+        # to get truncated/garbled when copied out of a terminal. Set
+        # DUMP_QUERY=true only if you specifically need to inspect the raw query.
         print(f"  [debug] /data/search/ query node:\n{json.dumps(query_node, indent=2)}")
     lead_ids, cursor = [], None
     while True:
@@ -335,6 +343,11 @@ def main():
         b = BUCKETS[key]
         idx_key = b["index_key"]
         print(f"\n--- {b['label']}  (view {b['smart_view_id']}) ---")
+
+        if not b.get("enabled", True):
+            print("  SKIP bucket: disabled (enabled=False)")
+            totals[key] = 0
+            continue
 
         blob = view_filters.get(key)
         if not blob or "query" not in (blob if isinstance(blob, dict) else {}):
