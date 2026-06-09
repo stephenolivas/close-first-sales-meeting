@@ -59,6 +59,16 @@ STATE_FILE = "lane2_state_cache.json"
 # Filters, and paste the result under the matching bucket key in this file.
 VIEW_FILTERS_FILE = "lane2_view_filters.json"
 
+# TEMPORARY (diagnostic only — remove once the 14-Day query is confirmed working).
+# Three leads known to be in the 14-Day Smart View (Ann, Kyle, Misty). On a
+# dry-run, each is tested against every condition individually to see which one
+# /data/search/ uses to (wrongly) exclude it. Override via DIAG_LEAD_IDS env var.
+DEFAULT_DIAG_LEAD_IDS = [
+    "lead_XzxuwaNQx9BGPjXdTZ9DcE0W3F6YLsCSoppp5xLGAI7",  # Ann Doan
+    "lead_E487kjYaOUTSxTQAP8zXuzvbpHHz8jpFi0YM0eqgx2Y",  # Kyle Mahoney
+    "lead_HINT2WSVtVNBJO7BFYzIsI1rIG3RlKKTrJjId37bjm1",  # Misty Bergeron
+]
+
 # Lane 2 reps, in round-robin order.
 REPS = [
     ("Cameron Caswell", "user_UpJb11fzX2TuFHf7fFyWpfXr84lg2Ui7i7p5CtQkIaW"),
@@ -259,6 +269,48 @@ def diagnose_query(query_node):
         time.sleep(0.6)   # gentle spacing so the burst doesn't trip Close's rate limit
 
 
+def diagnose_lead(query_node, lead_id):
+    """
+    Test ONE known lead against each condition individually via /data/search/
+    (object_type + id + single condition). Shows exactly which condition that
+    lead fails — the definitive way to find why a lead that should match doesn't.
+    """
+    inner = None
+    for q in query_node.get("queries", []):
+        if q.get("type") in ("and", "or") and isinstance(q.get("queries"), list) and len(q["queries"]) > 1:
+            inner = q
+            break
+    if not inner:
+        print(f"  [lead-diag {lead_id}] could not locate condition list")
+        return
+
+    conds = inner["queries"]
+
+    def base():
+        return {"type": "and", "negate": False, "queries": [
+            {"type": "object_type", "object_type": "lead", "negate": False},
+            {"type": "id", "value": lead_id},
+        ]}
+
+    try:
+        found = lead_id in search_lead_ids(base())
+    except Exception as e:
+        found = f"ERROR ({e})"
+    print(f"  [lead-diag {lead_id}] baseline (exists in search): {found}")
+    time.sleep(0.6)
+
+    for i, c in enumerate(conds):
+        test = base()
+        test["queries"].append(copy.deepcopy(c))
+        try:
+            ok = lead_id in search_lead_ids(test)
+            result = "PASS" if ok else "FAIL  <-- this condition excludes the lead"
+        except Exception as e:
+            result = f"ERROR ({e})"
+        print(f"  [lead-diag {lead_id}] cond[{i}] {_describe_condition(c)}: {result}")
+        time.sleep(0.6)
+
+
 def get_lead(lead_id):
     return close_request("GET", f"{BASE}/lead/{lead_id}/").json()
 
@@ -360,6 +412,12 @@ def main():
         print(f"View returned {len(lead_ids)} lead(s)")
         if dry_run and len(lead_ids) == 0:
             diagnose_query(node)
+        diag_ids = [x.strip() for x in os.environ.get("DIAG_LEAD_IDS", "").split(",") if x.strip()]
+        if not diag_ids:
+            diag_ids = DEFAULT_DIAG_LEAD_IDS
+        if dry_run and diag_ids:
+            for lid in diag_ids:
+                diagnose_lead(node, lid)
 
         assigned = skipped_overlap = skipped_owned = 0
 
