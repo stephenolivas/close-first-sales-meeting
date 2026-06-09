@@ -33,6 +33,7 @@ Modes (CLI flags or env vars set by the GitHub workflow):
 
 import os
 import sys
+import copy
 import json
 import argparse
 import requests
@@ -153,6 +154,65 @@ def search_lead_ids(query_node, debug=False):
             return lead_ids
 
 
+def _describe_condition(group):
+    """Short human label for a condition group, for diagnostics."""
+    def find_fc(node):
+        if isinstance(node, dict):
+            if node.get("type") == "field_condition":
+                return node
+            for v in node.values():
+                r = find_fc(v)
+                if r:
+                    return r
+        elif isinstance(node, list):
+            for v in node:
+                r = find_fc(v)
+                if r:
+                    return r
+        return None
+
+    fc = find_fc(group)
+    if not fc:
+        return "(unknown condition)"
+    field = fc.get("field", {})
+    name = field.get("field_name") or field.get("custom_field_id") or field.get("type")
+    neg = " [negated]" if fc.get("negate") else ""
+    return f"{name}{neg}"
+
+
+def diagnose_query(query_node):
+    """
+    When a query returns 0, re-run it with each top-level condition removed one
+    at a time and report the count. The condition whose removal makes leads
+    appear is the one /data/search/ can't evaluate.
+    """
+    # Locate the inner group that holds the list of condition sub-groups.
+    inner = None
+    for q in query_node.get("queries", []):
+        if q.get("type") in ("and", "or") and isinstance(q.get("queries"), list) and len(q["queries"]) > 1:
+            inner = q
+            break
+    if not inner:
+        print("  [diagnose] could not locate the condition list — skipping isolation")
+        return
+
+    conds = inner["queries"]
+    print(f"  [diagnose] full query returned 0; testing {len(conds)} conditions individually:")
+    for i in range(len(conds)):
+        reduced = copy.deepcopy(query_node)
+        for q in reduced["queries"]:
+            if (q.get("type") in ("and", "or") and isinstance(q.get("queries"), list)
+                    and len(q["queries"]) == len(conds)):
+                del q["queries"][i]
+                break
+        try:
+            count = len(search_lead_ids(reduced))
+        except Exception as e:
+            count = f"ERROR ({e})"
+        flag = "  <-- culprit" if isinstance(count, int) and count > 0 else ""
+        print(f"  [diagnose] drop [{i}] {_describe_condition(conds[i])}: {count} leads{flag}")
+
+
 def get_lead(lead_id):
     r = requests.get(f"{BASE}/lead/{lead_id}/", auth=AUTH)
     r.raise_for_status()
@@ -251,8 +311,11 @@ def main():
             totals[key] = 0
             continue
 
-        lead_ids = search_lead_ids(extract_query_node(blob), debug=dry_run)
+        node = extract_query_node(blob)
+        lead_ids = search_lead_ids(node, debug=dry_run)
         print(f"View returned {len(lead_ids)} lead(s)")
+        if dry_run and len(lead_ids) == 0:
+            diagnose_query(node)
 
         assigned = skipped_overlap = skipped_owned = 0
 
