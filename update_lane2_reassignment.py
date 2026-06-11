@@ -60,9 +60,6 @@ VIEW_FILTERS_FILE = "lane2_view_filters.json"
 
 # Lane 2 reps, in round-robin order.
 REPS = [
-    ("Cameron Caswell", "user_UpJb11fzX2TuFHf7fFyWpfXr84lg2Ui7i7p5CtQkIaW"),
-    ("Elvis Ellis",     "user_I0cHZ04mBXXBvbFcnwmsc2KrcMsLsKxqjW8DtJ783Hr"),
-    ("Jason Aaron",     "user_MrBLkl5wCqTm7QxHxPo2ydNV5KxMllg6YZDVc12Aqzj"),
     ("Lyle Hubbard",    "user_Bov31jjnHhENBy8uWNTTL8KKax8VX7o6DugLzBYOHBG"),
     ("Kelley Schrader", "user_WquWudQN7dghZsAPiNY80eJUmg1EadQg2UCQdvgbif7"),
 ]
