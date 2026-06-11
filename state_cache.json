@@ -56375,10 +56375,9 @@
     "lead_lNSOVFx3yU1gsNt9Lt3zhbgndr11g3JlIBTcKSco5D9": {
       "date": "2026-06-05",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "William Nowak"
     },
     "lead_bgVpxnbLmCGASZoBHVmouqS48AUGUmjKRDHWau50KnM": {
       "date": "2026-06-03",
@@ -58484,9 +58483,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-06-11 23:09:59 UTC",
+  "saved_at": "2026-06-11 23:35:51 UTC",
   "count": 7380
 }
