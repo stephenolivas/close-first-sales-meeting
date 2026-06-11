@@ -35906,8 +35906,7 @@
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
-      "reactivation": "Mallory Kent",
-      "earliest_scraper_date": "2025-12-18"
+      "reactivation": "Mallory Kent"
     },
     "lead_4Et4czbdelqGY7diUgTbFVBqWK4HQZ8PcJJ2GIc3o8J": {
       "date": "2025-12-23",
@@ -35921,8 +35920,7 @@
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
-      "reactivation": "Mallory Kent",
-      "earliest_scraper_date": "2026-01-23"
+      "reactivation": "Mallory Kent"
     },
     "lead_pLAn5WbMtspyirme6FQgcQEhW4QMkuMz8sUpNQ9omy5": {
       "date": "2026-01-21",
@@ -58458,7 +58456,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_E4WYNuyMW5I9tqp2KNSWOJI7zPyEP54qiqJ0cW048aL": {
       "date": "2026-06-12",
@@ -58466,8 +58465,22 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Vince Bartolini"
+    },
+    "lead_FV8ZvemhABsgq0ZLt3uzjbcRPx3xjg0j4XCyowlsgRO": {
+      "date": "2026-06-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini"
+    },
+    "lead_QCaUG9WiRhvYtqh1X47nB6556u3IhxgwFe7YbmTL1db": {
+      "date": "2026-06-10",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini"
     }
   },
-  "saved_at": "2026-06-11 20:41:05 UTC",
-  "count": 7377
+  "saved_at": "2026-06-11 21:40:22 UTC",
+  "count": 7379
 }
