@@ -58386,10 +58386,11 @@
     },
     "lead_jghm9du9Kt3AwhM3YSEUNgUPvQZJJApWqjtGkAtOkph": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_JIn90iBVxhp8Iwp45AENl2b1CfQXFvoRVy7hhpj1Sa4": {
       "date": "2026-06-16",
@@ -58453,6 +58454,6 @@
       "reactivation": "Mallory Kent"
     }
   },
-  "saved_at": "2026-06-11 19:40:35 UTC",
+  "saved_at": "2026-06-11 20:10:23 UTC",
   "count": 7375
 }
