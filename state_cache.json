@@ -58508,12 +58508,11 @@
       "earliest_scraper_date": null
     },
     "lead_FICJ5Sd2Bg8AqNPC9gJPLqMUSI5IfVi8e6Ex89e15H7": {
-      "date": "2026-06-13",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_FJHiccfFOg7jXxmzBsqlsPVW4zQofCV6cV7cWKq31NC": {
       "date": "2026-06-13",
@@ -58598,6 +58597,6 @@
       "reactivation": "Vince Bartolini"
     }
   },
-  "saved_at": "2026-06-12 21:11:18 UTC",
+  "saved_at": "2026-06-12 21:23:51 UTC",
   "count": 7395
 }
