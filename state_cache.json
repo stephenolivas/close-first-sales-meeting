@@ -58573,8 +58573,15 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Vince Bartolini"
+    },
+    "lead_LTLvqLHj6hrnSv7wJCScdyufk8jF6Nh7jdigFhTG2qQ": {
+      "date": "2026-06-14",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-06-12 19:10:16 UTC",
-  "count": 7392
+  "saved_at": "2026-06-12 19:38:18 UTC",
+  "count": 7393
 }
