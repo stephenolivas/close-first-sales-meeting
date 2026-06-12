@@ -56595,10 +56595,9 @@
     "lead_8sOd8kmwWW9jvLXzt1WaFE2QVj10KmgZG1pQgC6OSQw": {
       "date": "2026-06-04",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "William Nowak"
     },
     "lead_i2xewYTAm44BhBAacNujmLAE5NvptRTqthl7N41Ut8V": {
       "date": "2026-06-03",
@@ -58485,8 +58484,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_6riYtmG4QBjU6IeZNsw6I3IsovGqnOqWvAl62xXy9jM": {
+      "date": "2026-06-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-06-12 00:10:10 UTC",
-  "count": 7380
+  "saved_at": "2026-06-12 00:40:40 UTC",
+  "count": 7381
 }
