@@ -1,0 +1,43 @@
+name: Update Sales Lane
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (report only, no writes)"
+        type: boolean
+        default: false
+  schedule:
+    # Weekdays, a few times a day, offset to :20 so it doesn't collide with the
+    # other jobs (:00/:30 first-sales, :15/:45 follow-ups, :05 sales-cycle).
+    # Runs after the morning reassignment jobs so it picks up new owners.
+    # All UTC. Bump to every 30 min if you want near-real-time lane stamping —
+    # the all-leads scan is cheap.
+    - cron: "20 16 * * 1-5"   # ~8:20/9:20am Pacific (after Lane 2 + Lost reassignments)
+    - cron: "20 20 * * 1-5"   # ~12:20/1:20pm Pacific
+    - cron: "20 23 * * 1-5"   # ~3:20/4:20pm Pacific
+
+jobs:
+  update-sales-lane:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Sales Lane updater
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python update_sales_lane.py --dry-run
+          else
+            python update_sales_lane.py
+          fi
