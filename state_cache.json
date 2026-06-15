@@ -58796,8 +58796,22 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_K7p9kjERkfPcg12aas2Ll8afbnGTv5rZBkKo43AQzbD": {
+      "date": "2026-06-17",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak"
+    },
+    "lead_hUmEY8UWPtkKVIbr4KqY1NBD8DrCzR8lOjMSLPNTAxS": {
+      "date": "2026-06-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini"
     }
   },
-  "saved_at": "2026-06-15 15:59:16 UTC",
-  "count": 7420
+  "saved_at": "2026-06-15 16:11:56 UTC",
+  "count": 7422
 }
