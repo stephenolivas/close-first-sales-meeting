@@ -80,12 +80,17 @@ SESSION.headers.update({"Content-Type": "application/json"})
 # --------------------------------------------------------------------------- #
 # "Next Steps" scraper meeting matcher
 # --------------------------------------------------------------------------- #
-# The four canonical scraper titles all contain "Next Steps" AND a
-# vendingpreneur token. This mirrors the Step-2 matcher in update_field.py:
+# Deliberately BROAD matcher: any title with a vendingpreneur token + "Next
+# Steps" (minus Canceled/Rescheduled). It does NOT enumerate the individual
+# scraper titles, so it auto-covers every current and future setter calendar
+# (Jennifer, Jacob, Vince, Juan, Spencer, William, ...) with no edits here when
+# the roster changes. Correctness comes from the AND in run(): a lead is only
+# touched if its Reactivation - Setter Name field is populated, and that field
+# is only ever set by update_field.py's exact Step-2 list. So this stays in
+# sync with the classifier through that field — not by duplicating the titles.
 #   - case-insensitive
 #   - misspelling-tolerant (Vendingprenuers, Vendingprenurs, ...)
 #   - tolerant of Calendly name suffixes ("... with John Smith")
-# Canceled / Rescheduled titles are excluded just like the upstream classifier.
 
 _NEXT_STEPS_RE = re.compile(r"next\s*steps?", re.I)
 _VENDINGPRENEUR_RE = re.compile(r"vendingpren[eu]+rs?", re.I)
