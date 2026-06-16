@@ -105,10 +105,12 @@ RE_POSTWEBINAR_TITLE = re.compile(r"post\s+masterclass\s+strategy\s+call", re.IG
 # Each maps to a setter label for the Reactivation - Setter Name field.
 # ORDER MATTERS: most specific pattern first (longer title before shorter).
 SCRAPER_TITLE_MAP = [
-    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps\s+call", re.IGNORECASE),  "Kristin Nelson"),   # Vendingpreneurs - Next Steps Call
-    (re.compile(r"vendingpren[eu]+rs?\s+next\s+steps\s+call", re.IGNORECASE),       "Vince Bartolini"),  # Vendingpreneurs Next Steps Call
-    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps(?!\s+call)", re.IGNORECASE), "Spencer Reynolds"), # Vendingpreneurs - Next Steps
-    (re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE),                "William Nowak"),     # Vendingpreneur Next Steps
+    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps\s+call", re.IGNORECASE),     "Jennifer Padilla"),  # Vendingpreneurs - Next Steps Call (Jennifer replaced Kristin Nelson)
+    (re.compile(r"vendingpren[eu]+rs?\s+call\s+-\s+next\s+steps", re.IGNORECASE),     "Jacob Hepner"),      # Vendingpreneurs Call - Next Steps
+    (re.compile(r"vendingpren[eu]+rs?\s+next\s+steps\s+call", re.IGNORECASE),         "Vince Bartolini"),   # Vendingpreneurs Next Steps Call
+    (re.compile(r"vendingpren[eu]+rs?\s+next\s+steps\s+session", re.IGNORECASE),      "Juan Cajina"),       # Vendingpreneurs Next Steps Session
+    (re.compile(r"vendingpren[eu]+rs?\s+-\s+next\s+steps(?!\s+call)", re.IGNORECASE), "Spencer Reynolds"),  # Vendingpreneurs - Next Steps
+    (re.compile(r"vendingpren[eu]+r\s+next\s+steps", re.IGNORECASE),                  "William Nowak"),     # Vendingpreneur Next Steps
 ]
 
 CLOSER_PATTERNS = [
@@ -152,7 +154,7 @@ def classify_meeting(meeting: dict) -> tuple:
 
     setter_name is only populated for "scraper" tier.
 
-    NOTE: Scraper titles are checked BEFORE hard excludes — all three contain
+    NOTE: Scraper titles are checked BEFORE hard excludes — they all contain
     "Next Steps" which would otherwise be caught by the followup hard exclude.
     SCRAPER_TITLE_MAP order matters: most specific (longest) pattern first.
     """
