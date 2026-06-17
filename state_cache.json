@@ -59281,8 +59281,15 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_Kabo63BS8vNKcFyKPfGtXDCQnPRg2U0F4jnJarZfO5h": {
+      "date": "2026-06-18",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-06-17 09:41:36 UTC",
-  "count": 7483
+  "saved_at": "2026-06-17 10:11:10 UTC",
+  "count": 7484
 }
