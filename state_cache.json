@@ -59180,12 +59180,11 @@
       "earliest_scraper_date": null
     },
     "lead_V1HlZLNbwk9adf5Iwjn13nVkh46aBI0N23BnmNk7oLW": {
-      "date": "2026-06-18",
+      "date": "2026-06-22",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": null
     },
     "lead_ZKIMJWN0n6tK7kr8mjUz3VLGB4UcfePksevZNgJ84sj": {
       "date": "2026-06-17",
@@ -59273,7 +59272,7 @@
       "reactivation": "William Nowak"
     },
     "lead_Kabo63BS8vNKcFyKPfGtXDCQnPRg2U0F4jnJarZfO5h": {
-      "date": "2026-06-18",
+      "date": "2026-06-19",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
@@ -59730,8 +59729,22 @@
       "post_webinar": null,
       "reactivation": null,
       "earliest_scraper_date": null
+    },
+    "lead_bmXdOIRi15tNNVNh5r2tDbCDmyo5ROgCKH2dUIlKUuc": {
+      "date": "2026-06-19",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner"
+    },
+    "lead_5IumslOz14ZJOC00FXaOqY5y3WP76CLDIaajGfLsQhn": {
+      "date": "2026-06-19",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak"
     }
   },
-  "saved_at": "2026-06-18 22:12:41 UTC",
-  "count": 7544
+  "saved_at": "2026-06-18 23:13:06 UTC",
+  "count": 7546
 }
