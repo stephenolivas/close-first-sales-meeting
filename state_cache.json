@@ -59593,16 +59593,32 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": "Jennifer Padilla"
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_rVBVib6b10xTkIPXix8mKwm0iN5NEzO8VxE4OtiUGTh": {
       "date": "2026-06-19",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_sJqqFkdxTJG5Wi2MBOrjAeIMflLyUTxwcHrKqzfnCoG": {
+      "date": "2026-06-19",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina"
+    },
+    "lead_9TnPRA0EqTd5XDTwIxw8m6lUHtK8mzUkniPlL7aUNVn": {
+      "date": "2026-06-23",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina"
     }
   },
-  "saved_at": "2026-06-18 18:12:36 UTC",
-  "count": 7526
+  "saved_at": "2026-06-18 18:42:12 UTC",
+  "count": 7528
 }
