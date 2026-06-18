@@ -5530,10 +5530,9 @@
     "lead_Gp12V2YBBzAqyN25S7TFixcXZeeCxIprMZgg0S4bpO2": {
       "date": "2026-01-30",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "Vince Bartolini"
     },
     "lead_xUJnMygp1Vo2RVGdOTgyr2W3NMiqkEJylfyZ5ViW6e0": {
       "date": "2026-03-03",
@@ -8370,18 +8369,16 @@
     "lead_jAAz8v1XxzLOO4l61C8hzdof7vXjL8Ctw1GL9BoG0PQ": {
       "date": "2026-02-18",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "Vince Bartolini"
     },
     "lead_b5kMQeVEyZiG4adhRZxns2WnVBrznbOEIfVj7xW8fYH": {
       "date": "2026-02-18",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "earliest_scraper_date": null
+      "reactivation": "Vince Bartolini"
     },
     "lead_UvTCKJ1GbjVR0u3j9KHaAXAgG0V7tOLp0ptveI2Gv6q": {
       "date": null,
@@ -59654,8 +59651,37 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Vince Bartolini"
+    },
+    "lead_8ZiEtXT8oqyrTHxze80xTdr5TkKJscQ3GWdbpiwQrII": {
+      "date": "2026-06-19",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak"
+    },
+    "lead_7yWR0gC0BHKVVZAJglXp8w362DdbAX54w1vN5oulr4U": {
+      "date": "2026-06-22",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini"
+    },
+    "lead_oqlHDSezMapNZD2NTa8wbUeIEVVfnBDQUDpndhJcqVf": {
+      "date": "2026-06-19",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_Avd7owFiJxVIyzJosqHBTgfjbGPXYVfw0Y1hgqT5J01": {
+      "date": "2026-06-26",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla"
     }
   },
-  "saved_at": "2026-06-18 20:12:20 UTC",
-  "count": 7533
+  "saved_at": "2026-06-18 21:12:14 UTC",
+  "count": 7537
 }
