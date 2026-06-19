@@ -59835,8 +59835,15 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "William Nowak"
+    },
+    "lead_AnSG5RL373D6XlnNnsSu1E5B5jDAw5fgIm8Sky24ASq": {
+      "date": "2026-06-19",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-06-19 18:04:34 UTC",
-  "count": 7558
+  "saved_at": "2026-06-19 18:42:58 UTC",
+  "count": 7559
 }
