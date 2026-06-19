@@ -2529,6 +2529,11 @@
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": "2026-02-24",
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": "2026-02-17"
   },
+  "lead_KDwpYz0W1R8BCCIZUWSYeQFjfBCL4jSm7DPnRi1T56h": {
+    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-19",
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
+  },
   "lead_KEgg5ZXdmLGeK7IyFY0MEL9kuzAT7DeuQyzLkrhHtzt": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-01-29",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
@@ -2695,7 +2700,7 @@
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
   },
   "lead_LXzRDlW7Wz5uYi9tmzq6pGFAtfmtVoxJwg1AoOolVKG": {
-    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-19",
+    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-22",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
   },
@@ -2941,7 +2946,7 @@
   },
   "lead_NnfxfC5WKy9hf7btPwOAt23zEaQ7WWNCSvf4yKkAlBE": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2025-12-15",
-    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": "2026-06-29",
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": "2026-06-19"
   },
   "lead_NxMNQk0DBRW9lyR6Ehhdr0sDms98PGvG0ohmv1KBKGm": {
@@ -4624,6 +4629,11 @@
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
   },
+  "lead_ZBtFKdsEhbiudfAcjiS61oK74GUcM9ayOX3DoijrdcW": {
+    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-23",
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
+  },
   "lead_ZDRY21ez2KR4hs5KCLSYt8QpNT1NobtRn1aipdioSla": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-03-02",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
@@ -5701,6 +5711,11 @@
   },
   "lead_gyv68GITxurh8ijCQM6PjOURHzqPNIbPYn0zpH7OtkM": {
     "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-04-03",
+    "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
+    "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
+  },
+  "lead_gzvU6mKtWtgqqkTu9qtvVgB5piMpRz7aHxgkiUMoKTw": {
+    "cf_2BzXSnYW94EQJxtedp3E6xxUaxnpZ4e0K1MNrFvNjIG": "2026-06-24",
     "cf_42swTFCof7d1J96AA2BNvgT9Y9vk7KO9q7Hs0xtCJ3R": null,
     "cf_N9VyFcSUGaYx9VIFg08Uafm7C0GiKiDgQKOLc21M9SV": null
   },
