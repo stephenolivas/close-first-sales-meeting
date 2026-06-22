@@ -60221,16 +60221,32 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_aZs2ueuGZMzNBKFGNL7GcosqNkT3TWtlok4MAzCvIei": {
       "date": "2026-06-23",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_UFP4hb1Z2l77bFP7uMFLKG3GVl45z43xToOjBrz9Xvg": {
+      "date": "2026-06-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
+    },
+    "lead_KMLo1CehmBtta2GolLsitgI4Wt8De83f6qPu23C60c0": {
+      "date": "2026-06-24",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla"
     }
   },
-  "saved_at": "2026-06-22 20:42:55 UTC",
-  "count": 7611
+  "saved_at": "2026-06-22 21:13:20 UTC",
+  "count": 7613
 }
