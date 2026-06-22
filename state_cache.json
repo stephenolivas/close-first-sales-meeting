@@ -60186,8 +60186,15 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Juan Cajina"
+    },
+    "lead_0GcOQeWYcE024RyFJzjR7JdZDMclANNhdgsqOLNKa4l": {
+      "date": "2026-06-23",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak"
     }
   },
-  "saved_at": "2026-06-22 19:13:03 UTC",
-  "count": 7605
+  "saved_at": "2026-06-22 19:43:06 UTC",
+  "count": 7606
 }
