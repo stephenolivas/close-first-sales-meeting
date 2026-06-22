@@ -60237,7 +60237,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": null
+      "reactivation": null,
+      "earliest_scraper_date": null
     },
     "lead_KMLo1CehmBtta2GolLsitgI4Wt8De83f6qPu23C60c0": {
       "date": "2026-06-24",
@@ -60245,8 +60246,22 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Jennifer Padilla"
+    },
+    "lead_XjknkyJFNmp1A0T6u9jHWgh7aPgauQdLvKXbSvHKx8Q": {
+      "date": "2026-06-23",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak"
+    },
+    "lead_YaiYVttZEqzPJ4D4c7CJgaJw6BQQVrLuPadaWYRJgtQ": {
+      "date": "2026-06-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
     }
   },
-  "saved_at": "2026-06-22 21:13:20 UTC",
-  "count": 7613
+  "saved_at": "2026-06-22 21:32:10 UTC",
+  "count": 7615
 }
