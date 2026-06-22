@@ -60206,9 +60206,31 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
+    },
+    "lead_BbVUEVFrkbhvaAAFqSGKUDqXZRpPGWJCAT5oAEneRfD": {
+      "date": "2026-06-22",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak"
+    },
+    "lead_h69xmKufmWh7vsTcVTW6Eg3Lcw1buuSrhGCAxWrglZl": {
+      "date": "2026-06-24",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null
+    },
+    "lead_aZs2ueuGZMzNBKFGNL7GcosqNkT3TWtlok4MAzCvIei": {
+      "date": "2026-06-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
       "reactivation": null
     }
   },
-  "saved_at": "2026-06-22 20:12:51 UTC",
-  "count": 7608
+  "saved_at": "2026-06-22 20:42:55 UTC",
+  "count": 7611
 }
