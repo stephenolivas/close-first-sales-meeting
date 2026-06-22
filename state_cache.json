@@ -60305,8 +60305,16 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Jennifer Padilla"
+    },
+    "lead_0BRcFW3W3T2BOd4uDvBOOcTOGlTVMf3uHKFMU4Hlh5X": {
+      "date": "2026-06-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "earliest_scraper_date": null
     }
   },
-  "saved_at": "2026-06-22 22:43:48 UTC",
-  "count": 7621
+  "saved_at": "2026-06-22 23:13:37 UTC",
+  "count": 7622
 }
