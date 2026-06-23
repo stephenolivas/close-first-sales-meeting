@@ -60928,8 +60928,16 @@
       "post_webinar": null,
       "reactivation": "Jacob Hepner",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_hKhDX1one12YL57qsUas6TAgveCpCzKDXdN71TT4Q0P": {
+      "date": "2026-06-25",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-23 22:55:07 UTC",
-  "count": 7654
+  "saved_at": "2026-06-23 23:09:23 UTC",
+  "count": 7655
 }
