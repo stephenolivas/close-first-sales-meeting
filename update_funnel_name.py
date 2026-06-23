@@ -12,6 +12,11 @@ ALWAYS overwritten to "Reactivation Scrapers" — re-asserted on every run, with
 no date cutoff. This is the aggressive/always-overwrite counterpart to the
 write that `update_field.py` already does under a 2026-04-06 gate.
 
+On each real flip (funnel was something else -> "Reactivation Scrapers"), a
+Close review task ("New Reactivated Lead Has Booked: Please Review") is created
+for the lead's Lead Owner, due today. Mirrors the task pattern in
+update_lost_deals.py. Skipped (funnel still flips) if the lead has no Lead Owner.
+
 Trigger (both conditions, by design — see REQUIRE_LIVE_MEETING)
 --------------------------------------------------------------
 1. The lead's "Reactivation - Setter Name" field is populated, AND
@@ -40,6 +45,8 @@ import argparse
 import os
 import re
 import sys
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -65,6 +72,18 @@ FUNNEL_DISPLAY_NAME = "Funnel Name DEAL (Opp)"
 SETTER_NAME_DISPLAY_NAME = "Reactivation - Setter Name"
 
 TARGET_VALUE = "Reactivation Scrapers"
+
+# Lead Owner is a USER-type custom field; its value may be a bare user_id string
+# OR a {"id": ..., "name": ...} dict (same shape update_lost_deals.py handles).
+# The review task is assigned to this user. If a lead has no owner, the funnel
+# still flips but the task is skipped.
+LEAD_OWNER_DISPLAY_NAME = "Lead Owner"
+
+# Review task created on a funnel flip — mirrors the task payload in
+# update_lost_deals.py (assigned to the Lead Owner, due today, normal priority).
+TASK_TEXT = "New Reactivated Lead Has Booked: Please Review"
+
+PACIFIC = ZoneInfo("America/Los_Angeles")
 
 # Require BOTH the setter-name field AND a live qualifying meeting.
 #   True  -> stricter: a lead whose setter-name is set but whose meeting was
@@ -156,6 +175,20 @@ def custom_value(lead: dict, display_name: str):
     return custom.get(display_name)
 
 
+def lead_owner_id(lead: dict):
+    """Return the Lead Owner's user_id, or None if unset.
+
+    User-type custom fields can come back as a bare id string or {id, name}
+    (mirrors get_current_owner_id in update_lost_deals.py).
+    """
+    val = custom_value(lead, LEAD_OWNER_DISPLAY_NAME)
+    if isinstance(val, dict):
+        return val.get("id")
+    if isinstance(val, str) and val.strip():
+        return val
+    return None
+
+
 def set_funnel(lead_id: str) -> dict:
     """Write the funnel field on the LEAD and verify the value stuck."""
     payload = {f"custom.{FUNNEL_FIELD_ID}": TARGET_VALUE}
@@ -168,6 +201,29 @@ def set_funnel(lead_id: str) -> dict:
             f"(got {custom_value(updated, FUNNEL_DISPLAY_NAME)!r})."
         )
     return updated
+
+
+def create_task(lead_id: str, owner_id: str) -> None:
+    """Create a Close review task for the Lead Owner, due today (Pacific).
+
+    Mirrors the task payload used by update_lost_deals.py:
+      _type / lead_id / assigned_to / date / text.
+      (No priority field == normal priority, same as that script.)
+
+    NOTE: not deduplicated — same as the other task-creating scripts. In steady
+    state the funnel stays flipped, so this fires once per lead; if the funnel is
+    reverted externally and re-flips, a second task is created.
+    """
+    today = datetime.now(PACIFIC).strftime("%Y-%m-%d")
+    payload = {
+        "_type": "lead",
+        "lead_id": lead_id,
+        "assigned_to": owner_id,
+        "date": today,
+        "text": TASK_TEXT,
+    }
+    resp = SESSION.post(f"{BASE}/task/", json=payload)
+    resp.raise_for_status()
 
 
 # --------------------------------------------------------------------------- #
@@ -188,8 +244,10 @@ def run(dry_run: bool):
         )
 
     written = skipped_no_setter = unchanged = errors = 0
+    tasks_created = tasks_skipped_no_owner = task_errors = 0
 
-    # 2. Per candidate: confirm setter-name populated, overwrite funnel if needed.
+    # 2. Per candidate: confirm setter-name populated, overwrite funnel if needed,
+    #    and on a real flip create a review task for the Lead Owner.
     for lead_id in sorted(candidate_ids):
         try:
             lead = get_lead(lead_id)
@@ -208,26 +266,55 @@ def run(dry_run: bool):
 
         if current == TARGET_VALUE:
             unchanged += 1
-            continue
+            continue  # already flipped -> no funnel write, no new task
+
+        owner_id = lead_owner_id(lead)
 
         if dry_run:
-            print(f"  [dry-run] would set {name}: {current!r} -> {TARGET_VALUE!r} (setter: {setter})")
+            task_note = f"task -> owner {owner_id}" if owner_id else "no Lead Owner, task skipped"
+            print(f"  [dry-run] would set {name}: {current!r} -> {TARGET_VALUE!r} "
+                  f"(setter: {setter}); {task_note}")
             written += 1
+            if owner_id:
+                tasks_created += 1
+            else:
+                tasks_skipped_no_owner += 1
             continue
 
+        # Flip the funnel first; only create the task if that write took.
         try:
             set_funnel(lead_id)
             print(f"  set {name}: {current!r} -> {TARGET_VALUE!r} (setter: {setter})")
             written += 1
         except (requests.HTTPError, RuntimeError) as e:
-            print(f"  ! write failed for {name}: {e}")
+            print(f"  ! funnel write failed for {name}: {e}")
             errors += 1
+            continue  # no task on a failed flip
 
+        # Funnel flipped -> create the review task for the Lead Owner.
+        if not owner_id:
+            print(f"      no Lead Owner — task skipped for {name}")
+            tasks_skipped_no_owner += 1
+            continue
+        try:
+            create_task(lead_id, owner_id)
+            print(f"      task created for owner {owner_id}")
+            tasks_created += 1
+        except requests.HTTPError as e:
+            print(f"      ! task creation failed for {name}: {e}")
+            task_errors += 1
+
+    flipped_verb = "would write" if dry_run else "written"
+    task_verb = "would create" if dry_run else "created"
     print("\nSummary")
-    print(f"  {'would write' if dry_run else 'written'}: {written}")
+    print(f"  funnel {flipped_verb}: {written}")
     print(f"  unchanged (already correct): {unchanged}")
     print(f"  skipped (no setter name): {skipped_no_setter}")
     print(f"  errors: {errors}")
+    print(f"  tasks {task_verb}: {tasks_created}")
+    print(f"  tasks skipped (no Lead Owner): {tasks_skipped_no_owner}")
+    if task_errors:
+        print(f"  task errors: {task_errors}")
 
 
 def main():
