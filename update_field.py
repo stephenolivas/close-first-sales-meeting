@@ -59,13 +59,14 @@ FIELD_CALLTYPE_KEY     = f"custom.{FIELD_CALLTYPE_ID}"
 FIELD_SCRAPER_KEY      = f"custom.{FIELD_SCRAPER_ID}"
 FIELD_POSTWEBINAR_KEY  = f"custom.{FIELD_POSTWEBINAR_ID}"
 FIELD_REACTIVATION_KEY = f"custom.{FIELD_REACTIVATION_ID}"
-FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY},{FIELD_REACTIVATION_KEY},{FIELD_FUNNEL_KEY}"
-
-# Reactivation dropdown — Close accepts label strings directly for choice fields
 
 # Funnel Name DEAL — lead field (NOT opportunity)
 FIELD_FUNNEL_ID       = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
 FIELD_FUNNEL_KEY      = f"custom.{FIELD_FUNNEL_ID}"
+
+FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY},{FIELD_REACTIVATION_KEY},{FIELD_FUNNEL_KEY}"
+
+# Reactivation dropdown — Close accepts label strings directly for choice fields
 
 # Cutoff dates — only write Funnel Name for meetings on/after these dates
 SCRAPER_FUNNEL_CUTOFF = "2026-04-06"   # Reactivation Scrapers cutoff
