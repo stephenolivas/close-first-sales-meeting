@@ -60491,11 +60491,11 @@
     },
     "lead_8fG9AAHNIJN0Nej2Nher5TF62uCETseZvjoK06yuHPN": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar"
+      "funnel_name": null
     },
     "lead_cWJzQ2hmQOJ51ilg3tbcavWMHFJVDaYb2qTw94mNbTV": {
       "date": "2026-06-19",
@@ -60930,6 +60930,6 @@
       "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-23 22:38:57 UTC",
+  "saved_at": "2026-06-23 22:55:07 UTC",
   "count": 7654
 }
