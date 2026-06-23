@@ -59,17 +59,17 @@ FIELD_CALLTYPE_KEY     = f"custom.{FIELD_CALLTYPE_ID}"
 FIELD_SCRAPER_KEY      = f"custom.{FIELD_SCRAPER_ID}"
 FIELD_POSTWEBINAR_KEY  = f"custom.{FIELD_POSTWEBINAR_ID}"
 FIELD_REACTIVATION_KEY = f"custom.{FIELD_REACTIVATION_ID}"
-FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY},{FIELD_REACTIVATION_KEY}"
+FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY},{FIELD_SCRAPER_KEY},{FIELD_POSTWEBINAR_KEY},{FIELD_REACTIVATION_KEY},{FIELD_FUNNEL_KEY}"
 
 # Reactivation dropdown — Close accepts label strings directly for choice fields
 
-# Opportunity field — Funnel Name DEAL
-OPP_FUNNEL_ID      = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
-OPP_FUNNEL_KEY     = f"custom.{OPP_FUNNEL_ID}"
-OPP_FUNNEL_VALUE   = "Reactivation Scrapers"
+# Funnel Name DEAL — lead field (NOT opportunity)
+FIELD_FUNNEL_ID       = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
+FIELD_FUNNEL_KEY      = f"custom.{FIELD_FUNNEL_ID}"
 
-# Only apply Funnel Name DEAL override for scraper meetings on/after this date
-SCRAPER_FUNNEL_CUTOFF = "2026-04-06"  # YYYY-MM-DD Pacific
+# Cutoff dates — only write Funnel Name for meetings on/after these dates
+SCRAPER_FUNNEL_CUTOFF = "2026-04-06"   # Reactivation Scrapers cutoff
+VSL_FUNNEL_CUTOFF     = "2026-06-18"   # VSL cutoff
 
 CHECKPOINT_FILE  = "checkpoint.json"
 STATE_CACHE_FILE = "state_cache.json"
@@ -99,7 +99,8 @@ RE_CANCELED          = re.compile(r"^canceled[\s:]?", re.IGNORECASE)
 RE_FOLLOWUP          = re.compile(r"follow[\-\s]?up|fallow\s+up|f/u\b|next\s+steps|reschedul", re.IGNORECASE)
 RE_ENROLLMENT        = re.compile(r"enrollment|silver\s+start\s*up|bronze\s+enrollment|questions\s+on\s+enrollment", re.IGNORECASE)
 RE_DISCOVERY_TITLE   = re.compile(r"vending\s+quick\s+discovery", re.IGNORECASE)
-RE_POSTWEBINAR_TITLE = re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE)
+RE_POSTWEBINAR_TITLE    = re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE)
+RE_ROUTE_PLANNING_TITLE = re.compile(r"route\s+planning\s+call", re.IGNORECASE)
 
 # Scraper meeting titles — all contain "Next Steps" so checked before hard excludes.
 # Each maps to a setter label for the Reactivation - Setter Name field.
@@ -183,6 +184,10 @@ def classify_meeting(meeting: dict) -> tuple:
     if RE_POSTWEBINAR_TITLE.search(title):
         return "post_webinar", None
 
+    # Route Planning Call — setter call that sets Funnel Name DEAL = VSL
+    if RE_ROUTE_PLANNING_TITLE.search(title):
+        return "route_planning", None
+
     # Closer — must match a qualifying pattern
     for pattern in CLOSER_PATTERNS:
         if pattern.search(title):
@@ -243,24 +248,42 @@ def calculate_desired_state(all_meetings: list) -> dict:
         has_setter      = False
         has_scraper     = False
         has_postwebinar = False
-        reactivation    = None  # setter label from first scraper meeting found
+        reactivation       = None  # setter label from first scraper meeting found
+        earliest_scraper   = None  # earliest scraper meeting date (for SCRAPER_FUNNEL_CUTOFF)
+        earliest_vsl       = None  # earliest route planning call date (for VSL_FUNNEL_CUTOFF)
 
         for m in meetings:
             tier, setter_name = classify_meeting(m)
+            starts_at = m.get("starts_at")
+            date = None
+            if starts_at:
+                dt_utc = datetime.fromisoformat(starts_at.replace("Z", "+00:00"))
+                date = dt_utc.astimezone(PACIFIC).strftime("%Y-%m-%d")
+
             if tier in ("closer", "post_webinar", "scraper"):
-                starts_at = m.get("starts_at")
-                if starts_at:
-                    dt_utc = datetime.fromisoformat(starts_at.replace("Z", "+00:00"))
-                    dt_pac = dt_utc.astimezone(PACIFIC)
-                    closer_dates.append(dt_pac.strftime("%Y-%m-%d"))
+                if date:
+                    closer_dates.append(date)
                 if tier == "post_webinar":
                     has_postwebinar = True
                 elif tier == "scraper":
                     has_scraper = True
                     if reactivation is None:
-                        reactivation = setter_name  # first match wins
+                        reactivation = setter_name
+                    if date and (earliest_scraper is None or date < earliest_scraper):
+                        earliest_scraper = date
             elif tier == "setter":
                 has_setter = True
+            elif tier == "route_planning":
+                if date and (earliest_vsl is None or date < earliest_vsl):
+                    earliest_vsl = date
+
+        # Determine Funnel Name DEAL value for this lead
+        # Scraper wins over VSL if both exist; each has its own date cutoff
+        funnel_name = None
+        if earliest_scraper and earliest_scraper >= SCRAPER_FUNNEL_CUTOFF:
+            funnel_name = "Reactivation Scrapers"
+        elif earliest_vsl and earliest_vsl >= VSL_FUNNEL_CUTOFF:
+            funnel_name = "VSL"
 
         if closer_dates:
             call_type = "Closer"
@@ -269,16 +292,14 @@ def calculate_desired_state(all_meetings: list) -> dict:
         else:
             call_type = None
 
-        earliest_scraper_date = min(closer_dates) if (has_scraper and closer_dates) else None
-
-        if call_type is not None or has_scraper or has_postwebinar:
+        if call_type is not None or has_scraper or has_postwebinar or funnel_name:
             desired[lead_id] = {
-                "date":                  min(closer_dates) if closer_dates else None,
-                "call_type":             call_type,
-                "scraper":               "YES" if has_scraper else None,
-                "post_webinar":          "YES" if has_postwebinar else None,
-                "reactivation":          reactivation,
-                "earliest_scraper_date": earliest_scraper_date,
+                "date":         min(closer_dates) if closer_dates else None,
+                "call_type":    call_type,
+                "scraper":      "YES" if has_scraper else None,
+                "post_webinar": "YES" if has_postwebinar else None,
+                "reactivation": reactivation,
+                "funnel_name":  funnel_name,
             }
 
     return desired
@@ -456,39 +477,6 @@ def fetch_all_meetings() -> list:
 # Write fields to a single lead
 # ─────────────────────────────────────────────
 
-def get_active_opportunity(lead_id: str) -> str | None:
-    """Returns the ID of the lead's most recently updated opportunity, or None."""
-    try:
-        data = api_get(
-            "/opportunity/",
-            params={"lead_id": lead_id, "_order_by": "-date_updated", "_fields": "id,status_type", "_limit": 10},
-        )
-        opps = data.get("data", [])
-        # Prefer active over won/lost
-        for opp in opps:
-            if opp.get("status_type") not in ("won", "lost"):
-                return opp["id"]
-        return opps[0]["id"] if opps else None
-    except Exception as e:
-        print(f"  WARNING: could not fetch opportunity for {lead_id}: {e}", flush=True)
-        return None
-
-
-def write_opportunity_funnel(lead_id: str, lead_name: str) -> bool:
-    """Sets Funnel Name DEAL = "Reactivation Scrapers" on the lead's opportunity."""
-    opp_id = get_active_opportunity(lead_id)
-    if not opp_id:
-        print(f"  [opp] No opportunity found for {lead_name} — skipping Funnel Name DEAL", flush=True)
-        return False
-    try:
-        api_put(f"/opportunity/{opp_id}/", {OPP_FUNNEL_KEY: OPP_FUNNEL_VALUE})
-        print(f"  [opp] {lead_name} → Funnel Name DEAL = {OPP_FUNNEL_VALUE}", flush=True)
-        return True
-    except Exception as e:
-        print(f"  [opp] ERROR writing Funnel Name DEAL for {lead_name}: {e}", flush=True)
-        return False
-
-
 def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> dict | None:
     """
     Compares current vs desired state for one lead and writes only what changed.
@@ -555,6 +543,19 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
     if new_reactivation_label and not cur_reactivation:
         payload[FIELD_REACTIVATION_KEY] = new_reactivation_label
 
+    # ── Funnel Name DEAL (lead field) ────────────────────────────────────────────
+    cur_funnel = current.get("funnel_name")
+    new_funnel = desired.get("funnel_name")
+
+    if new_funnel == "Reactivation Scrapers":
+        # Always override — scraper attribution wins
+        if cur_funnel != new_funnel:
+            payload[FIELD_FUNNEL_KEY] = new_funnel
+    elif new_funnel == "VSL":
+        # Only write if currently blank — do not override existing funnel
+        if not cur_funnel:
+            payload[FIELD_FUNNEL_KEY] = new_funnel
+
     if not payload:
         return None  # Nothing to write
 
@@ -571,17 +572,21 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
         changes.append(f"post-webinar: {cur_postwebinar or 'blank'} → {new_postwebinar or 'cleared'}")
     if FIELD_REACTIVATION_KEY in payload:
         changes.append(f"reactivation: {cur_reactivation or 'blank'} → {new_reactivation_label}")
+    if FIELD_FUNNEL_KEY in payload:
+        changes.append(f"funnel: {cur_funnel or 'blank'} → {new_funnel}")
 
     print(f"  Updated: {lead_name} | {' | '.join(changes)}", flush=True)
 
     final_reactivation = new_reactivation_label if FIELD_REACTIVATION_KEY in payload else cur_reactivation
+    final_funnel       = new_funnel if FIELD_FUNNEL_KEY in payload else cur_funnel
 
     return {
-        "date":          new_date if FIELD_DATE_KEY in payload else cur_date,
-        "call_type":     new_type if FIELD_CALLTYPE_KEY in payload else cur_type,
-        "scraper":       new_scraper if FIELD_SCRAPER_KEY in payload else cur_scraper,
-        "post_webinar":  new_postwebinar if FIELD_POSTWEBINAR_KEY in payload else cur_postwebinar,
-        "reactivation":  final_reactivation,
+        "date":         new_date if FIELD_DATE_KEY in payload else cur_date,
+        "call_type":    new_type if FIELD_CALLTYPE_KEY in payload else cur_type,
+        "scraper":      new_scraper if FIELD_SCRAPER_KEY in payload else cur_scraper,
+        "post_webinar": new_postwebinar if FIELD_POSTWEBINAR_KEY in payload else cur_postwebinar,
+        "reactivation": final_reactivation,
+        "funnel_name":  final_funnel,
     }
 
 
@@ -603,7 +608,7 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
 
     # Leads cached as having a value but no longer in desired (stale)
     stale = {
-        lead_id: {"date": None, "call_type": None, "scraper": None, "post_webinar": None, "reactivation": None, "earliest_scraper_date": None}
+        lead_id: {"date": None, "call_type": None, "scraper": None, "post_webinar": None, "reactivation": None, "funnel_name": None}
         for lead_id, cached in cached_state.items()
         if lead_id not in desired_state
         and (cached.get("date") or cached.get("call_type"))
@@ -637,11 +642,12 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
             lead_data = api_get(f"/lead/{lead_id}/", params={"_fields": FIELDS_PARAM})
             lead_name = lead_data.get("display_name", lead_id)
             current   = {
-                "date":          lead_data.get(FIELD_DATE_KEY),
-                "call_type":     lead_data.get(FIELD_CALLTYPE_KEY),
-                "scraper":       lead_data.get(FIELD_SCRAPER_KEY),
-                "post_webinar":  lead_data.get(FIELD_POSTWEBINAR_KEY),
-                "reactivation":  lead_data.get(FIELD_REACTIVATION_KEY),
+                "date":         lead_data.get(FIELD_DATE_KEY),
+                "call_type":    lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":      lead_data.get(FIELD_SCRAPER_KEY),
+                "post_webinar": lead_data.get(FIELD_POSTWEBINAR_KEY),
+                "reactivation": lead_data.get(FIELD_REACTIVATION_KEY),
+                "funnel_name":  lead_data.get(FIELD_FUNNEL_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
@@ -650,12 +656,6 @@ def routine_update(desired_state: dict, cached_state: dict) -> dict:
                 new_cache[lead_id] = result
             else:
                 new_cache[lead_id] = desired
-
-            # Opp field: write Funnel Name DEAL if this is a newly detected scraper lead
-            scraper_date     = desired.get("earliest_scraper_date")
-            was_already_scraper = cached_state.get(lead_id, {}).get("scraper") == "YES"
-            if scraper_date and scraper_date >= SCRAPER_FUNNEL_CUTOFF and not was_already_scraper:
-                write_opportunity_funnel(lead_id, lead_name)
 
         except Exception as e:
             errors += 1
@@ -699,11 +699,12 @@ def backfill(desired_state: dict, already_processed: set) -> tuple[dict, set]:
             lead_data = api_get(f"/lead/{lead_id}/", params={"_fields": FIELDS_PARAM})
             lead_name = lead_data.get("display_name", lead_id)
             current   = {
-                "date":          lead_data.get(FIELD_DATE_KEY),
-                "call_type":     lead_data.get(FIELD_CALLTYPE_KEY),
-                "scraper":       lead_data.get(FIELD_SCRAPER_KEY),
-                "post_webinar":  lead_data.get(FIELD_POSTWEBINAR_KEY),
-                "reactivation":  lead_data.get(FIELD_REACTIVATION_KEY),
+                "date":         lead_data.get(FIELD_DATE_KEY),
+                "call_type":    lead_data.get(FIELD_CALLTYPE_KEY),
+                "scraper":      lead_data.get(FIELD_SCRAPER_KEY),
+                "post_webinar": lead_data.get(FIELD_POSTWEBINAR_KEY),
+                "reactivation": lead_data.get(FIELD_REACTIVATION_KEY),
+                "funnel_name":  lead_data.get(FIELD_FUNNEL_KEY),
             }
 
             result = write_lead(lead_id, lead_name, current, desired)
@@ -713,11 +714,6 @@ def backfill(desired_state: dict, already_processed: set) -> tuple[dict, set]:
             else:
                 skipped += 1
                 built_cache[lead_id] = desired
-
-            # Opp field: write Funnel Name DEAL for qualifying new scraper leads
-            scraper_date = desired.get("earliest_scraper_date")
-            if scraper_date and scraper_date >= SCRAPER_FUNNEL_CUTOFF:
-                write_opportunity_funnel(lead_id, lead_name)
 
             processed.add(lead_id)
 
