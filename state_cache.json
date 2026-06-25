@@ -61216,8 +61216,24 @@
       "post_webinar": null,
       "reactivation": "Jennifer Padilla",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_kqpbocmSfouyyl7nDbU8MptfjaU2s9nfAwaLIw77dls": {
+      "date": "2026-06-26",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_oRbZepVnJQs1mRVAY1Fbsy3QmYKwOyATHSSweyH4CHS": {
+      "date": "2026-06-29",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-25 22:39:07 UTC",
-  "count": 7690
+  "saved_at": "2026-06-25 23:08:47 UTC",
+  "count": 7692
 }
