@@ -61128,8 +61128,16 @@
       "post_webinar": null,
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_amXxQK3M37WuQYlP5A8ZqOaByYwTamPWPgZoTZKHosw": {
+      "date": "2026-06-25",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-25 16:39:22 UTC",
-  "count": 7679
+  "saved_at": "2026-06-25 17:09:14 UTC",
+  "count": 7680
 }
