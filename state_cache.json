@@ -49553,10 +49553,10 @@
     "lead_e97U84i72xh9iDw6cXkYpO24CH0fKddWDbJ6zv6h0EN": {
       "date": "2026-05-12",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_QpVW0IxqNLROpDV6Dp8X9xMzAep4nOccbAfbRo1vr8l": {
       "date": "2026-05-11",
@@ -61178,6 +61178,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-06-25 20:09:49 UTC",
+  "saved_at": "2026-06-25 20:39:19 UTC",
   "count": 7685
 }
