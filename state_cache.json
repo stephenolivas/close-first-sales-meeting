@@ -60858,20 +60858,20 @@
       "funnel_name": "VSL"
     },
     "lead_IY2K5HCtuAN0oFChIoTZE5c5zB7qoSHkeq05Gd8EqWj": {
-      "date": null,
-      "call_type": null,
-      "scraper": null,
+      "date": "2026-06-29",
+      "call_type": "Closer",
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": "VSL"
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_4AabBs2VBE3O6u9CV5lvq33ZO4kEdS9XL82lQXqIuBW": {
-      "date": null,
-      "call_type": null,
-      "scraper": null,
+      "date": "2026-06-29",
+      "call_type": "Closer",
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": "VSL"
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_lnD15CeRAski8vKB2q0jWKsCWJ0wD89Pp9Xj08YyMXM": {
       "date": null,
@@ -61288,8 +61288,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_v3MbsELhYMDpyjRvk5X0FiQHYc4ql6DhkV4FUsXp0ji": {
+      "date": "2026-06-29",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-06-26 16:39:16 UTC",
-  "count": 7699
+  "saved_at": "2026-06-26 17:09:25 UTC",
+  "count": 7700
 }
