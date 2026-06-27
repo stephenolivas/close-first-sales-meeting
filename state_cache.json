@@ -61430,10 +61430,10 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": "Juan Cajina",
-      "funnel_name": "Internal Webinar"
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-06-27 04:38:48 UTC",
+  "saved_at": "2026-06-27 05:08:36 UTC",
   "count": 7717
 }
