@@ -61392,8 +61392,24 @@
       "post_webinar": null,
       "reactivation": "William Nowak",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_fhoDPv7K86XDTL0mGoX4pSntNX07wo8fJ5PAbiaxxzP": {
+      "date": "2026-06-29",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_TjqCc7DOfStSbR7St5EH8CjL2DF3Z2kWZdluP6u5ns1": {
+      "date": "2026-06-29",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Linkedin"
     }
   },
-  "saved_at": "2026-06-27 00:39:27 UTC",
-  "count": 7712
+  "saved_at": "2026-06-27 01:08:44 UTC",
+  "count": 7714
 }
