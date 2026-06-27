@@ -61416,8 +61416,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_kuWXOKlqxm8RegEy2w9YmbW96asmxW7yUgDtbAvfBE1": {
+      "date": "2026-06-29",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-06-27 01:39:18 UTC",
-  "count": 7715
+  "saved_at": "2026-06-27 02:09:31 UTC",
+  "count": 7716
 }
