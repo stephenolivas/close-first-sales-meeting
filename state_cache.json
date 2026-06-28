@@ -35743,8 +35743,8 @@
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
-      "reactivation": "Mallory Kent",
-      "funnel_name": "Reactivation Scrapers"
+      "reactivation": "William Nowak",
+      "funnel_name": null
     },
     "lead_01F04xk8jM4b1f3eo3mTLPm0cCg0I1vfe6nzkddQzcG": {
       "date": "2026-02-09",
@@ -61514,6 +61514,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-06-28 23:20:57 UTC",
+  "saved_at": "2026-06-28 23:38:43 UTC",
   "count": 7727
 }
