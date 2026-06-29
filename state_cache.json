@@ -41596,10 +41596,10 @@
     "lead_o8dMyShNDfT1YupnzMwq64QiOg4oVxnToQI5BvNVrhK": {
       "date": "2026-04-20",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_77gpW29tdwzRS3fFph1N25n2SziYgkvWfzSweRSAKpm": {
       "date": "2026-04-16",
@@ -61314,7 +61314,7 @@
       "funnel_name": null
     },
     "lead_1PCptFgrpLZmw3QcfJ0LOr1nqYTmofT6glDI48stoma": {
-      "date": "2026-06-29",
+      "date": "2026-06-30",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -61626,12 +61626,12 @@
       "funnel_name": "Reactivation Scrapers"
     },
     "lead_CeoTZHLNnf2qZCU5V062Z3OJlAoLGvPsvL7h4WTIIXz": {
-      "date": "2026-06-30",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Meta Ads"
     },
     "lead_dkHyWjzmPtgXzvyiGY4gbbZAgpcfyfK4u7hszwKQLfw": {
       "date": "2026-06-30",
@@ -61706,6 +61706,6 @@
       "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-29 18:39:37 UTC",
+  "saved_at": "2026-06-29 19:09:24 UTC",
   "count": 7751
 }
