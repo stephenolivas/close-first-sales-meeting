@@ -61235,11 +61235,11 @@
     },
     "lead_YrHP2uccsTj0gsVl6Y9KnbHGuc4JkBuu9qHuxYn1zg7": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram"
+      "funnel_name": null
     },
     "lead_F5ZPbMUJq1CbsuwmgEvKBVUxRPg44c5iDglzgdmpCKY": {
       "date": "2026-06-29",
@@ -61610,6 +61610,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-06-29 14:10:09 UTC",
+  "saved_at": "2026-06-29 14:40:02 UTC",
   "count": 7739
 }
