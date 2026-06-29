@@ -61627,11 +61627,11 @@
     },
     "lead_CeoTZHLNnf2qZCU5V062Z3OJlAoLGvPsvL7h4WTIIXz": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Meta Ads"
+      "funnel_name": null
     },
     "lead_dkHyWjzmPtgXzvyiGY4gbbZAgpcfyfK4u7hszwKQLfw": {
       "date": "2026-06-30",
@@ -61706,6 +61706,6 @@
       "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-29 19:09:24 UTC",
+  "saved_at": "2026-06-29 19:39:55 UTC",
   "count": 7751
 }
