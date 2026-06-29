@@ -29769,7 +29769,7 @@
       "funnel_name": null
     },
     "lead_7ttXQInAwv10idc8fWOIZt7zB0ZbdvFOE7oFkjb9yBI": {
-      "date": "2026-06-29",
+      "date": "2026-06-09",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -61728,8 +61728,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_thvfTOkYe2nhTNChmaP0ZqYaQdmJ3jsYVxj9ilDC3uY": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Meta Ads"
+    },
+    "lead_KQ5saMVZOXe7xqqbyJxYoZTiXNBqLLSPJSB64RRVK5o": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-29 21:09:29 UTC",
-  "count": 7754
+  "saved_at": "2026-06-29 21:39:13 UTC",
+  "count": 7756
 }
