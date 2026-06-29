@@ -54270,12 +54270,12 @@
       "funnel_name": null
     },
     "lead_LGcMNyvOy3glzkg2GLJzu1iTyeP7uercZRnKjt8GELT": {
-      "date": "2026-05-20",
+      "date": "2026-05-18",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Low Ticket Funnel"
     },
     "lead_kY9QD0EihRWJZDARigj3AAmoDsLHFphiWPP8Yg2T0lq": {
       "date": "2026-05-20",
@@ -61258,8 +61258,8 @@
       "funnel_name": null
     },
     "lead_8B4UEbDzoOsmxlupuyy8Zzb31gLwSPad0epUOax7TNr": {
-      "date": "2026-06-30",
-      "call_type": "Closer",
+      "date": null,
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
@@ -61768,8 +61768,16 @@
       "post_webinar": null,
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_tym0rZputkKhIWguVXSxuz69HCDIlILlinvstjnZanU": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-29 21:59:11 UTC",
-  "count": 7759
+  "saved_at": "2026-06-29 22:39:37 UTC",
+  "count": 7760
 }
