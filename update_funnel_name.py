@@ -13,9 +13,10 @@ no date cutoff. This is the aggressive/always-overwrite counterpart to the
 write that `update_field.py` already does under a 2026-04-06 gate.
 
 On each real flip (funnel was something else -> "Reactivation Scrapers"), a
-Close review task ("New Reactivated Lead Has Booked: Please Review") is created
-for the lead's Lead Owner, due today. Mirrors the task pattern in
-update_lost_deals.py. Skipped (funnel still flips) if the lead has no Lead Owner.
+high-priority Close review task is created for the lead's Lead Owner, due today,
+naming the setter who booked the call ("New Reactivated Lead: Next Steps Call
+Scheduled by <setter> - Please Review"). Follows the Lane 2 reassignment task
+convention. Skipped (funnel still flips) if the lead has no Lead Owner.
 
 Trigger (both conditions, by design — see REQUIRE_LIVE_MEETING)
 --------------------------------------------------------------
@@ -79,9 +80,12 @@ TARGET_VALUE = "Reactivation Scrapers"
 # still flips but the task is skipped.
 LEAD_OWNER_DISPLAY_NAME = "Lead Owner"
 
-# Review task created on a funnel flip — mirrors the task payload in
-# update_lost_deals.py (assigned to the Lead Owner, due today, normal priority).
-TASK_TEXT = "New Reactivated Lead Has Booked: Please Review"
+# Review task created on a funnel flip. Follows the Lane 2 reassignment task
+# convention: high priority, due today, "... - Please Review" wording. {setter}
+# is always present when a task fires (run() only creates one after confirming
+# the setter-name field is populated).
+TASK_TEXT_TEMPLATE = "New Reactivated Lead: Next Steps Call Scheduled by {setter} - Please Review"
+TASK_PRIORITY = "high"  # matches Lane 2 reassignment tasks
 
 PACIFIC = ZoneInfo("America/Los_Angeles")
 
@@ -203,12 +207,11 @@ def set_funnel(lead_id: str) -> dict:
     return updated
 
 
-def create_task(lead_id: str, owner_id: str) -> None:
-    """Create a Close review task for the Lead Owner, due today (Pacific).
+def create_task(lead_id: str, owner_id: str, setter: str) -> None:
+    """Create a high-priority Close review task for the Lead Owner, due today.
 
-    Mirrors the task payload used by update_lost_deals.py:
-      _type / lead_id / assigned_to / date / text.
-      (No priority field == normal priority, same as that script.)
+    Payload verified against update_lane2_reassignment.py's create_task:
+      _type / lead_id / assigned_to / date (due) / text / priority "high".
 
     NOTE: not deduplicated — same as the other task-creating scripts. In steady
     state the funnel stays flipped, so this fires once per lead; if the funnel is
@@ -220,7 +223,8 @@ def create_task(lead_id: str, owner_id: str) -> None:
         "lead_id": lead_id,
         "assigned_to": owner_id,
         "date": today,
-        "text": TASK_TEXT,
+        "text": TASK_TEXT_TEMPLATE.format(setter=setter),
+        "priority": TASK_PRIORITY,
     }
     resp = SESSION.post(f"{BASE}/task/", json=payload)
     resp.raise_for_status()
@@ -297,7 +301,7 @@ def run(dry_run: bool):
             tasks_skipped_no_owner += 1
             continue
         try:
-            create_task(lead_id, owner_id)
+            create_task(lead_id, owner_id, setter)
             print(f"      task created for owner {owner_id}")
             tasks_created += 1
         except requests.HTTPError as e:
