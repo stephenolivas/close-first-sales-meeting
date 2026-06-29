@@ -2426,10 +2426,10 @@
     "lead_XHPFJbWamAy8SLp8gzOgD4Kj6tc2zkuaRKCTb4FZwef": {
       "date": "2025-09-10",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_tburDSAES2lFyyYGZhg3bV4vfEgLT230iHVmxdfDQZV": {
       "date": "2026-03-16",
@@ -24676,10 +24676,10 @@
     "lead_VsyVxIYwcoXb9WcTc9szZlII3548gq8tiD4aGDhyykt": {
       "date": "2025-12-19",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_sgkt6xsVLiyuEt4wVlAQMTgnuDCWFdj812ntBrimy64": {
       "date": "2025-12-20",
@@ -30313,10 +30313,10 @@
     "lead_GVLNN08bRjVAXGY34NOsVjc1XIxOOuTLFpyCQvQY4Cf": {
       "date": "2025-12-16",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_ZAKqZ9AD2Nraclx7J1CRiY4wuGq4JgZjbcn1IYvesUt": {
       "date": "2025-12-19",
@@ -61250,12 +61250,12 @@
       "funnel_name": null
     },
     "lead_NLJmsk6InNfWEXe9XgFIANhKSNUfYgvKrJJ79DDAFZR": {
-      "date": "2026-06-29",
+      "date": "2026-07-03",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Instagram"
     },
     "lead_8B4UEbDzoOsmxlupuyy8Zzb31gLwSPad0epUOax7TNr": {
       "date": "2026-06-30",
@@ -61546,15 +61546,15 @@
       "funnel_name": null
     },
     "lead_p7yinutnJiOAIa7lO0ODdI58tH4LKYiOl4aLMgNR5RK": {
-      "date": "2026-06-30",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Website"
     },
     "lead_MgXoZKazBEJN1dEkMhjebqlcFCl5UG3W0b46YfjQwDT": {
-      "date": "2026-06-30",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
@@ -61648,8 +61648,56 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_GlJIKGpACpIHlEmmGg35q9mKYdmevKsRuxYaaEkYxxD": {
+      "date": "2026-06-09",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_vd3sN0RtHjcVbTOiFBgBwInEl28PsZ6Qfg53lUkrGfE": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_aGJsaZFTsxfj3OjJwujaOsKH2aJn8OuGvg0jLOA7RP3": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_mr1PYMv3jktOshdAvQOzJaGMvTMnKTgOC7ooSzKz2nN": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_DnsqcGMwq2tksKOsZCUC5zkIETKH0M8aKjJ2Se7nNaM": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_SLfecNM3LU4n754t6CI5S15c4fDZfeKaFHKXg0UbNNK": {
+      "date": "2026-07-01",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-29 17:39:19 UTC",
-  "count": 7744
+  "saved_at": "2026-06-29 18:09:40 UTC",
+  "count": 7750
 }
