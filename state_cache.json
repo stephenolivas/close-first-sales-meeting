@@ -61551,7 +61551,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Website"
+      "funnel_name": null
     },
     "lead_MgXoZKazBEJN1dEkMhjebqlcFCl5UG3W0b46YfjQwDT": {
       "date": "2026-06-30",
@@ -61562,6 +61562,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-06-29 04:38:35 UTC",
+  "saved_at": "2026-06-29 05:08:56 UTC",
   "count": 7733
 }
