@@ -72,6 +72,11 @@ FIELDS_PARAM           = f"id,display_name,{FIELD_DATE_KEY},{FIELD_CALLTYPE_KEY}
 SCRAPER_FUNNEL_CUTOFF = "2026-04-06"   # Reactivation Scrapers cutoff
 VSL_FUNNEL_CUTOFF     = "2026-06-18"   # VSL cutoff
 
+# Funnel values the scraper write must NEVER override. A lead already tagged VSL
+# (Route Planner / Discovery) stays VSL even if it also trips the scraper
+# condition. Keep in sync with PROTECTED_FUNNELS in update_funnel_name.py.
+PROTECTED_FUNNELS = {"VSL"}
+
 CHECKPOINT_FILE  = "checkpoint.json"
 STATE_CACHE_FILE = "state_cache.json"
 CHECKPOINT_EVERY = 200
@@ -549,8 +554,9 @@ def write_lead(lead_id: str, lead_name: str, current: dict, desired: dict) -> di
     new_funnel = desired.get("funnel_name")
 
     if new_funnel == "Reactivation Scrapers":
-        # Always override — scraper attribution wins
-        if cur_funnel != new_funnel:
+        # Override the existing funnel — EXCEPT protected values (e.g. VSL, the
+        # Route Planner / Discovery funnel), which are left exactly as-is.
+        if cur_funnel != new_funnel and (cur_funnel or "").strip() not in PROTECTED_FUNNELS:
             payload[FIELD_FUNNEL_KEY] = new_funnel
     elif new_funnel == "VSL":
         # Only write if currently blank — do not override existing funnel
