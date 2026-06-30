@@ -28174,7 +28174,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram"
+      "funnel_name": null
     },
     "lead_tZHbfK7LD15dEJV39Pq23m55bF9d8dBGZiYbIxoknGm": {
       "date": "2026-01-16",
@@ -61442,12 +61442,12 @@
       "funnel_name": null
     },
     "lead_YHznSdAZl4RSSJKAwXYJIhEYjg2iluDrlkwJyxvvyU5": {
-      "date": "2026-06-30",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Instagram"
     },
     "lead_qQgDWacGeKnd9dVOVLKdX146rtO7y19UtBW1tScED9h": {
       "date": "2026-06-29",
@@ -61531,11 +61531,11 @@
     },
     "lead_4tl01RoKd9z4LOxbkPljZJCMseXaNWtZgAJ9ruJQhzY": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Meta Ads"
+      "funnel_name": null
     },
     "lead_qcPdApN5LCEeUkmDDuwzOu88s7mLPhs9yyD0q36WteG": {
       "date": "2026-06-29",
@@ -61871,9 +61871,9 @@
       "scraper": "YES",
       "post_webinar": null,
       "reactivation": "William Nowak",
-      "funnel_name": "LTF - In-House"
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-06-30 15:39:48 UTC",
+  "saved_at": "2026-06-30 16:09:55 UTC",
   "count": 7772
 }
