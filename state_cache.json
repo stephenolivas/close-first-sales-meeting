@@ -61415,7 +61415,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Website"
+      "funnel_name": null
     },
     "lead_kuWXOKlqxm8RegEy2w9YmbW96asmxW7yUgDtbAvfBE1": {
       "date": "2026-06-29",
@@ -61895,7 +61895,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Meta Ads"
+      "funnel_name": null
     },
     "lead_ChziyIr1iGY3FlA80BWkS7A9FewnRTErFk3aoYrKHWy": {
       "date": "2026-07-01",
@@ -61904,8 +61904,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_NLYFkLCbVH56PHtfaUhDTWTVdOh5pJZ3T8ORqICYiM9": {
+      "date": "2026-07-01",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_JQUkU8EB4PFOyhTvHg6n4OZaOEAsr0YIjbh2EEm5tF9": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL"
     }
   },
-  "saved_at": "2026-06-30 16:40:19 UTC",
-  "count": 7776
+  "saved_at": "2026-06-30 17:10:06 UTC",
+  "count": 7778
 }
