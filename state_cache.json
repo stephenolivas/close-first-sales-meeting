@@ -12573,10 +12573,10 @@
     "lead_W4fCzMAq3VnOggYo8ZUaN6iCpwN2EbsxLXV5CGVmVG9": {
       "date": "2026-02-10",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_MosCYxIJQQjYM6F8eHxO9KBo8bkxfh606IiDwjNckhF": {
       "date": "2025-11-05",
@@ -28169,12 +28169,12 @@
       "funnel_name": null
     },
     "lead_Sqdea92mSNuRuGJoNcTudikzlxH7AcMx4oXkuWsXITH": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-01-13",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Instagram"
     },
     "lead_tZHbfK7LD15dEJV39Pq23m55bF9d8dBGZiYbIxoknGm": {
       "date": "2026-01-16",
@@ -61530,12 +61530,12 @@
       "funnel_name": null
     },
     "lead_4tl01RoKd9z4LOxbkPljZJCMseXaNWtZgAJ9ruJQhzY": {
-      "date": "2026-06-30",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Meta Ads"
     },
     "lead_qcPdApN5LCEeUkmDDuwzOu88s7mLPhs9yyD0q36WteG": {
       "date": "2026-06-29",
@@ -61610,7 +61610,7 @@
       "funnel_name": null
     },
     "lead_57PUBHJvReC8ONrlod1c0p1YSrv16TqY3Hg1AQTKyDt": {
-      "date": "2026-06-30",
+      "date": "2026-07-03",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -61864,8 +61864,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_6GfdDstPa1MTSlvnXmalgHfc40uKUG3rHNmxSF6HMMM": {
+      "date": "2025-12-19",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "LTF - In-House"
     }
   },
-  "saved_at": "2026-06-30 14:40:06 UTC",
-  "count": 7771
+  "saved_at": "2026-06-30 15:39:48 UTC",
+  "count": 7772
 }
