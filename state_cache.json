@@ -61410,12 +61410,12 @@
       "funnel_name": null
     },
     "lead_YidskBuazwga7tPFcP1ZZJ7Uep2d1LwbvnuVsQnAp9T": {
-      "date": "2026-06-30",
+      "date": "2026-07-01",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Website"
     },
     "lead_kuWXOKlqxm8RegEy2w9YmbW96asmxW7yUgDtbAvfBE1": {
       "date": "2026-06-29",
@@ -61443,11 +61443,11 @@
     },
     "lead_YHznSdAZl4RSSJKAwXYJIhEYjg2iluDrlkwJyxvvyU5": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram"
+      "funnel_name": null
     },
     "lead_qQgDWacGeKnd9dVOVLKdX146rtO7y19UtBW1tScED9h": {
       "date": "2026-06-29",
@@ -61872,8 +61872,40 @@
       "post_webinar": null,
       "reactivation": "William Nowak",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_H6Om5vLIwSBci7jcwByJ9ltTUYdN4RdEqtUqDUnt2wL": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_FBJkaCfnwd0fzbFQAsvDBNXNVVk9Jivyv2fs7gIL8vI": {
+      "date": "2026-07-01",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_QTGgZUwdfin0qNz23rz5n82IeoRDFwnFGTUdAwJ1Tgb": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Meta Ads"
+    },
+    "lead_ChziyIr1iGY3FlA80BWkS7A9FewnRTErFk3aoYrKHWy": {
+      "date": "2026-07-01",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-06-30 16:09:55 UTC",
-  "count": 7772
+  "saved_at": "2026-06-30 16:40:19 UTC",
+  "count": 7776
 }
