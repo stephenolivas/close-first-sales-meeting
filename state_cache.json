@@ -61791,7 +61791,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Low Ticket Funnel"
+      "funnel_name": null
     },
     "lead_PkcJQeKcktO1Xapo5c2Lq7yyucD7jyyHI4NBeBDozYl": {
       "date": "2026-06-30",
@@ -61800,8 +61800,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_diBpHL85KZ0qpBr1okekIcD8YlWiSoDo4ZFPTOsLqsD": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram"
+    },
+    "lead_aV0O3L3WTaJXwr3RWRyvdJKDewhNDG7JfWw62GmbejX": {
+      "date": "2026-06-30",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-06-30 00:08:45 UTC",
-  "count": 7763
+  "saved_at": "2026-06-30 00:39:21 UTC",
+  "count": 7765
 }
