@@ -61850,7 +61850,15 @@
       "funnel_name": null
     },
     "lead_9uiZOXTTAtPAH7e7j0f1jlBuPVAdup0UxwGDwfpXUza": {
-      "date": "2026-06-30",
+      "date": "2026-07-01",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_hyVfsqY5bQ3e5C4S1XI1hxEq2KCLQho1L3FEWnwGpf5": {
+      "date": "2026-07-01",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
@@ -61858,6 +61866,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-06-30 13:39:22 UTC",
-  "count": 7770
+  "saved_at": "2026-06-30 14:10:30 UTC",
+  "count": 7771
 }
