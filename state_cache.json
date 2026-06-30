@@ -61722,7 +61722,7 @@
       "funnel_name": "Reactivation Scrapers"
     },
     "lead_RnXqh51y4I112S4ALNxmXCAJDUt1w3viDINNPnqjzaH": {
-      "date": "2026-07-02",
+      "date": "2026-06-30",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
@@ -61944,8 +61944,32 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_c1Xfp3NT2aH3BdNXmKZ3Mg85yxkkjymOElwMVimf9M4": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_Kr4jqZ4T4HEIRh7xte16BdCQjrkRRnOqpdBzTj2QGKl": {
+      "date": "2026-07-02",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_uPLTYgubvdmVXyvsU9of29vJQR2mCA0XMEhM3XFYOGi": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-06-30 18:26:29 UTC",
-  "count": 7781
+  "saved_at": "2026-06-30 18:39:26 UTC",
+  "count": 7784
 }
