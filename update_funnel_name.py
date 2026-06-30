@@ -12,6 +12,9 @@ ALWAYS overwritten to "Reactivation Scrapers" — re-asserted on every run, with
 no date cutoff. This is the aggressive/always-overwrite counterpart to the
 write that `update_field.py` already does under a 2026-04-06 gate.
 
+EXCEPTION: leads whose funnel is already one of PROTECTED_FUNNELS (e.g. "VSL" —
+Route Planner / Discovery calls) are left untouched: no funnel write, no task.
+
 On each real flip (funnel was something else -> "Reactivation Scrapers"), a
 high-priority Close review task is created for the lead's Lead Owner, due today,
 naming the setter who booked the call ("New Reactivated Lead: Next Steps Call
@@ -73,6 +76,12 @@ FUNNEL_DISPLAY_NAME = "Funnel Name DEAL (Opp)"
 SETTER_NAME_DISPLAY_NAME = "Reactivation - Setter Name"
 
 TARGET_VALUE = "Reactivation Scrapers"
+
+# Funnel values this script must NEVER overwrite. Leads already carrying one of
+# these are left exactly as-is (no funnel write, no task). VSL covers Route
+# Planner / Discovery calls that should stay tagged VSL even if the lead also
+# trips the scraper "Next Steps" condition. Add more protected values here.
+PROTECTED_FUNNELS = {"VSL"}
 
 # Lead Owner is a USER-type custom field; its value may be a bare user_id string
 # OR a {"id": ..., "name": ...} dict (same shape update_lost_deals.py handles).
@@ -247,7 +256,7 @@ def run(dry_run: bool):
             f"{SETTER_NAME_FIELD_ID} (not empty) to populate candidate_ids."
         )
 
-    written = skipped_no_setter = unchanged = errors = 0
+    written = skipped_no_setter = unchanged = skipped_protected = errors = 0
     tasks_created = tasks_skipped_no_owner = task_errors = 0
 
     # 2. Per candidate: confirm setter-name populated, overwrite funnel if needed,
@@ -271,6 +280,11 @@ def run(dry_run: bool):
         if current == TARGET_VALUE:
             unchanged += 1
             continue  # already flipped -> no funnel write, no new task
+
+        if current and str(current).strip() in PROTECTED_FUNNELS:
+            skipped_protected += 1
+            print(f"  skip {name}: funnel is {current!r} (protected) — left as-is")
+            continue  # protected funnel -> never overwrite, no task
 
         owner_id = lead_owner_id(lead)
 
@@ -313,6 +327,7 @@ def run(dry_run: bool):
     print("\nSummary")
     print(f"  funnel {flipped_verb}: {written}")
     print(f"  unchanged (already correct): {unchanged}")
+    print(f"  skipped (protected funnel, e.g. VSL): {skipped_protected}")
     print(f"  skipped (no setter name): {skipped_no_setter}")
     print(f"  errors: {errors}")
     print(f"  tasks {task_verb}: {tasks_created}")
