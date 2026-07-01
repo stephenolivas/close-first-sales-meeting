@@ -54558,12 +54558,12 @@
       "earliest_scraper_date": null
     },
     "lead_G4UQyHUMDoH0ouijHn6igxjBFAVGgwd4xi5iWGfoagK": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-07-03",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Low Ticket Funnel"
     },
     "lead_cEoI9tC88OUVxeMjKFWFipMRUC49RqTSCDpVG4GFdIv": {
       "date": "2026-05-21",
@@ -62568,8 +62568,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_gR1AM9LwzfshrWXs2NljB26oQW8lgXSo3pFGxohbsjA": {
+      "date": "2026-05-07",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_rILtYTjXIxYR3U9SHrpWiejSMi0BLsX2lQcmYmycE0u": {
+      "date": "2026-05-07",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-01 22:07:16 UTC",
-  "count": 7859
+  "saved_at": "2026-07-01 22:39:30 UTC",
+  "count": 7861
 }
