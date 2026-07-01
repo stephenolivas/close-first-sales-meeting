@@ -62354,12 +62354,12 @@
       "funnel_name": "Reactivation Scrapers"
     },
     "lead_m5qe1B6V6uU7S5YDFadhTMoyt4RyR4SoZ8gGGpzc4yq": {
-      "date": "2026-07-02",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Instagram"
     },
     "lead_kAqTPXT7Qk6AFFets2l22829IE1PHULMkRq6zrmpc32": {
       "date": "2026-07-03",
@@ -62602,6 +62602,6 @@
       "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-07-01 23:26:51 UTC",
+  "saved_at": "2026-07-01 23:39:55 UTC",
   "count": 7863
 }
