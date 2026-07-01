@@ -24668,10 +24668,10 @@
     "lead_fM1S8aFa4vXtRv114jNiZ5x6i5y70ZarRqu5bjnJzKG": {
       "date": "2025-12-20",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_VsyVxIYwcoXb9WcTc9szZlII3548gq8tiD4aGDhyykt": {
       "date": "2025-12-19",
@@ -42797,10 +42797,10 @@
     "lead_e8XsctxdUxnqwZGKvzTUOtGxR5ww2rU6rpjwGGOjROt": {
       "date": "2026-04-20",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_PWYlfmMAqXFJYSJSlFAPEIt2FlPNeBfxfMZSpDMpAli": {
       "date": "2026-02-17",
@@ -62448,8 +62448,40 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_XogNYh1BpIseEAcAWt9RLhOdn8wv8xIyqCsmy5hIAAB": {
+      "date": "2026-07-02",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Linkedin"
+    },
+    "lead_TJ2XzVQNCt3eTWhlnNKmyUUXtb7WBsvipd1TumREdny": {
+      "date": "2026-07-02",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_SJa7YIWtpzlFjTk6DgQ5sibOCILMTdnPQtUUZk5E8n1": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram"
+    },
+    "lead_HPshNFF5Zps1rauuMUn1dUKeqclvUJ6k5nGYHZAU98N": {
+      "date": "2026-07-02",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram"
     }
   },
-  "saved_at": "2026-07-01 17:39:02 UTC",
-  "count": 7844
+  "saved_at": "2026-07-01 18:10:10 UTC",
+  "count": 7848
 }
