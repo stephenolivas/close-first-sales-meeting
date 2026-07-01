@@ -62368,8 +62368,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_bqljQgpl915XCFG0nsPaARFU1izr5JZZmCC3zrLKBjr": {
+      "date": "2026-07-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Meta Ads"
+    },
+    "lead_039LXBQ4eDOsrIhu9t1Ya8n5givz7dCrNwySeOGsOTw": {
+      "date": "2026-07-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-01 06:09:38 UTC",
-  "count": 7834
+  "saved_at": "2026-07-01 06:30:08 UTC",
+  "count": 7836
 }
