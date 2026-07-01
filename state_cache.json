@@ -62250,12 +62250,12 @@
       "funnel_name": null
     },
     "lead_JYIra5pB1mGNVuf9NgvdWIFStcwBgGXsZlFmn8YoG8x": {
-      "date": "2026-07-02",
+      "date": "2026-07-01",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Internal Webinar"
     },
     "lead_KjNvc6tQFDAt3v4tnJGY5wvin9OEL9MH2CtSKrpywnh": {
       "date": "2026-07-02",
@@ -62455,7 +62455,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Linkedin"
+      "funnel_name": null
     },
     "lead_TJ2XzVQNCt3eTWhlnNKmyUUXtb7WBsvipd1TumREdny": {
       "date": "2026-07-02",
@@ -62471,7 +62471,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram"
+      "funnel_name": null
     },
     "lead_HPshNFF5Zps1rauuMUn1dUKeqclvUJ6k5nGYHZAU98N": {
       "date": "2026-07-02",
@@ -62479,9 +62479,17 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram"
+      "funnel_name": null
+    },
+    "lead_RMfoz7woazWntOdjMRhz7j6uiNeHXmbzUaxGve7rJya": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-01 18:10:10 UTC",
-  "count": 7848
+  "saved_at": "2026-07-01 18:31:19 UTC",
+  "count": 7849
 }
