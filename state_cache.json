@@ -115,10 +115,10 @@
     "lead_d1L4a3DfaO9IWKtYzSFfYpmMzqLrsA3oXHkbIgRV7kQ": {
       "date": "2026-03-02",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_wMqQQPXP90kDXTuoYfZpTEavwEoO7Bpz5ycfHeHSfVX": {
       "date": null,
@@ -54563,7 +54563,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Low Ticket Funnel"
+      "funnel_name": null
     },
     "lead_cEoI9tC88OUVxeMjKFWFipMRUC49RqTSCDpVG4GFdIv": {
       "date": "2026-05-21",
@@ -62410,7 +62410,7 @@
       "funnel_name": null
     },
     "lead_mc58qsJfMtkq6h8RvwkSA9mUNMuLBmktTLufTOya5Hm": {
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -62586,6 +62586,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-01 22:39:30 UTC",
+  "saved_at": "2026-07-01 23:09:11 UTC",
   "count": 7861
 }
