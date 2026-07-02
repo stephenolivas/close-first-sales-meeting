@@ -61250,12 +61250,12 @@
       "funnel_name": null
     },
     "lead_NLJmsk6InNfWEXe9XgFIANhKSNUfYgvKrJJ79DDAFZR": {
-      "date": "2026-07-03",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Instagram"
     },
     "lead_8B4UEbDzoOsmxlupuyy8Zzb31gLwSPad0epUOax7TNr": {
       "date": "2026-07-01",
@@ -62783,9 +62783,49 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Meta Ads"
+      "funnel_name": null
+    },
+    "lead_csWZidMP3srDEdTb61mF2O2ruyJOjlau32aJOcobYnD": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_uDOR0AypXcHLVDtjlFAFf3yPEYx644YxiiUTM5Vrjj1": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_7hzIjx1s25DDsmjvn4iaxo3GrU9IjPoPFcSjbB4uK6S": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_jSggKImYc0XhplHaFatpp2RyUj6cEFR0TXFrleYUiIn": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL"
+    },
+    "lead_KSRZN7dp22mvjiH7p311D1jW6buRd4TMgpFAFflqIkN": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL"
     }
   },
-  "saved_at": "2026-07-02 14:39:22 UTC",
-  "count": 7886
+  "saved_at": "2026-07-02 15:40:38 UTC",
+  "count": 7891
 }
