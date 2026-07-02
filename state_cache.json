@@ -62303,7 +62303,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar"
+      "funnel_name": null
     },
     "lead_KZTr2k2ZaKtE0OrQPms0UannftedWOCOzS3IyP4hfAZ": {
       "date": null,
@@ -62403,11 +62403,11 @@
     },
     "lead_DNzAdNH7OsnChb5K6nL9cuBtANmIwrgnXRkmjKVwJjV": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Website"
+      "funnel_name": null
     },
     "lead_mc58qsJfMtkq6h8RvwkSA9mUNMuLBmktTLufTOya5Hm": {
       "date": "2026-07-02",
@@ -63082,6 +63082,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-02 22:39:46 UTC",
+  "saved_at": "2026-07-02 23:09:53 UTC",
   "count": 7923
 }
