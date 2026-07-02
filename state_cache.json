@@ -62355,11 +62355,11 @@
     },
     "lead_m5qe1B6V6uU7S5YDFadhTMoyt4RyR4SoZ8gGGpzc4yq": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram"
+      "funnel_name": null
     },
     "lead_kAqTPXT7Qk6AFFets2l22829IE1PHULMkRq6zrmpc32": {
       "date": "2026-07-03",
@@ -62600,8 +62600,16 @@
       "post_webinar": null,
       "reactivation": "Jennifer Padilla",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_9eN101Gi7CJ4VHhOgrQciEzzCLYq1ZFmHjFZZQLB0j7": {
+      "date": "2026-07-02",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-07-01 23:39:55 UTC",
-  "count": 7863
+  "saved_at": "2026-07-02 00:10:02 UTC",
+  "count": 7864
 }
