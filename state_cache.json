@@ -62951,7 +62951,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube"
+      "funnel_name": null
     },
     "lead_EMqXdXbbvDEDuzslLB3qq31lApnoI6G1evbcxiovyS4": {
       "date": "2026-07-04",
@@ -62976,8 +62976,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_O8921oEl6gxfBEcFFDenn5AJAmHqmVITt3J8pXAtyLU": {
+      "date": "2026-07-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-02 19:10:14 UTC",
-  "count": 7910
+  "saved_at": "2026-07-02 19:26:39 UTC",
+  "count": 7911
 }
