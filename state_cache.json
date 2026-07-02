@@ -62656,8 +62656,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_OXrREL1tphELVucxrzYV4sP2n9hN5RJvE7tauiKn3Sx": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram"
     }
   },
-  "saved_at": "2026-07-02 04:09:48 UTC",
-  "count": 7870
+  "saved_at": "2026-07-02 04:39:44 UTC",
+  "count": 7871
 }
