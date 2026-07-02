@@ -62888,8 +62888,24 @@
       "post_webinar": null,
       "reactivation": "Jacob Hepner",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_at9YeFdNkl6u0fYDboiYDtqt86bv5JrZ4uIZJmVoYTM": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_w6Nq8lySj2fE4BgwiwcTDceLdSgCgIHgH8zXubVQDaw": {
+      "date": "2026-07-03",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-07-02 16:39:14 UTC",
-  "count": 7899
+  "saved_at": "2026-07-02 17:10:02 UTC",
+  "count": 7901
 }
