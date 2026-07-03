@@ -62179,11 +62179,11 @@
     },
     "lead_RzEqurmkebxLQRM7HirsSMWRLMobY9cOuuZ1lRWrcAN": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar"
+      "funnel_name": null
     },
     "lead_RyXZPfobx0JNS4NyhUMCQexbQe8T5EAMcVNPbThHmKd": {
       "date": "2026-07-02",
@@ -63352,8 +63352,32 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_TWxetbbKDoHJ55pDhtDQgIjU48wzwsYGg8Ff6CxWIsv": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_88KU9nvu49nh6f6B3jqjqwva0ETTUl2ZdQyi4rVQ1RZ": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_yRHGfRnINkASwM4GbTpDDpWpvao85T9i5jDRU26UBjL": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL"
     }
   },
-  "saved_at": "2026-07-03 20:39:32 UTC",
-  "count": 7957
+  "saved_at": "2026-07-03 21:10:01 UTC",
+  "count": 7960
 }
