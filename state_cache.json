@@ -62124,10 +62124,10 @@
     "lead_YX79MqL6LFcnK6kfO34ijfXhBgPrRsgwgcql85EvTKa": {
       "date": "2026-07-02",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_skdb6MB2PPTrCjqp46JgMtZmIs9pjL7Xok6vj2QosYm": {
       "date": "2026-07-03",
@@ -63240,8 +63240,40 @@
       "post_webinar": null,
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_nPjYrnZ6PP4ud5EPognN1eYRWtXISxl2pxfpak3Oq1i": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram"
+    },
+    "lead_rYt38y19r9RzCaXSn4PzzXCKi0qXqudp0qR1zUvMh9t": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_GISMP0ih9MsvD5Z57JKYkTHDhFEMkD3mloRqJXwA10Q": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_umektWgSga7FztjatTYVONrfHjwY6rf4zIKGnUly2wi": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-03 16:39:03 UTC",
-  "count": 7943
+  "saved_at": "2026-07-03 17:40:09 UTC",
+  "count": 7947
 }
