@@ -63159,7 +63159,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar"
+      "funnel_name": null
     },
     "lead_qeMhxF2wYT29jIJgULVFKaMGUEKOt0iOSQiQGxixeN6": {
       "date": "2026-07-03",
@@ -63186,6 +63186,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-03 04:09:59 UTC",
+  "saved_at": "2026-07-03 04:39:03 UTC",
   "count": 7936
 }
