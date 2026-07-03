@@ -63399,9 +63399,17 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube"
+      "funnel_name": null
+    },
+    "lead_sYjsy62RjpgrCpxUcCWV59f7qBWTFXxjHObj7r7e8mo": {
+      "date": "2026-07-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Google Ads"
     }
   },
-  "saved_at": "2026-07-03 23:09:51 UTC",
-  "count": 7963
+  "saved_at": "2026-07-03 23:40:16 UTC",
+  "count": 7964
 }
