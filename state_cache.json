@@ -63440,8 +63440,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_Jc9Pxe1wfc8dqCti8S37vh5qREbA2nlsRFnLBKqDu12": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "LTF - In-House"
     }
   },
-  "saved_at": "2026-07-04 04:38:57 UTC",
-  "count": 7968
+  "saved_at": "2026-07-04 05:09:57 UTC",
+  "count": 7969
 }
