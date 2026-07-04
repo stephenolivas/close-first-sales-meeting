@@ -63480,8 +63480,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_mQeYwWhNC3toHvoZ37yWkNZWZHcGNH2V7E8CExXy1aY": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_kuXAVBBLpKf131YDHXbpY8SBM7shf9w6sQXHI1w6VVt": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-04 13:39:41 UTC",
-  "count": 7973
+  "saved_at": "2026-07-04 14:09:26 UTC",
+  "count": 7975
 }
