@@ -63447,9 +63447,33 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "LTF - In-House"
+      "funnel_name": null
+    },
+    "lead_SorzNymyHSwav3MwvjnAcGaBjwMw75fegLXtB05V8zN": {
+      "date": "2026-07-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_r7BOntPQqpFaxZMoGf3h3aWSHPtzDWNPySAiuZFu2U2": {
+      "date": "2026-07-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_m5FuCSyf1mOuy4NxgnNBY4lgUsyuWphTCHhWr5YPaRV": {
+      "date": "2026-07-05",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-04 05:09:57 UTC",
-  "count": 7969
+  "saved_at": "2026-07-04 05:39:19 UTC",
+  "count": 7972
 }
