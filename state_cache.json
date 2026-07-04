@@ -63551,7 +63551,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "LTF - In-House"
+      "funnel_name": null
     },
     "lead_Ugn4b3do2BLbkt6d5ffzolOhWqJ1FazeP2N9Fj8ygRV": {
       "date": "2026-07-05",
@@ -63562,6 +63562,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-04 17:08:58 UTC",
+  "saved_at": "2026-07-04 17:39:43 UTC",
   "count": 7983
 }
