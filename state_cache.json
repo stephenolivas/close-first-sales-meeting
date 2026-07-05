@@ -63394,12 +63394,12 @@
       "funnel_name": null
     },
     "lead_alHp9PO7KvmKAoakQZmDeCbD5hmQ5YXWESeapU2Zqj0": {
-      "date": "2026-07-06",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "YouTube"
     },
     "lead_sYjsy62RjpgrCpxUcCWV59f7qBWTFXxjHObj7r7e8mo": {
       "date": "2026-07-05",
@@ -63418,12 +63418,12 @@
       "funnel_name": null
     },
     "lead_hEnCupowKLZ8BwzBv9oXeYFURSvgQVARa9IZIQVc6wO": {
-      "date": "2026-07-07",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Meta Ads"
     },
     "lead_UqQdK9umdQ9Lt08TZkU4Y0fNuE9YI4MeMzjPDAnl8qD": {
       "date": null,
@@ -63624,8 +63624,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_okIKoSa1NadB0UAyYkkuPrUXFMoFwCHcMyJA1jnF657": {
+      "date": "2026-07-06",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "YouTube"
     }
   },
-  "saved_at": "2026-07-05 20:39:54 UTC",
-  "count": 7991
+  "saved_at": "2026-07-05 21:09:39 UTC",
+  "count": 7992
 }
