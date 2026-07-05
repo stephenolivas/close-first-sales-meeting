@@ -63616,8 +63616,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_sHiCcNR24nlyDGm8H8QbGiSSyz6P8IEHPYuppuhq9f2": {
+      "date": "2026-07-07",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-05 19:39:27 UTC",
-  "count": 7990
+  "saved_at": "2026-07-05 20:09:42 UTC",
+  "count": 7991
 }
