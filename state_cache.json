@@ -63498,12 +63498,12 @@
       "funnel_name": null
     },
     "lead_PCaraDWTwHhOBqmMWEdXIkYPuIIFRXtjIYD8rWAr3EI": {
-      "date": "2026-07-05",
+      "date": "2026-07-11",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Meta Ads"
     },
     "lead_Ggs0nybkRjpcEpBtb65wmtxgMvku9By1KffJZosZgWH": {
       "date": null,
@@ -63642,6 +63642,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-06 00:09:10 UTC",
+  "saved_at": "2026-07-06 00:39:53 UTC",
   "count": 7993
 }
