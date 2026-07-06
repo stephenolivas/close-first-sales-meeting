@@ -62084,10 +62084,10 @@
     "lead_UQ7Br5496I4NeCkG5kH3MMkyKBLVMDERCOeIvjm2TqM": {
       "date": "2026-07-03",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_45gOn9SGJFTGULisAFfn7nq2ZRmxqhCxvQfXiO3hpDB": {
       "date": "2026-07-03",
@@ -63503,7 +63503,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Meta Ads"
+      "funnel_name": null
     },
     "lead_Ggs0nybkRjpcEpBtb65wmtxgMvku9By1KffJZosZgWH": {
       "date": null,
@@ -63642,6 +63642,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-06 00:39:53 UTC",
+  "saved_at": "2026-07-06 01:09:59 UTC",
   "count": 7993
 }
