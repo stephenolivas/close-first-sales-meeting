@@ -63204,10 +63204,10 @@
     "lead_muoFYbbIzlQdGWNuuos2pmV3Jhtb3DzCuG2W0naIz6Y": {
       "date": "2026-07-04",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_iLfx5qD9NR9i8SQNhcSxR3gpxi2YkELtv3h9BMRDnPl": {
       "date": null,
@@ -63642,6 +63642,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-06 01:09:59 UTC",
+  "saved_at": "2026-07-06 01:39:09 UTC",
   "count": 7993
 }
