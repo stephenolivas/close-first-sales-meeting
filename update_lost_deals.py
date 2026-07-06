@@ -1,7 +1,13 @@
 """
 update_lost_deals.py
 
-Reassigns leads to Jason Aaron when:
+Reassigns Lost leads to their intended reviewer the morning after the first
+sales call, based on Lost Reason:
+
+  - "DIY-..." or "Price-..." → Ryan Jones
+  - Everything else          → Jason Aaron
+
+Match criteria:
   - First Sales Call Booked Date falls in the lookback window (Pacific time)
   - Lead Status = 💔 Lost
 
@@ -12,11 +18,11 @@ Lookback window:
     still behave sensibly)
 
 For each matched lead, sets:
-  - Lead Owner (custom field) → Jason Aaron
+  - Lead Owner (custom field) → the routed assignee
   - Lane 2 Handraiser → "Prior Day Lost Deals"
-  - Creates a Close task for Jason, due today
+  - Creates a Close task for the routed assignee, due today
 
-Idempotent: skips leads whose Lead Owner is already Jason Aaron.
+Idempotent: skips leads whose Lead Owner is already the routed assignee.
 
 Environment variables:
   CLOSE_API_KEY   (required)
@@ -38,11 +44,28 @@ SKIP_TASKS = os.environ.get("SKIP_TASKS", "false").lower() == "true"
 BASE = "https://api.close.com/api/v1"
 AUTH = (CLOSE_API_KEY, "")
 
-ASSIGNEE_USER_ID        = "user_MrBLkl5wCqTm7QxHxPo2ydNV5KxMllg6YZDVc12Aqzj"  # Jason Aaron
-ASSIGNEE_NAME           = "Jason Aaron"
+# --- Routing ---
+DEFAULT_ASSIGNEE = {
+    "user_id": "user_MrBLkl5wCqTm7QxHxPo2ydNV5KxMllg6YZDVc12Aqzj",
+    "name":    "Jason Aaron",
+}
+RYAN_ASSIGNEE = {
+    "user_id": "user_3nrtuEmgPYd5VA15NvrxgQxDVNWbhrNSzitEKGwi8s6",
+    "name":    "Ryan Jones",
+}
+# Lost Reason values that should route to Ryan. EXACT string match, case-sensitive.
+# If Close changes these labels (dash spacing, quote style, wording), update here.
+RYAN_LOST_REASONS = {
+    'DIY- "I can do this on my own"',
+    'Price- "Thats more than I can afford to pay"',
+}
+
+# --- Field IDs ---
 FIRST_SALES_CALL_FIELD  = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
 LEAD_OWNER_FIELD        = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 LANE_2_HANDRAISER_FIELD = "cf_Q1hRv8It46xsAEmpv4PRKdI1y0sPJnrnQrgRbIlF8uL"
+LOST_REASON_FIELD       = "cf_R4i05fLNOQP8yveAs4ofTMMYGAQnkLLklunP4lov2Bt"
+
 LOST_STATUS_LABEL       = "💔 Lost"
 HANDRAISER_VALUE        = "Prior Day Lost Deals"
 
@@ -52,6 +75,7 @@ FIELD_DISPLAY_NAMES = {
     FIRST_SALES_CALL_FIELD:  "First Sales Call Booked Date",
     LEAD_OWNER_FIELD:        "Lead Owner",
     LANE_2_HANDRAISER_FIELD: "Lane 2 Handraiser",
+    LOST_REASON_FIELD:       "Lost Reason (Opp)",
 }
 
 PACIFIC = ZoneInfo("America/Los_Angeles")
@@ -86,6 +110,15 @@ def get_custom_field(lead, field_id):
     if field_id in custom:
         return custom[field_id]
     return None
+
+
+def route_assignee(lead):
+    """Pick the assignee based on Lost Reason. Ryan gets DIY/Price; Jason gets
+    everything else (including null/blank Lost Reason)."""
+    lost_reason = get_custom_field(lead, LOST_REASON_FIELD)
+    if lost_reason in RYAN_LOST_REASONS:
+        return RYAN_ASSIGNEE
+    return DEFAULT_ASSIGNEE
 
 
 def format_call_date(iso_str):
@@ -167,13 +200,13 @@ def get_current_owner_id(lead):
     return val
 
 
-def update_lead(lead_id):
+def update_lead(lead_id, target_user_id):
     """PUT custom fields with `custom.cf_xxx` key prefix. Verify the response
     reflects the new Lead Owner; otherwise raise."""
     if DRY_RUN:
         return
     payload = {
-        f"custom.{LEAD_OWNER_FIELD}":        ASSIGNEE_USER_ID,
+        f"custom.{LEAD_OWNER_FIELD}":        target_user_id,
         f"custom.{LANE_2_HANDRAISER_FIELD}": HANDRAISER_VALUE,
     }
     r = requests.put(f"{BASE}/lead/{lead_id}/", json=payload, auth=AUTH)
@@ -182,15 +215,15 @@ def update_lead(lead_id):
 
     # Verify the owner actually changed before we move on
     new_owner = get_current_owner_id(updated)
-    if new_owner != ASSIGNEE_USER_ID:
+    if new_owner != target_user_id:
         raise RuntimeError(
             f"Lead Owner update for {lead_id} did NOT take. "
-            f"Expected {ASSIGNEE_USER_ID}, got {new_owner!r}. "
+            f"Expected {target_user_id}, got {new_owner!r}. "
             f"Payload sent: {payload}"
         )
 
 
-def create_task(lead_id, lead_name, sales_call_date_iso):
+def create_task(lead_id, lead_name, sales_call_date_iso, assignee_user_id):
     if DRY_RUN or SKIP_TASKS:
         return
     today = datetime.now(PACIFIC).strftime("%Y-%m-%d")
@@ -198,7 +231,7 @@ def create_task(lead_id, lead_name, sales_call_date_iso):
     payload = {
         "_type": "lead",
         "lead_id": lead_id,
-        "assigned_to": ASSIGNEE_USER_ID,
+        "assigned_to": assignee_user_id,
         "date": today,
         "text": (
             f"Prior Day Lost Deal — {lead_name}. "
@@ -236,33 +269,44 @@ def main():
     print(f"Found {len(lead_ids)} matching leads\n")
 
     processed = skipped = 0
+    routed_counts = {"Jason Aaron": 0, "Ryan Jones": 0}
+
     for lead_id in lead_ids:
         lead = get_lead(lead_id)
 
         name = lead.get("display_name", "(no name)")
         sales_call_iso = get_custom_field(lead, FIRST_SALES_CALL_FIELD)
         pretty_date = format_call_date(sales_call_iso)
+        lost_reason = get_custom_field(lead, LOST_REASON_FIELD)
         current_owner = get_current_owner_id(lead)
 
-        if current_owner == ASSIGNEE_USER_ID:
-            print(f"  SKIP   {name} — Lead Owner is already {ASSIGNEE_NAME}")
+        target = route_assignee(lead)
+        target_user_id = target["user_id"]
+        target_name = target["name"]
+
+        if current_owner == target_user_id:
+            print(f"  SKIP   {name} — Lead Owner is already {target_name}")
             skipped += 1
             continue
 
         if DRY_RUN:
-            print(f"  WOULD  {name}  (current owner: {current_owner or 'none'})")
-            print(f"           → Lead Owner: {ASSIGNEE_NAME}")
+            print(f"  WOULD  {name} → {target_name}")
+            print(f"           current owner: {current_owner or 'none'}")
+            print(f"           lost reason: {lost_reason!r}")
             print(f"           → Lane 2 Handraiser: {HANDRAISER_VALUE}")
             print(f"           → task: 'First sales call was {pretty_date}'")
         else:
-            update_lead(lead_id)             # raises if Lead Owner didn't take
-            create_task(lead_id, name, sales_call_iso)
+            update_lead(lead_id, target_user_id)   # raises if update didn't take
+            create_task(lead_id, name, sales_call_iso, target_user_id)
             suffix = " (task skipped)" if SKIP_TASKS else ""
-            print(f"  DONE   {name}{suffix}")
+            print(f"  DONE   {name} → {target_name}{suffix}")
+
         processed += 1
+        routed_counts[target_name] = routed_counts.get(target_name, 0) + 1
 
     verb = "Would process" if DRY_RUN else "Processed"
     print(f"\n{verb}: {processed}, Skipped: {skipped}")
+    print(f"Routing breakdown: {routed_counts}")
 
 
 if __name__ == "__main__":
