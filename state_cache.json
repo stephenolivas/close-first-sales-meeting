@@ -62098,12 +62098,12 @@
       "funnel_name": null
     },
     "lead_5RbNAEXuXw5xxAUDoqgBOzqjT02nESfJ2SMn88SxuQV": {
-      "date": "2026-07-06",
+      "date": "2026-07-13",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "Internal Webinar"
     },
     "lead_I7wN7sgVKMJ041mO0Cf6A4d3KLRicKiW1GP5CaXmhFm": {
       "date": "2026-07-01",
@@ -63690,7 +63690,7 @@
       "funnel_name": null
     },
     "lead_FHt20z5V3r4qljtXtpoNnMUqyH0zHzREjYJWhmlo92x": {
-      "date": "2026-07-06",
+      "date": "2026-07-08",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -63824,8 +63824,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_0VQhIhmaVZFybNsuz6KdDGvwDKUjirjlZHjZUQg5IKO": {
+      "date": "2026-07-07",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_WLrFMTtL9vsoKwTLK5FYMLenXRLgLTnzaRheUOBmQ5D": {
+      "date": null,
+      "call_type": "Setter",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "LTF - In-House"
     }
   },
-  "saved_at": "2026-07-06 19:10:03 UTC",
-  "count": 8016
+  "saved_at": "2026-07-06 19:40:46 UTC",
+  "count": 8018
 }
