@@ -64064,8 +64064,16 @@
       "post_webinar": null,
       "reactivation": "Jennifer Padilla",
       "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_QUECC3KkR8n5k4y3NxiL3zJoeXs4f3GKB2fkD27V5Ky": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-07 17:39:28 UTC",
-  "count": 8046
+  "saved_at": "2026-07-07 18:10:06 UTC",
+  "count": 8047
 }
