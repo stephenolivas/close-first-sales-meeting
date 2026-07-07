@@ -63090,7 +63090,7 @@
       "funnel_name": "Reactivation Scrapers"
     },
     "lead_NpE4xAB7WVDS7U4bwT6gtF1G0du3iHJFEmtEugwV847": {
-      "date": "2026-07-06",
+      "date": "2026-07-09",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -63888,8 +63888,24 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_XcxdOrO8uaAZk3OClpLAkMtK3dQOdYxWPeOP2cKYbtT": {
+      "date": "2026-07-09",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram"
+    },
+    "lead_NKabCLdrgInMGgEwwWQN4XyrpbOI2doBLkR9s75LBHV": {
+      "date": "2026-07-09",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-06 23:10:20 UTC",
-  "count": 8024
+  "saved_at": "2026-07-07 00:09:36 UTC",
+  "count": 8026
 }
