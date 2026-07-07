@@ -64066,14 +64066,38 @@
       "funnel_name": "Reactivation Scrapers"
     },
     "lead_QUECC3KkR8n5k4y3NxiL3zJoeXs4f3GKB2fkD27V5Ky": {
+      "date": null,
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
+    },
+    "lead_8Gfvbsj9kGL6nnrq5s9VYDbpnFV4IVlGpW2rOm16gqz": {
       "date": "2026-07-08",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_DW0Sk8of7QHsGI311py1lwXI3OcUtvE1NQpI3utjsRU": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers"
+    },
+    "lead_9lKQ6GVZHZEjFCovmkrhkkRp6gefj2h2uJ1LNpWUfwL": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers"
     }
   },
-  "saved_at": "2026-07-07 18:10:06 UTC",
-  "count": 8047
+  "saved_at": "2026-07-07 18:40:15 UTC",
+  "count": 8050
 }
