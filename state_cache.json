@@ -4125,10 +4125,10 @@
     "lead_07hVllIgceudJl9EdmJt6MX6tIrzPNRiYWQ4VWVfjcT": {
       "date": "2026-03-09",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers"
     },
     "lead_QoSmhlcWuuFX6S9C0MfbXcwxlw5cda7SzDSnujdywNA": {
       "date": "2026-01-05",
@@ -62042,7 +62042,7 @@
       "funnel_name": null
     },
     "lead_5cyg5d99wFdPNcGCOXvMxf7rj6zezpCKmD6KsZNj9mS": {
-      "date": "2026-07-07",
+      "date": "2026-07-10",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
@@ -63762,12 +63762,12 @@
       "funnel_name": "Reactivation Scrapers"
     },
     "lead_0BXUd38ZNtTYgSjxipO6a2Th8ePwb0kNf3hkfbKInOI": {
-      "date": "2026-07-07",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null
+      "funnel_name": "LTF - In-House"
     },
     "lead_90sqHOAOt4p4XuzkOLHgME4boDO2FxZrS6Z86iFPq4p": {
       "date": "2026-07-06",
@@ -63992,8 +63992,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_ayHw5bPlVTtE3RKByhq6SJ6jnorbd1ifuzjfoLkodCb": {
+      "date": "2026-07-08",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null
     }
   },
-  "saved_at": "2026-07-07 15:33:37 UTC",
-  "count": 8037
+  "saved_at": "2026-07-07 16:11:01 UTC",
+  "count": 8038
 }
