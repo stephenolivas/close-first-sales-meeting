@@ -63895,7 +63895,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram"
+      "funnel_name": null
     },
     "lead_NKabCLdrgInMGgEwwWQN4XyrpbOI2doBLkR9s75LBHV": {
       "date": "2026-07-09",
@@ -63906,6 +63906,6 @@
       "funnel_name": null
     }
   },
-  "saved_at": "2026-07-07 00:09:36 UTC",
+  "saved_at": "2026-07-07 00:40:18 UTC",
   "count": 8026
 }
