@@ -63952,8 +63952,16 @@
       "post_webinar": null,
       "reactivation": null,
       "funnel_name": null
+    },
+    "lead_SuQmja9RCN7yxlDzTI4oiM3EDYn1iO91cx3XPkad8BE": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL"
     }
   },
-  "saved_at": "2026-07-07 10:09:37 UTC",
-  "count": 8032
+  "saved_at": "2026-07-07 10:39:33 UTC",
+  "count": 8033
 }
