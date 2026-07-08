@@ -70885,11 +70885,11 @@
     },
     "lead_INEtmO4IXEdNu5bToyYbITjBe9gJlksAm8ZO66N7oW7": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_RX4033mQa2wTyQ0ZkN8NERszREPXTakQgDEP61phhPP": {
@@ -71693,11 +71693,11 @@
     },
     "lead_e3CNilUUUx2x3f023fZRZnu5Fr2dfUIYenW4SP1PAPJ": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_WTDu4RYgQ3ilHUwWadpecTTDjsijOgFZUB4v7mIsj6B": {
@@ -71798,8 +71798,44 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_JxEzghUzuB4fon0lgXg5bO2nZPcx0KSn74xZ6oHsJqk": {
+      "date": "2026-07-09",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_M05xzZdF9fM79SWWItIStYiYMXJFDrvq2CWxpxszcUF": {
+      "date": "2026-07-10",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_LWCan6MP1ggRZepQs1ZKbvzm1tJxhqfvzUW6DzTzGVT": {
+      "date": "2026-07-09",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_7ABbtQm4ie1CpLMMMlSMgCSuNXjPGwfRm4bJZmGbmuf": {
+      "date": "2026-07-09",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-08 21:10:08 UTC",
-  "count": 8087
+  "saved_at": "2026-07-08 22:09:46 UTC",
+  "count": 8091
 }
