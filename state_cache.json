@@ -71699,8 +71699,17 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_WTDu4RYgQ3ilHUwWadpecTTDjsijOgFZUB4v7mIsj6B": {
+      "date": "2026-07-10",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Low Ticket Funnel",
+      "vendhub": "Standard Booking"
     }
   },
-  "saved_at": "2026-07-08 16:11:02 UTC",
-  "count": 8076
+  "saved_at": "2026-07-08 16:37:05 UTC",
+  "count": 8077
 }
