@@ -71994,10 +71994,28 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Linkedin",
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_qttoRVM7GqKlkhFNfwXs8uf6HLvLnEPm0YgOsami5Cx": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_Pm8vd8qtYzAdyHO5bA8xyLf8pfydBi4GLomfjs2gCQa": {
+      "date": "2026-07-10",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-09 20:10:42 UTC",
-  "count": 8109
+  "saved_at": "2026-07-09 20:39:41 UTC",
+  "count": 8111
 }
