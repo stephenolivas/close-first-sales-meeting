@@ -63736,10 +63736,10 @@
     "lead_w8gZ1GW7ChC8dBnSkp2XDGhm6A7MAU1vZqsdXghtnji": {
       "date": "2026-06-03",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     },
     "lead_fX7hEbROe7j1vZlem4EGQob63nCBUDCLuVLKNqVaKvr": {
@@ -71980,6 +71980,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-09 18:40:20 UTC",
+  "saved_at": "2026-07-09 19:39:33 UTC",
   "count": 8107
 }
