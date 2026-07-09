@@ -71468,11 +71468,11 @@
     },
     "lead_7saPojRWtTMfZicGv0vGdnveseoJvEnvkMxtnkOxZKI": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_68PVbvXRLM09swOoxOfpXgjWcIV4HR6c7lu0T3XvL6l": {
@@ -71881,6 +71881,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-09 13:12:14 UTC",
+  "saved_at": "2026-07-09 13:39:45 UTC",
   "count": 8096
 }
