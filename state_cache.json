@@ -71227,12 +71227,12 @@
       "vendhub": null
     },
     "lead_wNwkoEba34q7TPVPEcjgqu9EFAp3atgdOX7NiD5Iams": {
-      "date": "2026-07-10",
+      "date": "2026-07-14",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "Meta Ads",
       "vendhub": null
     },
     "lead_XcxdOrO8uaAZk3OClpLAkMtK3dQOdYxWPeOP2cKYbtT": {
@@ -72106,6 +72106,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-10 10:40:14 UTC",
+  "saved_at": "2026-07-10 11:09:32 UTC",
   "count": 8121
 }
