@@ -1361,6 +1361,12 @@
     "name": "Patrick Oswalt",
     "won_date": "2026-07-06"
   },
+  "lead_NmrvpYfBzW2Cvue2bMytLZhMC4sA7CLysBHp5wQCscb": {
+    "cycle_days": 7,
+    "first_call_date": "2026-07-02",
+    "name": "Kyle Pescetto",
+    "won_date": "2026-07-09"
+  },
   "lead_NnHSoA6ik16TRkwKTYR098GaTEB1s7PrZGQBOwuMMcG": {
     "cycle_days": 3,
     "first_call_date": "2026-03-25",
@@ -2854,6 +2860,12 @@
     "first_call_date": "2026-04-14",
     "name": "Gustavo E Padres",
     "won_date": "2026-04-14"
+  },
+  "lead_lpRIDoNvJSqGb3Je32AoUlxcDmWvis5LK3ubU3jnyzM": {
+    "cycle_days": 0,
+    "first_call_date": "2026-07-09",
+    "name": "Ryan Fair",
+    "won_date": "2026-07-09"
   },
   "lead_lsN12ZaLPRUDzJayXSsxxSbLOn20ThloFTzWj1FJFYt": {
     "cycle_days": 3,
