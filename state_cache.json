@@ -72338,8 +72338,17 @@
       "reactivation": "Jennifer Padilla",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_VN4qE6DPAVfd0hXFY3dRtHgY1EYRh3LVaiguBlt7vR4": {
+      "date": "2026-07-11",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-11 05:09:31 UTC",
-  "count": 8147
+  "saved_at": "2026-07-11 05:34:16 UTC",
+  "count": 8148
 }
