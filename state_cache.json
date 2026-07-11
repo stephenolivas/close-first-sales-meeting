@@ -70821,7 +70821,7 @@
       "funnel_name": "VSL"
     },
     "lead_7Pk4uZHB56ENxJ5DkVYcbVYsIvGguoG87fWB5QFk27O": {
-      "date": "2026-07-11",
+      "date": "2026-07-13",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -72464,8 +72464,17 @@
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_Ea60zbOnmki6gURANPBoT3yaO5MlwqhB2TgCulF1paY": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-11 20:10:27 UTC",
-  "count": 8161
+  "saved_at": "2026-07-11 20:39:37 UTC",
+  "count": 8162
 }
