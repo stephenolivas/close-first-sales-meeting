@@ -72781,7 +72781,7 @@
       "vendhub": null
     },
     "lead_lbEwbSpsi2c5zqQbPzl3eJSabZLNlc7VnCNu4sYNqtA": {
-      "date": "2026-07-23",
+      "date": "2026-07-16",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -72896,8 +72896,44 @@
       "reactivation": "Jennifer Padilla",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_tA8hRl6ZsNpbNKqJ1TcSneUoNxPc3DDaVAp6aYWCfwP": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_UWo9yj5BmcWqTynafkTv3O08m2uHLWAzK4VpNifHq8k": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_WoSGdyU8Ngge2MCg3ZIwE0BMFSGxLsYn9dXR7n8sxAQ": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_A6tTX9WH0HbEeZTb4pIpgjOzBRMKUcrxJw6z3Blkm8L": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-13 23:10:08 UTC",
-  "count": 8209
+  "saved_at": "2026-07-13 23:34:45 UTC",
+  "count": 8213
 }
