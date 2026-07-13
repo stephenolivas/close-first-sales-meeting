@@ -1,4 +1,10 @@
 {
+  "lead_0190LwQYC0p3JspjqWrpstNsPr2mjJt5vjtvRX4ZCkm": {
+    "cycle_days": 7,
+    "first_call_date": "2026-07-03",
+    "name": "Jon",
+    "won_date": "2026-07-10"
+  },
   "lead_0GNwmJ8iGe4iz3gJCEfBFyOEhwDkPMkR0eI78igRbp9": {
     "cycle_days": 37,
     "first_call_date": "2026-03-24",
@@ -1234,6 +1240,12 @@
     "first_call_date": "2025-11-07",
     "name": "Esteban Cardona",
     "won_date": "2025-11-08"
+  },
+  "lead_LrrqnHGkIm1m4hHRF3RBgKOJWyNtNqrUrp4oqx9uFPV": {
+    "cycle_days": 0,
+    "first_call_date": "2026-07-12",
+    "name": "Carl Rocha",
+    "won_date": "2026-07-12"
   },
   "lead_LsJg07q2xUnsHaajyKhPiQLdIumGRebHBHVp1LrKnbX": {
     "cycle_days": 0,
