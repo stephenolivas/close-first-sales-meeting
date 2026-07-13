@@ -72770,8 +72770,35 @@
       "reactivation": "William Nowak",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_kkE9UGZZ6FmKznP39jwOGZ0EKksrpEDutK9akUqfgki": {
+      "date": "2026-07-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_lbEwbSpsi2c5zqQbPzl3eJSabZLNlc7VnCNu4sYNqtA": {
+      "date": "2026-07-23",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_A5c1ern8dzXJITpyfOpFYHyjPrHvVkIKWRR3vwrh8uu": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-13 17:40:12 UTC",
-  "count": 8195
+  "saved_at": "2026-07-13 18:41:03 UTC",
+  "count": 8198
 }
