@@ -72358,12 +72358,12 @@
       "vendhub": null
     },
     "lead_oy0GfMnLNthNNbDNMeWPNqMGvGyy4GbZXRx2KVzBSNT": {
-      "date": "2026-07-13",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "Meta Ads",
       "vendhub": null
     },
     "lead_wWsmk9Zs2ELgK3mCUekpwTkfMr9DY3JyDWoCPvlzD7f": {
@@ -72830,8 +72830,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": "Jennifer Padilla",
-      "funnel_name": "Internal Webinar",
+      "reactivation": null,
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_IBLJFhpYgyfJlbpRBaUSLJBXXdaqrbMBROdICc7yBPm": {
@@ -72853,6 +72853,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-13 21:36:42 UTC",
+  "saved_at": "2026-07-13 22:10:37 UTC",
   "count": 8204
 }
