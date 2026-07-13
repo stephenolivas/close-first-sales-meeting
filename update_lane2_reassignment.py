@@ -73,7 +73,9 @@ LEAD_OWNER_DISPLAY     = "Lead Owner"  # how Close keys it on reads
 # Bucket definitions. Processed in PROCESS_ORDER (Bucket 2 wins overlaps).
 BUCKETS = {
     "bucket1": {
-        "enabled":       True,
+        # TEMPORARILY DISABLED — flip back to True to re-enable. The query and
+        # all other settings are preserved.
+        "enabled":       False,
         "label":         "14-Day No Activity",
         "smart_view_id": "save_usGcGnOy1f5wIxt9jKGkACrfuQXgsKRwbzZSWhV2T8q",
         "handraiser":    "No Activity / Past 14 Days",
