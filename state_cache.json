@@ -47712,10 +47712,10 @@
     "lead_Irj4DS39r3vq6reSl0h4g4ixLF4juj57Th5Jr8ocRKX": {
       "date": "2026-04-21",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     },
     "lead_AQNmXV3Qn9NsRD4Xnve3o8r6zReyFY1rEBF7oQJZyqk": {
@@ -72815,8 +72815,44 @@
       "reactivation": "William Nowak",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_1UOsI5332SC4bfj9rXfpAPhg9BgzgfTbgfSnSXIBsvG": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_JIS5qullYtb49QhgETzXWfZnpPqIe1Hq1QleTMhHEIG": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
+    },
+    "lead_IBLJFhpYgyfJlbpRBaUSLJBXXdaqrbMBROdICc7yBPm": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_4MJyEgNO0qxqeYsGu0mMgdkw2apzVg15QwA8di0RKQv": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-13 20:40:54 UTC",
-  "count": 8200
+  "saved_at": "2026-07-13 21:36:42 UTC",
+  "count": 8204
 }
