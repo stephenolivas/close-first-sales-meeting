@@ -1248,8 +1248,8 @@
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
-      "reactivation": "Vince Bartolini",
-      "funnel_name": "Instagram",
+      "reactivation": null,
+      "funnel_name": null,
       "vendhub": "Standard Booking"
     },
     "lead_fbKWUs6xZ6kHgoIcE7Dk6UumAXO7iYCRwSuJWcNvaoR": {
@@ -5236,10 +5236,10 @@
     "lead_DWqxZOUt3waWWpfYNoz4IYGDa15iAvPxMc3kXQZWgyV": {
       "date": "2026-02-13",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     },
     "lead_6aSLT7e0HSXDAFZieJlwP7l2VfxDF3PsDg0uBpFnqQD": {
@@ -72885,10 +72885,19 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar",
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_TFwWCTTc0LeDIJ423AXGfngHFaHZzElX5cVze4dfZMg": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-13 22:36:04 UTC",
-  "count": 8208
+  "saved_at": "2026-07-13 23:10:08 UTC",
+  "count": 8209
 }
