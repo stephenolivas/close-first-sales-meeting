@@ -73031,8 +73031,26 @@
       "reactivation": "William Nowak",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_a3CTfxcT53JVp3ukZgmjWQjVC7myywFgC08fIIAEIQo": {
+      "date": "2026-07-18",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_eXTKVCXUweQn6GXeVvLO7gNguEzfk5rmpBOGXUHQmKv": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-14 14:32:12 UTC",
-  "count": 8224
+  "saved_at": "2026-07-14 15:10:24 UTC",
+  "count": 8226
 }
