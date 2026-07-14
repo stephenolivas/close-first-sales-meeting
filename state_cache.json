@@ -7330,7 +7330,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Q4 Misc Traffic Cam",
+      "funnel_name": null,
       "vendhub": "Standard Booking"
     },
     "lead_RwvmvptlcYB4JIu6q6Duft34prNGsTlXUs67EkDwr73": {
@@ -73229,8 +73229,17 @@
       "reactivation": "William Nowak",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_JWkYtg5OAP2rtz412TlE1YXHIortRB1Tu0WJAoAm8Aw": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-14 21:10:45 UTC",
-  "count": 8246
+  "saved_at": "2026-07-14 21:38:22 UTC",
+  "count": 8247
 }
