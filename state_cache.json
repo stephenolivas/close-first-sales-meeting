@@ -72932,8 +72932,17 @@
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_D1kE5b0IxftMtuiachJDrq6eQRvk22FHevEFZpNPGz7": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-14 00:10:19 UTC",
-  "count": 8213
+  "saved_at": "2026-07-14 00:39:47 UTC",
+  "count": 8214
 }
