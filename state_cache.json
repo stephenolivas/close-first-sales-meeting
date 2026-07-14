@@ -73283,8 +73283,35 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_8B5JGpiEeqXwaiyzAHN8iAy0fw3sPPpx5b5PwW9IqM4": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_HcxFR3S00vD8MooZWIdH4gSpJgnPgojceyPZyCms9Np": {
+      "date": "2026-07-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_U6b4jij3kMyIfA0IG06JPLo40zyB5SzL55XBJ5iPScm": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-14 23:10:34 UTC",
-  "count": 8252
+  "saved_at": "2026-07-14 23:40:35 UTC",
+  "count": 8255
 }
