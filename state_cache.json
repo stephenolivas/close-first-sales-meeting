@@ -58902,7 +58902,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Meta Ads",
+      "funnel_name": null,
       "vendhub": "Standard Booking"
     },
     "lead_l5r6FjZTNxxvfHk7dByU9VrcLmcXmWp6yIKaBkG8wdy": {
@@ -73006,12 +73006,12 @@
       "vendhub": null
     },
     "lead_GfrX2r1KN2XjSDANs71kjEWvVB5xnDkCpQn59IcYUqQ": {
-      "date": "2026-07-14",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "YouTube",
       "vendhub": null
     },
     "lead_Zl7y3sAeBhTZGxGaF716ahGLL9Nnf50lmOtFKv35DAR": {
@@ -73130,8 +73130,26 @@
       "reactivation": "Juan Cajina",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_UNy8DwctEqrdnUjtP9f4tTxVPOEfvbMO1JZz8DGHP0Q": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_GVLHwcewyAqpUsBRgfw39x7lHhK7byWAF6R3lz6clKd": {
+      "date": "2026-07-20",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-14 17:11:00 UTC",
-  "count": 8235
+  "saved_at": "2026-07-14 18:10:23 UTC",
+  "count": 8237
 }
