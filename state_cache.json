@@ -23565,10 +23565,10 @@
     "lead_vzdgY6LquZluydfEWg4x7Ut9jQDu8kCBSsj5Nzr3Smq": {
       "date": "2026-01-15",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
-      "reactivation": null,
-      "funnel_name": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     },
     "lead_O5GoiPk9qsXmhBHP82QqIQQWWktBAtjwfklUUcGGEyP": {
@@ -58902,8 +58902,8 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
-      "vendhub": null
+      "funnel_name": "Meta Ads",
+      "vendhub": "Standard Booking"
     },
     "lead_l5r6FjZTNxxvfHk7dByU9VrcLmcXmWp6yIKaBkG8wdy": {
       "date": "2026-05-19",
@@ -73094,8 +73094,44 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_1Rt8aKKn9Q8P8DxDdca1MOjYDGNonTxo0al9SHDVCEj": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_Hc190boOMekdjrsYna9OIuEMv9Xs6XCJSdcnO2bPKjD": {
+      "date": "2026-07-18",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_hUBSnnHhoBGU4MIVfksaxVyVvI90Mi9kPntMN2Bpnx4": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_XtxXK2pWFOnBcGCalYDTPIVm8nqkK1g6bkCeTQtKaa5": {
+      "date": "2026-07-14",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-14 16:40:47 UTC",
-  "count": 8231
+  "saved_at": "2026-07-14 17:11:00 UTC",
+  "count": 8235
 }
