@@ -73661,8 +73661,44 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_euu5ggU4hulok2wo5AxwfoZOrXq494DQ0LcpAF054VA": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_SzKqDHQUmYOKu8eN8msld1vhU76oPjnqeC4QQK1w6VQ": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_jgBNQBTwCXFFIMqBHQ2FBKGZ9U6U1AGMTVsA5fc85x1": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_2zFYWOjQsoA4frjK4JlUXtmGjPgqKkijL6vhrikSQHv": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 19:40:55 UTC",
-  "count": 8294
+  "saved_at": "2026-07-15 20:09:58 UTC",
+  "count": 8298
 }
