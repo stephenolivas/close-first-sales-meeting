@@ -65421,12 +65421,12 @@
       "vendhub": null
     },
     "lead_HaS5elQHnCiQF8tomTsTYWizMLow42VqfwRO3XBHwyY": {
-      "date": null,
-      "call_type": "Setter",
+      "date": "2026-07-23",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "LTF - In-House",
       "vendhub": null
     },
     "lead_s655LesQ6AToxBQZh0yxjuuhUEu9oFW5JHRYIe8sGgp": {
@@ -73254,7 +73254,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_jlrmvuNK1RhRmsW64KLYQFF9r3KR2v03SkfnI10JZcQ": {
@@ -73537,6 +73537,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 14:09:44 UTC",
+  "saved_at": "2026-07-15 14:40:53 UTC",
   "count": 8280
 }
