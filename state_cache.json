@@ -18414,7 +18414,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube",
+      "funnel_name": null,
       "vendhub": "Standard Booking"
     },
     "lead_egp4uxulo784Ro8Z3DzKs352nwdeTFn59Pd7h2eofhQ": {
@@ -73641,10 +73641,19 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar",
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_9nvH66g2n8XCMTbimJhuhyBcUbbghcQLSE3LWN5F0J6": {
+      "date": "2026-07-20",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jennifer Padilla",
+      "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 18:40:42 UTC",
-  "count": 8292
+  "saved_at": "2026-07-15 19:10:50 UTC",
+  "count": 8293
 }
