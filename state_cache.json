@@ -73463,8 +73463,26 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_NWMN0ul6ElbxkPPhYxLr3fH0qVzeEzqNso9XRK7jHHT": {
+      "date": "2026-07-18",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_xYz3hJuuIweE4G39ucR3EvNstPVjCjK4b4rKRhEYnS5": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "LTF - In-House",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 02:40:27 UTC",
-  "count": 8272
+  "saved_at": "2026-07-15 03:10:12 UTC",
+  "count": 8274
 }
