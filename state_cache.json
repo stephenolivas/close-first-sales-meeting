@@ -73335,10 +73335,91 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_Pd0RYbqkh4iR1PHWC5Xoh4M65aNbetxrtPUZYoodIdx": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
+    },
+    "lead_jycboAgiXxT6Qp0WrXRBiuX6S1ftA0ZzLvBu9LtfXxG": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
+    },
+    "lead_IRzzbzVkgS8pQLoEwbu3GPUZ4MlRCd3r5OzJrzGWEcr": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
+    },
+    "lead_PdT1P2Bkgo7AAd8NMxCrs7Eo8fP032bsu79elLIK1Ok": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
+    },
+    "lead_ZyTdmQT6xcVQud3MqdrwTva5BKWI3ngA1p9ImQ5C6V6": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_9hBsNOvFbz6nC6eKwT5exUcoJs9Od8j5kBRHro0vwyh": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
+    },
+    "lead_uH1JOSNJ6nEgus6sbelR7ZAKjrSqADHVFo5H1q2OM62": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
+      "vendhub": null
+    },
+    "lead_gC32Ds8FtjXPLqhpGjPWNOlXdP8LajZrqnzBuVAmJOY": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_MhMGxBKnaxi01Ik4JoKhT1qU9yVAG2fXRVAVrqKFLXE": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
       "funnel_name": "Internal Webinar",
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 00:10:30 UTC",
-  "count": 8258
+  "saved_at": "2026-07-15 00:40:45 UTC",
+  "count": 8267
 }
