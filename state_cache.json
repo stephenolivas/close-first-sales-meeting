@@ -65089,7 +65089,7 @@
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
-      "reactivation": "Vince Bartolini",
+      "reactivation": "Juan Cajina",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
     },
@@ -73535,8 +73535,17 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_TWuFHKGMPaZeuxkHvqr17euj7CTvi5MajoI8RJ8ZvX5": {
+      "date": "2026-07-15",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "YouTube",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 14:54:10 UTC",
-  "count": 8280
+  "saved_at": "2026-07-15 15:10:45 UTC",
+  "count": 8281
 }
