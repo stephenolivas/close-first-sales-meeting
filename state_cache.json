@@ -73517,8 +73517,17 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_pU1O9R67Jss4H6NCoSuMnz0qgtwEUTlEDhjdshzreKc": {
+      "date": "2026-07-16",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Juan Cajina",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 05:40:23 UTC",
-  "count": 8278
+  "saved_at": "2026-07-15 06:10:41 UTC",
+  "count": 8279
 }
