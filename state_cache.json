@@ -73249,12 +73249,12 @@
       "vendhub": null
     },
     "lead_kNsIVqoJm8nstLxJah5nDtpimGjWUpvQC3FFBrQjTce": {
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "YouTube",
       "vendhub": null
     },
     "lead_jlrmvuNK1RhRmsW64KLYQFF9r3KR2v03SkfnI10JZcQ": {
@@ -73519,7 +73519,7 @@
       "vendhub": null
     },
     "lead_pU1O9R67Jss4H6NCoSuMnz0qgtwEUTlEDhjdshzreKc": {
-      "date": "2026-07-16",
+      "date": "2026-07-17",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -73537,6 +73537,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-15 13:40:36 UTC",
+  "saved_at": "2026-07-15 14:09:44 UTC",
   "count": 8280
 }
