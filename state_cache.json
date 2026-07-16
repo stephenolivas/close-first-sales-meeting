@@ -72656,12 +72656,12 @@
       "vendhub": null
     },
     "lead_B3jhgWd4IiZ2B6ZP64yQWw6DQiJzp4cZIhCJTsYFchw": {
-      "date": "2026-07-16",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "Website",
       "vendhub": null
     },
     "lead_dygu8VWqoDdghTFUGCPKT1xJhZZh2NO2XIdyooyLhzd": {
@@ -74031,8 +74031,26 @@
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_B3smedte9PURKiE4weWKKhHRVU96PjPSbdUZF4jzjbZ": {
+      "date": "2026-07-20",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Vince Bartolini",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
+    },
+    "lead_3PQLF9BoOdOCsZHeg3a6M13roXvxIG2xQ3Zc6G59AuZ": {
+      "date": "2026-07-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Meta Ads",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-16 21:39:48 UTC",
-  "count": 8335
+  "saved_at": "2026-07-16 22:09:54 UTC",
+  "count": 8337
 }
