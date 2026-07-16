@@ -73787,8 +73787,17 @@
       "reactivation": null,
       "funnel_name": "VSL",
       "vendhub": null
+    },
+    "lead_T5RSUWB2gwFB6sMbsGkyXh1RhhizLADUSDVbe8twirJ": {
+      "date": "2026-07-17",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-16 02:10:33 UTC",
-  "count": 8308
+  "saved_at": "2026-07-16 02:39:38 UTC",
+  "count": 8309
 }
