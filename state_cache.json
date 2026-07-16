@@ -47272,7 +47272,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Sales Reactivation",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_k7T5j2Uau3hRV6sz0EBZRWtXTpUJqF3Zr7TOfY77CQA": {
@@ -73860,8 +73860,17 @@
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_bxTZqTBVFD5DW9ZZgHAZpVHoTNUP48n8rDo76s4HFw6": {
+      "date": "2026-07-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-16 16:40:23 UTC",
-  "count": 8316
+  "saved_at": "2026-07-16 17:10:56 UTC",
+  "count": 8317
 }
