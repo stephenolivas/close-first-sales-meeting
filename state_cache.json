@@ -45722,7 +45722,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube",
+      "funnel_name": null,
       "vendhub": "Standard Booking"
     },
     "lead_qAkQM8N0myxaAul0GFYxqrCSzp2Y8YVwZp4F0HIeseN": {
@@ -73574,7 +73574,7 @@
       "vendhub": null
     },
     "lead_6SElCRcHqQfLnSBGS1sCgXlSfGfQm4Gdg9NX1qAMkzB": {
-      "date": "2026-07-17",
+      "date": "2026-07-20",
       "call_type": "Closer",
       "scraper": "YES",
       "post_webinar": null,
@@ -74321,6 +74321,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-17 22:10:09 UTC",
+  "saved_at": "2026-07-17 22:21:16 UTC",
   "count": 8367
 }
