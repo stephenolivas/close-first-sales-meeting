@@ -45722,8 +45722,8 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
-      "vendhub": null
+      "funnel_name": "YouTube",
+      "vendhub": "Standard Booking"
     },
     "lead_qAkQM8N0myxaAul0GFYxqrCSzp2Y8YVwZp4F0HIeseN": {
       "date": "2026-04-15",
@@ -74321,6 +74321,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-17 21:39:28 UTC",
+  "saved_at": "2026-07-17 22:10:09 UTC",
   "count": 8367
 }
