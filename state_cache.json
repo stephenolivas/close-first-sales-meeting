@@ -74121,8 +74121,35 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_yYnTdWHNsQfMH6SOfHctmPYM4u52zqB6rwY3yw8zGvn": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL",
+      "vendhub": null
+    },
+    "lead_eGWyqv2S2SXkqOiIEcmsNiNicinMcPShKHJDGtDw7rk": {
+      "date": "2026-07-07",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_Qe2dMz2hqNW52DH9rFj9HmdiFGm516vaeNA4rICPfi4": {
+      "date": "2026-07-07",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-17 12:09:49 UTC",
-  "count": 8345
+  "saved_at": "2026-07-17 12:39:34 UTC",
+  "count": 8348
 }
