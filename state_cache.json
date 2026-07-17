@@ -74085,8 +74085,17 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_jLFyKwol9VDTpdVHyfu9MwUzwHyq9MgbUTxGVPutFf6": {
+      "date": "2026-07-19",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "William Nowak",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-17 02:39:40 UTC",
-  "count": 8341
+  "saved_at": "2026-07-17 03:10:16 UTC",
+  "count": 8342
 }
