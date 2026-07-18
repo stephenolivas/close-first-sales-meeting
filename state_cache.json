@@ -73295,8 +73295,8 @@
       "vendhub": null
     },
     "lead_HcxFR3S00vD8MooZWIdH4gSpJgnPgojceyPZyCms9Np": {
-      "date": "2026-07-20",
-      "call_type": "Closer",
+      "date": null,
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
@@ -74391,8 +74391,26 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_T3iwIDuIZsKbIWwfxIzuMCiRfOjUwR7NyONneH2sp0G": {
+      "date": "2026-07-24",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_EWvmGe8PIMP2TEEIqqWPOq5n08BSRtEWlrGOXGln3Pr": {
+      "date": "2026-07-20",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-18 17:01:13 UTC",
-  "count": 8375
+  "saved_at": "2026-07-18 17:39:59 UTC",
+  "count": 8377
 }
