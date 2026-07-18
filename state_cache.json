@@ -74418,8 +74418,26 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_BvzEDYyS1AlfMcArEt2F1B37tG61pBJfsR5lerPKxuX": {
+      "date": "2026-07-19",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_jZYJnKXvmz5q0YMWeEWamf1EN4jaf2V3MF4uY5iXHai": {
+      "date": "2026-07-21",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-18 19:05:09 UTC",
-  "count": 8378
+  "saved_at": "2026-07-18 19:39:15 UTC",
+  "count": 8380
 }
