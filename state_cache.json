@@ -74443,10 +74443,19 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar",
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_M26pFqD0AJ4WqXokg2Do8t4CDJlFswQS49uP69FHr87": {
+      "date": "2026-07-19",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-18 20:09:21 UTC",
-  "count": 8381
+  "saved_at": "2026-07-18 20:39:36 UTC",
+  "count": 8382
 }
