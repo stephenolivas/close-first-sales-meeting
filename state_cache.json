@@ -52393,12 +52393,13 @@
       "vendhub": null
     },
     "lead_UtZd4NsdFkcwL5DmJjSTvIp722kNwf8GcBV3tNW8Mwd": {
-      "date": null,
-      "call_type": null,
+      "date": "2026-07-22",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "earliest_scraper_date": null
+      "funnel_name": "LTF - In-House",
+      "vendhub": null
     },
     "lead_YwzpFVwhJ4W9PxlconCviEmioecmGOpxu9sIaJomCc9": {
       "date": null,
@@ -74528,6 +74529,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-19 18:03:17 UTC",
+  "saved_at": "2026-07-19 18:39:38 UTC",
   "count": 8390
 }
