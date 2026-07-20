@@ -74599,8 +74599,17 @@
       "reactivation": "Vince Bartolini",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_ItO4EM4zsR6GjQqDFoLtn1NkHnnLiftXZmZjtvqtpVW": {
+      "date": "2026-07-24",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "YouTube",
+      "vendhub": "Standard Booking"
     }
   },
-  "saved_at": "2026-07-20 17:08:44 UTC",
-  "count": 8398
+  "saved_at": "2026-07-20 17:40:48 UTC",
+  "count": 8399
 }
