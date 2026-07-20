@@ -74606,10 +74606,19 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube",
+      "funnel_name": null,
       "vendhub": "Standard Booking"
+    },
+    "lead_j6WWcrOlFT06fF3QjApE9SKA1k3D5CsGZbUk2Qgus3C": {
+      "date": "2026-07-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-20 17:40:48 UTC",
-  "count": 8399
+  "saved_at": "2026-07-20 18:10:48 UTC",
+  "count": 8400
 }
