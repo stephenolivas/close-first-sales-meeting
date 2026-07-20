@@ -73486,7 +73486,7 @@
     },
     "lead_ehY7fCLyg6vOjNSi6f3JrJ2Y8HRHLivZdn43zlMUAMu": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
@@ -74565,6 +74565,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-20 12:09:31 UTC",
+  "saved_at": "2026-07-20 12:39:28 UTC",
   "count": 8394
 }
