@@ -25224,7 +25224,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_fXmlad2I2KIuDMXPfjhcJT8Znse8j8Zib6gcJ3dWeOf": {
@@ -74565,6 +74565,6 @@
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-20 05:10:18 UTC",
+  "saved_at": "2026-07-20 05:40:01 UTC",
   "count": 8394
 }
