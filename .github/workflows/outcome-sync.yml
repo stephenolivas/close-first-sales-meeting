@@ -1,0 +1,57 @@
+# .github/workflows/outcome-sync.yml
+#
+# Meeting Outcome Sync — runs alongside the field updater, every 30 min.
+# Separate workflow file on purpose: a Zoom outage or sync bug can never
+# block FSCBD stamping in update-field.yml.
+#
+# Trigger from cron-job.org exactly like update-field.yml:
+#   POST https://api.github.com/repos/stephenolivas/close-first-sales-meeting/actions/workflows/outcome-sync.yml/dispatches
+#   Body: {"ref": "main"}
+# (Same PAT, workflow scope. Or just let the schedule below carry it —
+#  outcome sync is less time-sensitive than field stamping.)
+
+name: Meeting Outcome Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7,37 * * * *"   # offset from update-field to avoid Close rate-limit overlap
+
+concurrency:
+  group: outcome-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Run outcome sync
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+          ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
+          ZOOM_CLIENT_ID: ${{ secrets.ZOOM_CLIENT_ID }}
+          ZOOM_CLIENT_SECRET: ${{ secrets.ZOOM_CLIENT_SECRET }}
+          # Flip to "0" after reviewing dry-run output in the Actions logs.
+          DRY_RUN: "1"
+          LOOKBACK_DAYS: "7"
+          MIN_ATTEND_SECONDS: "300"
+          HOST_MIN_SECONDS: "600"
+          ZOOM_AUTO_NOSHOW: "1"
+        run: python outcome_sync.py
+
+      - name: Upload run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: outcome-sync-report
+          path: outcome_sync_report.json
+          retention-days: 14
