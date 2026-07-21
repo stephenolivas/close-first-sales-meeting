@@ -75092,7 +75092,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_9IMumI5F86LrVNPF7fyK9JBKBHwPak8SlbAJ7VXDhl9": {
@@ -75101,10 +75101,10 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "YouTube",
+      "funnel_name": null,
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-21 23:13:54 UTC",
+  "saved_at": "2026-07-21 23:39:34 UTC",
   "count": 8454
 }
