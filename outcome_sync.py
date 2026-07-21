@@ -101,6 +101,32 @@ ATTENTION_MAX_AGE_DAYS = 3
 EXCLUDED_OWNER_NAMES = {"stephen olivas", "ahmad bukhari"}
 
 ZOOM_JOIN_RE = re.compile(r"zoom\.us/j/(\d{9,12})", re.IGNORECASE)
+# Calendly hides the real conferencing URL behind a redirect link:
+#   calendly.com/events/{uuid}/zoom          -> redirects to zoom.us/j/...
+#   calendly.com/events/{uuid}/google_meet   -> Google Meet
+CALENDLY_CONF_RE = re.compile(
+    r"(https?://(?:www\.)?calendly\.com/events/[0-9a-fA-F-]+/(zoom|google_meet))",
+    re.IGNORECASE)
+
+_calendly_cache = {}
+
+def resolve_calendly_zoom(url):
+    """Follow a calendly .../zoom redirect to the real Zoom join URL."""
+    if url in _calendly_cache:
+        return _calendly_cache[url]
+    zoom_id = None
+    try:
+        r = requests.get(url, allow_redirects=True, timeout=15)
+        chain = [h.headers.get("Location", "") for h in r.history] + [r.url, r.text[:2000]]
+        for piece in chain:
+            m = ZOOM_JOIN_RE.search(piece or "")
+            if m:
+                zoom_id = m.group(1)
+                break
+    except requests.RequestException:
+        pass
+    _calendly_cache[url] = zoom_id
+    return zoom_id
 
 # ---------------------------------------------------------------------------
 # Config
@@ -114,6 +140,7 @@ def env_int(name, default):
 
 DRY_RUN = os.environ.get("DRY_RUN", "1") != "0"
 LOOKBACK_DAYS = env_int("LOOKBACK_DAYS", 7)
+GRACE_MINUTES = env_int("GRACE_MINUTES", 90)  # skip meetings that ended < this long ago
 MIN_ATTEND_SECONDS = env_int("MIN_ATTEND_SECONDS", 300)
 HOST_MIN_SECONDS = env_int("HOST_MIN_SECONDS", 600)
 ZOOM_AUTO_NOSHOW = os.environ.get("ZOOM_AUTO_NOSHOW", "1") != "0"
@@ -439,6 +466,12 @@ def run():
         st = parse_dt(m.get("starts_at"))
         if st is None or st > now_utc:
             continue  # future meetings keep their Scheduled default
+        # Grace period: don't judge a meeting that is in progress or just
+        # ended — Attention hasn't written its verdict and Zoom's participant
+        # report lags meeting end. The next 30-min run will pick it up.
+        est_end = st + timedelta(seconds=int(m.get("duration") or 3600))
+        if now_utc < est_end + timedelta(minutes=GRACE_MINUTES):
+            continue
         owner = users.get(m.get("user_id"), {})
         if owner.get("name", "").lower() in EXCLUDED_OWNER_NAMES:
             continue
@@ -455,8 +488,16 @@ def run():
             disposition = lead.get(CF_TODAYS_DISPOSITION)
 
             blob = f"{m.get('note') or ''} {m.get('location') or ''}"
-            if ZOOM_JOIN_RE.search(blob):
-                provider = "zoom"
+            zoom_meeting_id = None
+            direct = ZOOM_JOIN_RE.search(blob)
+            calendly = CALENDLY_CONF_RE.search(blob)
+            if direct:
+                provider, zoom_meeting_id = "zoom", direct.group(1)
+            elif calendly and calendly.group(2).lower() == "google_meet":
+                provider = "google-meet"
+            elif calendly:  # calendly .../zoom redirect — resolve to real ID
+                zoom_meeting_id = resolve_calendly_zoom(calendly.group(1))
+                provider = "zoom" if zoom_meeting_id else "zoom-calendly-unresolved"
             elif "meet.google.com" in blob.lower():
                 provider = "google-meet"
             elif "zoom.us" in blob.lower():
@@ -466,8 +507,7 @@ def run():
 
             zoom_result = "skip"
             if zoom.enabled:
-                match = ZOOM_JOIN_RE.search(blob)
-                if match:
+                if zoom_meeting_id:
                     attendees = m.get("attendees") or []
                     prospect_emails = {
                         (a.get("email") or "").lower() for a in attendees
@@ -477,7 +517,7 @@ def run():
                     prospect_names = [a.get("name") or "" for a in attendees
                                       if (a.get("email") or "").lower()
                                       not in org_emails]
-                    participants = zoom.participants_for(match.group(1), st)
+                    participants = zoom.participants_for(zoom_meeting_id, st)
                     zoom_result = (participants, prospect_emails,
                                    org_emails, prospect_names)
 
@@ -502,6 +542,7 @@ def run():
                     {"meeting": m["id"], "lead": lead_id,
                      "title": m.get("title"), "starts_at": m.get("starts_at"),
                      "provider": provider, "age_days": age_days,
+                     "note_head": (m.get("note") or "")[:100],
                      "reason": f"{source}: {detail}"})
                 print(f"  FLAG               {label} "
                       f"({source}: {detail}) [provider={provider} age={age_days}d]")
