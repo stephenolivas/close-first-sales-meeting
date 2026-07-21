@@ -158,7 +158,7 @@ def fetch_org_users(s):
         data = close_get(s, "/user/", {"_skip": skip, "_limit": 100})
         for u in data["data"]:
             users[u["id"]] = {
-                "name": (u.get("first_name", "") + " " + u.get("last_name", "")).strip(),
+                "name": ((u.get("first_name") or "") + " " + (u.get("last_name") or "")).strip(),
                 "email": (u.get("email") or "").lower(),
             }
         if not data.get("has_more"):
