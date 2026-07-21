@@ -454,9 +454,18 @@ def run():
             lead = lead_cache[lead_id]
             disposition = lead.get(CF_TODAYS_DISPOSITION)
 
+            blob = f"{m.get('note') or ''} {m.get('location') or ''}"
+            if ZOOM_JOIN_RE.search(blob):
+                provider = "zoom"
+            elif "meet.google.com" in blob.lower():
+                provider = "google-meet"
+            elif "zoom.us" in blob.lower():
+                provider = "zoom-link-unparsed"  # /my/ vanity or webinar link
+            else:
+                provider = "no-video-link"
+
             zoom_result = "skip"
             if zoom.enabled:
-                blob = f"{m.get('note') or ''} {m.get('location') or ''}"
                 match = ZOOM_JOIN_RE.search(blob)
                 if match:
                     attendees = m.get("attendees") or []
@@ -488,11 +497,14 @@ def run():
                 print(f"  {'DRY ' if DRY_RUN else ''}SET {outcome_key:<11} "
                       f"[{source}] {label} ({detail})")
             else:
+                age_days = (now_utc - st).days
                 report["flagged"].append(
                     {"meeting": m["id"], "lead": lead_id,
                      "title": m.get("title"), "starts_at": m.get("starts_at"),
+                     "provider": provider, "age_days": age_days,
                      "reason": f"{source}: {detail}"})
-                print(f"  FLAG               {label} ({source}: {detail})")
+                print(f"  FLAG               {label} "
+                      f"({source}: {detail}) [provider={provider} age={age_days}d]")
         except Exception as e:  # keep the run alive; report the failure
             report["errors"].append({"meeting": m.get("id"), "error": str(e)})
             print(f"  ERROR {m.get('id')}: {e}", file=sys.stderr)
@@ -505,6 +517,18 @@ def run():
     print(f"needs review     : {len(report['flagged'])}")
     print(f"auto no-shows    : {len(report['auto_noshow'])} (verify these)")
     print(f"errors           : {len(report['errors'])}")
+    prov_counts = defaultdict(int)
+    fresh_counts = defaultdict(int)
+    for f in report["flagged"]:
+        prov_counts[f["provider"]] += 1
+        fresh_counts["fresh (<=3d)" if f["age_days"] <= 3 else "backlog (>3d)"] += 1
+    if report["flagged"]:
+        print("flagged by provider : " + ", ".join(
+            f"{k}={v}" for k, v in sorted(prov_counts.items(), key=lambda x: -x[1])))
+        print("flagged by age      : " + ", ".join(
+            f"{k}={v}" for k, v in sorted(fresh_counts.items())))
+    report["flagged_by_provider"] = dict(prov_counts)
+    report["flagged_by_age"] = dict(fresh_counts)
     for f in report["flagged"]:
         print(f"  REVIEW: https://app.close.com/lead/{f['lead']}/ "
               f"'{(f['title'] or '')[:50]}' — {f['reason']}")
