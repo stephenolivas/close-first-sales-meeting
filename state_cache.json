@@ -74950,8 +74950,26 @@
       "reactivation": "Jacob Hepner",
       "funnel_name": "Reactivation Scrapers",
       "vendhub": null
+    },
+    "lead_QCqnOSlqhn02xH3NCLYlJuhLJUG5rcJ8oJOgnyTOkXi": {
+      "date": "2026-07-21",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_5aJPTJT6J4lO0rqTFXGZdebyJk69QjaWTV9WFNBGtiq": {
+      "date": "2026-07-17",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-21 18:01:30 UTC",
-  "count": 8437
+  "saved_at": "2026-07-21 18:39:55 UTC",
+  "count": 8439
 }
