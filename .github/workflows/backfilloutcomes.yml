@@ -1,0 +1,51 @@
+# .github/workflows/backfill-outcomes.yml
+# One-time historical backfill — MANUAL TRIGGER ONLY. No schedule.
+# Run it dry first (default), review the backfill_report.json artifact,
+# then re-run with dry_run=0.
+
+name: Backfill Meeting Outcomes (one-time)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "1 = plan only (default), 0 = write outcomes"
+        required: false
+        default: "1"
+      backfill_since:
+        description: "Earliest meeting date to consider (YYYY-MM-DD)"
+        required: false
+        default: "2026-01-01"
+
+concurrency:
+  group: backfill-outcomes
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Run backfill
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+          BACKFILL_SINCE: ${{ github.event.inputs.backfill_since }}
+          SKIP_RECENT_DAYS: "7"
+        run: python backfill_outcomes.py
+
+      - name: Upload backfill report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backfill-report
+          path: backfill_report.json
+          retention-days: 30
