@@ -51756,12 +51756,13 @@
       "earliest_scraper_date": null
     },
     "lead_9FYTL8wuazRzVIcbAFCeDXk89M1Yhf9vMIbVBOmwdD9": {
-      "date": null,
-      "call_type": null,
+      "date": "2026-07-23",
+      "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "earliest_scraper_date": null
+      "funnel_name": "Instagram",
+      "vendhub": "Standard Booking"
     },
     "lead_Li2SENHRAzwmuAd82MwJnaOgoQjd7VibMIxAvmhYU4Z": {
       "date": "2026-05-05",
@@ -67737,8 +67738,8 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
-      "vendhub": null
+      "funnel_name": "YouTube",
+      "vendhub": "Standard Booking"
     },
     "lead_rU4Zq8au4EfAPrNuxpG2bbf9rorRQ4jrGJmCWyXBphl": {
       "date": "2026-06-25",
@@ -75328,8 +75329,26 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_4PwdXBkWcMDgldmS3WLyCbovZuOx2ajUTIpMJjabMFj": {
+      "date": "2026-05-13",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Meta Ads",
+      "vendhub": null
+    },
+    "lead_c4jTfR0gZbJY0WygfdjAUaSe80OWd2JMven4ssqeynK": {
+      "date": "2026-07-24",
+      "call_type": "Closer",
+      "scraper": "YES",
+      "post_webinar": null,
+      "reactivation": "Jacob Hepner",
+      "funnel_name": "Reactivation Scrapers",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-22 22:39:25 UTC",
-  "count": 8479
+  "saved_at": "2026-07-22 23:10:00 UTC",
+  "count": 8481
 }
