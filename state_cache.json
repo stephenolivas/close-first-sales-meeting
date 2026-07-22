@@ -74066,7 +74066,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Website",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_m8ME1HXJ2EWDjsKdBpV5PneswWVdLaoSAbslwEd3v3s": {
@@ -75241,11 +75241,11 @@
     },
     "lead_eYvIH4XNVknBznzhaCk4EftEx7rAQXdZzvkza8p25nt": {
       "date": null,
-      "call_type": "Closer",
+      "call_type": null,
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "LTF - In-House",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_qAC5bJyJOhYENuAwg2VR098Xna4wvQDdaluYlL01L04": {
@@ -75272,10 +75272,10 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Instagram",
+      "funnel_name": null,
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-22 19:40:06 UTC",
+  "saved_at": "2026-07-22 20:01:35 UTC",
   "count": 8473
 }
