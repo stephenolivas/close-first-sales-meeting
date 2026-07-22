@@ -40205,9 +40205,9 @@
       "vendhub": null
     },
     "lead_teDEyn9ZDS5giwqz2JFalr58jMtLtiRNkgSNTHMH0j4": {
-      "date": null,
+      "date": "2026-01-07",
       "call_type": "Closer",
-      "scraper": null,
+      "scraper": "YES",
       "post_webinar": null,
       "reactivation": "Mallory Kent",
       "funnel_name": "Reactivation Scrapers",
@@ -74061,12 +74061,12 @@
       "vendhub": null
     },
     "lead_4I4aAW8m6eL4bdDoIxoJYI6pKzI3oPojYW6gVGESjvp": {
-      "date": "2026-07-22",
+      "date": "2026-07-23",
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "Website",
       "vendhub": null
     },
     "lead_m8ME1HXJ2EWDjsKdBpV5PneswWVdLaoSAbslwEd3v3s": {
@@ -75240,12 +75240,12 @@
       "vendhub": null
     },
     "lead_eYvIH4XNVknBznzhaCk4EftEx7rAQXdZzvkza8p25nt": {
-      "date": "2026-07-23",
+      "date": null,
       "call_type": "Closer",
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": null,
+      "funnel_name": "LTF - In-House",
       "vendhub": null
     },
     "lead_qAC5bJyJOhYENuAwg2VR098Xna4wvQDdaluYlL01L04": {
@@ -75265,8 +75265,17 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_UVgVwj2mvhGuv0NHmOaIcUhETuCtdnpctKYYr2K9e17": {
+      "date": "2026-07-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-22 19:09:51 UTC",
-  "count": 8472
+  "saved_at": "2026-07-22 19:40:06 UTC",
+  "count": 8473
 }
