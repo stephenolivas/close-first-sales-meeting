@@ -75401,8 +75401,17 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_Wt0A3e6Qv4B9LTykrjFnJp7uhnXOmLHpa6R2fD919aO": {
+      "date": "2026-07-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Meta Ads",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-23 13:59:52 UTC",
-  "count": 8487
+  "saved_at": "2026-07-23 14:10:45 UTC",
+  "count": 8488
 }
