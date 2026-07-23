@@ -75383,8 +75383,17 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_UkL9bQEnSU86lGVYvSUVuvi1hJs3yCGDwVVbb35zKAk": {
+      "date": "2026-07-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "YouTube",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-23 05:39:46 UTC",
-  "count": 8485
+  "saved_at": "2026-07-23 06:10:25 UTC",
+  "count": 8486
 }
