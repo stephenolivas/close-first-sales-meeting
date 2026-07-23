@@ -1,0 +1,37 @@
+# .github/workflows/parallel-check.yml
+# Daily field-vs-outcome comparison — the cutover gate evidence.
+# Read-only against Close. Runs once a day after the morning syncs.
+
+name: Parallel Run Check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * *"   # 9am PDT daily
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Run comparison
+        env:
+          CLOSE_API_KEY: ${{ secrets.CLOSE_API_KEY }}
+          WINDOW_DAYS: "14"
+        run: python parallel_check.py
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parallel-report
+          path: parallel_report.json
+          retention-days: 30
