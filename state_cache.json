@@ -75525,7 +75525,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_dnM77cpQXzvXfhZnWsSlmlvo478rk1bpZ3FSnUCc70H": {
@@ -75534,7 +75534,7 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Internal Webinar",
+      "funnel_name": null,
       "vendhub": null
     },
     "lead_8PlUAZC8JdSSU0qb5kGgvIERvUSQiMSLHT2Zcymjbuz": {
@@ -75608,8 +75608,26 @@
       "reactivation": null,
       "funnel_name": null,
       "vendhub": null
+    },
+    "lead_BK3qYXaMgTcuRHbwjrZbZl1is0WlUsx3SHgivHxBAzW": {
+      "date": "2026-07-27",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_G6L75WvRWAOvlbdglCEU9t11OO9c8HCgbPZAFXenjSF": {
+      "date": "2026-07-27",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Instagram",
+      "vendhub": null
     }
   },
-  "saved_at": "2026-07-23 20:39:34 UTC",
-  "count": 8510
+  "saved_at": "2026-07-23 21:10:00 UTC",
+  "count": 8512
 }
