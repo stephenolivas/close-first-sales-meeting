@@ -75408,10 +75408,37 @@
       "scraper": null,
       "post_webinar": null,
       "reactivation": null,
-      "funnel_name": "Meta Ads",
+      "funnel_name": null,
+      "vendhub": null
+    },
+    "lead_raFpYLhRPKwrewITu6Bu7JBXACN3pulOdgLbeKv3n8y": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL",
+      "vendhub": null
+    },
+    "lead_0YfGHv5wHLHJze1TO5b3cam8ZfVvPJ1XA3nGFPkVyJQ": {
+      "date": null,
+      "call_type": null,
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "VSL",
+      "vendhub": null
+    },
+    "lead_Fjzn8ySvSBHjSb7d5EgWDX8uTmgIkD8td6JP0nyMZVc": {
+      "date": "2026-07-23",
+      "call_type": "Closer",
+      "scraper": null,
+      "post_webinar": null,
+      "reactivation": null,
+      "funnel_name": "Internal Webinar",
       "vendhub": null
     }
   },
-  "saved_at": "2026-07-23 14:10:45 UTC",
-  "count": 8488
+  "saved_at": "2026-07-23 14:40:25 UTC",
+  "count": 8491
 }
